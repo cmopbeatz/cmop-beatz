@@ -1,0 +1,2308 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8">
+<title>CMO_P Beatz</title>    
+
+  <meta property="og:url" content="http://www.your-domain.com/your-page.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Your Website Title" />
+  <meta property="og:description" content="Your description" />
+  <meta property="og:image" content="http://www.your-domain.com/path/image.jpg"/> 
+
+</head>
+<style type="text/css">
+<!--
+html{
+	scrollbar-arrow-color: #CCC;
+	scrollbar-face-color: #666;
+	scrollbar-base-color: #666;
+	scrollbar-highlight-color: #0CF;
+	scrollbar-dark-shadow-color: #333;
+	scrollbar-shadow-color: #666;
+	
+}
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius:0px 0px 3px 0px;
+  
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CCC;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #CCC;
+}
+::-webkit-scrollbar-track {
+  background:#CCC ;
+  border-radius: 0px 3px 3px 0px;
+  
+  
+}
+::-webkit-scrollbar-track:hover {
+  background: #0CF ;
+}
+::-webkit-scrollbar-track:active {
+  background:#0CF ;
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	margin: 0;
+	background-repeat: repeat;
+	width: auto;
+	background-image: url(CMOP_P-webIntro/cmop-3dlogo0001.png);
+	background-attachment: fixed;
+	background-position: center center;
+	height: auto;
+}
+
+
+.scroll-left {
+	height: 40px;
+	overflow: hidden;
+	position: relative;
+
+	color: rgba(255,255,255,1);
+
+	background-color: #000000;
+}
+.scroll-left p {
+	position: absolute;
+	width: 300%;
+	height: 100%;
+	line-height: 50px;
+	text-align: center;
+	/* Starting position */
+	-moz-transform: translateX(100%);
+	-webkit-transform: translateX(100%);
+	transform: translateX(100%);
+	/* Apply animation to this element */	
+	-moz-animation: scroll-left 15s linear infinite;
+	-webkit-animation: scroll-left 15s linear infinite;
+	animation: scroll-left 15s linear infinite;
+	margin-left: 100px;
+	left: 8px;
+}
+/* Move it (define the animation) */
+@-moz-keyframes scroll-left {
+ 0%   { -moz-transform: translateX(100%); }
+ 100% { -moz-transform: translateX(-100%); }
+}
+@-webkit-keyframes scroll-left {
+ 0%   { -webkit-transform: translateX(100%); }
+ 100% { -webkit-transform: translateX(-100%); }
+}
+@keyframes scroll-left {
+ 0%   { 
+ -moz-transform: translateX(100%); /* Browser bug fix */
+ -webkit-transform: translateX(100%); /* Browser bug fix */
+ transform: translateX(100%); 		
+ }
+ 100% { 
+ -moz-transform: translateX(-100%); /* Browser bug fix */
+ -webkit-transform: translateX(-100%); /* Browser bug fix */
+ transform: translateX(-100%); 
+ }
+}
+
+
+
+div#audio_player{
+	width: 340px;
+	height: 48px;
+	border-radius: 2px 2px 2px 2px;
+	visibility: visible;
+	z-index: 5;
+	position: absolute;
+	display: inline-block;
+	left: 8px;
+	top: 83px;
+}
+div#main{
+	float: right;
+	width: 340px;
+	height: 60px;
+	background-color: rgbd(255,255,255,.5);
+	border-radius: 4px;
+	background-image: none;
+	left: 25px;
+	position: relative;
+	border-top-width: thin;
+	border-top-style: solid;
+	border-top-color: #FFF;
+	border-left-color: #FFF;
+	border-left-width: thin;
+	border-left-style: solid;
+	z-index: 1;
+	box-shadow: 2px 0px 3px 2px;
+}
+
+div#audio_controls{
+	height: 60px;
+	width: 311px;
+	position: relative;
+	left: 1px;
+}
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color:#fff;
+	/* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #4E5869;
+	}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
+.container {
+	height: 780px;
+	width: 105%;
+	max-width: 1260px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
+	min-width: 780px;/* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
+	margin-top: 40px;
+	margin-right: auto;
+	margin-bottom: 0;
+	margin-left: auto;
+	background-repeat: no-repeat;
+	display: block;
+	position: relative;
+	z-index: 1;
+}
+
+/* ~~the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo~~ */
+.header {
+	background:;
+	height: 40px;
+	width: 1260px;
+	z-index: 10;
+	position: relative;
+	background-color: #000;
+	border: 4px solid rgba(0,0,0,1);
+	left: -3px;
+}
+#contact-options {
+	color: rgba(255,255,255,1);
+	background-color: rgba(0,0,0,1);
+	height: auto;
+	width: 280px;
+	position: absolute;
+	left: 10px;
+	top: 11px;
+	display: none;
+}
+#share-options {
+	height: 40px;
+	width: 280px;
+	left: 5px;
+	position: absolute;
+	top: 51px;
+	font-size: 36px;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
+	display: none;
+	padding-top: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+}
+.linkbox {
+	height: 30px;
+	width: 30px;
+	padding: 2px;
+	border-radius: 32px;
+}
+.linkbox:hover {
+	box-shadow: 0px 0px 1px 1px rgba(255,255,255,1);
+}
+#clock-toggle {
+	height: 40px;
+	width: 40px;
+	float: right;
+	position: absolute;
+	left: 1040px;
+	top: -26px;
+	border-radius: 20px;
+	background-color: rgba(0,0,0,1);
+}
+
+/* ~~ This is the layout information. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+*/
+.content {
+	width: 1260px;
+	height: 780px;
+	padding-top: 10px;
+	padding-bottom: 1px;
+	box-shadow: 0px 0px 4px 3px #000;
+	background-repeat: repeat-x;
+	z-index: auto;
+	position: relative;
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: groove;
+	border-left-style: none;
+	border-top-color: #FFFFFF;
+	border-bottom-color: #3F423B;
+	background-color: #000;
+	background-image: url(CMOP_P-webIntro/webIntro-composite%20footage/cmop-weblogo/cmop-contentlivebkgd/cmop-cont-disp00.gif);
+	background-position: right;
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+/* ~~ The footer ~~ */
+button#footer {
+	background-color: #000;
+	height: 20px;
+	width: 1260px;
+	padding-right: 0;
+	padding-bottom: 0;
+	padding-left: 0;
+	position: relative;
+	margin-bottom: 50px;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	box-shadow: 0px 0px 4px 3px #000;
+	letter-spacing: 2px;
+	border-top-width: thin;
+	border-top-style: solid;
+	border-top-color: #FFF;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-ms-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+	text-decoration: underline overline;
+	font-weight: bold;
+	font-variant: small-caps;
+}
+#aboutField{
+	width: 1260px;
+	height: 70px;
+	display: none;
+	box-shadow: 0px 0px 2px 1px #000;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	position: absolute;
+	left: 0px;
+	top: 890px;
+	background-color: #999;
+	border-radius: 0px 0px 10px 10px;
+	-webkit-transition: all .5s ease-in-out;
+	-moz-transition: all .5s ease-in-out;
+	-ms-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+	color: rgba(255,255,255,1);
+	margin-bottom: 10px;
+	text-shadow: 1px 2px 2px rgba(0,0,0,1);
+	font-weight: bold;
+	font-variant: small-caps;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+div#m_Player{
+	width: 720px;
+	height: auto;
+	position: absolute;
+	float: left;
+	left: 1px;
+	top: -20px;
+	z-index: 6;
+}
+
+
+
+button {
+	border: none;
+	cursor: pointer;
+	outline: none;
+	display: block;
+	float:left;
+	margin: 26px 10px 0px 0px; 
+}
+input {outline:none;   }
+
+
+button#playpausebtn{
+	display: block;
+	width: 24px;
+	height: 24px;
+	background-color: transparent;
+	background-repeat: no-repeat;
+	background-image: url(images/cmop-playbtn.png);
+	}
+
+button#mutebtn{
+	float: right;
+	display: block;
+	width: 35px;
+	height: 24px;
+	margin-right: 10px;
+	background-image: url(images/cmop-mute.png);
+	background-repeat: no-repeat;
+	background-color: rgba(0,0,0,0.0);
+}
+
+input#seekslider{
+	width: 300px;
+	height: 5px;
+	background-color: #0CF;
+	position: relative;
+	left: -26px;
+	top: 23px;
+	z-index: 1;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 30px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #000;
+	box-shadow: 0px 1px 2px 1px rgba(0,0,0,1);
+			}
+input#volumeslider{
+	width: 80px;
+	margin: 28px 5px 0px 0px;
+	float: right;
+	display: block;
+	border-radius: 4px;
+	background-color: rgba(0,204,255,.1);
+	box-shadow: 0px 1px 1px 1px rgba(0,0,51,1);
+	border-top-width: 2px;
+	border-bottom-width: 2px;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-top-color: rgba(0,0,102,1);
+	border-bottom-color: #006;
+	background-image: url(images/cmop-volumebkg.png);
+	background-repeat: no-repeat;
+	background-position: 2px -6px;
+}
+div#timebox{
+	float: left;
+	width: 80px;
+	height: 14px;
+	margin: 28px 2px 0px 0px;
+	text-align: center;
+	color: #0CF;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	display: block;
+	border-radius: 8px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: small-caps;
+	text-shadow: 0px 0px 2px rgba(0,0,102,1);
+	background-color: rgba(0,153,204,0);
+	letter-spacing: 1px;
+	vertical-align: middle;
+	white-space: nowrap;
+	border-top-width: thin;
+	border-right-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #036;
+	border-right-color: #036;
+	border-bottom-color: #036;
+	border-left-color: #036;
+	box-shadow: 0px 1px 1px 1px rgba(0,0,51,1);
+	}
+div#trackwrap{
+	width: 500px;
+	height: 160px;
+	margin-left: 30px;
+	margin-top: 50px;
+	position: absolute;
+	left: 635px;
+	top: -30px;
+}
+div#AdvOptions{
+	width: 1024px;
+	height: 740px;
+	overflow: hidden;
+	position: absolute;
+	float: none;
+	margin-right: 0px;
+	left: 1px;
+	}
+		
+			div#trackbox_selector{
+	width: 150px;
+	height: 159px;
+	overflow: hidden;
+			}
+	select#trackbox{
+	float: left;
+	width: 320px;
+	height: 0px;
+	overflow: auto;
+	color: #FFF;
+	background-color: rgba(102,102,102,0.2);
+	background-image: none;
+	background-position: center;
+	position: relative;
+	z-index: 1;
+	margin-left: 5px;
+	transition: all .5s ease-in-out 0s;
+	opacity: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	text-align: left;
+	vertical-align: middle;
+	letter-spacing: normal;
+	word-spacing: normal;
+	white-space: normal;
+	display: inline-block;
+	top: 193px;
+	box-shadow: 2px 0px 2px 1px #333;
+	border-radius: 0px 0px 8px 8px;
+	left: -330px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	-webkit-transition: all .5s ease-in-out 0s;
+	-moz-transition: all .5s ease-in-out 0s;
+	-ms-transition: all .5s ease-in-out 0s;
+	-o-transition: all .5s ease-in-out 0s;
+	border: thick solid rgba(51,51,51,1);
+			}
+			
+			select option{
+	color: #fff;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
+	background-color: rgba(255,255,255,0.2);
+	font-family: Arial, Helvetica, sans-serif;
+				}
+button#exp_tracklist {
+	height: 35px;
+	width: 318px;
+	position: relative;
+	background-color: #333333;
+	color: #FFF;
+	font-size: 18px;
+	top: 132px;
+	border-radius: 8px;
+	left: 4px;
+	font-style: normal;
+	font-weight: bolder;
+	font-family: Arial, Helvetica, sans-serif;
+	letter-spacing: 2px;
+	text-align: center;
+	vertical-align: middle;
+	border-top-width: thin;
+	border-left-width: thin;
+	border-top-style: solid;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: solid;
+	border-top-color: #FFF;
+	border-left-color: #FFF;
+	z-index: 5;
+	box-shadow: 2px 0px 3px 2px #000;
+	text-shadow: 0px .px;
+	text-shadow: .5px .5px .px;
+	text-shadow: .5px .5px .5px rgba(51,51,51,1);
+	-webkit-transition: all 1s ease-in-out 0s;
+	-moz-transition: all 1s ease-in-out 0s;
+	-ms-transition: all 1s ease-in-out 0s;
+	-o-transition: all 1s ease-in-out 0s;
+	transition: all 1s ease-in-out 0s;
+	font-variant: normal;
+	text-transform: capitalize;
+}
+div#buyLinks{
+	width: 148px;
+	height: 47px;
+	float: right;
+	position: relative;
+	z-index: 8;
+	left: 0px;
+	top: 175px;
+	border-radius: 8px 1px 1px 1px;
+	background-color: #333;
+	opacity: 1;
+	transition: all 1s;
+	text-align: center;
+	vertical-align: middle;
+	box-shadow: 0px 0px 1px 1px rgba(51,51,51,1);
+	font-variant: small-caps;
+	font-weight: bold;
+	font-style: normal;
+}
+div#addToCart{
+	height: 40px;
+	width: 40px;
+	float: left;
+	position: relative;
+	background-image: none;
+	margin-top: 3px;
+	margin-left: 10px;
+}
+div#soundCloud{
+	height: 40px;
+	width: 40px;
+	position: relative;
+	float: right;
+	background-image: none;
+	margin-top: 3px;
+	margin-right: 4px;
+	left: -5px;
+}
+div#eMail{
+height:;
+width:;
+	float: right;
+	position: relative;
+	height: 40px;
+	width: 40px;
+	background-image: none;
+	margin-right: 10px;
+	margin-top: 3px;
+}
+	div#textbox{
+	width: 0px;
+	height: 30px;
+	color: #FFF;
+	position: absolute;
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	text-align: center;
+	background-image: none;
+	left: 5px;
+	top: 56px;
+	float: left;
+	line-height: 30px;
+	transition: all .3s ease-out;
+	vertical-align: top;
+	display: block;
+	border-radius: 0px 5px 5px 0px;
+	opacity: 0;
+	z-index: 1;
+	letter-spacing: 2px;
+	word-spacing: 4px;
+	text-indent: 10;
+	font-size: 18px;
+	box-shadow: 0px 0px 3px 1px #FFF;
+	border: 2px solid #FFF;
+	text-shadow: .5px 0-.px;
+	text-shadow: 0.5px -0.6px 5px rgba(0,0,0,1);
+	background-color: rgba(51,204,255,.4);
+	font-weight: bold;
+	font-variant: small-caps;
+			}
+button#PricingHeader{
+	width: 32px;
+	height: 32px;
+	position	: absolute;
+	margin-top: 20px;
+	background-image: none;
+	background-repeat: no-repeat;
+	z-index: 4;
+	top: 400px;
+	left: -38px;
+	border-radius: 32px;
+	box-shadow: inset 0px 0px 4px 2px #000;
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgba(255,255,255,1);
+	font-size: 22px;
+	font-style: normal;
+	font-weight: bolder;
+	font-variant: small-caps;
+	text-transform: uppercase;
+	text-shadow: 0px 0px 8px rgba(0,0,0,1);
+	background-color: rgba(255,255,255,0.5);
+	text-align: justify;
+	vertical-align: middle;
+	display: inline-block;
+	text-indent: 2px;
+	border: 3px solid rgba(255,255,255,1);
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+}
+#pricingPanel {
+	height: 340px;
+	width: 600px;
+	position: absolute;
+	left: 7px;
+	top: 472px;
+	display: none;
+	text-shadow: 1px 1px 1px rgba(0,0,0,1);
+	-webkit-transition: all 1s;
+	-moz-transition: all 1s;
+	-ms-transition: all 1s;
+	-o-transition: all 1s;
+	transition: all 1s;
+}
+#pricingTabs {
+	height: 100px;
+	position: absolute;
+	font-family: "Carbon Phyber";
+	color: #000;
+	width: 180px;
+	padding-right: -40px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: bold;
+	font-variant: small-caps;
+	font-style: normal;
+}
+button#limitedTab {
+	width: inherit;
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000;
+	font-size: 12px;
+	height: 24px;
+	letter-spacing: 2px;
+	text-align: right;
+	vertical-align: middle;
+	background-color: rgba(255, 255,255, 0);
+	float: right;
+	left: 7px;
+}
+button#limitedTab:active {
+	color: #FFF;
+}
+button#limitedTab:hover {
+	color: #FFF;
+}
+button#exclusiveTab:hover {
+	color: #FFF;
+}
+button#standardTab {
+	background-color: rgba(255, 255,255, 0);
+	width: inherit;
+	position: relative;
+	height: 24px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	letter-spacing: 2px;
+	text-align: right;
+	vertical-align: middle;
+	color: #000;
+	float: left;
+}
+button#standardTab:hover {
+	color: #FFF;
+}
+button#standardTab:active {
+	color: #FFF;
+}
+button#proTab {
+	background-color: rgba(255, 255,255, 0);
+	width: inherit;
+	position: relative;
+	height: 24px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	letter-spacing: 2px;
+	text-align: right;
+	vertical-align: middle;
+	color: #000;
+	float: right;
+}
+button#proTab:hover {
+	color: #FFF;
+}
+button#exclusiveTab {
+	background-color: rgba(255, 255,255, 0);
+	width: inherit;
+	position: relative;
+	height: 24px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	float: right;
+	display: block;
+	letter-spacing: 2px;
+	text-align: right;
+	vertical-align: middle;
+	color: #000;
+}
+#contentPanel {
+	height: auto;
+	width: 377px;
+	float: left;
+	position: relative;
+	margin-right: 20px;
+	right: -170px;
+	border-left-width: thin;
+	border-left-style: dashed;
+	border-left-color: rgba(153,153,153,1);
+}
+.pricingCell {
+	background-color: rgba(52,52,52,.2);
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bolder;
+	font-variant: normal;
+	color: rgba(255,255,255,1);
+	height: 20px;
+	vertical-align: middle;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-shadow: 1px 1px 2px rgba(0,0,0,1);
+}
+#limitedContent {
+	width: 377px;
+	height: auto;
+	color: #FFF;
+	position: absolute;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	float: left;
+	left: 18px;
+	top: 25px;
+	font-variant: small-caps;
+	border-radius: 8px;
+}
+#exclusiveContent {
+	position: absolute;
+	height: auto;
+	width: 377px;
+	top: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: rgba(255,255,255,1);
+	display: none;
+	float: left;
+	left: 18px;
+	font-variant: small-caps;
+	border-radius: 8px;
+}
+#standardContent {
+	height: auto;
+	width: 377px;
+	position: absolute;
+	top: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	font-variant: small-caps;
+	color: rgba(255,255,255,1);
+	display: none;
+	float: left;
+	left: 18px;
+	border-radius: 8px;
+}
+		
+		div#TermsService{
+	width: 22px;
+	height: 222px;
+	margin-left: 350px;
+	position: absolute;
+	left: -38px;
+	top: 506px;
+		}
+		
+				
+	button#ToS{
+	height: 220px;
+	width: 20px;
+	text-decoration: none;
+	position: absolute;
+	top: 20px;
+	left: -350px;
+	background-image: url(images/CMO_P-ToS-button.png);
+	background-repeat: no-repeat;
+	border-top-left-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-top-width: thin;
+	border-bottom-width: thin;
+	border-left-width: thin;
+	border-top-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFF;
+	border-bottom-color: #FFF;
+	border-left-color: #FFF;
+	display: block;
+	border-radius: 10px;
+	box-shadow: 0px 0px 3px 1px #000;
+	z-index: 1;
+	float: left;
+}
+#termWindow{
+	position: absolute;
+	height: 300px;
+	width: 660px;
+	z-index: 15;
+	display: none;
+	overflow: auto;
+	background-color: rgba(102,102,102,0.5);
+	left: -310px;
+	opacity: 1;
+	box-shadow: inset 0px 0px 3px 2px #000;
+	top: -35px;
+	padding-top: 5px;
+	padding-left: 5px;
+	border-radius: 5px;
+	border: medium solid rgba(102,102,102,1);
+	float: left;
+}
+.scrollText {
+	font-family: "Courier New", Courier, monospace;
+	float: left;
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFF;
+	background-color: #000;
+	height: 20px;
+	width: 80px;
+	position: relative;
+}
+
+div#actionPanel{
+	width: 400px;
+	height: 540px;
+	position: absolute;
+	overflow: hidden;
+	background-repeat: no-repeat;
+	z-index: 4;
+	display: block;
+	border-radius: 5px 0px 5px 5px;
+	bottom: -37px;
+	right: 0px;
+	float: right;
+	top: 230px;
+	background-color: rgba(102,102,102,0.1);
+	background-image: none;
+	border: 3px solid rgba(51,51,51,1);
+	box-shadow: inset 0px 0px 2px 2px rgba(51,51,51,1);
+	opacity: 1;
+	-webkit-transition: all .5s ease-in-out 0s;
+	-moz-transition: all .5s ease-in-out 0s;
+	-ms-transition: all .5s ease-in-out 0s;
+	-o-transition: all .5s ease-in-out 0s;
+	transition: all .5s ease-in-out 0s;
+}
+
+
+ 
+#actionPanel::-ms-scrollbar { 
+    display: none; 
+}
+
+
+#emailPanel::-webkit-scrollbar { 
+    display: none; 
+}
+button#closeAction {
+	background-color: rgba(255,255,255,.3);
+	height: 45px;
+	width: 60px;
+	position: absolute;
+	top: 159px;
+	display: block;
+	float: left;
+	z-index: 7;
+	left: 1250px;
+	transition: all 1s;
+	margin-left: 12px;
+	opacity: 1;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: rgba(0,0,0,1);
+	background-image: none;
+	background-repeat: no-repeat;
+	border-radius: 2px 15px 15px 2px;
+	box-shadow: inset 0px 0px 3px 2px rgba(0,0,0,1);
+	font-style: normal;
+	font-weight: bold;
+	font-variant: small-caps;
+	text-transform: capitalize;
+	border-top-width: medium;
+	border-right-width: medium;
+	border-bottom-width: medium;
+	border-left-width: thin;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: none;
+	border-top-color: rgba(255,255,255,1);
+	border-right-color: rgba(255,255,255,1);
+	border-bottom-color: rgba(255,255,255,1);
+	text-decoration: blink;
+}
+button#openAction {
+	background:;
+	height: 45px;
+	width: 60px;
+	position: absolute;
+	top: 237px;
+	display: table-column;
+	float: right;
+	z-index: 7;
+	left: 1265px;
+	transition: all 1s ease-in-out 0s;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #FFFFFF;
+	font-weight: bold;
+	font-variant: small-caps;
+	font-style: normal;
+	text-align: justify;
+	vertical-align: bottom;
+	text-transform: capitalize;
+	text-decoration: blink;
+	text-shadow: 0px 0px 3px #FFF;
+	letter-spacing: 0.5px;
+	background-color: rgba(153,153,153,0.3);
+	white-space: nowrap;
+	background-repeat: no-repeat;
+	background-image: none;
+	-webkit-transition: all 1s ease-in-out 0s;
+	-moz-transition: all 1s ease-in-out 0s;
+	-ms-transition: all 1s ease-in-out 0s;
+	-o-transition: all 1s ease-in-out 0s;
+	border: medium solid rgba(255,255,255,1);
+	border-radius: 15px;
+	box-shadow: inset 0px 0px 3px 2px rgba(0,0,0,1);
+	opacity: 0;
+}
+#proContent {
+	height: auto;
+	width: 377px;
+	position: absolute;
+	top: 25px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: rgba(255,255,255,1);
+	font-weight: bold;
+	font-variant: small-caps;
+	display: none;
+	float: left;
+	left: 18px;
+	border-radius: 8px;
+}
+#emailPanel{
+	width: 400px;
+	height: 540px;
+	position: relative;
+	float: right;
+	z-index: 3;
+	border: thick solid #333;
+	transition: opacity 1s;
+	opacity: 1;
+}
+#paypalPanel{
+	width: auto;
+	height: 540px;
+	overflow: auto;
+	position: relative;
+	background-color: #;
+	float: right;
+	color: #FFF;
+	z-index: 3;
+	transition: opacity 1s;
+	background-color: rgba(153,153,153,.1);
+	opacity: 1;
+}
+
+/*////Song/ProductLayout for PayPalPanel////*/
+.paybtn{
+	position: absolute;
+	width: 60px;
+	height: 20px;
+	float: none;
+	left: 260px;
+	top: -9px;
+	text-align: center;
+	vertical-align: middle;
+}
+.order-dropdown {
+	font-family: "Courier New";
+	font-size: 14px;
+	font-weight: bold;
+	color: rgba(255,255,255,1);
+	background-color: rgba(102,102,102,1);
+	float: right;
+	text-align: center;
+	vertical-align: middle;
+	height: auto;
+	width: 150px;
+}
+
+.option{
+}
+	.purchasing{
+	height: 30px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	width: 100px;
+	color: rgba(255,255,255,1);
+	text-align: center;
+	vertical-align: top;
+	font-variant: small-caps;
+}
+.textBox{
+	height: 12px;
+	width: 100px;
+	float: left;
+	position: relative;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 14px;
+	text-align: center;
+	vertical-align: middle;
+	margin-right: 40px;
+	display: inline-block;
+}
+
+
+
+
+
+
+#soundCloudPanel{
+	width: 400px;
+	height: 540px;
+	position: relative;
+	float: right;
+	z-index: 3;
+	transition: opacity 1s;
+	opacity: 1;
+}
+.product-list {
+	height: auto;
+	color: rgba(255,255,255,1);
+	background-color: rgba(51,51,51,.2);
+	border-top-width: thin;
+	border-bottom-width: thin;
+	border-top-style: dashed;
+	border-bottom-style: dashed;
+	border-top-color: rgba(204,204,204,1);
+	border-bottom-color: rgba(204,204,204,1);
+	text-align: center;
+	vertical-align: middle;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	text-shadow: .2px -.px;
+	text-shadow: 0.4px -0.4px 1px rgba(0,0,0,1);
+}
+
+input[type='range']{
+	-webkit-appearance: none !important;
+	background: #000;
+	height: 13px;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-color: #FFF;
+	border-right-color: #FFF;
+	border-bottom-color: #FFF;
+	border-left-color: #FFF;	
+}
+input[type='range']::-ms-fill-lower{
+	background:#000;
+}
+input[type='range']::-ms-fill-upper{
+	background:#000;
+}
+input[type='range']::-moz-range-track{
+	border:none;
+	background:#000;
+}
+input[type='range']::-webkit-slider-thumb{
+	-webkit-appearance:none !important;
+	background:rgba(25,25,25,0.5);
+	height:11px;
+	width:7px;
+	cursor:pointer;
+	border:2px solid rgba(0,204,255,1);
+	border-radius: 24px;
+	box-shadow: #0CF 1px 1px;
+}
+input[type='range']::-moz-range-thumb{
+	background:rgba(25,25,25,0.5);
+	height:11px;
+	width:11px;
+	cursor:pointer;
+}
+input[type='range']::-ms-thumb{
+	-webkit-appearance:none !important;
+	background:rgba(25,25,25,0.5);
+	height:11px;
+	width:11px;
+	cursor:pointer;
+}
+#EmailLabel {
+	height: 22px;
+	width: 176px;
+	position: absolute;
+	left: 909px;
+	top: 120px;
+	background-color: #717170;
+	border: thin solid #FFF;
+	border-radius: 10px 10px 0px 0px;
+}
+#tb_Icon {
+	width: 39px;
+	height: 39px;
+	position: absolute;
+	background-image: none;
+	top: 30px;
+	border: 3px solid #FFF;
+	border-radius: 30px;
+	background-repeat: no-repeat;
+	background-position: center center;
+	z-index: 2;
+	left: -45px;
+	box-shadow: inset 0px 0px 4px 2px #000;
+	background-color: rgba(255,255,255,.5);
+	font-size: 26px;
+	font-style: normal;
+	line-height: normal;
+	font-weight: bolder;
+	font-variant: small-caps;
+	color: rgba(255,255,255,1);
+	text-decoration: blink;
+	text-shadow: 0px 0px 8px rgba(0,0,0,1);
+}
+#clock {
+	font-family: "Courier New";
+	font-size: 18px;
+	font-weight: bold;
+	color: #999;
+	text-shadow: 0px 0px 2px #FFF;
+	width: 120px;
+	height: 20px;
+	float: right;
+	position: absolute;
+	opacity: 0;
+	-webkit-transition: all 1s ease-in-out;
+	-moz-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	-o-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+	visibility: visible;
+	right: 30px;
+	text-align: left;
+	vertical-align: text-bottom;
+	display: inline-block;
+	border-bottom-width: thin;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: dashed;
+	border-left-style: none;
+	border-bottom-color: #CCC;
+	top: 0px;
+}
+#options-toggle {
+	float: right;
+	height: 40px;
+	width: 40px;
+	position: absolute;
+	left: 1222px;
+	top: -23px;
+	background-image: url(images/options-toggle-img.png);
+	background-repeat: no-repeat;
+	background-color: rgba(0,0,0,1);
+	border-left: thin 1px solid;
+}
+#shareSong-container {
+	position: absolute;
+	height: 140px;
+	width: 45px;
+	left: 326px;
+	top: 250px;
+	background-color: rgba(153,153,153,.1);
+	border-radius: 0px 5px 5px 0px;
+}
+#ssHeader {
+	width: 45px;
+	height: 40px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: rgba(255,255,255,1);
+	font-weight: bolder;
+	background-color: rgba(51,51,51,1);
+	border-radius: 0px 5px 0px 0px;
+	box-shadow: 0px 0px 0.5px 1px rgba(102,102,102,1);
+	border-top-width: medium;
+	border-right-width: thin;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-top-color: rgba(255,255,255,1);
+	border-right-color: rgba(153,153,153,1);
+}
+#ssBody {
+	height: 120px;
+	width: 45px;
+	border-radius: 0px 0px 5px 0px;
+	background-color: rgba(51,51,51,1);
+	box-shadow: inset 0px 0px 0.5px 1px rgba(102,102,102,1);
+	border-right-width: medium;
+	border-bottom-width: medium;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: rgba(153,153,153,1);
+	border-bottom-color: rgba(0,153,204,1);
+}
+#fbSongshare {
+	height: 41px;
+	width: 41px;
+	position: absolute;
+	top: 15px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	background-color: rgba(0,0,0,0);
+	left: -2px;
+	text-align: center;
+	vertical-align: middle;
+}
+#twSongshare {
+	height: 41px;
+	width: 41px;
+	position: absolute;
+	top: 50px;
+	background-color: rgba(0,0,0,0);
+	background-repeat: no-repeat;
+	left: -2px;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+}
+#inSongshare {
+	height: 41px;
+	width: 41px;
+	position: absolute;
+	top: 85px;
+	background-color: rgba(0,0,0,0);
+	background-repeat: no-repeat;
+	display: inline-block;
+	text-align: center;
+	vertical-align: middle;
+	left: -2px;
+}
+#options-container {
+	height: 140px;
+	width: 460px;
+	position: absolute;
+	left: 795px;
+	top: 47px;
+	display: none;
+}
+#contact:hover {
+	color: rgba(255,255,255,1);
+	background-color: rgba(102,102,102,1);
+}
+.options {
+	background-color: rgba(153,153,153,1);
+	height: 40px;
+	width: 100px;
+	position: relative;
+	color: rgba(102,102,102,1);
+	margin-top: 10px;
+	float: right;
+	border-radius: 10px;
+	box-shadow: inset 0px 0px 1px 1px rgba(51,51,51,1);
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	margin-left: 20px;
+}
+#share:hover {
+	color: rgba(255,255,255,1);
+	background-color: rgba(102,102,102,1);
+}
+#calendar {
+	height: 20px;
+	width: 150px;
+	position: absolute;
+	top: 20px;
+	left: 1080px;
+	font-size: 18px;
+	font-weight: normal;
+	color: #999;
+	-webkit-transition: opacity 1.2s ease-in-out 0s, width 1.2s ease-in-out;
+	-moz-transition: opacity 1.2s ease-in-out 0s, width 1.2s ease-in-out;
+	-ms-transition: opacity 1.2s ease-in-out 0s, width 1.2s ease-in-out;
+	-o-transition: opacity 1.2s ease-in-out 0s, width 1.2s ease-in-out;
+	transition: opacity 1.2s ease-in-out 0s, width 1.2s ease-in-out;
+	opacity: 0;
+	text-shadow: 0px 0px 2px #FFF;
+	font-family: "Courier New";
+	text-align: left;
+	vertical-align: text-bottom;
+	display: inline-block;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+
+
+button#proTab:active {
+	color: #FFF;
+}
+button#exclusiveTab:active {
+	color:#fff;
+}
+#shareSong-list {
+	height: auto;
+	width: 40px;
+	position: relative;
+}
+#cmmtPanel {
+	background-color: rgba(51,204,255,.25);
+	height: 300px;
+	width: 400px;
+	position: absolute;
+	left: 385px;
+	top: 150px;
+}
+#RSS-container {
+	height: 40px;
+	width: 1260px;
+}
+#CMOP-title {
+	height: 42px;
+	width: 300px;
+	float: left;
+	font-size: 24px;
+	color: rgba(204,204,204,1);
+	letter-spacing: 2px;
+	text-align: left;
+	vertical-align: middle;
+	word-spacing: 1px;
+	font-family: "Planet Kosmos";
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 65px;
+	line-height: 40px;
+	text-shadow: -3px 2px 4px rgba(102,102,102,1);
+	top: 0px;
+	background-color: rgba(55,55,55,.1);
+	z-index: 3;
+}
+#CMOP-logo {
+	height: 60px;
+	width: 60px;
+	position: absolute;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-position: center center;
+	top: -15px;
+	left: -30px;
+	z-index: 4;
+}
+#CMOP-description {
+	height: 40px;
+	width: 600px;
+	float: right;
+	font-family: "Carbon Phyber";
+	font-size: 24px;
+	color: rgba(255,255,255,1);
+	right: 250px;
+}
+</style>
+
+<body>
+
+<div class="container">
+  <div class="header"><div id="CMOP-logo"><img width ="100" height="60px" src="images/cmop-letterhead.png"></div><div id="CMOP-title" title="The Logo for &quot;cmop-beatz&quot;"><img width ="341" height="40px" src="cmop-web-logo.png">
+ 
+</div>
+  <div id="RSS-container" >
+<div  id="CMOP-description" class="scroll-left"><p class ="scroll-left p"> We've got a beat for any genre! Contact us for exclusive projects! </p></div>
+
+</div>
+<button title="Hide/Show the Time and Date" name="clock-toggle" id="clock-toggle"><img src="images/clock.png" width="41" height="40"></button>
+<div id="clock"></div>
+<div id="calendar"></div>
+ <button title="Share on Social Media" id="options-toggle"></button>
+ <div id="options-container">
+ <table width="460" border="0">
+  <tr>
+    <td><button title="how to contact CMOp..." class="options" id="contact">contact</button></td>
+    <td><div id="contact-options">
+    General Questions: cmo_p@outlook.com
+    Purchase/Sales-related: sales.cashmeout@gmail.com
+   Collaborations & Features: exclusives.cashmeout@gmail.com
+ </div>
+</td>
+  </tr>
+  <tr>
+    <td><button class="options" id="share">share</button></td>
+    <td><div id="share-options">
+<table width="280" border="0">
+  <tr>
+    <td class="linkbox"><a class="twitter popup" target="_blank" href="http://twitter.com/share?text=New%20Music%20uploaded%20weekly!%20"><img src="images/Twitter_Android.png" style="height:30px; width:30px;"></a></td>
+    <td class="linkbox"><a href="http://www.linkedin.com/shareArticle?mini=true&url=http://your page url&title=Your Page Title&summary=Your page content description&source=My Website Name" target="_blank"> <img src="images/linkedin-icon-21.png" style="height:30px; width:30px;"/> </a></td>
+    <td class="linkbox"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http://www.google.com"><img src="images/facebook-icon-preview-1.png" style="height:30px; width:30px;">
+</a></td>
+    <td class="linkbox"><a href="http://plus.google.com/share?url=YOUR_URL"><img src="images/google-plus-icon.png" style="height:30px; width:30px;"></a></td>
+    <td class="linkbox"><a target="_blank" href="mailto:anybody@email.com&body=Check out this site: http://www.website.com."
+   title="Share by Email"><img src="images/at-symbol.png" style="height:30px; width:30px;"></a></td>
+  </tr>
+</table>
+
+
+ </div></td>
+  </tr>
+</table>
+
+ 
+ 
+
+ 
+  </div>
+</div>
+  <div id="cont" class="content">
+    <div id="buyLinks">
+      <div id="addToCart" title="View complete tracklist"><img src="images/CMO_P-buyLinks-S-Cart.png" width="40" height="40" alt="add to cart"></div>
+         
+          <div id="soundCloud" title="Listen to music featured on SoundCloud" ><img src="images/CMO_P-buyLinks-S-Cloud.png" width="40" height="40" alt="to soundcloud.com"></div>
+      <div id="eMail" title="Questions/Comments"> <img src="images/CMO_P-buyLinks-E-mail1.png" width="40" height="40" alt="to email"></div>
+    </div>
+       <button title="Display song info" id="tb_Icon">?</button>
+       <div id="textbox"> 
+         <h4 id= "playlist_status" class="PS_scroll" style= "color: #FFF">Select a Track</h4>
+         
+         
+    </div> 
+   
+
+    
+      <div id= "shareSong-container">
+      <div id="ssHeader">song options</div>
+      <div id="ssBody">
+      <button id= "fbSongshare"><img src="images/facebook-icon-preview-1.png"height="40px" width="40px"></button>
+        <button id= "twSongshare"><img src="images/Twitter_Android.png" height="40px" width="40px"></button>
+        <button id= "inSongshare"><img src="images/linkedin-icon-21.png"height="40px" width="40px"></button>
+      </div>
+      
+      </div>
+   
+    <button title="Expand/Collapse tracklist" name="exp_tracklist" value="Click to expand." id="exp_tracklist">EXPAND</button>
+    
+    <select name="trackbox" size="8" class="selection" id="trackbox">
+        
+      <option value="00" selected="selected">.:Select_a_Track:.</option>
+          <option  value="After Me(no-hook).mp3">After Me(no-hook)</option>
+          <option  value="All In(no-hook).mp3">All In(no-hook)</option>
+          <option  value="Baddest Bitch(no-hook).mp3">Baddest Bitch(no-hook)</option>
+          <option  value="Beach Cruiser(no-hook).mp3">Beach Cruiser(no-hook)</option>
+          <option  value="Bi-Coastal(no-hook).mp3">Bi-Coastal(no-hook)</option>
+
+          <option  value="Bottles(no-hook).mp3">Bottles(no-hook)</option>
+          <option  value="Destined(no-hook).mp3">Destined(no-hook)</option>
+          <option value="F-n Do It(no-hook).mp3">F-n Do It(no-hook)</option>
+          <option value="Frenchie(no-hook).mp3">Frenchie(no-hook)</option>
+          <option  value="Functional Fyre(no-hook).mp3">Functional Fyre(no-hook)</option>
+          <option value="Gyros(no-hook).mp3">Gyros(no-hook)</option>
+          
+          <option  value="Hands-Up.mp3">Hands-Up(no-hook)</option>
+          <option value="HH-e(no-hook).mp3">HH-e(no-hook)</option>
+          <option  value="Hi-Jinx(no-hook).mp3">Hi-Jinx(no-hook)</option>
+          <option  value="In My Mind(no-hook).mp3">In My Mind(no-hook)</option>
+          <option  value="Justify(no-hook).mp3">Justify(no-hook)</option>
+          <option  value="Like Neon(no-hook).mp3">Like Neon(no-hook)</option>
+          <option  value="Make It Count(no-hook).mp3">Make It Count(no-hook)</option>
+          <option  value="Numbers(no-hook).mp3">Numbers(no-hook)</option>
+          <option  value="Position2(no-hook).mp3">Position2(no-hook)</option>
+
+    </select>
+    <div id="audio_player">
+        <input id="seekslider" type="range" min="0" max="500" value="0" step="1">
+        <div id="audio_controls">
+          
+          <div id="main">
+            <button id="playpausebtn">          
+            </button>
+            <button id="mutebtn"></button>
+            <div id="timebox" style="padding-bottom:5px;"> <span style="text-align:center;vertical-align:middle;" id="curtimetext">00.00</span>/<span style="text-align:center;vertical-align:middle;" id="durtimetext">00.00</span> </div>
+            <input style="margin-right:20px;" id="volumeslider" type="range" min="0" max="100" value="100" step="1">
+          </div>
+        </div>
+  
+    </div><div id="TermsService">
+  <button id="ToS">
+  <p style="color:white">&nbsp;</p>
+  </button>                                           
+
+<div id="termWindow"><p style="color:yellow">TERMS of SERVICE									<font size="1">Last updated:(01/06/2016).</font></p>
+
+<p style="color:white">
+<br>
+<font size="1.5">Please read these Terms of Service ("Terms", "Terms of Service") carefully before using <strong>CMO_P Beatz</strong>("service") 
+Your access to and use of our Services is conditioned on your acceptance of and compliance with
+these Terms. These Terms apply to all visitors, users and others who access or use the Service.
+By accessing or using the Service you agree to be bound by these Terms. If you disagree with
+any part of the terms then you may not access the Service.</font>
+<br>
+<br>
+<strong>Termination</strong>
+<br>
+<font size="2">We may terminate or suspend access to our Service immediately, without prior notice or liability,
+for any reason whatsoever, including without limitation if you breach the Terms.
+All provisions of the Terms which by their nature should survive termination shall survive
+termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity
+and limitations of liability.</font>
+<br>
+<br>
+<strong>Links To Other Web Sites</strong>
+<br>
+<font size="2">Our Service may contain links to thirdparty
+web sites or services that are not owned or controlled
+by <strong>CASHMEOUT Productions</strong>("company").
+<strong>CASHMEOUT Productions</strong> has no control over, and assumes no responsibility for, the
+content, privacy policies, or practices of any third party web sites or services. You further
+acknowledge and agree that <strong>CASHMEOUT Productions</strong> shall not be responsible or liable,
+directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection
+with use of or reliance on any such content, goods or services available on or through any such
+web sites or services.
+We strongly advise you to read the terms and conditions and privacy policies of any third-party
+web sites or services that you visit.</font>
+<br>
+<br>
+<strong>Governing Law</strong>
+<br>
+<font size="2">These Terms shall be governed and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.
+Our failure to enforce any right or provision of these Terms will not be considered a waiver of
+those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the
+remaining provisions of these Terms will remain in effect. These Terms constitute the entire
+agreement between us ("company", "end-user") regarding our service, and supersede and replace any prior agreements
+we might have between us regarding the Service.</font>
+<br>
+<br>
+<strong>Changes</strong>
+<br>
+<font size="2">We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a
+revision is material we will try to provide at least 30  business days notice prior to any new
+terms taking effect. What constitutes a material change will be determined at our sole discretion.
+
+By continuing to access or use the company's service after those revisions become effective, you agree to
+be bound by the revised terms. If you do not agree to the new terms, please stop using the
+Service.</font>
+<br>
+<br>
+<strong>Contact Us</strong>
+<br>
+<font size="2">If you have any questions about these Terms, please contact us using the <strong>Questions/Comments</strong> form located above.</font></p>
+</div>
+</div>
+<button id="PricingHeader" >$</button>
+  <div id ="pricingPanel">
+  <table style="margin-left:20px;" width="300" border="0">
+  <tr>
+    <td style ="float:left;text-align:center;color:white;background:rgba(51,204,255,.2);border-radius:5px;box-shadow: #000;text-shadow:rgba(0,0,0,1);"><strong>License by type</strong></td>
+    <td style ="float:right;text-align:left;margin-right:22px;color:white;background:rgba(51,204,255,.2);border-radius:5px;box-shadow: #000;text-shadow:rgba(0,0,0,1);"><strong>Description</strong></td>
+  </tr>
+</table>
+  	<div id ="pricingTabs">
+  		<button id ="limitedTab">
+  		<h2>limited</h2>
+  		</button>
+	    <button id ="standardTab">
+	    <h2>standard </h2>
+	    </button>
+    	<button id ="proTab">
+    	<h2>pro</h2>
+    	</button>
+    	<button id ="exclusiveTab">
+    	<h2>exclusive</h2>
+    	</button>
+  	</div>
+ 
+    
+  <div id ="contentPanel">
+
+
+
+  	<div id ="limitedContent"><table width="379"  align="center" cellspacing="1">
+  <tr>
+    <td class = "pricingCell">LIMITED License</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">29.95</td>
+  </tr>
+  <tr>
+ <td class = "pricingCell">Untagged .mp3</td>
+  </tr>
+  <tr>
+     <td class = "pricingCell">Distribute up to 2500 units</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">Radio use prohibhited</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">Non-Exclusive</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">Must accredit CMO-p beatz</td>
+  </tr>
+</table>
+</div>
+    <div id ="standardContent"><table width="377"  align="center" cellspacing="1">
+  <tr>
+    <td class = "pricingCell">STANDARD License</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">65.99</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">.WAV + Trackouts</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">Distribute up to 10000 units</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">Radio use prohibited</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">Non-Exclusive</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">Must accredit CMO-p</td>
+  </tr>
+</table></div>
+    <div id ="proContent"><table width="377"  align="center" cellspacing="1">
+  <tr>
+    <td class = "pricingCell">PRO License</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">99.99</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">.WAV + Trackouts</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">UNLIMITED distribution</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">Radio use Allowed</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">Non-Exclusive</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">Must accredit CMO-p</td>
+  </tr>
+</table></div>
+    <div id ="exclusiveContent"><table width="377"  align="center" cellspacing="1">
+  <tr>
+    <td class = "pricingCell">EXCLUSIVE Rights</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">**Contact Us</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">.WAV + Trackouts</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">UNLIMITED distribution</td>
+  </tr>
+  <tr>
+    <td class = "pricingCell">Exclusive Rights</td>
+  </tr>
+   <tr>
+    <td><p style="font-size: small; background:#666; border-radius:10px;">How to contact CMO-p:
+    <br>1. Click the optiopnt button(upper-right), select contact then copy and paste the desired email address into your recipient bar.
+    <br>2. Click the 'Action Panel' tab then select the 'contact icon. Fill out the quick form then click 'Submit.'</p></td>
+  </tr>
+</table></div>
+  </div>
+</div>
+
+  <!-- <div id="mediaPlayer"> 
+      <h2>Media Player</h2>
+ <!-- Controls/Interface for mpControlScheme01 (uses mpcontrols.js)--><!--   <audio id="myTrack" >
+      	<source src="CMO_P-Music/Winner.mp3"type="audio/mp3"/>
+      </audio>
+      <nav>
+       <div id="defaultBar">
+       <div id ="progressBar"></div>
+       </div>
+       <div id="buttons">
+       <button type="button" id="playButton" ></button>
+       <button type="button" id="muteButton"></button>
+        <span id="currentTime">0:00</span>
+        /<span id="fullDuration">0:00</span>
+        </div>
+      </nav>-->
+
+  <button id="openAction"><img src="images/cmop-openactionbtn.png" width="40.25" height="40.25"><br><strong>--open--</strong>
+
+</button>
+<button id="closeAction"><img src="images/cmop-closeactionbtn.png" width="40.25" height="40.25"><br><strong>--close--</strong></button>
+<div id="actionPanel" scrolling="no">
+
+  
+
+
+
+  <div id="paypalPanel">
+  <table width="400" border="0">
+ 
+  <tr class = "product-list">
+    <td>After Me</td>
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="2ELHMUAT2YZLW">
+    <td class="purchasing"><input type="hidden" name="on0" value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95</option>
+	<option value="Standard">Standard $65.99</option>
+	<option value="Pro">Pro $99.99</option>
+</select></td>
+    <td><input type="hidden" name="currency_code" value="USD">
+<input type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png"
+width="1" height="1"></form></td>
+  </tr>
+  
+  <tr class= "product-list">
+    <td>All In</td>
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="2SRKGJCMDFH4Q">
+    <td class="purchasing"><input type="hidden" name="on0" value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95</option>
+	<option value="Standard">Standard $65.99</option>
+	<option value="Pro">Pro $99.99</option></select></td>
+    
+    <td><input type="hidden" name="currency_code" value="USD">
+<input  type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form></td>
+  </tr>
+  
+  <tr class= "product-list">
+ 
+    <td>Baddest Bitch</td>
+     <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="9DXGVKLUGWYXC">
+    <td class="purchasing"><input type="hidden" name="on0" value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95</option>
+	<option value="Standard">Standard $65.99</option>
+	<option value="Pro">Pro $99.99</option>
+</select> </td>
+    <td><input type="hidden" name="currency_code" value="USD">
+<input  type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+</td>
+  </tr>
+  
+  
+  <tr class= "product-list">
+  <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="NRK9Q7HUE5BYW">
+    <td>Beach Cruiser</td>
+    <td class="purchasing"><input type="hidden" name="on0" value="Purchasing">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95</option>
+	<option value="Standard">Standard $65.99</option>
+	<option value="Pro">Pro $99.99</option>
+</select></td>
+    <td><input type="hidden" name="currency_code" value="USD">
+<input  type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png"border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form></td>
+</tr> 
+  <tr class= "product-list">
+    <td>Bi-Coastal</td>
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="ASFWCLAB5XVGC">
+    <td class="purchasing"><input type="hidden" name="on0" value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95</option>
+	<option value="Standard">Standard $65.99</option>
+	<option value="Pro">Pro $99.99</option>
+</select></td>
+    <td><input type="hidden" name="currency_code" value="USD">
+<input  type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png"border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form></td>
+  </tr>
+
+    <tr class= "product-list">
+
+    <td>Bottles</td>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="4G259CS5UYCHY">
+    <td class="purchasing"><input type="hidden" name="on0" value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95</option>
+	<option value="Standard">Standard $65.99</option>
+	<option value="Pro">Pro $99.99</option>
+</select> </td>
+    <td><input type="hidden" name="currency_code" value="USD">
+<input  type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png"border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form></td>
+  </tr>
+
+  <tr class= "product-list">
+
+    <td>Destined</td>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="XEVVQEQBCV9GQ">
+    <td class="purchasing"><input type="hidden" name="on0" value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95</option>
+	<option value="Standard">Standard $65.99</option>
+	<option value="Pro">Pro $99.99</option>
+</select></td>
+    <td><input type="hidden" name="currency_code" value="USD">
+<input  type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png"border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+</td>
+  </tr>
+  
+  <tr class= "product-list">
+  
+  <td>F-n Do It</td>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
+
+method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="MRGHVE4JTAJH8">
+ 
+ <td class="purchasing"><input type="hidden" name="on0" 
+
+value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95 USD</option>
+	<option value="Standard">Standard $65.99 USD</option>
+	<option value="Pro">Pro $99.99 USD</option>
+</select> </td>
+
+<td><input type="hidden" name="currency_code" value="USD">
+<input type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
+
+to pay online!">
+<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
+
+height="1">
+</form></td>
+</td>
+
+<tr class ="product-list">
+
+ <td>Frenchie</td>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
+
+method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="HED6DVVWK93JA">
+ 
+ <td class="purchasing"><input type="hidden" name="on0" 
+
+value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95 USD</option>
+	<option value="Standard">Standard $65.99 USD</option>
+	<option value="Pro">Pro $99.99 USD</option>
+</select> </td>
+
+<td><input type="hidden" name="currency_code" value="USD">
+<input type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" height="1">
+</form></td>
+</tr>
+
+  <tr class= "product-list">
+	 <td>Functional Fyre</td>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
+
+method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="UG7G9FHJCY7DC">
+ 
+ <td class="purchasing"><input type="hidden" name="on0" 
+
+value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95 USD</option>
+	<option value="Standard">Standard $65.99 USD</option>
+	<option value="Pro">Pro $99.99 USD</option>
+</select> </td>
+
+<td><input type="hidden" name="currency_code" value="USD">
+<input type="image" height="30" width="50" src="images/CMO_P-Cart-
+
+buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
+
+to pay online!">
+<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
+
+height="1">
+</form></td>
+   
+  </tr>
+
+  <tr class= "product-list">
+
+  <td>Gyros</td>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
+
+method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="HJ5SNDH2QFBA4">
+ 
+ <td class="purchasing"><input type="hidden" name="on0" 
+
+value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95 USD</option>
+	<option value="Standard">Standard $65.99 USD</option>
+	<option value="Pro">Pro $99.99 USD</option>
+</select> </td>
+
+<td><input type="hidden" name="currency_code" value="USD">
+<input type="image" height="30" width="50" src="images/CMO_P-Cart-
+
+buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
+
+to pay online!">
+<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
+
+height="1">
+</form></td>
+</tr>
+
+  <tr class= "product-list">
+
+  <td>Hands-Up</td>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
+
+method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="AYXAE8X45HV2Y">
+ 
+ <td class="purchasing"><input type="hidden" name="on0" 
+
+value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95 USD</option>
+	<option value="Standard">Standard $65.99 USD</option>
+	<option value="Pro">Pro $99.99 USD</option>
+</select> </td>
+
+<td><input type="hidden" name="currency_code" value="USD">
+<input type="image" height="30" width="50" src="images/CMO_P-Cart-
+
+buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
+
+to pay online!">
+<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
+
+height="1">
+</form></td>
+  </tr>
+
+  <tr class= "product-list">
+
+    <td>HH-e</td>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
+
+method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="LFU7J4W7HL69Q">
+ 
+ <td class="purchasing"><input type="hidden" name="on0" 
+
+value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95 USD</option>
+	<option value="Standard">Standard $65.99 USD</option>
+	<option value="Pro">Pro $99.99 USD</option>
+</select> </td>
+
+<td><input type="hidden" name="currency_code" value="USD">
+<input type="image" height="30" width="50" src="images/CMO_P-Cart-
+
+buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
+
+to pay online!">
+<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
+
+height="1">
+</form></td>  </tr>
+
+  <tr class= "product-list">
+
+     <td>Hi-Jinx</td>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
+
+method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="X49XLU2GNFYE6">
+ 
+ <td class="purchasing"><input type="hidden" name="on0" 
+
+value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95 USD</option>
+	<option value="Standard">Standard $65.99 USD</option>
+	<option value="Pro">Pro $99.99 USD</option>
+</select> </td>
+
+<td><input type="hidden" name="currency_code" value="USD">
+<input type="image" height="30" width="50" src="images/CMO_P-Cart-
+
+buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
+
+to pay online!">
+<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
+
+height="1">
+</form></td>
+  </tr>
+
+  <tr class= "product-list">
+
+     <td>In My Mind</td>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
+
+method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="5PQAMLHHP7LX2">
+ 
+ <td class="purchasing"><input type="hidden" name="on0" 
+
+value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95 USD</option>
+	<option value="Standard">Standard $65.99 USD</option>
+	<option value="Pro">Pro $99.99 USD</option>
+</select> </td>
+
+<td><input type="hidden" name="currency_code" value="USD">
+<input type="image" height="30" width="50" src="images/CMO_P-Cart-
+
+buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
+
+to pay online!">
+<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
+
+height="1">
+</form></td>
+  </tr>
+
+  <tr class= "product-list">
+
+    <td>Justify</td>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
+
+method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="ALL9HYT4GYMC6">
+ 
+ <td class="purchasing"><input type="hidden" name="on0" 
+
+value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95 USD</option>
+	<option value="Standard">Standard $65.99 USD</option>
+	<option value="Pro">Pro $99.99 USD</option>
+</select> </td>
+
+<td><input type="hidden" name="currency_code" value="USD">
+<input type="image" height="30" width="50" src="images/CMO_P-Cart-
+
+buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
+
+to pay online!">
+<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
+
+height="1">
+</form></td>
+  </tr>
+
+  <tr class= "product-list">
+
+  <td>Like Neon</td>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
+
+method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="95R4Y2LJ2Q4FL">
+ 
+ <td class="purchasing"><input type="hidden" name="on0" 
+
+value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95 USD</option>
+	<option value="Standard">Standard $65.99 USD</option>
+	<option value="Pro">Pro $99.99 USD</option>
+</select> </td>
+
+<td><input type="hidden" name="currency_code" value="USD">
+<input type="image" height="30" width="50" src="images/CMO_P-Cart-
+
+buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
+
+to pay online!">
+<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
+
+height="1">
+</form></td>
+  </tr>
+
+  <tr class= "product-list">
+
+    <td>Make It Count</td>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
+
+method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="QGWMQQJJPYDLG">
+ 
+ <td class="purchasing"><input type="hidden" name="on0" 
+
+value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95 USD</option>
+	<option value="Standard">Standard $65.99 USD</option>
+	<option value="Pro">Pro $99.99 USD</option>
+</select> </td>
+
+<td><input type="hidden" name="currency_code" value="USD">
+<input type="image" height="30" width="50" src="images/CMO_P-Cart-
+
+buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
+
+to pay online!">
+<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
+
+height="1">
+</form></td>
+  </tr>
+
+  <tr class= "product-list">
+
+  <td>Numbers</td>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
+
+method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="XH9DQPGTQBLQA">
+ 
+ <td class="purchasing"><input type="hidden" name="on0" 
+
+value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95 USD</option>
+	<option value="Standard">Standard $65.99 USD</option>
+	<option value="Pro">Pro $99.99 USD</option>
+</select> </td>
+
+<td><input type="hidden" name="currency_code" value="USD">
+<input type="image" height="30" width="50" src="images/CMO_P-Cart-
+
+buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
+
+to pay online!">
+<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
+
+height="1">
+</form></td>
+  </tr>
+
+  <tr class= "product-list">
+
+  <td>Position2</td>
+<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
+
+method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="GH677ZXM52VHU">
+ 
+ <td class="purchasing"><input type="hidden" name="on0" 
+
+value="Purchase">License:<select class="order-dropdown" name="os0">
+	<option value="Limited">Limited $29.95 USD</option>
+	<option value="Standard">Standard $65.99 USD</option>
+	<option value="Pro">Pro $99.99 USD</option>
+</select> </td>
+
+<td><input type="hidden" name="currency_code" value="USD">
+<input type="image" height="30" width="50" src="images/CMO_P-Cart-
+
+buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
+
+to pay online!">
+<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
+
+height="1">
+</form></td>
+	</tr>
+</table>
+</div>
+  
+
+
+  <div id="emailPanel" scrolling="no">
+<iframe src="https://docs.google.com/forms/d/1jdLcta57s4MziN4L9ToJK6KmTAook8vRX6a8nx8Syk4/viewform?"embedded="true" width="400" height="580" frameborder="0" marginheight="0" marginwidth="0" scrolling="no">Loading...</iframe>
+    </div>
+     <div id="soundCloudPanel" scrolling="no">
+		<iframe width="400" height="580" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/190363403&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
+    </div>
+</div>
+
+</div>
+ 
+
+ <button id="footer">  <p style="color:white"><strong>About</strong></p>
+ </button>
+
+ 
+   <div id="aboutField">
+  <p style="color:yellow"><strong>music</strong> and <strong>art</strong> displayed (for proprietary purposes) is subject to the ownership of CASHMEOUT Productions. This excludes contributions made by: GoogleDocs; SoundCloud; and PayPal. Rights to ownership can be discussed in further detail by using the Questions/Comments form <strong>above</strong>. This site and all of its content was made by <strong>d1nero</strong> for CASHMEOUT Productions. All rights reserved.</p></div>
+</div>
+
+
+<script type="text/javascript" src="mpcontrols-alt.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</body>
+</html>
