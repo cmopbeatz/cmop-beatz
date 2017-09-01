@@ -110,7 +110,8 @@ function initAudioPlayer() {
     option1 = document.createElement('option');
     option2 = document.createElement('option');
     option3 = document.createElement('option');
-
+	
+	songshare = document.getElementById('shareSong-container');
 
     //Audio Object//
     audio = new Audio();
@@ -338,6 +339,8 @@ function initAudioPlayer() {
                 expandTB.style.borderRadius = "8px  8px 1px 1px";
                 track_List.style.opacity = "1";
                 track_List.style.height = "270px";
+				songshare.style.opacity = "1";
+				songshare.style.width = "45px";
                 expandTB.innerHTML = "COLLAPSE";
 
 
@@ -346,6 +349,8 @@ function initAudioPlayer() {
             } else {
                 track_List.style.opacity = "";
                 track_List.style.height = "0px";
+				songshare.style.opacity = "";
+				songshare.style.width = "0px";
                 expandTB.style.borderRadius = "8px";
                 expandTB.innerHTML = "EXPAND";
 

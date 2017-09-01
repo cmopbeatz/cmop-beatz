@@ -5,11 +5,11 @@
 <meta charset="utf-8">
 <title>CMO_P Beatz</title>    
 
-  <meta property="og:url" content="http://www.your-domain.com/your-page.html" />
+  <meta property="og:url" content="https://cmopbeatz.github.io/cmop-beatz/CMOP_SC2.html" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Your Website Title" />
-  <meta property="og:description" content="Your description" />
-  <meta property="og:image" content="http://www.your-domain.com/path/image.jpg"/> 
+  <meta property="og:title" content="cmop-beatz: We got what you need!"/>
+  <meta property="og:description" content="New music added weekly!"/>
+  <meta property="og:image" content="images/cmop-web-logo.png"> 
 
 </head>
 <style type="text/css">
@@ -1260,14 +1260,21 @@ input[type='range']::-ms-thumb{
 #shareSong-container {
 	position: absolute;
 	height: 140px;
-	width: 45px;
+	width: 72px;
 	left: 326px;
 	top: 250px;
 	background-color: rgba(153,153,153,.1);
 	border-radius: 0px 5px 5px 0px;
+	display: block;
+	opacity: 0;
+	-webkit-transition: all .5s ease-in-out .09s;
+	-moz-transition: all .5s ease-in-out .09s;
+	-ms-transition: all .5s ease-in-out .09s;
+	-o-transition: all .5s ease-in-out .09s;
+	transition: all .5s ease-in-out .09s;
 }
 #ssHeader {
-	width: 45px;
+	width: 72px;
 	height: 40px;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
@@ -1285,7 +1292,7 @@ input[type='range']::-ms-thumb{
 }
 #ssBody {
 	height: 120px;
-	width: 45px;
+	width: 72px;
 	border-radius: 0px 0px 5px 0px;
 	background-color: rgba(51,51,51,1);
 	box-shadow: inset 0px 0px 0.5px 1px rgba(102,102,102,1);
@@ -1298,9 +1305,9 @@ input[type='range']::-ms-thumb{
 }
 #fbSongshare {
 	height: 41px;
-	width: 41px;
+	width: 72px;
 	position: absolute;
-	top: 15px;
+	top: 40px;
 	background-repeat: no-repeat;
 	display: inline-block;
 	background-color: rgba(0,0,0,0);
@@ -1310,7 +1317,7 @@ input[type='range']::-ms-thumb{
 }
 #twSongshare {
 	height: 41px;
-	width: 41px;
+	width: 72px;
 	position: absolute;
 	top: 50px;
 	background-color: rgba(0,0,0,0);
@@ -1322,7 +1329,7 @@ input[type='range']::-ms-thumb{
 }
 #inSongshare {
 	height: 41px;
-	width: 41px;
+	width: 72px;
 	position: absolute;
 	top: 85px;
 	background-color: rgba(0,0,0,0);
@@ -1457,6 +1464,16 @@ button#exclusiveTab:active {
 
 <body>
 
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
+
+
 <div class="container">
   <div class="header"><div id="CMOP-logo"><img width ="100" height="60px" src="images/cmop-letterhead.png"></div><div id="CMOP-title" title="The Logo for &quot;cmop-beatz&quot;"><img width ="341" height="40px" src="images/cmop-web-logo.png">
  
@@ -1522,10 +1539,17 @@ button#exclusiveTab:active {
    
 
     
-      <div id= "shareSong-container">
+    <div id= "shareSong-container">
+   
       <div id="ssHeader">song options</div>
       <div id="ssBody">
-      <button id= "fbSongshare"><img src="images/facebook-icon-preview-1.png"height="40px" width="40px"></button>
+      <div id= "fbSongshare"> <div class="fb-share-button" 
+    data-href="http://www.your-domain.com/your-page.html" 
+    data-layout="button_count">
+  </div></div>
+      
+      
+      
         <button id= "twSongshare"><img src="images/Twitter_Android.png" height="40px" width="40px"></button>
         <button id= "inSongshare"><img src="images/linkedin-icon-21.png"height="40px" width="40px"></button>
       </div>
