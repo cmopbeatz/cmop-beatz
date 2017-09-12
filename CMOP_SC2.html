@@ -8,8 +8,8 @@
   <meta property="og:url" content="https://cmopbeatz.github.io/cmop-beatz/CMOP_SC2.html" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="cmop-beatz: We got what you need!"/>
-  <meta property="og:description" content="New music added weekly!"/>
-  <meta property="og:image" content="images/cmop-web-logo.png"> 
+  <meta property="og:description" content="www.cmopbeatz.github.io/cmop-beatz/CMOP_SC2.html"/>
+  <meta property="og:image" content="images/cmop-web-logo.png"/> 
 
 </head>
 <style type="text/css">
@@ -66,7 +66,9 @@ body {
 	background-image: url(images/cmop-3dlogo0001.png);
 	background-attachment: fixed;
 	background-position: center center;
-	height: auto;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
 }
 
 
@@ -148,6 +150,7 @@ div#main{
 	border-left-style: solid;
 	z-index: 1;
 	box-shadow: 2px 0px 3px 2px;
+	top: 20px;
 }
 
 div#audio_controls{
@@ -184,18 +187,58 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 
 /* ~~ this container surrounds all other divs giving them their percentage-based width ~~ */
 .container {
-	height: 780px;
-	width: 105%;
-	max-width: 1260px;/* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
-	min-width: 780px;/* the auto value on the sides, coupled with the width, centers the layout. It is not needed if you set the .container's width to 100%. */
-	margin-top: 40px;
-	margin-right: auto;
-	margin-bottom: 0;
-	margin-left: auto;
 	background-repeat: no-repeat;
-	display: block;
-	position: relative;
+	position: static;
 	z-index: 1;
+	width: 100%;
+	height: 100%;
+	margin-left: 60px;
+	margin-right: auto;
+	margin-top: 40px;
+	margin-bottom: 80px;
+	-webkit-transition: all 2s ease-in-out 0s;
+	-moz-transition: all 2s ease-in-out 0s;
+	-ms-transition: all 2s ease-in-out 0s;
+	-o-transition: all 2s ease-in-out 0s;
+	transition: all 2s ease-in-out 0s;
+	opacity: 40;
+	display: none;
+}
+#Enter-page {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	color: rgba(255,255,255,1);
+	background-color: rgba(0,0,0,1);
+	height: 40px;
+	width: 100%;
+	font-variant: small-caps;
+	-webkit-transition: all .25s ease-in;
+	-moz-transition: all .25s ease-in;
+	-ms-transition: all .25s ease-in;
+	-o-transition: all .25s ease-in;
+	transition: all .25s ease-in;
+	opacity: 1;
+	border-radius: 0px 0px 0px 40px;
+	position: absolute;
+	top: 344px;
+}
+#loader-graphic {
+	height: 40px;
+	width: 100%;
+	-webkit-transition: all 1s ease-out 1s;
+	-moz-transition: all 1s ease-out 1s;
+	-ms-transition: all 1s ease-out 1s;
+	-o-transition: all 1s ease-out 1s;
+	transition: all 1s ease-out 1s;
+	position: absolute;
+	opacity: 1;
+	top: 370px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 0px 0px 0px 40px;
+	background-color: rgba(0,0,0,1);
+	z-index: 20;
 }
 
 /* ~~the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo~~ */
@@ -279,7 +322,9 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	border-bottom-color: #3F423B;
 	background-color: #000;
 	background-image: url(images/cmop-cont-disp00.gif);
-	background-position: right;
+	background-position: left;
+	min-height: 350px;
+	min-width: 780px;
 }
 
 /* ~~ This grouped selector gives the lists in the .content area space ~~ */
@@ -329,10 +374,12 @@ button#footer {
 	-o-transition: all .5s ease-in-out;
 	transition: all .5s ease-in-out;
 	color: rgba(255,255,255,1);
-	margin-bottom: 10px;
 	text-shadow: 1px 2px 2px rgba(0,0,0,1);
 	font-weight: bold;
 	font-variant: small-caps;
+	margin-left: 59px;
+	margin-top: 50px;
+	margin-bottom: 60px;
 }
 
 /* ~~ miscellaneous float/clear classes ~~ */
@@ -379,7 +426,7 @@ button#playpausebtn{
 	height: 24px;
 	background-color: transparent;
 	background-repeat: no-repeat;
-	background-image: url(images/cmop-playbtn.png);
+	background-image: url(images/cmop-pausebtn.png);
 	}
 
 button#mutebtn{
@@ -409,6 +456,7 @@ input#seekslider{
 	border-bottom-style: solid;
 	border-bottom-color: #000;
 	box-shadow: 0px 1px 2px 1px rgba(0,0,0,1);
+	display: none;
 			}
 input#volumeslider{
 	width: 80px;
@@ -489,7 +537,6 @@ div#AdvOptions{
 	float: left;
 	width: 320px;
 	height: 0px;
-	overflow: auto;
 	color: #FFF;
 	background-color: rgba(102,102,102,0.2);
 	background-image: none;
@@ -497,7 +544,7 @@ div#AdvOptions{
 	position: relative;
 	z-index: 1;
 	margin-left: 5px;
-	transition: all .5s ease-in-out 0s;
+	/* [disabled]transition: all .5s ease-in-out 0s; */
 	opacity: 0;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16px;
@@ -518,6 +565,8 @@ div#AdvOptions{
 	-ms-transition: all .5s ease-in-out 0s;
 	-o-transition: all .5s ease-in-out 0s;
 	border: thick solid rgba(51,51,51,1);
+	overflow-y: scroll;
+	overflow-x: hidden;
 			}
 			
 			select option{
@@ -609,8 +658,8 @@ width:;
 	height: 40px;
 	width: 40px;
 	background-image: none;
-	margin-right: 10px;
-	margin-top: 3px;
+	margin-top: 0px;
+	left: -15px;
 }
 	div#textbox{
 	width: 0px;
@@ -675,7 +724,7 @@ button#PricingHeader{
 	transition: all 1s ease-in-out;
 }
 #pricingPanel {
-	height: 340px;
+	height: 305px;
 	width: 600px;
 	position: absolute;
 	left: 7px;
@@ -687,13 +736,57 @@ button#PricingHeader{
 	-ms-transition: all 1s;
 	-o-transition: all 1s;
 	transition: all 1s;
+	box-shadow: 0px 0px 2px 2px rgba(102,102,102,1);
+}
+#contCont {
+}
+.moreInfo {
+	background-color: rgba(102,102,102,1);
+	height: 190px;
+	width: 377px;
+	position: absolute;
+	left: 0px;
+	top: 2px;
+	overflow: auto;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-variant: normal;
+	display: none;
+}
+#ovBtn {
+	height: auto;
+	width: 80px;
+	position: absolute;
+	top: -19px;
+	left: 50px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 5px 5px 0px 0px;
+	background-color: #999;
+	color: #333;
+	font-weight: bold;
+}
+#summBtn {
+	height: auto;
+	width: 100px;
+	position: absolute;
+	top: -19px;
+	left: 250px;
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 5px 5px 0px 0px;
+	background-color: #333;
+	color: #999;
+	font-weight: bold;
 }
 #pricingTabs {
 	height: 100px;
 	position: absolute;
 	font-family: "Carbon Phyber";
 	color: #000;
-	width: 180px;
+	width: 140px;
 	padding-right: -40px;
 	display: inline-block;
 	text-align: center;
@@ -701,6 +794,7 @@ button#PricingHeader{
 	font-weight: bold;
 	font-variant: small-caps;
 	font-style: normal;
+	left: 50px;
 }
 button#limitedTab {
 	width: inherit;
@@ -714,7 +808,7 @@ button#limitedTab {
 	vertical-align: middle;
 	background-color: rgba(255, 255,255, 0);
 	float: right;
-	left: 7px;
+	left: 3px;
 }
 button#limitedTab:active {
 	color: #FFF;
@@ -736,7 +830,7 @@ button#standardTab {
 	text-align: right;
 	vertical-align: middle;
 	color: #000;
-	float: left;
+	float: right;
 }
 button#standardTab:hover {
 	color: #FFF;
@@ -1163,11 +1257,11 @@ input[type='range']::-moz-range-track{
 input[type='range']::-webkit-slider-thumb{
 	-webkit-appearance:none !important;
 	background:rgba(25,25,25,0.5);
-	height:11px;
+	height:10px;
 	width:7px;
 	cursor:pointer;
 	border:2px solid rgba(0,204,255,1);
-	border-radius: 24px;
+	border-radius: 60px;
 	box-shadow: #0CF 1px 1px;
 }
 input[type='range']::-moz-range-thumb{
@@ -1433,22 +1527,22 @@ button#exclusiveTab:active {
 	font-family: "Planet Kosmos";
 	background-repeat: no-repeat;
 	position: absolute;
-	left: 65px;
+	left: 90px;
 	line-height: 40px;
 	text-shadow: -3px 2px 4px rgba(102,102,102,1);
-	top: 0px;
+	top: 10px;
 	background-color: rgba(55,55,55,.1);
 	z-index: 3;
 }
 #CMOP-logo {
-	height: 60px;
+	height: 100%;
 	width: 60px;
 	position: absolute;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center center;
-	top: -15px;
-	left: -30px;
+	top: -62.5px;
+	left: -100px;
 	z-index: 4;
 }
 #CMOP-description {
@@ -1460,22 +1554,49 @@ button#exclusiveTab:active {
 	color: rgba(255,255,255,1);
 	right: 250px;
 }
+#pre-loader {
+	background-color: rgba(51,51,51,.1);
+	background-attachment: fixed;
+	background-image: url(../images/CMO_P-grafittilogobkgndd.jpg);
+	background-repeat: no-repeat;
+	background-position: center center;
+	border-radius: 0px 40px 0px 40px;
+	box-shadow: inset 0px 0px 2px 3px rgba(0,0,0,1);
+	position: absolute;
+	-webkit-transition: all 1s ease-in-out 0s;
+	-moz-transition: all 1s ease-in-out 0s;
+	-ms-transition: all 1s ease-in-out 0s;
+	-o-transition: all 1s ease-in-out 0s;
+	transition: all 1s ease-in-out 0s;
+	margin-left: 350px;
+	z-index: 20;
+	top: 120px;
+	opacity: 1;
+	display: block;
+}
+#lOv {
+	display: block;
+}
+#sOv {
+	display: block;
+}
+#pOv {
+	display: block;
+}
+#eOv {
+	display: block;
+}
 </style>
 
 <body>
 
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1";
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'facebook-jssdk'));</script>
+<div id ="pre-loader"><img src="images/cmop-letterhead2.png" height ="400px" width ="780px">
+<div id ="loader-graphic"><img src="images/cmop-loader-circle.gif" height="30px" width="30px"></div>
+<button id ="Enter-page">enter cmop-beatz</button>
+</div>
 
-
-<div class="container">
-  <div class="header"><div id="CMOP-logo"><img width ="100" height="60px" src="images/cmop-letterhead.png"></div><div id="CMOP-title" title="The Logo for &quot;cmop-beatz&quot;"><img width ="341" height="40px" src="images/cmop-web-logo.png">
+<div id ="cntr" class="container">
+  <div class="header"><div id="CMOP-logo"><img width ="300" height="150px" src="images/cmop-letterhead2.png"></div><div id="CMOP-title" title="The Logo for &quot;cmop-beatz&quot;"><img width ="300" height="40px" src="images/cmop-web-logo.png">
  
 </div>
   <div id="RSS-container" >
@@ -1491,9 +1612,10 @@ button#exclusiveTab:active {
   <tr>
     <td><button title="how to contact CMOp..." class="options" id="contact">contact</button></td>
     <td><div id="contact-options">
-    General Questions: cmo_p@outlook.com
-    Purchase/Sales-related: sales.cashmeout@gmail.com
-   Collaborations & Features: exclusives.cashmeout@gmail.com
+   Purchase/Sales-related:
+   sales.cashmeout@gmail.com
+   Exclusives & Collaborations:
+   exclusives.cashmeout@gmail.com
  </div>
 </td>
   </tr>
@@ -1503,10 +1625,10 @@ button#exclusiveTab:active {
 <table width="280" border="0">
   <tr>
     <td class="linkbox"><a class="twitter popup" target="_blank" href="http://twitter.com/share?text=New%20Music%20uploaded%20weekly!%20"><img src="images/Twitter_Android.png" style="height:30px; width:30px;"></a></td>
-    <td class="linkbox"><a href="http://www.linkedin.com/shareArticle?mini=true&url=http://your page url&title=Your Page Title&summary=Your page content description&source=My Website Name" target="_blank"> <img src="images/linkedin-icon-21.png" style="height:30px; width:30px;"/> </a></td>
-    <td class="linkbox"><a target="_blank" href="http://www.facebook.com/sharer.php?u=http://www.google.com"><img src="images/facebook-icon-preview-1.png" style="height:30px; width:30px;">
+    <td class="linkbox"><a href="http://www.linkedin.com/shareArticle?mini=true&url=https://cmopbeatz.github.io/cmop-beatz/CMOP_SC2.html&title=cmop-beatz&summary=Your page content description&source=My Website Name" target="_blank"> <img src="images/linkedin-icon-21.png" style="height:30px; width:30px;"/> </a></td>
+    <td class="linkbox"><a target="_blank" href="http://www.facebook.com/sharer.php?u=https://cmopbeatz.github.io/cmop-beatz/CMOP_SC2.html&t=We got what you need!"><img src="images/facebook-icon-preview-1.png" style="height:30px; width:30px;">
 </a></td>
-    <td class="linkbox"><a href="http://plus.google.com/share?url=YOUR_URL"><img src="images/google-plus-icon.png" style="height:30px; width:30px;"></a></td>
+    <td class="linkbox"><a href="http://plus.google.com/share?url=https://cmopbeatz.github.io/cmop-beatz/CMOP_SC2.html"><img src="images/google-plus-icon.png" style="height:30px; width:30px;"></a></td>
     <td class="linkbox"><a target="_blank" href="mailto:anybody@email.com&body=Check out this site: http://www.website.com."
    title="Share by Email"><img src="images/at-symbol.png" style="height:30px; width:30px;"></a></td>
   </tr>
@@ -1528,7 +1650,8 @@ button#exclusiveTab:active {
       <div id="addToCart" title="View complete tracklist"><img src="images/CMO_P-buyLinks-S-Cart.png" width="40" height="40" alt="add to cart"></div>
          
           <div id="soundCloud" title="Listen to music featured on SoundCloud" ><img src="images/CMO_P-buyLinks-S-Cloud.png" width="40" height="40" alt="to soundcloud.com"></div>
-      <div id="eMail" title="Questions/Comments"> <img src="images/CMO_P-buyLinks-E-mail1.png" width="40" height="40" alt="to email"></div>
+          
+      <div id="eMail" title="Questions/Comments"> <img src="images/CMO_P-buyLinks-E-mail1.png" width="50" height="50" alt="to email"></div>
     </div>
        <button title="Display song info" id="tb_Icon">?</button>
        <div id="textbox"> 
@@ -1539,13 +1662,15 @@ button#exclusiveTab:active {
    
 
     
-    <div id= "shareSong-container">
+    <!--<div id= "shareSong-container">
    
       <div id="ssHeader">song options</div>
       <div id="ssBody">
-      <div id= "fbSongshare"> <div class="fb-share-button" 
-    data-href="http://www.your-domain.com/your-page.html" 
-    data-layout="button_count">
+      <div id= "fbSongshare"><div class="fb-like" 
+    data-href="https://cmopbeatz.github.io/cmop-beatz/CMOP_SC2.html"  
+    data-layout="standard" 
+    data-action="like" 
+    data-show-faces="false">
   </div></div>
       
       
@@ -1554,35 +1679,35 @@ button#exclusiveTab:active {
         <button id= "inSongshare"><img src="images/linkedin-icon-21.png"height="40px" width="40px"></button>
       </div>
       
-      </div>
+      </div>-->
    
     <button title="Expand/Collapse tracklist" name="exp_tracklist" value="Click to expand." id="exp_tracklist">EXPAND</button>
     
     <select name="trackbox" size="8" class="selection" id="trackbox">
         
       <option value="00" selected="selected">.:Select_a_Track:.</option>
-          <option  value="After Me(no-hook).mp3">After Me(no-hook)</option>
-          <option  value="All In(no-hook).mp3">All In(no-hook)</option>
-          <option  value="Baddest Bitch(no-hook).mp3">Baddest Bitch(no-hook)</option>
-          <option  value="Beach Cruiser(no-hook).mp3">Beach Cruiser(no-hook)</option>
-          <option  value="Bi-Coastal(no-hook).mp3">Bi-Coastal(no-hook)</option>
+          <option  value="After Me(no-hook).mp3">After Me(no-hook) prod. by: d1nero</option>
+          <option  value="All In(no-hook).mp3">All In(no-hook) prod. by: d1nero</option>
+          <option  value="Baddest Bitch(no-hook).mp3">Baddest Bitch(no-hook) prod. by: d1nero</option>
+          <option  value="Beach Cruiser(no-hook).mp3">Beach Cruiser(no-hook) prod. by: d1nero</option>
+          <option  value="Bi-Coastal(no-hook).mp3">Bi-Coastal(no-hook) prod. by: d1nero</option>
 
-          <option  value="Bottles(no-hook).mp3">Bottles(no-hook)</option>
-          <option  value="Destined(no-hook).mp3">Destined(no-hook)</option>
-          <option value="F-n Do It(no-hook).mp3">F-n Do It(no-hook)</option>
-          <option value="Frenchie(no-hook).mp3">Frenchie(no-hook)</option>
-          <option  value="Functional Fyre(no-hook).mp3">Functional Fyre(no-hook)</option>
-          <option value="Gyros(no-hook).mp3">Gyros(no-hook)</option>
+          <option  value="Bottles(no-hook).mp3">Bottles(no-hook) prod. by: d1nero</option>
+          <option  value="Destined(no-hook).mp3">Destined(no-hook) prod. by: d1nero</option>
+          <option value="F-n Do It(no-hook).mp3">F-n Do It(no-hook) prod. by: d1nero</option>
+          <option value="Frenchie(no-hook).mp3">Frenchie(no-hook) prod. by: d1nero</option>
+          <option  value="Functional Fyre(no-hook).mp3">Functional Fyre(no-hook) prod. by: d1nero</option>
+          <option value="Gyros(no-hook).mp3">Gyros(no-hook) prod. by: d1nero</option>
           
-          <option  value="Hands-Up.mp3">Hands-Up(no-hook)</option>
-          <option value="HH-e(no-hook).mp3">HH-e(no-hook)</option>
-          <option  value="Hi-Jinx(no-hook).mp3">Hi-Jinx(no-hook)</option>
-          <option  value="In My Mind(no-hook).mp3">In My Mind(no-hook)</option>
-          <option  value="Justify(no-hook).mp3">Justify(no-hook)</option>
-          <option  value="Like Neon(no-hook).mp3">Like Neon(no-hook)</option>
-          <option  value="Make It Count(no-hook).mp3">Make It Count(no-hook)</option>
-          <option  value="Numbers(no-hook).mp3">Numbers(no-hook)</option>
-          <option  value="Position2(no-hook).mp3">Position2(no-hook)</option>
+          <option  value="Hands-Up.mp3">Hands-Up(no-hook) prod. by: d1nero</option>
+          <option value="HH-e(no-hook).mp3">HH-e(no-hook) prod. by: d1nero</option>
+          <option  value="Hi-Jinx(no-hook).mp3">Hi-Jinx(no-hook) prod. by: d1nero</option>
+          <option  value="In My Mind(no-hook).mp3">In My Mind(no-hook) prod. by: d1nero</option>
+          <option  value="Justify(no-hook).mp3">Justify(no-hook) prod. by: d1nero</option>
+          <option  value="Like Neon(no-hook).mp3">Like Neon(no-hook) prod. by: d1nero</option>
+          <option  value="Make It Count(no-hook).mp3">Make It Count(no-hook) prod. by: d1nero</option>
+          <option  value="Numbers(no-hook).mp3">Numbers(no-hook) prod. by: d1nero</option>
+          <option  value="Position2(no-hook).mp3">Position2(no-hook) prod. by: d1nero</option>
 
     </select>
     <div id="audio_player">
@@ -1614,10 +1739,14 @@ By accessing or using the Service you agree to be bound by these Terms. If you d
 any part of the terms then you may not access the Service.</font>
 <br>
 <br>
+<strong>Terms of Licensing</strong>
+<br>
+<font size="2">CASHMEOUT(CMOp) offers licenses of various types for different projects, at affordable, reasonable prices. Please consider that the services offered are not free, but can be nogotiable if necessary and beneficial. Also, if payment is not received for selected track, or if the checkout process is not completed, the transaction will be considered void. If later discovered that the track or "beat" in question was indeed utilized without adeqcquate consent from CMOp, legal action may be taken. Please confirm that the transaction has been completed prior to using purchased material.</font>
+<br>
+<br>
 <strong>Termination</strong>
 <br>
-<font size="2">We may terminate or suspend access to our Service immediately, without prior notice or liability,
-for any reason whatsoever, including without limitation if you breach the Terms.
+<font size="2">We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.
 All provisions of the Terms which by their nature should survive termination shall survive
 termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity
 and limitations of liability.</font>
@@ -1625,9 +1754,7 @@ and limitations of liability.</font>
 <br>
 <strong>Links To Other Web Sites</strong>
 <br>
-<font size="2">Our Service may contain links to thirdparty
-web sites or services that are not owned or controlled
-by <strong>CASHMEOUT Productions</strong>("company").
+<font size="2">Our Service may contain links to thirdparty web sites or services that are not owned or controlled by <strong>CASHMEOUT Productions</strong>("company").
 <strong>CASHMEOUT Productions</strong> has no control over, and assumes no responsibility for, the
 content, privacy policies, or practices of any third party web sites or services. You further
 acknowledge and agree that <strong>CASHMEOUT Productions</strong> shall not be responsible or liable,
@@ -1644,15 +1771,12 @@ web sites or services that you visit.</font>
 Our failure to enforce any right or provision of these Terms will not be considered a waiver of
 those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the
 remaining provisions of these Terms will remain in effect. These Terms constitute the entire
-agreement between us ("company", "end-user") regarding our service, and supersede and replace any prior agreements
-we might have between us regarding the Service.</font>
+agreement between us ("company", "end-user") regarding our service, and supersede and replace any prior agreements we might have between us regarding the Service.</font>
 <br>
 <br>
 <strong>Changes</strong>
 <br>
-<font size="2">We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a
-revision is material we will try to provide at least 30  business days notice prior to any new
-terms taking effect. What constitutes a material change will be determined at our sole discretion.
+<font size="2">We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30  business days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
 
 By continuing to access or use the company's service after those revisions become effective, you agree to
 be bound by the revised terms. If you do not agree to the new terms, please stop using the
@@ -1666,10 +1790,10 @@ Service.</font>
 </div>
 <button id="PricingHeader" >$</button>
   <div id ="pricingPanel">
-  <table style="margin-left:20px;" width="300" border="0">
+  <table style="margin-left:40px;" width="300" border="0">
   <tr>
-    <td style ="float:left;text-align:center;color:white;background:rgba(51,204,255,.2);border-radius:5px;box-shadow: #000;text-shadow:rgba(0,0,0,1);"><strong>License by type</strong></td>
-    <td style ="float:right;text-align:left;margin-right:22px;color:white;background:rgba(51,204,255,.2);border-radius:5px;box-shadow: #000;text-shadow:rgba(0,0,0,1);"><strong>Description</strong></td>
+    <td style ="box-shadow:inset rgba(51,51,51,1); float:left;text-align:center;color:white;background:rgba(51,204,255,.2);border-radius:5px;box-shadow: #000;text-shadow:rgba(0,0,0,1);"><strong>Lease by type</strong></td>
+    <td style ="box-shadow:inset rgba(51,51,51,1);float:right;text-align:left;margin-right:22px;color:white;background:rgba(51,204,255,.2);border-radius:5px;box-shadow: #000;text-shadow:rgba(0,0,0,1);"><strong>Description</strong></td>
   </tr>
 </table>
   	<div id ="pricingTabs">
@@ -1689,57 +1813,70 @@ Service.</font>
  
     
   <div id ="contentPanel">
+	<button id ="ovBtn">Overview</button>
+    <button id ="summBtn">Summary</button>
 
-
-
-  	<div id ="limitedContent"><table width="379"  align="center" cellspacing="1">
+<div id ="contCont">
+  	<div id ="limitedContent">
+    <div class ="moreInfo" id ="limitedInfo">Limited LEASE
+    <br>
+You will receive a link for an encoded MP3 file of the tagged song.  Leasing rights allow you to use the beat (or song) for ONE recording. This recording can then be distributed  online for promotional purposes only. You may sell the recording, either by itself or on a mixtape or album up to 1000 units. You may also use the beat for non-profit promotional use or demos. You have full rights to record, alter, mix the beat/song in any shape, way, or form (except reselling the beat). In the event that someone buys exclusive rights to the beat you have leased, your rights remain; the beat is still yours to use only as stated in this License for 365 days (1 calendar year) from the day of lease.  The seller receives a royalty from the sale of records or downloads. You must also give full credit to the seller (indicated with the phrase "prod. by:" in the track title) on all recordings. Upon purchasing leasing rights, the seller still owns the beat(s) and the seller is able to resell the beat(s) to any other party until exclusive rights have been purchased.</div>
+    <table id ="lOv" width="379"  align="center" cellspacing="1">
   <tr>
-    <td class = "pricingCell">LIMITED License</td>
+    <td class = "pricingCell">LIMITED Lease</td>
   </tr>
   <tr>
-    <td class = "pricingCell">29.95</td>
+    <td class = "pricingCell">19.95</td>
   </tr>
   <tr>
- <td class = "pricingCell">Untagged .mp3</td>
+ <td class = "pricingCell">Tagged .mp3(Mid Quality)</td>
   </tr>
   <tr>
-     <td class = "pricingCell">Distribute up to 2500 units</td>
+     <td class = "pricingCell">1000 units</td>
   </tr>
   <tr>
-    <td class = "pricingCell">Radio use prohibhited</td>
+    <td class = "pricingCell">Commercial/Resale: No</td>
   </tr>
   <tr>
     <td class = "pricingCell">Non-Exclusive</td>
   </tr>
   <tr>
-    <td class = "pricingCell">Must accredit CMO-p beatz</td>
+    <td class = "pricingCell">Must give producer WRITTEN credits</td>
   </tr>
 </table>
 </div>
-    <div id ="standardContent"><table width="377"  align="center" cellspacing="1">
+    <div id ="standardContent">
+        <div class ="moreInfo" id ="standardInfo">Standard LEASE
+        <br>
+You will receive a link for the Wav file of the untagged song.  Standard Leasing rights allow you to use the beat (or song) for ONE recording. You may sell the recording, either by itself or on a mixtape or album up to 3000 copies. After that you MUST  renegotiate new terms of agreement with seller. You may also use the beat for non-profit promotional use or demos. You have full rights to record, alter, mix the beat/song in any shape, way, or form (except reselling the beat). In the event that someone buys exclusive rights to the beat you have leased, your rights shall stand and the beat is still yours to use only as stated in this License. The seller will receive a royalty from the sale of records or downloads.  You must give full credit to the producer on all recordings(indicated with "prod. by:" while observing the song title). Upon purchasing leasing rights, the seller still owns the beat(s) and the seller is able to resell the beat(s) to any other party until exclusive rights have been purchased.</div>
+    <table id ="sOv" width="377"  align="center" cellspacing="1">
   <tr>
     <td class = "pricingCell">STANDARD License</td>
   </tr>
   <tr>
-    <td class = "pricingCell">65.99</td>
+    <td class = "pricingCell">45.99</td>
   </tr>
   <tr>
-    <td class = "pricingCell">.WAV + Trackouts</td>
+    <td class = "pricingCell">Untagged .WAV(High Quality)</td>
   </tr>
   <tr>
-    <td class = "pricingCell">Distribute up to 10000 units</td>
+    <td class = "pricingCell">Up to 3000 units</td>
   </tr>
   <tr>
-    <td class = "pricingCell">Radio use prohibited</td>
+    <td class = "pricingCell">Commercial/Resale: No</td>
   </tr>
   <tr>
     <td class = "pricingCell">Non-Exclusive</td>
   </tr>
   <tr>
-    <td class = "pricingCell">Must accredit CMO-p</td>
+    <td class = "pricingCell">Must give producer WRITTEN credits</td>
   </tr>
 </table></div>
-    <div id ="proContent"><table width="377"  align="center" cellspacing="1">
+    <div id ="proContent">
+        <div class ="moreInfo" id ="proInfo">Pro LEASE
+        <br>
+You will receive a link for the Wav file of the untagged beat. Pro Leasing rights allow you to use the beat (or song) for ONE recording. You may sell the recording, either by itself or on a mixtape or album up to 5000 copies. After that you MUST  renegotiate new terms of agreement with seller. You may also use the beat for non-profit promotional use or demos. You have full rights to record, alter, mix the beat/song in any shape, way, or form (except reselling the beat). In the event that someone buys exclusive rights to the beat you have leased, your rights shall stand; the beat is still yours to use only as stated in this License. The seller will receive a royalty from the sale of records or downloads.  You must give full credit to the producer(indicated with the phrase "prod. by:" in the song's title) on all recordings. Upon purchasing leasing rights, the seller still owns the beat(s) and the seller is able to resell the beat(s) to any other party until exclusive rights have been purchased.</div>
+    <table id ="pOv" width="377"  align="center" cellspacing="1">
   <tr>
     <td class = "pricingCell">PRO License</td>
   </tr>
@@ -1747,22 +1884,26 @@ Service.</font>
     <td class = "pricingCell">99.99</td>
   </tr>
   <tr>
-    <td class = "pricingCell">.WAV + Trackouts</td>
+    <td class = "pricingCell">Untagged .WAV</td>
   </tr>
   <tr>
-    <td class = "pricingCell">UNLIMITED distribution</td>
+    <td class = "pricingCell">Up to 5000 Units</td>
   </tr>
   <tr>
-    <td class = "pricingCell">Radio use Allowed</td>
+    <td class = "pricingCell">Commercial/Resale: No</td>
   </tr>
   <tr>
     <td class = "pricingCell">Non-Exclusive</td>
   </tr>
   <tr>
-    <td class = "pricingCell">Must accredit CMO-p</td>
+    <td class = "pricingCell">Must give producucer WRITTEN credits</td>
   </tr>
 </table></div>
-    <div id ="exclusiveContent"><table width="377"  align="center" cellspacing="1">
+    <div id ="exclusiveContent">
+        <div class ="moreInfo" id ="exclusiveInfo">Exclusive RIGHTS
+        <br>
+You will receive a link for the untagged .Wav file of the beat (or song) as well as the Trackouts (Stems). The song file will also be delivered digitally to your email address. Exclusive rights grant you unlimited commercial recordings and broadcasts. You have full rights to record, alter, mix the beat/song in any shape, way, or form (except reselling the beat). The original seller may no longer lease or sell the beat/song, but may still display it on his/her own promotional page (no downloads).The seller will receive a royalty from the sale of records or downloads as well as mechanical royalties from use of the composition. You must give full credit to the producer(indicated with "prod. by:" while observing the song title) on all recordings.</div>
+    <table id ="eOv" width="377"  align="center" cellspacing="1">
   <tr>
     <td class = "pricingCell">EXCLUSIVE Rights</td>
   </tr>
@@ -1770,23 +1911,24 @@ Service.</font>
     <td class = "pricingCell">**Contact Us</td>
   </tr>
   <tr>
-    <td class = "pricingCell">.WAV + Trackouts</td>
+    <td class = "pricingCell">Untagged .WAV + Trackouts</td>
   </tr>
   <tr>
-    <td class = "pricingCell">UNLIMITED distribution</td>
+    <td class = "pricingCell">Unlimited distribution</td>
   </tr>
   <tr>
-    <td class = "pricingCell">Exclusive Rights</td>
+    <td class = "pricingCell">Exclusive Rights<br>(Must give producer WRITTEN credits)</td>
   </tr>
    <tr>
-    <td><p style="font-size: small; background:#666; border-radius:10px;">How to contact CMO-p:
-    <br>1. Click the optiopnt button(upper-right), select contact then copy and paste the desired email address into your recipient bar.
-    <br>2. Click the 'Action Panel' tab then select the 'contact icon. Fill out the quick form then click 'Submit.'</p></td>
+    <td><p style="font-size: small; background:#666; border-radius:2px;">**Contact CMO-p:
+    <br>Click the <img src="images/options-toggle-img.png" height="15" width="15"> button(upper-right), select contact; copy and paste the desired email address into the recipient field of your composed email.
+    <br>-OR-
+    <br>Click the <img src="images/cmop-openactionbtn.png" height="15" width="20"> tab then select the <img src="images/CMO_P-buyLinks-E-mail1.png" height="15" width="20"> icon. Fill out the quick form then click 'Submit.'</p></td>
   </tr>
 </table></div>
   </div>
 </div>
-
+</div>
   <!-- <div id="mediaPlayer"> 
       <h2>Media Player</h2>
  <!-- Controls/Interface for mpControlScheme01 (uses mpcontrols.js)--><!--   <audio id="myTrack" >
@@ -2285,8 +2427,8 @@ method="post">
  <td class="purchasing"><input type="hidden" name="on0" 
 
 value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95 USD</option>
-	<option value="Standard">Standard $65.99 USD</option>
+	<option value="Limited">Limited $19.95 USD</option>
+	<option value="Standard">Standard $45.99 USD</option>
 	<option value="Pro">Pro $99.99 USD</option>
 </select> </td>
 

@@ -1,11 +1,60 @@
 // JavaScript Document//
+
 window.onload = initAudioPlayer;
+
+
+function initPreLoader(){
+
+
+		document.getElementById('cntr').style.display = "none";
+
+		document.getElementById('pre-loader').style.display ="block";
+		document.getElementById('pre-loader').style.top = "120px";
+
+		document.getElementById('Enter-page').style.opacity = "0";
+		document.getElementyId('loader-graphic').style.opacity="1";
+}
+
+setTimeout(function(){
+	 $('#Enter-page').hide('fast');},-1000);
+
+
+setTimeout(function() {
+    $('#loader-graphic').hide('slow');
+
+}, 3000);
+	
+	setTimeout(function() {
+    $('#Enter-page').show('slow');
+}, 3500);
+	
+	function showEnterBtn(){
+		document.getElementyId('loader-graphic').style.opacity="0";
+		document.getElementyId('loader-graphic').style.display="none";
+		
+				document.getElementById('Enter-page').style.opacity = "1";
+						document.getElementById('Enter-page').style.display = "block";
+	}
+	
+	document.getElementById('Enter-page').onclick = function(){
+		
+				document.getElementById('pre-loader').style.opacity ="0";
+				document.getElementById('pre-loader').style.display ="none";
+
+		document.getElementById('Enter-page').style.opacity = "0";
+		
+		document.getElementById('cntr').style.display = "block";
+
+
+		}	
+
+
 
 function initAudioPlayer() {
 
     var audio, playbtn, mutebtn, seekslider, volumeslider, seekto, seeking = false, songShare,
         curtimetext, durtimetext, playlist_status, dir, playlist, playlist_index, tBox, track_List, ext, emlBtn, payBtn, pCart, tWindow, tLink, abtFooter, abtText, clicked = false,
-        pHead, tPanels, openAP, APlinks, closeAP, ActP, icon_TB, clockdisp, toggleClock, caldisp, contactbtn, sharebtn, contactCtn, shareCtn, optionbtn, lTAB, sTAB, pTAB, eTAB, ordSelect,
+        pHead, tPanels, openAP, APlinks, closeAP, ActP, icon_TB, clockdisp, toggleClock, caldisp, contactbtn, sharebtn, contactCtn, shareCtn, optionbtn, lTAB, sTAB, pTAB, eTAB, ordSelect,ovBtn,sumBtn,lSum,sSum,pSum,eSum,lTable,sTable,pTable,eTable,pLoader,wContainer,
         playlist = [];
 
 
@@ -49,7 +98,8 @@ function initAudioPlayer() {
 
 
     // Set object references
-    clockdisp = document.getElementById('clock');
+ 
+	   clockdisp = document.getElementById('clock');
     toggleClock = document.getElementById('clock-toggle');
     caldisp = document.getElementById('calendar');
 
@@ -112,6 +162,17 @@ function initAudioPlayer() {
     option3 = document.createElement('option');
 	
 	songshare = document.getElementById('shareSong-container');
+	
+	ovBtn = document.getElementById('ovBtn');
+	sumBtn = document.getElementById('summBtn');
+	lSum = document.getElementById('limitedInfo');
+	sSum = document.getElementById('standardInfo');
+	pSum = document.getElementById('proInfo');
+	eSum = document.getElementById('exclusiveInfo');
+	lTable  = document.getElementById('lOv');
+	sTable = document.getElementById('sOv');
+	pTable = document.getElementById('pOv');
+	eTable = document.getElementById('eOv');
 
     //Audio Object//
     audio = new Audio();
@@ -152,9 +213,13 @@ function initAudioPlayer() {
     track_List.addEventListener("change", switchStatus);
 
     //Functions//
+///preloader ctrl////
+
+
+
+
 
   //options panel//
-
     optionbtn.onclick = function() {
         if (optionCtn.style.display === "") {
 
@@ -269,6 +334,48 @@ function initAudioPlayer() {
             }
 
         }
+		
+		//////toggle Overview/Summary//////
+		ovBtn.onclick = function(){
+		ovBtn.style.backgroundColor="#999";
+		sumBtn.style.backgroundColor="#333";
+		ovBtn.style.color ="#333";
+		sumBtn.style.color ="#999";
+			
+		lTable.style.display = "block";
+		lSum.style.display = "none";
+
+		sTable.style.display = "block";
+		sSum.style.display = "none";
+
+		pTable.style.display = "block";
+		pSum.style.display = "none";
+
+		eTable.style.display = "block";
+		eSum.style.display = "none";
+				
+		}
+		summBtn.onclick = function(){
+		ovBtn.style.backgroundColor="#333";
+		sumBtn.style.backgroundColor="#999"	
+		ovBtn.style.color ="#999";
+		sumBtn.style.color ="#333";	
+			
+		lTable.style.display = "none";
+		lSum.style.display = "block";
+	
+		sTable.style.display = "none";
+		sSum.style.display = "block";
+
+		pTable.style.display = "none";
+		pSum.style.display = "block";
+
+		eTable.style.display = "none";
+		eSum.style.display = "block";
+				
+
+		}
+		
         ////Display Pricing////
     lTAB.onclick = function() {
         lCont.style.display = "block";
@@ -305,7 +412,7 @@ function initAudioPlayer() {
             pHead.innerHTML = "X";
             pHead.style.textIndent = "0.25px";
             tPanels.style.display = "block";
-            tPanels.style.width = "720px";
+            tPanels.style.width = "600px";
             tWindow.style.display = "none";
         } else {
             pHead.innerHTML = "$";
@@ -339,9 +446,7 @@ function initAudioPlayer() {
                 expandTB.style.borderRadius = "8px  8px 1px 1px";
                 track_List.style.opacity = "1";
                 track_List.style.height = "270px";
-				songshare.style.opacity = "1";
-				songshare.style.width = "45px";
-                expandTB.innerHTML = "COLLAPSE";
+				expandTB.innerHTML = "COLLAPSE";
 
 
 
@@ -349,9 +454,7 @@ function initAudioPlayer() {
             } else {
                 track_List.style.opacity = "";
                 track_List.style.height = "0px";
-				songshare.style.opacity = "";
-				songshare.style.width = "0px";
-                expandTB.style.borderRadius = "8px";
+				expandTB.style.borderRadius = "8px";
                 expandTB.innerHTML = "EXPAND";
 
             }
@@ -586,3 +689,5 @@ function initAudioPlayer() {
 
 
 }
+
+
