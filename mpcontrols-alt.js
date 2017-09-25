@@ -1,7 +1,12 @@
 // JavaScript Document//
 
-window.onload = initAudioPlayer;
+window.onload = initAudioPlayer, initPreLoader;
 
+document.addEventListener('DOMContentLoaded', function() {
+   // your code here
+   
+introLoader();
+}, false);
 
 function initPreLoader(){
 
@@ -15,18 +20,18 @@ function initPreLoader(){
 		document.getElementyId('loader-graphic').style.opacity="1";
 }
 
-setTimeout(function(){
-	 $('#Enter-page').hide('fast');},-1000);
+function introLoader(){
+var hideEnter = setTimeout(function(){document.getElementById('Enter-page').style.display = "none"; }, 3000);
 
 
-setTimeout(function() {
-    $('#loader-graphic').hide('slow');
+var hideSplash = setTimeout(function(){document.getElementById('loader-graphic').style.display = "none"; }, 3000);
 
-}, 3000);
 	
-	setTimeout(function() {
-    $('#Enter-page').show('slow');
+var showEnter =	setTimeout(function() {
+    document.getElementById('Enter-page').style.display = "block";
 }, 3500);
+	
+}
 	
 	function showEnterBtn(){
 		document.getElementyId('loader-graphic').style.opacity="0";
@@ -51,6 +56,8 @@ setTimeout(function() {
 
 
 function initAudioPlayer() {
+	
+	
 
     var audio, playbtn, mutebtn, seekslider, volumeslider, seekto, seeking = false, songShare,
         curtimetext, durtimetext, playlist_status, dir, playlist, playlist_index, tBox, track_List, ext, emlBtn, payBtn, pCart, tWindow, tLink, abtFooter, abtText, clicked = false,
@@ -68,26 +75,27 @@ function initAudioPlayer() {
     ////////////////////////////////
     //USE "playlist [element number]= [var for song data]"//
     ///////////////////////////////
-    playlist[0] = "After Me(no-hook)";
-    playlist[1] = "All In(no-hook)";
-    playlist[2] = "Baddest Bitch(no-hook)";
-    playlist[3] = "Beach Cruiser(no-hook)";
-    playlist[4] = "Bi-Coastal(no-hook)";
-    playlist[5] = "Biz_as_usual(no-hook)";
-    playlist[6] = "Bottles(no-hook)";
-    playlist[7] = "F-n Do It(no-hook)";
-    playlist[8] = "Frenchie(no-hook)";
-    playlist[9] = "Functional Fyre(no-hook)";
-    playlist[10] = "Gyros(no-hook)";
-    playlist[11] = "Hands-Up(no-hook)";
-    playlist[12] = "HH-e(no-hook)";
-    playlist[13] = "Hi-Jinx(no-hook)";
-    playlist[14] = "In My Mind(no-hook)";
-    playlist[15] = "Justify(no-hook)";
-    playlist[16] = "Like Neon(no-hook)";
-    playlist[17] = "Make It Count(no-hook)";
-    playlist[18] = "Numbers(no-hook)";
-    playlist[19] = "Position2(no-hook)";
+    playlist[0] = "emptyfile";
+    playlist[1] = "After Me(no-hook)";
+    playlist[2] = "All In(no-hook)";
+    playlist[3] = "Baddest Bitch(no-hook)";
+    playlist[4] = "Beach Cruiser(no-hook)";
+    playlist[5] = "Bi-Coastal(no-hook)";
+    playlist[6] = "Biz_as_usual(no-hook)";
+    playlist[7] = "Bottles(no-hook)";
+    playlist[8] = "F-n Do It(no-hook)";
+    playlist[9] = "Frenchie(no-hook)";
+    playlist[10] = "Functional Fyre(no-hook)";
+    playlist[11] = "Gyros(no-hook)";
+    playlist[12] = "Hands-Up(no-hook)";
+    playlist[13] = "HH-e(no-hook)";
+    playlist[14] = "Hi-Jinx(no-hook)";
+    playlist[15] = "In My Mind(no-hook)";
+    playlist[16] = "Justify(no-hook)";
+    playlist[17] = "Like Neon(no-hook)";
+    playlist[18] = "Make It Count(no-hook)";
+    playlist[19] = "Numbers(no-hook)";
+	playlist[20] = "Position2(no-hook)";
    
 
 
@@ -177,9 +185,9 @@ function initAudioPlayer() {
     //Audio Object//
     audio = new Audio();
     audio.preload = false;
-    audio.src = dir + playlist['#'] + ext;
+    audio.src = dir + playlist["0"] + ext;
     audio.loop = false;
-    audio.play();
+   // audio.play();
 
 
     //order dropdown add options//
@@ -539,7 +547,10 @@ function initAudioPlayer() {
     function pickTrack(event) {
         audio.src = dir + event.target.value;
         audio.play();
-    }
+	
+
+		}
+
 
 
     ////Switch Status////
@@ -548,12 +559,10 @@ function initAudioPlayer() {
         var selected_Track = track_List.options[track_List.selectedIndex].value;
 
 
-        if (selected_Track === "00") {
+        if (selected_Track === "emptyfile.mp3") {
             playlist_status.innerHTML = "Select a Track";
 
-            audio.preload = false;
-
-        } else if (selected_Track === "After Me(no-hook).mp3") {
+           	}else if (selected_Track === "After Me(no-hook).mp3") {
             playlist_status.innerHTML = "AfterMe";
 
         } else if (selected_Track === "All In(no-hook).mp3") {

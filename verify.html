@@ -1,64 +1,815 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
+<script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script type="text/javascript" src="html2canvas.min.js"></script>
+<script type="text/javascript" src="jsPDF.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.debug.js"></script>
+
+
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Untitled Document</title>
+<title>cmop-beatz email confirmation</title>
+<style type="text/css">
+
+canvas{max-width:100%;
+		max-height:100%;}
+
+html{
+	scrollbar-arrow-color: #CCC;
+	scrollbar-face-color: #666;
+	scrollbar-base-color: #666;
+	scrollbar-highlight-color: #0CF;
+	scrollbar-dark-shadow-color: #333;
+	scrollbar-shadow-color: #666;
+	
+}
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius:0px 0px 0px 0px;
+  
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CCC;
+}
+::-webkit-scrollbar-thumb:active {
+  background: #CCC;
+}
+::-webkit-scrollbar-track {
+  background:rgba(153,153,153,.25) ;
+  border-radius: 0px 0px 0px 0px;
+  
+  
+}
+::-webkit-scrollbar-track:hover {
+  background: #0CF ;
+  background:rgba(0,204,255,.25);
+}
+::-webkit-scrollbar-track:active {
+  background:rgba(0,204,255,.25);
+}
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+body {
+	background-attachment: fixed;
+	background-image: url(images/cmop-3dlogo0001.png);
+	background-repeat: repeat;
+	background-position: center top;
+	background-color: rgba(51,51,51,.3);
+	overflow-x: hidden;
+	height: auto;
+}
+
+#mail-dialog {
+	height: 300px;
+	width: 510px;
+	border-radius: 0px 0px 10px 10px;
+	box-shadow: inset 0px 0px 5px 5px rgba(0,0,0,1);
+	font-family: Arial, Helvetica, sans-serif;
+	-webkit-transition: all .25s ease-in-out 0s;
+	-moz-transition: all .25s ease-in-out 0s;
+	-ms-transition: all .25s ease-in-out 0s;
+	-o-transition: all .25s ease-in-out 0s;
+	transition: all .25s ease-in-out 0s;
+	background-color: rgba(51,51,51,.45);
+	background-image: url(images/cmop-letterhead2.png);
+	background-attachment: fixed;
+	background-repeat: repeat;
+	background-position: left center;
+	float: left;
+	position: relative;
+}
+#tContact-styler {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	text-align: center;
+	vertical-align: middle;
+	position: inherit;
+}
+#main-dialog-title {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+	font-variant: small-caps;
+	color: rgba(255,255,255,1);
+	text-align: center;
+	vertical-align: middle;
+	top: 20px;
+	position: relative;
+}
+#clientName {
+	background-color: rgba(255,255,255,0.6);
+	height: 70px;
+	width: auto;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-left: 10px;
+	margin-top: 60px;
+	top: 350px;
+	position: inherit;
+}
+#fname {
+	height: auto;
+	width: 200px;
+	float: left;
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-left: 10px;
+	color: rgba(51,51,51,1);
+	text-shadow: 0px .px;
+	text-shadow: 0.15px -0.1px 0.25px rgba(153,153,153,1);
+	top: -38px;
+}
+#lname {
+	height: auto;
+	width: 200px;
+	float: right;
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	padding-right: 10px;
+	color: rgba(51,51,51,1);
+	text-shadow: 0px .px;
+	text-shadow: 0.15px -0.1px 0.25px rgba(153,153,153,1);
+	top: -38px;
+}
+#clientEmail {
+	font-family: Arial, Helvetica, sans-serif;
+	text-align: justify;
+	vertical-align: top;
+	height: 100px;
+	width: 505px;
+	text-indent: 10px;
+	margin-left: 2.5px;
+	-webkit-transition: all 0.45s ease-in-out 0.2s;
+	-moz-transition: all 0.45s ease-in-out 0.2s;
+	-ms-transition: all 0.45s ease-in-out 0.2s;
+	-o-transition: all 0.45s ease-in-out 0.2s;
+	transition: all 0.45s ease-in-out 0.2s;
+	margin-top: 25px;
+	background-color: rgba(0,153,255,.5);
+}
+#e-mail {
+	font-family: Arial, Helvetica, sans-serif;
+	height: auto;
+	width: 200px;
+	vertical-align: top;
+	padding-left: 10px;
+	position: absolute;
+	z-index: 5;
+	bottom: 37px;
+	margin-top: 40px;
+	text-indent: 20px;
+}
+input#validateMail {
+	font-family: Arial, Helvetica, sans-serif;
+	height: 30px;
+	background-color: rgba(255,255,255,1);
+	border-top-width: thin;
+	border-right-width: medium;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-top-color: rgba(102,102,102,1);
+	border-right-color: rgba(153,153,153,1);
+	border-bottom-style: none;
+	border-left-style: none;
+	border-radius: 5px;
+	font-size: 14px;
+	color: rgba(51,51,51,1);
+	font-weight: bold;
+	position: absolute;
+	margin-bottom: 10px;
+	float: right;
+	margin-left: 50px;
+}
+#submitButton {
+	height: 50px;
+	width: 100px;
+	text-align: center;
+	vertical-align: middle;
+	border-radius: 10px;
+	box-shadow: inset 0px 0px 1px 2px rgba(0,0,0,1);
+	position: relative;
+	background-color: rgba(102,102,102,1);
+	float: right;
+	top: -30px;
+	left: -40px;
+	-webkit-transition: all 0.5s ease-in-out 0.3s;
+	-moz-transition: all 0.5s ease-in-out 0.3s;
+	-ms-transition: all 0.5s ease-in-out 0.3s;
+	-o-transition: all 0.5s ease-in-out 0.3s;
+	transition: all 0.5s ease-in-out 0.3s;
+}
+#error-prompt {
+	background-color: rgba(255,153,153,0.5);
+	height: 40px;
+	width: 500px;
+	position: absolute;
+	top: 43px;
+	left: 5px;
+	z-index: 1;
+	border-radius: 2;
+	display: none;
+}
+input#formsub {
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	font-variant: small-caps;
+	color: rgba(255,255,255,1);
+	text-align: center;
+	vertical-align: middle;
+	background-color: rgba(51,51,51,1);
+	border-radius: 5px;
+	box-shadow: 0px 0px 1px 2px rgba(51,51,51,1);
+	position: relative;
+	top: 4.5px;
+	height: 40px;
+	width: 90px;
+	right: 4.5px;
+}
+#thankYou {
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	font-weight: normal;
+	height: 300px;
+	width: 600px;
+	text-align: center;
+	text-indent: 10;
+	position: static;
+	float: left;
+	color: rgba(255,255,255,1);
+	text-shadow: -1px 1px 2px rgba(0,0,0,1);
+	margin-left: 400px;
+	margin-top: 30px;
+}
+#information-pane {
+	vertical-align: bottom;
+	height: 20px;
+	width: 500px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	box-shadow: 0px .px;
+	box-shadow: .1px .1px .px;
+	box-shadow: .1px .1px .2px .px;
+	position: static;
+	bottom: -290px;
+}
+#intersititial {
+	height: 0px;
+	width: 500px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	color: rgba(255,255,255,1);
+	background-color: rgba(102,102,102,1);
+	text-align: center;
+	margin-left: 2.5px;
+	box-shadow: inset 0px 0.2px 2px 2px rgba(0,0,0,1);
+	position: inherit;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	-webkit-transition: all .35s ease-in-out .2s;
+	-moz-transition: all .35s ease-in-out .2s;
+	-ms-transition: all .35s ease-in-out .2s;
+	-o-transition: all .35s ease-in-out .2s;
+	transition: all .35s ease-in-out .2s;
+}
+#email-info {
+	height: auto;
+	width: auto;
+	position: relative;
+	display: none;
+	opacity: 0;
+	-webkit-transition: all .15s ease-in-out;
+	-moz-transition: all .15s ease-in-out;
+	-ms-transition: all .15s ease-in-out;
+	-o-transition: all .15s ease-in-out;
+	transition: all .15s ease-in-out;
+}
+#term-info {
+	height: 100px;
+	width: 490px;
+	position: static;
+	vertical-align: top;
+	text-align: left;
+	white-space: normal;
+	color: rgba(255,255,255,1);
+	display: block;
+	font-family: Arial, Helvetica, sans-serif;
+	margin-left: 1.5px;
+	opacity: 0;
+	-webkit-transition: all 0.15s ease-in-out 0s;
+	-moz-transition: all 0.15s ease-in-out 0s;
+	-ms-transition: all 0.15s ease-in-out 0s;
+	-o-transition: all 0.15s ease-in-out 0s;
+	transition: all 0.15s ease-in-out 0s;
+}
+input#firstN {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: rgba(51,51,51,1);
+	background-color: rgba(255,255,255,1);
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-radius: 2px;
+	border-top-width: thin;
+	border-right-width: medium;
+	border-top-color: rgba(102,102,102,1);
+	border-right-color: rgba(204,204,204,1);
+	height: 40px;
+}
+
+input#lastN {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: rgba(51,51,51,1);
+	background-color: rgba(255,255,255,1);
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-radius: 2px;
+	border-top-width: thin;
+	border-right-width: medium;
+	border-top-color: rgba(102,102,102,1);
+	border-right-color: rgba(204,204,204,1);
+	height: 40px;
+}
+
+input#mailAddr {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	color: rgba(51,51,51,1);
+	background-color: rgba(255,255,255,1);
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: none;
+	border-left-style: none;
+	border-radius: 2px;
+	border-top-width: thin;
+	border-right-width: medium;
+	border-top-color: rgba(102,102,102,1);
+	border-right-color: rgba(204,204,204,1);
+	height: 30px;
+	margin-bottom: 5px;
+	margin-left: 20px;
+}
+#linkArea {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	height: 40px;
+	width: auto;
+	float: right;
+	bottom: -5px;
+	position: relative;
+}
+.linkCont {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: normal;
+	color: rgba(153,153,153,1);
+	width: 400px;
+}
+#headerArea {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 24px;
+	color: rgba(255,255,255,1);
+	background-color: rgba(0,0,0,1);
+	height: 200px;
+	width: 1100px;
+	box-shadow: 0px 0px 2px 3px rgba(102,102,102,1);
+	border-radius: 5;
+	margin-left: 280px;
+	text-align: left;
+	vertical-align: middle;
+	position: relative;
+}
+#logoArea {
+	position: absolute;
+	top: -48px;
+	float: left;
+	left: -420px;
+}
+#wrapper {
+	clear: both;
+	height: auto;
+	width: auto;
+	position: relative;
+}
+#headerDesc {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 120px;
+	font-weight: bolder;
+	color: rgba(255,255,255,1);
+	text-align: left;
+	vertical-align: middle;
+	margin-right: 40px;
+	text-indent: 20px;
+	float: right;
+	position: absolute;
+	right: 100px;
+}
+#dlArea {
+	height: 20px;
+	width: 180px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	vertical-align: middle;
+	float: left;
+	position: relative;
+	display: block;
+	background-color: rgba(102,102,102,1);
+	margin-top: 10px;
+	border-radius: 5px;
+	box-shadow: inset 0px 0px .px;
+	box-shadow: inset 0px 0px .25px .px;
+	box-shadow: inset 0px 0px .25px .25px rgba(0,0,0,1);
+}
+#dlBlocker {
+	background-color: rgba(204,204,204,1);
+	height: 20px;
+	width: 180px;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	-webkit-transition: all .5s ease-out;
+	-moz-transition: all .5s ease-out;
+	-ms-transition: all .5s ease-out;
+	-o-transition: all .5s ease-out;
+	transition: all .5s ease-out;
+	border-radius: 5px;
+	box-shadow: inset 0px 0px 2px 1px rgba(51,51,51,1);
+}
+
+#emailPanel::-webkit-scrollbar { 
+    display: none; 
+}
+
+#emailPanel{
+	width: 400px;
+	height: 285px;
+	position: relative;
+	z-index: 3;
+	border: medium solid #000;
+	transition: all 1s ease-in-out 0s;
+	opacity: 0;
+	background-color: rgba(51,51,51,0.5);
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgba(255,255,255,1);
+	font-weight: bold;
+	box-shadow: inset 0px 0px 2px 2px rgba(0,0,0,.5);
+	display: none;
+	-webkit-transition: all 1s ease-in-out 0s;
+	-moz-transition: all 1s ease-in-out 0s;
+	-ms-transition: all 1s ease-in-out 0s;
+	-o-transition: all 1s ease-in-out 0s;
+}
+#QCform {
+	height: auto;
+	width: auto;
+	opacity: 0;
+	display: none;
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-ms-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
+}
+#qcArea {
+	font-family: Arial, Helvetica, sans-serif;
+	position: absolute;
+	height: 300px;
+	display: block;
+	opacity: 1;
+	-webkit-transition: all .15s ease-in-out 0s;
+	-moz-transition: all .15s ease-in-out 0s;
+	-ms-transition: all .15s ease-in-out 0s;
+	-o-transition: all .15s ease-in-out 0s;
+	transition: all .15s ease-in-out 0s;
+	width: 28px;
+	float: right;
+	margin-left: 509px;
+	vertical-align: middle;
+	text-align: center;
+	text-decoration: none;
+}
+#formArea {
+	height: auto;
+	width: 948px;
+	position: absolute;
+	left: 210px;
+	top: 850px;
+}
+#reasonBox     {
+	height: 100px;
+	width: 100px;
+	left: 20px;
+	position: absolute;
+	top: 0px;
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-ms-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
+}
+#submitArea {
+	height: auto;
+	width: auto;
+	position: absolute;
+	top: 250px;
+	left: 25px;
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-ms-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
+}
+#reasonBox {
+	height: auto;
+	width: auto;
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgba(255,255,255,1);
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-ms-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
+}
+#reasonSelect {
+	height: auto;
+	width: auto;
+	position: absolute;
+	top: 30px;
+	left: 2.5px;
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-ms-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
+}
+#commtArea {
+	height: auto;
+	width: 100px;
+	position: absolute;
+	top: 40px;
+	-webkit-transition: all .25s ease-in-out;
+	-moz-transition: all .25s ease-in-out;
+	-ms-transition: all .25s ease-in-out;
+	-o-transition: all .25s ease-in-out;
+	transition: all .25s ease-in-out;
+}
+</style>
 </head>
 
+
+
+
+
+
+
+
 <body>
-<div id ="mail-dialog">
-<div id="main-dialog-title"></div>
-
-<form id="gform" method="post" action="https://docs.google.com/forms/d/e/1FAIpQLSeIvKp5s1l0nw--bQIx72unFSw7HsaJCfU7hId9_2iwlRXc5w/viewform?usp=sf_link">
-<div id ="clientName">
+<div id ="wrapper">
+<div id="headerArea">
+<div id = "logoArea"><img src="images/cmop-letterhead2.png" height="295" width="548" /></div>
+<div id = "headerDesc">thank you.<br><p style="font-size:24px;color:rgba(153,153,153,1)">your download will begin shortly.</p></div>
+</div>
+<div id="thankYou">
+Thank you for stopping by! We hope to see you again soon! Please take a moment to fill out our <strong>Email Submission Form.</strong> By doing so, you are able to recieve a copy of your purchased beat(s) via email. This gaurantees that if there are any issues with the download, a copy can be sent directly to you, once it is verified that you have in fact, purchased the beat(s) in question. There will also be a downloadable Certificate of Purchase, a means to indicate that you have rights of use for purchased beas. Also, please feel free to express any feedback or concerns using our <p style="position:absolute;color:rgba(0,204,255,1);left:550px;top:540px;">Questions/Comments panel.</p><br><br> Simply double click the <img  src="images/cmop-openactionbtn(rev).png" height="20px" style="right:340px;top:635px;position:relaive;margin-right:5px;margintop:10px;" width="20px">button.
 <br>
-Please state your first and last name:
+<br>
 
-<div id ="fname">First Name:<input name="FirstName:" id="firstN" type="text" placeholder="first"/></div>
-<div id ="lname">Last Name:<input name="LastName:" id="lastN" type="text" placeholder="last"/></div>
+Regards,
+<br>
+d1nero
+<br>Co-Founder/CEO
+<br>C/O
+<br>CMOp 
+</div>
+
+
+<div id= "formArea">
+<div id ="mail-dialog">
+<div id="main-dialog-title" style ="background:rgba(0,204,255,.5);">cmop Quick Email Submission Form</div>
+
+
+<form id="gform" method="POST"   target="no-target" >
+<div id="error-prompt"><div id="badName" style="display:none;color:rgba(204,51,0,.4);font-size:12;text-shadow:0px 0px 1px rgba(255,0,0,1);">Please enter a First Name.</div><div id="badEmail" style="display:none;color:rgba(204,51,0,.4);font-size:12;text-shadow:0px 0px 1px rgba(255,0,0,1);">Email address must not contain special characters.</div></div>
+<div id ="clientName">
+
+<p style="position: absolute; top: 745px; color: white; margin-left:10px">Please state your first and last name:</p>
+<br>
+<br>
+
+<div id ="fname">First Name(required):<input name="First Name:" id="firstN" type="text"  placeholder="first" onblur="isFnameBlank();" required/></div>
+<div id ="lname">Last Name:<input name="Last Name:" id="lastN" type="text" placeholder="last"/></div>
+</div>
+
+<div id ="information-pane"><a style="float:left;background-color:rgba(255,255,255,1);font-weight:bold;margin-left:10px;border-radius:3px;box-shadow: .25px .1px rgba(0,51,102,.4) ;" href="javascript:void(0)" id ="whyEmail">Why is an email address necessary?</a>
+<a style="float:right;margin-right:10px;font-weight:bold;background-color:rgba(255,255,255,1);border-radius:3px;" href="javascript:void(0)" id ="Tos">Review Terms of Service</a>
 </div>
 
 <div id ="clientEmail">
-<br>
-Please enter a valid email address.
+  <p style="color: white;width:500px; height:10px; position: relative;top:-50px;vertical-align:text-top;display:inline-block;">Please enter a valid email address.</p>
 
-<div id ="information-pane">
-<a href="#" id ="whyEmail"><p style ="font-size:14px;color:blue;">Why is an email address necessary?</p></a>
 
 <div id ="intersititial">
-<strong>Why is an email address necessary?</strong>
-<br>
-<p style ="font-size:14px;">An email address is necessary to ensure that you recieve a copy of the downloaded/purchased music in a secure way;
-<br> serves as a backup method should the download become corrupted or other issues arise.</p> 
-
-
+<div id ="email-info">
+<p style="background:rgba(0,204,255,.3);">Why is an email address necessary?</p>
+<p style ="font-size: 14px; position: static; top: 260px; left: 70px;padding-right:10px;padding-top:1.5px;width:485px;">An email address is necessary to ensure you recieve a copy of the down-<br>loaded/purchased music in a secure way and serves as a backup method<br>should the download become corrupted or other issues arise.</p> 
 </div>
+<div id ="term-info">
+<p style="background:rgba(0,204,255,.3);text-align:center;">Terms of Service</p>
+
+
+<p style="font-size:12px; position:static;text-align:left;top:150px;padding-top:1.5px;">Please read these Terms of Service ("Terms", "Terms of Service") carefully before<br> using <strong>CMO_P Beatz</strong>("service") 
+Your access to and use of our Services is conditioned on<br> your acceptance of and compliance with
+these Terms. These Terms apply to all visitors, <br>users and others who access or use the Service.
+By accessing or using the Service you<br> 
+agree to be bound by these Terms. If you disagree with
+any part of the terms then you<br> may not access the Service.</font>
+<br>
+<br>
+<strong>Terms of Licensing</strong>
+<br>
+<font size="2">CASHMEOUT(CMOp) offers licenses of various types at affordable, reasonable prices.<br> Please consider that services offered are not free, but some can be negotiable if nece-<br>ssary and beneficial. If payment is not received for selected track, or if the checkout<br> process is not completed, the transaction will be considered void. If later discovered<br> that the track or "beat" in question was utilized without adecquate consent from CMOp,<br> legal action may be taken. Please confirm that the transaction has been completed<br> prior to using purchased material.</font>
+<br>
+<br>
+<strong>Termination</strong>
+<br>
+<font size="2">We may terminate or suspend access to our Service immediately, without prior<br> notice or liability, for any reason whatsoever, including without limitation if you breach<br> the Terms.
+All provisions of the Terms which by their nature should survive termination<br> 
+shall survive
+termination, including, without limitation, ownership provisions, warranty<br> disclaimers, indemnity
+and limitations of liability.</font>
+<br>
+<br>
+<strong>Links To Other Web Sites</strong>
+<br>
+<font size="2">Our Service may contain links to thirdparty web sites or services that are not owned or<br> controlled by <strong>CASHMEOUT Productions</strong>("company").
+<strong>CASHMEOUT Productions</strong><br> has no control over, and assumes no responsibility for, the
+content, privacy policies, or<br> practices of any third party web sites or services. You further
+acknowledge and agree<br> that <strong>CASHMEOUT Productions</strong> shall not be responsible or liable,
+directly or indirectly<br> for any damage or loss caused or alleged to be caused by or in connection
+with use of<br> or reliance on any such content, goods or services available on or through any such
+web-<br>sites or services.
+We strongly advise you to read the terms and conditions and privacy<br> policies of any third-party
+web sites or services that you visit.</font>
+<br>
+<br>
+<strong>Governing Law</strong>
+<br>
+<font size="2">These Terms shall be governed and construed in accordance with the laws of<br> the United States, without regard to its conflict of law provisions.
+Our failure to enforce<br> any right or provision of these Terms will not be considered a waiver of
+those rights. If<br> any provision of these Terms is held to be invalid or unenforceable by a court, the
+rem-<br>aining provisions of these Terms will remain in effect. These Terms constitute the entire<br>
+agreement between us ("company", "end-user") regarding our service, and supersede<br> and replace any prior agreements we might have between us regarding the Service.</font>
+<br>
+<br>
+<strong>Changes</strong>
+<br>
+<font size="2">We reserve the right, at our sole discretion, to modify or replace these Terms at any time.<br> If a revision is material we will try to provide at least 30  business days notice prior to any<br> new terms taking effect. What constitutes a material change will be determined at our sole discretion.
+
+By continuing to access or use the company's service after those revisions become effective, you agree to
+be bound by the revised terms. If you do not agree to the new terms, please stop using the
+Service.</font>
+<br>
+<br>
+<div id="tContact-styler" style="text-align:center;color:rgba(255,255,255,1);">
+<strong>Contact Us</strong>
+<br>
+<font size="2">If you have any questions about these Terms, please contact us using the <strong>Questions/Comments</strong> form located above.</font></p></div>
+</div>
+
 </div>
 
 
 <div id ="e-mail">
-
-Email: <input type ="email" id ="mailAddr" placeholder="abcd@1234.com" />
+Email(required): 
+<input type="email" name="Email:" id ="mailAddr" placeholder="abcd@1234.com" onblur="isEmailBlank();" required />
+<img src=""  />
+<input type="email" name="vEmail:" id ="validateMail" placeholder="verify email address" onblur ="iscEmailBlank();" required/>
 
 </div>
-</div>
-
 <div id ="submitButton">
-<input type="button" value="Sumbit!" id ="submitEmail" onclick="checkEmail();"/>
+<input type="submit" value="Submit!" name="fbzx " id ="formsub" onclick = "checkFieldsTrue();" />
 
+</div>
+</div>
+
+
+
+
+</form>
+</div>
+<div class="linkCont">
+<div id="dlArea">
+<a href ="#">DOWNLOAD</a>
+<div id ="dlBlocker">
+<p id="cdTimer" style="box-shadow: 0px 0px 1px #FFFFFF;border-radius:5px;background:rgba(51,51,51,1);position:relative;top:-16px;color:rgba(0,204,255,.75);text-shadow:0px 0px 1px rgba(102,102,102,1);"> Ready in: <span id="countdowntimer">10 </span></p>
+</div>
 </div>
 
 <div id="linkArea">
-<a href ="#">Download song.</a>
+<a  id="dlPDF" href="javascript:Cert2PDF()" >Download Certificate</a>
 </div>
-</form>
 </div>
 
-<script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<div id="qcArea"><a id="expQC" href="javascript:void(0)" style="top:135px;position:relative;width:10px;height:10px;color:rgba(255,255,255,1);text-decoration:none;font-weight:bold;text-shadow:rgba(255,255,255,1);"><img id="expQCimg" style="border:medium solid rgba(255,255,255,1);border-radius:20px;" src="images/cmop-openactionbtn(rev).png" width="20px"height="20px" /></a>
+<div id="emailPanel" scrolling="no">
+  <p style ="font-size:24px;background:rgba(0,204,255,.5);text-align:center;position:absolute;top:-65px;">Questions/Comments</p>
+	<form id="QCform" method="POST" target = "no-target" name ="QCform">
+    
+   
+   
+   
+   
+    <div id="reasonBox">My question/comment:
+    <div id="reasonSelect"> 
+   <select id="selQ" name="My question/comment:" size="1">
+     <option id="q1" name="regarding Exclusives...">regarding Exclusives...</option>
+     <option id="q2" name="regarding my recent purchase...">regarding my recent purchase...</option>
+     <option id="q3" name="regarding the site and/or services provided(in general)...">regarding the site and/or services provided...</option>
+     <option id="q4" name="Other...">Other...</option>
+   </select>
+   <div id="commtArea">
+     <textarea name="Please enter Question/Comment" cols="50" rows="10" id="commtBox" placeholder="Type Here"style="border-radius:5px;" value="Nevermind..."></textarea>
+     <div id ="cmmtError" style="display:none;position:absolute;width:300px;height:120px;background:rgba(102,102,102,1);box-shadow:inset 0px 0px 2px #000000;border-radius:15px;padding-left:5px;padding-right:5px;padding-top:5px;top:15px;left:35px;">Form will submit without a question if this field is left blank. Is this okay?<input id="yBtn"  style="display:none;position:relative;float:left;margin-left:50px;border-radius:5px;margin-top:10px;"type="button" value="Yes" onclick="confirmHideError();" /><input id="nBtn" style="display:none;position:relative;float:right;margin-right:50px;border-radius:5px;margin-top:10px;" type="button" value="No" onclick="hideError();"/></div>
+   </div>
+    </div>
+  
+   
+    </div>
+    
+    
+    </form>
+  </div>
+  </div>
+</div>
+</div>
+
+<div id="CertForm" style="position:absolute;background:rgba(255,255,255,1);height:425px;width:1100px;font-family:Arial, Helvetica, sans-serif;border-radius:10px;box-shadow:inset 0px 0px 6px #000000;border:medium rgba(51,51,51,1) solid;">
+<div id="letterhead" style="position:relative;float:left;left:-10px;width:355px;border-radius:10px;border:medium solid rgba(51,51,51,1);margin-left:40px;margin-top:80px;background:rgba(153,153,153,.75);"><img style=";margin-right:10px;" src="images/cmop-letterhead(Cert).png" height="250" width="350" /></div>
+<div id="CertCont" style="position:relative;float:right;width:640px;margin-right:20px;margin-top:15px;">
+<div id="certHeader" style="background:rgba(51,51,51,1);color:rgba(255,255,255,1);position:relative;font-size:30px;font-weight:bolder;">Certificate of Authenticity[Limited]</div>
+	<form id="CertAuth">
+    <div id="certDate" style="position:relative;margin-bottom:15px;margin-top:20px;">Effective: <input id="efDate" type="text" style ="width:200px;" readonly="readonly"/></div>
+    
+    <div id="songSpecs" style="position:relative;width:inherit;height:120px;">
+    <div id="songTitle"style="position:relative;float:left;">Title: <input id="st" type="text" style="font-family:Arial, Helvetica, sans-serif;font-weight:bolder;" readonly="readonly"/></div>
+    <div id="songDuration" style="position:relative;float:right;margin-right:69px;">Duration: <input id="sd" type="text" style="width:40px;" readonly="readonly"/></div>
+    <div id="producerInfo" style="position:absolute;width:300px;top:30px;left:2.5px;">Produced by:
+    <div id="producerID" style="width:280px;height:80px;"> 
+    <div id="producerPhoto" style="position:relative;width:100px;height:90px;background-image:;float:left;border-radius:50px;border:medium rgba(102,102,102,1) dashed"><img id="prodpic" src="images/d1neroLogo1.png" height="100" width="100"/></div>
+    <div id="producerName"style="position:relative;width:160px;height:40px;background:;float:right;margin-top:20px;margin-right:10px;"><img id="prodlogo" src="images/d1nero-profile-logo(web).png" height="50" width="160"/></div>
+    </div>
+    </div>
+    
+    </div>
+
+    
+    
+    
+
+    
+    
+  <div id="formalities" style="position:relative;margin-top:30px;">This document certifies that <input id="coaFirst" type="text" /> <input id="coaLast" type="text" style="width:auto;"/> </div><div id="bodyMsg">  has purchased the right to use <input id="songSold"  type ="text" readonly="readonly"/>
+, according to the terms outlined in cmop-beatz.com's Leasing Terms; the holder of this certificate agrees to comply with and uphold the Terms of Service outlined by cmop-beatz.com as well.</div>
+<div id="closing" style="position:relative;margin-top:25px;">Date: <input id="saleDate" type="text" /><p id="certNum" style="position:absolute;right:10px;font-size:10px;">Form: cmop-L00</p></div>
+</form>
+</div>
+</div>
+</div>
+
+<iframe src= "#" id="no-target" name="no-target" style="visibility:hidden;"></iframe>
+<canvas class="result" id="coaPreview" crossOrigin ="Anonymous"/>
+
+
 
 
 <script type="text/javascript" src="form-G-s.js"></script>
-
+<script type="text/javascript" src="QC(Add-On).js"></script>
+<script type="text/javascript" src="Cert-2-PDF.js"></script>
+<script type="text/javascript" src="certAuth.js"></script>
 <script type="text/javascript" src="verification.js"></script>
+
 </body>
 </html>
