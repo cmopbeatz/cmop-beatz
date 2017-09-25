@@ -1,6 +1,18 @@
 // Cert-to-PDF
 
 function Cert2PDF(){
+html2canvas(document.body, {
+	
+	onrendered: function(canvas){
+		var img = canvas.toDataURL('image/png');
+		var doc = new jsPDF();
+		doc.addImage(img, 'JPEG',20,20);
+		doc.save('coaL00.pdf');
+	}
+});
+
+
+
 
 //var pdfCanvas = document.getElementById('coaPreview');
 
@@ -16,13 +28,13 @@ function Cert2PDF(){
 //});
 
 
-var element = document.querySelectorAll("CertForm")[0];
-options = {
-    onrendered: function(canvas) {
-       $('CertForm').append(canvas);
-        var imgstring = canvas.toDataURL();
-        $('.result').attr('src', imgstring);
-    }};
-html2canvas(element, options);
+//var element = document.querySelectorAll("CertForm")[0];
+//options = {
+  //  onrendered: function(canvas) {
+       //$('CertForm').append(canvas);
+    //    var imgstring = canvas.toDataURL();
+      //  $('.result').attr('src', imgstring);
+   // }};
+//html2canvas(element, options);
 
 }
