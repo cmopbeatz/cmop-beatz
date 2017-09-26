@@ -98,4 +98,5 @@ html2canvas(element, options);
 //});
 
 
+
 }
