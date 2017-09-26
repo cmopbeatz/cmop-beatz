@@ -79,14 +79,23 @@ function certScreen(){
 //});
 
 
-var element = document.querySelectorAll("CertForm")[0];
-options = {
-    onrendered: function(canvas) {
-       $('CertForm').append(canvas);
-        var imgstring = canvas.toDataURL();
-        $('.result').attr('src', imgstring);
-    }};
-html2canvas(element, options);
+//var element = document.querySelectorAll("CertForm")[0];
+//options = {
+//    onrendered: function(canvas) {
+  //     $('CertForm').append(canvas);
+    //    var imgstring = canvas.toDataURL();
+      //  $('.result').attr('src', imgstring);
+//    }};
+//html2canvas(element, options);
+
+var pdf = new jsPDF('l', 'pt', 'a4');
+ var options = {
+    pagesplit: true
+};
+
+pdf.addHTML($('body'), 0, 0, options, function(){
+    pdf.save("test.pdf");
+});
 
 
 }
