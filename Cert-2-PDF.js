@@ -13,18 +13,18 @@ function certScreen(){
 			var coaImg = new Image();
 			
 			var cvs = document.createElement('canvas');
-			cvs.width = 800;
-			cvs.height = 800;
+			cvs.width = 850;
+			cvs.height = 425;
 			
 			var dl = document.getElementById('dlPDF');
-			dl.href = cvs.toDataURL('image/jpg');
-			dl.download = 'cmop-L00.jpg';
+			dl.href = cvs.toDataURL('image/png');
+			dl.download = 'cmop-L00.png';
 			dl.click;
 			
 			var cvsTxt = cvs.getContext('2d');
 			cvsTxt.drawImage(coaImg,0,0);
 	
-			coaImg.src = URL.createObjectURL();
+			coaImg.src = URL.createObjectURL(document.getElementById('CertForm'));
 					
 			window.open(dl.href);
 	}
