@@ -7,29 +7,29 @@ function certScreen(){
 //{"target": "#CertForm", "bheight": -1, "height": -1, "width": -1}).Create();
 	
 	
-	//html2canvas(document.getElementById('CertForm'),{
-		//onrendered:function(cvs){
-	//		
-//			//var coaImg = new Image();
+	html2canvas(document.getElementById('CertForm'),{
+		onrendered:function(cvs){
 			
-			//var cvs = document.createElement('canvas');
-			//cvs.width = 800;
-			//cvs.height = 800;
+			var coaImg = new Image();
 			
-			//var dl = document.getElementById('dlPDF');
-			//dl.href = cvs.toDataURL('image/jpg');
-			//dl.download = 'cmop-L00.jpg';
-			//dl.click;
+			var cvs = document.createElement('canvas');
+			cvs.width = 800;
+			cvs.height = 800;
 			
-			//var cvsTxt = cvs.getContext('2d');
-			//cvsTxt.drawImage(coaImg,0,0);
+			var dl = document.getElementById('dlPDF');
+			dl.href = cvs.toDataURL('image/jpg');
+			dl.download = 'cmop-L00.jpg';
+			dl.click;
+			
+			var cvsTxt = cvs.getContext('2d');
+			cvsTxt.drawImage(coaImg,0,0);
 	
-			//coaImg.src = URL.createObjectURL();
+			coaImg.src = URL.createObjectURL();
 					
-			//window.open(dl.href);
-	//}
+			window.open(dl.href);
+	}
 	
-	//});
+	});
 //}
 
 //function Cert2PDF(){
@@ -81,22 +81,22 @@ function certScreen(){
 
 
 //var element = document.querySelectorAll("CertForm")[0];
-options = {
-    onrendered: function(canvas) {
-       $('#CertForm').append(canvas);
-        var imgstring = canvas.toDataURL();
-        $('.result').attr('src', imgstring);
-    }};
-html2canvas(element, options);
+//options = {
+  //  onrendered: function(canvas) {
+//       $('#CertForm').append(canvas);
+      //  var imgstring = canvas.toDataURL();
+    //    $('.result').attr('src', imgstring);
+  //  }};
+//html2canvas(element, options);
 
-var pdf = new jsPDF('landscape', 'px', 'a4');
- var options = {
-   pagesplit: true
-};
+//var pdf = new jsPDF('landscape', 'px', 'a4');
+// var options = {
+  // pagesplit: true
+//};
 
-pdf.addHTML($('#CertForm'), 0, 0, options, function(){
-   pdf.save("test.pdf");
-});
+//pdf.addHTML($('#CertForm'), 0, 0, options, function(){
+  // pdf.save("test.pdf");
+//});
 
 //function generatePDF(canvasObj, fileName, callback){
 	
