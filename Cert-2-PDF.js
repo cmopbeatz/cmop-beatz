@@ -83,7 +83,7 @@ function certScreen(){
 //var element = document.querySelectorAll("CertForm")[0];
 options = {
     onrendered: function(canvas) {
-       $('CertForm').append(canvas);
+       $('#CertForm').append(canvas);
         var imgstring = canvas.toDataURL();
         $('.result').attr('src', imgstring);
     }};
