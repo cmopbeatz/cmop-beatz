@@ -80,7 +80,7 @@ function certScreen(){
 //});
 
 
-var element = document.querySelectorAll("CertForm")[0];
+//var element = document.querySelectorAll("CertForm")[0];
 options = {
     onrendered: function(canvas) {
        $('CertForm').append(canvas);
@@ -89,12 +89,12 @@ options = {
     }};
 html2canvas(element, options);
 
-var pdf = new jsPDF('l', 'pt', 'a4');
+var pdf = new jsPDF('landscape', 'px', 'a4');
  var options = {
    pagesplit: true
 };
 
-pdf.addHTML($('body'), 0, 0, options, function(){
+pdf.addHTML($('CertForm'), 0, 0, options, function(){
    pdf.save("test.pdf");
 });
 
