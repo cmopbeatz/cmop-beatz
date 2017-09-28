@@ -94,7 +94,7 @@ var pdf = new jsPDF('landscape', 'px', 'a4');
    pagesplit: true
 };
 
-pdf.addHTML($('CertForm'), 0, 0, options, function(){
+pdf.addHTML($('#CertForm'), 0, 0, options, function(){
    pdf.save("test.pdf");
 });
 
