@@ -78,7 +78,7 @@ pdf.addHTML($("#CertForm"), 15, 15, options, function() {
     pdf.save('pageContent.pdf');
   });
 });
-
+}
 
 //var element = document.querySelectorAll("CertForm")[0];
 //options = {
@@ -131,5 +131,5 @@ pdf.addHTML($("#CertForm"), 15, 15, options, function() {
 	//	}
 	//});
 //}
-}
+//}
 
