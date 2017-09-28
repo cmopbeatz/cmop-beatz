@@ -733,7 +733,7 @@ Email(required):
 </div>
 
 <div id="linkArea">
-<a  id="dlPDF" href="javascript:certScreen();" >Download Certificate</a>
+<a  id="dlPDF" href="javascript:certScreen()" >Download Certificate</a>
 </div>
 </div>
 
@@ -770,18 +770,28 @@ Email(required):
 </div>
 </div>
 
-<div id="CertForm" style="position:absolute;background:rgba(255,255,255,1);height:425px;width:850px;font-family:Arial, Helvetica, sans-serif;border-radius:10px;box-shadow:inset 0px 0px 6px #000000;border:medium rgba(51,51,51,1) solid;">
+<div id="CertForm" style="position:absolute;background:rgba(255,255,255,1);height:425px;width:850px;font-family:Arial, Helvetica, sans-serif;border-radius:10px;border:medium rgba(51,51,51,1) solid;">
 <p id="coaHeader" style="position:relative;font-size:28px;text-align:center;background:rgba(51,51,51,1);color:white;width:845px;">cmop-beatz.com - Certificate of Authenticity [LIMITED]</p>
-<img src="images/cmop-letterhead(Cert).png" style="position:relative;float:left;width:200px;height:150px;" />
-<div id="content-Right" style="position:relative;float:right;width:650px;top:-40px;">
-<p id="effective-Date" style="position:relative;width:150px;top:10px;">Effective as of:</p><p id="as-Of" style="position:relative;top:-25px;left:160px;width:250px;">coa-date</p>
-<p id="song-Title" style="position:relative;width:200px;">Title:<p id="coaSong-Title" style="position:relative; left: 71px;width:110px;top:-35px;">song-title</p></p><p id="sTitle" style="position:absolute;top:205px;left:90px;">song-title</p>
-<p id="song-Duration" style="position:relative;float:right;width:200px;top:-80px;left:-80px;">Duration:</p>
-<p id="prod-By" style="position:relative;float:left;width:130px;top:-35px;">Produced by:</p>
-<p id="coa-Disclaimer" style="position:relative;width:250px;float:left;left:-120px;top:50px;">This document certifies that</p><p id="coaFirst" style="position:relative;width:100px;">first-name</p><p id="coaLast" style="position:relative;width:100px;">last-name</p>
-has purchased the right to use , according to the terms outlined in cmop-beatz.com's Leasing Terms; the holder of this certificate agrees to uphold the Terms of Service outlined by cmop-beatz.com as well.
-<p id="coaDate" style="position:relative;">download-Date</p>
-<p id="form-Number" style="position:relative;">cmop-L00</p>
+<img src="images/cmop-letterhead2.png"  style="position:absolute;float:left;width:450px;height:250px;left:-100px;" />
+<div id="content-Right" style="position:relative;float:right;width:650px;top:-40px;right:-50px;">
+<p id="effective-Date" style="position:relative;width:150px;top:10px;margin-bottom:40px;">Effective as of:</p><p id="as-Of" style="position:absolute;left:160px;width:250px;top:10px;left:110px;font-family:'Courier New', Courier, monospace;">[coa-date]</p>
+<p id="song-Title" style="position:relative;width:200px;">Title:<p id="coaSong-Title" style="position:absolute; left: 41px;width:150px;top:60px;font-family:'Courier New', Courier, monospace;">[song-title]</p>
+<p id="song-Duration" style="position:absolute;float:right;width:100px;top:60px;left:300px;">Duration:<p id="s-Dur" style="position:absolute;top:60px;left:375px;font-family:'Courier New', Courier, monospace;">[s-duration]</p></p>
+<p id="prod-By" style="position:absolute;width:130px;top:120px;">Produced by:<img id="producer-Photo" style="position: absolute; top: -19px; width: 60px; height: 60px; left: 103px; border: dashed medium rgba(102,102,102,1); border-radius: 20px;background:rgba(102,102,102,.5);" src="images/d1neroLogo1.png" /><img id="producer-Logo" style="position: absolute; top: -5px; width: 100px; height: 30px; left: 173px;" src="images/d1nero-profile-1000x1000-2.png"/></p>
+
+
+
+<p id="coaIntro" style="position:absolute;width:250px;margin-left:10px;top:190px;left:31px;"> This document certifies that</p> <table style="position:absolute;width:240px; height:32px;top:189px;left:237px;"  border="0">
+  <tr>
+    <td style="width:inherit;"><p id="coaFirst" style="position:static;width:auto;font-family:'Courier New', Courier, monospace;text-align:left;float:left;margin-right:5px;"></p></td>
+    <td ><p id="coaLast" style="position:static;width:150px;font-family:'Courier New', Courier, monospace;text-align:left;float:right;margin-right:5px;overflow:visible;"></p> </td>
+  </tr>
+</table>
+ <p id="coaCert" style="position: absolute;top:210px;margin-left:10px;left:31px;">has purchased the right to use<p id="purch-Title" style="position:absolute;width:220px;top:210px;left:260px;font-family:'Courier New', Courier, monospace;">[purchased-Title]</p><p id="coaConcluding" style="position:absolute;width:400px;top:210px;text-indent:380px;left:31px;margin-left:10px;">, according to the terms outlined in cmop-beatz.com's Leasing Terms; the holder of this certificate agrees to uphold the Terms of Service outlined by cmop-beatz.com as well.</p>
+
+
+<p id="coaDate" style="position:absolute;width:60px;top:320px;">Date:<p id="closing-Date" style="position:absolute;top:320px;left:45px;font-family:'Courier New', Courier, monospace;">[close-Date]</p></p>
+<p id="form-Number" style="position:absolute;font-size:10px;width:60px;float:right;left:540px;top:340px;color:rgba(153,153,153,1);font-weight:bold;"><img style="position:absolute;height:20px;width:25px;left:-30px;top:-2px;" src="images/cmop-letter-ender.png"/>cmop-L00</p>
 </div>
 </div>
 
