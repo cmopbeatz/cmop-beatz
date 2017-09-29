@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // Cert-to-PDF
 
 
@@ -134,7 +134,7 @@ function certScreen(){
 //}
 }
 
-=======
+
 // Cert-to-PDF
 
 
@@ -270,4 +270,4 @@ function certScreen(){
 //}
 }
 
->>>>>>> ecd7e3870c2ee95b537597349ca4fdca85264c98
+
