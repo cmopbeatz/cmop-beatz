@@ -1,18 +1,24 @@
 
-// Cert-to-PDF
+//window.onload = function Cert-to-PDF{
 var certificate, pdfDL, previewPDF;
 
-certificate = document.getElementById('CertForm');
-pdfDL = document.getElementById('dlPDF');
-previewPDF = document.getElementById('coaPreview');
+
 
 
 function certScreen(){
 	
-	html2canvas(certificate),{
-		onrendered: function(canvas){
+	
+var certificate = document.getElementById('CertForm');
+var pdfDL = document.getElementById('dlPDF');
+previewPDF = document.getElementById('coaPreview');	
+	
+	//html2canvas(certificate),{
+		//onrendered: function(canvas){
 		
 		
+	
+	
+	
 	
 	var getImg = function(url, callback){
 		
@@ -22,9 +28,6 @@ function certScreen(){
 		};
 		img.src = url;
 	}
-	
-	
-	
 	
 	var margin = {top:20,left:5,right:5,bottom:0};
 	
@@ -51,5 +54,5 @@ function certScreen(){
 
 
 
-	}
-	}
+	//}
+	//}
