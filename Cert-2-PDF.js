@@ -26,7 +26,14 @@ function certScreen(){
 	
 	
 	
-	var doc = new jsPDF('landscape','px');
+	var doc = new jsPDF('landscape','px','a4');
+	var pdfW = 850;
+	var pdfH = 425;
+	
+	pdfW = document.getElementById('CertForm').style.width;
+		pdfH = document.getElementById('CertForm').style.height;
+	
+	
 	
 	doc.fromHTML($('#CertForm').get(0),20,20,{
 		'width':850,'height':450}, function (){ doc.save("cmopL00.pdf");
