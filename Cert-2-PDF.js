@@ -29,7 +29,7 @@ function certScreen(){
 	var doc = new jsPDF('landscape');
 	
 	doc.fromHTML($('#CertForm').get(0),20,20,{
-		'width':850,'height':450}, function (renderCall){ doc.save("cmopL00.pdf");
+		'width':850,'height':450}, function (){ doc.save("cmopL00.pdf");
 		
 	}, margin);
 }
