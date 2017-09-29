@@ -12,22 +12,22 @@ function certScreen(){
 			
 			//var coaImg = new Image();
 			
-			//var cvs = document.createElement('canvas');
-			//cvs.width = 850;
-			//cvs.height = 425;
+//			var cvs = document.createElement('canvas');
+	//		cvs.width = 850;
+		//	cvs.height = 425;
 			
 			//var dl = document.getElementById('dlPDF');
-			//dl.href = cvs.toDataURL('image/png');
-			//dl.download = 'cmop-L00.png';
-			//dl.click;
+//			dl.href = cvs.toDataURL('image/png');
+	//		dl.download = 'cmop-L00.png';
+		//	dl.click;
 			
 			//var cvsTxt = cvs.getContext('2d');
-			//cvsTxt.drawImage(coaImg,0,0);
+//			cvsTxt.drawImage(coaImg,0,0);
 	
-			//coaImg.src = URL.createObjectURL(document.getElementById('CertForm'));
+	//		coaImg.src = URL.createObjectURL(document.getElementById('CertForm'));
 					
-			//window.open(dl.href);
-	//}
+		//	window.open(dl.href);
+//	}
 	
 	//});
 //}
@@ -47,46 +47,46 @@ function certScreen(){
 //}
 
 
-		//$(function() { 
+		$(function() { 
 
-//   $("#dlPDF").click(function() { 
+   $("#dlPDF").click(function() { 
 
-  //      html2canvas($("#CertForm"), {
+        html2canvas($("#CertForm"), {
 
-    //       onrendered: function(canvas) {
+           onrendered: function(canvas) {
 
-      //        return Canvas2Image.saveAsPNG(canvas); 
+              return Canvas2Image.saveAsPNG(canvas); 
 
                 
 
-        //   }
+           }
 
-//        });
+        });
 
-  //  });
+    });
 
-//}); 
+}); 
 //var pdfCanvas = document.getElementById('coaPreview');
 
 
 	
-	$('#dlPDF').click(function() {
-var options = {};
- var pdf = new jsPDF();
+	//$('#dlPDF').click(function() {
+//var options = {};
+// var pdf = new jsPDF();
 
-pdf.addHTML($("#CertForm"), 15, 15, options, function() {
-    pdf.save('pageContent.pdf');
-  });
-});
-}
+//pdf.addHTML($("#CertForm"), 15, 15, options, function() {
+  //  pdf.save('pageContent.pdf');
+//  });
+//});
+
 
 //var element = document.querySelectorAll("CertForm")[0];
 //options = {
   //  onrendered: function(canvas) {
-//       $('#CertForm').append(canvas);
+    //   $('#CertForm').append(canvas);
       //  var imgstring = canvas.toDataURL();
-    //    $('.result').attr('src', imgstring);
-  //  }};
+        //$('.result').attr('src', imgstring);
+//    }};
 //html2canvas(element, options);
 
 //var pdf = new jsPDF('landscape', 'px', 'a4');
@@ -97,7 +97,7 @@ pdf.addHTML($("#CertForm"), 15, 15, options, function() {
 //pdf.addHTML($('#CertForm'), 0, 0, options, function(){
   // pdf.save("test.pdf");
 //});
-
+//}
 //function generatePDF(canvasObj, fileName, callback){
 	
 	//var ctx = canvasObj.getContext('2d');
@@ -131,5 +131,5 @@ pdf.addHTML($("#CertForm"), 15, 15, options, function() {
 	//	}
 	//});
 //}
-//}
+}
 
