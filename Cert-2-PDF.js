@@ -9,6 +9,10 @@ previewPDF = document.getElementById('coaPreview');
 
 function certScreen(){
 	
+	html2canvas(certificate),{
+		onrendered: function(canvas){
+		
+		
 	
 	var getImg = function(url, callback){
 		
@@ -34,11 +38,12 @@ function certScreen(){
 		pdfH = document.getElementById('CertForm').style.height;
 	
 	
-	
+	doc.addImage(img, 'PNG',10,10);
 	doc.fromHTML($('#CertForm').get(0),20,20,{
 		'width':pdfW,'height':pdfH}, function (){ doc.save("cmopL00.pdf");
 		
 	}, margin);
+			
 }
 		
 	  
@@ -46,4 +51,5 @@ function certScreen(){
 
 
 
-
+	}
+	}
