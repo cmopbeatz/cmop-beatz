@@ -16,7 +16,7 @@ previewPDF = document.getElementById('coaPreview');
 		onrendered: function(canvas){
 		const imgDataURL = canvas.toDataURL('image/png')
 	var doc = new jsPDF('landscape','mm','a4');
-	doc.addImage(imgDataURL, 'PNG',20,20,350,200);
+	doc.addImage(imgDataURL, 'PNG',20,20);
 	doc.save('cmopL00.pdf');
 		}
 	});
