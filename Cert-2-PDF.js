@@ -42,7 +42,9 @@ previewPDF = document.getElementById('coaPreview');
 	
 	//doc.addImage(img, 'PNG',10,10);
 	doc.fromHTML($('#CertForm').get(0),20,20,{
-		'width':pdfW,'height':pdfH}, function (){ doc.save("cmopL00.pdf");
+		'width':pdfW,'height':pdfH
+		}, 
+		function (){ doc.save("cmopL00.pdf");
 		
 	}, margin);
 			
