@@ -11,7 +11,7 @@ var certificate = document.getElementById('CertForm');
 var pdfDL = document.getElementById('dlPDF');
 previewPDF = document.getElementById('coaPreview');	
 	
-	html2canvas(certificate),{
+	html2canvas($("#CertForm"),{
 		onrendered: function(canvas){
 		
 		
@@ -21,7 +21,7 @@ previewPDF = document.getElementById('coaPreview');
 	
 	var getImg = function(url, callback){
 		
-		img = new Image();
+		var img = new Image();
 		img.onload = function(){
 			callback(img);
 		};
@@ -40,8 +40,8 @@ previewPDF = document.getElementById('coaPreview');
 		pdfH = document.getElementById('CertForm').style.height;
 	
 	
-	doc.addImage(img, 'PNG',10,10);
-	doc.fromHTML($('#CertForm').get(0),20,20,{
+	//doc.addImage(img, 'PNG',10,10);
+	doc.fromHTML($("#CertForm").get(0),20,20,{
 		'width':pdfW,'height':pdfH
 		}, 
 		function (){ doc.save("cmopL00.pdf");
@@ -56,6 +56,6 @@ previewPDF = document.getElementById('coaPreview');
 	
 
 
-
-	}
-	}
+	});
+	};
+	
