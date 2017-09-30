@@ -14,10 +14,10 @@ previewPDF = document.getElementById('coaPreview');
 	
 	html2canvas(document.getElementById('CertForm'),{
 		onrendered: function(canvas){
-		const imgDataURL = canvas.toDataURL('image/png')
-	var doc = new jsPDF('landscape','px','a4');
+	const imgDataURL = canvas.toDataURL('image/png')
+	var doc = new jsPDF('landscape','mm','a4');
 	doc.addImage(imgDataURL, 'PNG',20,20);
-	doc.save('cmopL00.pdf');
+
 		}
 	});
 		
@@ -27,10 +27,10 @@ previewPDF = document.getElementById('coaPreview');
 	
 	//var getImg = function(url, callback){
 		
-		//img = new Image();
+	//var img = new Image();
 		//img.onload = function(){
 			//callback(img);
-		//};
+	//};
 		//img.src = url;
 	//}
 	
@@ -40,17 +40,17 @@ previewPDF = document.getElementById('coaPreview');
 	
 //var doc = new jsPDF('landscape','px','a4');
 	//var pdfW;
-//	var pdfH; 
+	//var pdfH; 
 	
 	//pdfW = document.getElementById('CertForm').style.width;
-//	pdfH = document.getElementById('CertForm').style.height;
+	//pdfH = document.getElementById('CertForm').style.height;
 	
 	
-	//doc.addImage(imgDataURL, 'PNG',10,10);
-//	doc.fromHTML($('#CertForm').get(0),20,20,{
-	//	'width':pdfW,'height':pdfH}, function (){ doc.save("cmopL00.pdf");
+	//doc.addImage(img, 'PNG',10,10);
+	//doc.fromHTML($('#CertForm').get(0),20,20,{
+		//'width':pdfW,'height':pdfH}, function (){ doc.save("cmopL00.pdf");
 		
-//	}, margin);
+	//}, margin);
 			
 }
 		
