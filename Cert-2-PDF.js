@@ -21,12 +21,21 @@ previewPDF = document.getElementById('coaPreview');
 	
 	//var getImg = function(url, callback){
 		
+<<<<<<< HEAD
 		//var img = new Image();
 //		img.onload = function(){
 	//		callback(img);
 		//};
 //		img.src = url;
 	//}
+=======
+		var img = new Image();
+		img.onload = function(){
+			callback(img);
+		};
+		img.src = url;
+	}
+>>>>>>> 3bfa154672f13798b8e00c25ea6d082612c4fc15
 	
 	var margin = {top:20,left:5,right:5,bottom:0};
 	
