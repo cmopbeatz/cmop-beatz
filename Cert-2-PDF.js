@@ -11,8 +11,8 @@ var certificate = document.getElementById('CertForm');
 var pdfDL = document.getElementById('dlPDF');
 previewPDF = document.getElementById('coaPreview');	
 	
-	//html2canvas(certificate),{
-		//onrendered: function(canvas){
+	html2canvas(certificate),{
+		onrendered: function(canvas){
 		
 		
 	
@@ -40,7 +40,7 @@ previewPDF = document.getElementById('coaPreview');
 		pdfH = document.getElementById('CertForm').style.height;
 	
 	
-	//doc.addImage(img, 'PNG',10,10);
+	doc.addImage(img, 'PNG',10,10);
 	doc.fromHTML($('#CertForm').get(0),20,20,{
 		'width':pdfW,'height':pdfH
 		}, 
@@ -50,10 +50,12 @@ previewPDF = document.getElementById('coaPreview');
 			
 }
 		
+	
+	
 	  
 	
 
 
 
-	//}
-	//}
+	}
+	}
