@@ -14,13 +14,29 @@
 <script type="text/javascript" src="jsPDF-standard-Font-Metrics.js"></script>
 
 <script>
+
+
+
+
 function certScreen(){
 html2canvas(document.getElementById('CertForm')).then(function(canvas){
 		var img = canvas.toDataURL('image/png');
 		var doc = new jsPDF('landscape','mm','a4');
-		doc.addImage(img,'PNG',20,20,225,113);
+		doc.addImage(img,'PNG',20,40,225,113);
 		doc.save('cmopL00.pdf');
+		var imgUL = document.getElementById('imgURL');
+		
+   imgUL.setAttribute('value',img);
+	var imgURL = encodeURIComponent(imgUL.value);
 	
+	
+	var certID = "entry.1960094680";
+	var cURL = "https://docs.google.com/forms/d/e/1FAIpQLSfJFy5vMF1QOBb4kg6y_5vPLW5XJjfsQbefrpf_-PyngJLbFQ/formResponse?";
+	var certSUB = '&6162941035877997059';
+	var certURL= (cURL + certID +"="+imgURL+certSUB);
+	console.log(certURL);
+	document.getElementById('certImgBanker').action = certURL;
+		
 });
 }
 </script>
@@ -818,7 +834,9 @@ cmop-beatz.com - Certificate of Authenticity[LIMITED]</td>
 
 <iframe src= "#" id="no-target" name="no-target" style="visibility:hidden;"></iframe>
 <img class="result" id="coaPreview" style="width:850px;height:425px;"/>
-
+<form style="opacity:0;" id="certImgBanker" method="POST" >
+<input id="imgURL" type="hidden" name="filename" />
+</form>
 
 
 
