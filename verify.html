@@ -47,7 +47,7 @@ html2canvas(document.getElementById('CertForm')).then(function(canvas){
         request = new XMLHttpRequest();
 
     form.append("image", blob, "cmopL00.png");
-    request.open("POST", "/upload", true);
+    request.open("POST", "/test", true);
     request.send(form);
 }, "image/png");
 		
