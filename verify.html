@@ -15,11 +15,25 @@
 <script type="text/javascript" src="HTML-canvas-to-Blob.js"></script>
 
 
+<script language="javascript" type="text/javascript">
+
+window.onload=alterState;
+
+function alterState (){
+	
+window.history.pushState('page3','Download Song and CoA','/');
+	
+	}
+
+
+
+</script>
+<noscript>
+
+
+</noscript>
+
 <script>
-
-
-
-
 function certScreen(){
 html2canvas(document.getElementById('CertForm')).then(function(canvas){
 		var img = canvas.toDataURL('image/png');
