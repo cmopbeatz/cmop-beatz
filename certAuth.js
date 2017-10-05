@@ -15,6 +15,7 @@ certLast = document.getElementById('coaLast');
 certFirst = document.getElementById('coaFirst');
 titleSold = document.getElementById('purch-Title');
 closeDate = document.getElementById('closing-Date');
+refNum = document.getElementById('refID');
 
 //set clock to efDate
 function eDateTime(){
@@ -63,7 +64,26 @@ function checkTime(i) {
     return i;
 }
 
-document.getElementById('formsub').onclick = function(){
+function genRefNum(){
+	
+var ref = new Date();
+	var refDay = ref.getDay();
+	var refDate = ref.getDate();
+	var refMon = ref.getMonth();
+	var refD = ["0001","0010","0100","0021","0210","1020","0201"];
+	var refM = ["a101","a102","a103","a104","a105","a106","a107","a108","a109","a110","a111","a000"];
+
+
+ var reference = document.getElementById('firstN').value + refD[refDay] + refM[refMon];
+ 
+
+		 refNum.innerHTML = reference;
+		 }
+
+
+
+
+function storeCertNames (){
 	certLast.innerHTML = document.getElementById('lastN').value;
 	certFirst.innerHTML = document.getElementById('firstN').value;
 	

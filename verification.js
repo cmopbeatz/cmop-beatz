@@ -122,6 +122,9 @@ function isFnameBlank(){
 		document.getElementById('badName').style.display = "block";
 			 collectData();	
 		 storeData();
+		genRefNum();	
+		 storeCertNames();
+		
 			}
 			
 	}

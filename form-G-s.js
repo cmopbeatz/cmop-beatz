@@ -7,9 +7,10 @@ window.onload = loadProgress();
     
 
 
-var mailBox,infoPop, whyE, ToS,ePanel,tPanelemailArea,gFormBtn,qcPanel,cmtPane,qcFBox,qcExpand,subArea,formView,eQCimg, qArea;
+var mailBox,infoPop, whyE, ToS,ePanel,tPanelemailArea,gFormBtn,qcPanel,cmtPane,qcFBox,qcExpand,subArea,formView,eQCimg, qArea,scrDL;
 
 //assign variables
+scrDL = document.getElementById('dlSCR');
 infoPop = document.getElementById('intersititial');
 whyE = document.getElementById('whyEmail');
 ToS = document.getElementById('Tos');
@@ -24,7 +25,7 @@ cmtPane = document.getElementById('emailPanel');
 qcFBox = document.getElementById('QCform');
 qcExpand = document.getElementById('expQC');
 subArea = document.getElementById('submitButton');
-formView = document.getElementById('QCscroll');
+
 eQCimg = document.getElementById('expQCimg');
 qArea = document.getElementById('commtBox');
 yesBt = document.getElementById('yBtn');
@@ -65,7 +66,14 @@ gFormBtn.onclick = function(){
 	eQCimg.src = "images/cmop-openactionbtn(rev).png";
 				}
 		
-			
+	scrDL.onclick = function (){
+
+		
+		window.scrollTo(0,800);
+		
+	
+		
+	}
 		
 			
 qcExpand.onclick = function(){
