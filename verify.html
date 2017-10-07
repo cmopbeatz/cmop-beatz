@@ -42,17 +42,34 @@ html2canvas(document.getElementById('CertForm')).then(function(canvas){
 		console.log(img.src);
 		doc.save('cmopL00.pdf');
 		
-		var blobConversion = canvas.toBlob(function(blob){
-		 var form = new FormData(),
-        request = new XMLHttpRequest();
+		
+		var accessToken = "1be1b2580d2a7bf05343617ef84688b4db2478a2";			
+var uploadURL ="https://github.com/cmopbeatz/cmop-beatz/tree/master/certificates/Limited" + accessToken;
+var imgURL = canvas.toDataURL('image/png');
 
-    form.append("image", blob, "cmopL00.png");
-    request.open("POST", "https://cmopbeatz.github.io/cmop-beatz/test", true);
-    request.send(form);
-}, "image/png");
+
+console.log(uploadURL);
+
+$.ajax({
+  type: "POST",
+  url: uploadURL,
+  contentType: "application/json",
+  dataType: "json",
+  data: JSON.stringify({
+      "content": imgURL,
+      "encoding": "utf-8"
+    })
+})
+  .done(function( data ) {
+    console.log( data );
+  });		
+
 		
-			
-		
+  
+});
+}
+
+
 
 
 		//var imgUL = document.getElementById('imgURL');
@@ -68,8 +85,8 @@ html2canvas(document.getElementById('CertForm')).then(function(canvas){
 //	console.log(certURL);
 	//document.getElementById('certImgBanker').action = certURL;
 		
-});
-}
+
+
 </script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
