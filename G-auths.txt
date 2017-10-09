@@ -1,0 +1,5 @@
+AppSecret:ac5981954b4dc56ee3ab6e2a70f81a31
+
+accToken: 1941720529386220|AwTfodHf_NzANSPov8shuJMJRCM
+
+URL:https://graph.facebook.com/oauth/access_token?client_id=1941720529386220&client_secret=ac5981954b4dc56ee3ab6e2a70f81a31&grant_type=client_credentials
