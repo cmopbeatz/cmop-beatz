@@ -1,0 +1,39 @@
+CMOP-notable dimensions:
+.header
+.container
+.content
+button#exp_tracklist
+select#trackbox
+#actionContainer
+.footer
+solution:
+
+if windowWidth <= 500{
+	.containerWidth = 500
+	.contentWidth = 440
+	.headerWidth = 480
+}
+
+
+if windowWidth <= 700{
+	.containerWidth = 700
+	.contentWidth = 640
+	.headerWidth = 680
+}
+
+if windowWidth <= 900{
+	.containerWidth = 900
+	.contentWidth = 840
+	.headerWidth = 880
+}
+
+if windowWidth <= 1100{
+	.containerWidth = 1100
+	.contentWidth = 1040
+	.headerWidth = 1080
+}
+if windowWidth <= 1300{
+		.containerWidth = 1300
+		.contentWidth = 1240		
+		.headerWidth = 1280
+}

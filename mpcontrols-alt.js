@@ -8,6 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
 introLoader();
 }, false);
 
+
+
+
 function initPreLoader(){
 
 
@@ -61,7 +64,7 @@ function initAudioPlayer() {
 
     var audio, playbtn, mutebtn, seekslider, volumeslider, seekto, seeking = false, songShare,
         curtimetext, durtimetext, playlist_status, dir, playlist, playlist_index, tBox, track_List, ext, emlBtn, payBtn, pCart, tWindow, tLink, abtFooter, abtText, clicked = false,
-        pHead, tPanels, openAP, APlinks, closeAP, ActP, icon_TB, clockdisp, toggleClock, caldisp, contactbtn, sharebtn, contactCtn, shareCtn, optionbtn, lTAB, sTAB, pTAB, eTAB, ordSelect,ovBtn,sumBtn,lSum,sSum,pSum,eSum,lTable,sTable,pTable,eTable,pLoader,wContainer,
+        pHead, tPanels, APlinks, closeAP, ActP, icon_TB, clockdisp, toggleClock, caldisp, contactbtn, sharebtn, contactCtn, shareCtn, optionbtn, lTAB, sTAB, pTAB, eTAB, ordSelect,ovBtn,sumBtn,lSum,sSum,pSum,eSum,lTable,sTable,pTable,eTable,pLoader,wContainer,apContainer, actPOC, 
         playlist = [];
 
 
@@ -106,7 +109,9 @@ function initAudioPlayer() {
 
 
     // Set object references
- 
+	
+actPOC = document.getElementById('actPOC');
+ apContainer = document.getElementById('actionContainer');
 	   clockdisp = document.getElementById('clock');
     toggleClock = document.getElementById('clock-toggle');
     caldisp = document.getElementById('calendar');
@@ -140,7 +145,7 @@ function initAudioPlayer() {
     abtFooter = document.getElementById('footer');
     abtText = document.getElementById('aboutField');
 
-    openAP = document.getElementById('openAction');
+   
     closeAP = document.getElementById('closeAction');
     ActP = document.getElementById('actionPanel');
 
@@ -245,8 +250,8 @@ function initAudioPlayer() {
 
     //contact/Share(HEADER)//
     contactbtn.onclick = function() {
-
-
+				   		           document.getElementById('tdDisplay').style.width="360px";
+		           document.getElementById('ccCont').style.display="none";
         shareCtn.style.display = "none";
 
         contactCtn.style.display = "block";
@@ -254,7 +259,8 @@ function initAudioPlayer() {
     }
     sharebtn.onclick = function() {
 
-
+		           document.getElementById('ccCont').style.display="none";
+				   		           document.getElementById('tdDisplay').style.width="240px";
         contactCtn.style.display = "none";
 
         shareCtn.style.display = "block";
@@ -267,14 +273,20 @@ function initAudioPlayer() {
         startTime();
         startDate();
         if (clockdisp.style.opacity === "") {
-            clockdisp.style.width = "145px";
-            clockdisp.style.opacity = "1";
 
+         document.getElementById('tdDisplay').style.width="360px";
+			shareCtn.style.display="none";
+			contactCtn.style.display="none";
+           document.getElementById('ccCont').style.display="block";
+		   clockdisp.style.display = "block";
+            clockdisp.style.opacity = "1";
+			caldisp.style.display = "block";
             caldisp.style.opacity = "1";
         } else {
-            clockdisp.style.width = "0px";
+			           document.getElementById('ccCont').style.display="none";
+           		   clockdisp.style.display = "none";
             clockdisp.style.opacity = "";
-
+						caldisp.style.display = "none";
             caldisp.style.opacity = "";
         }
     }
@@ -310,7 +322,8 @@ function initAudioPlayer() {
     }
 
 
-    ////Visualizer using Canvas////
+/////expand hot-to-Contact///
+
 
 
     ////Expand / Close Footer////
@@ -420,7 +433,7 @@ function initAudioPlayer() {
             pHead.innerHTML = "X";
             pHead.style.textIndent = "0.25px";
             tPanels.style.display = "block";
-            tPanels.style.width = "600px";
+            tPanels.style.width = "330px";
             tWindow.style.display = "none";
         } else {
             pHead.innerHTML = "$";
@@ -453,7 +466,8 @@ function initAudioPlayer() {
                ) {
                 expandTB.style.borderRadius = "8px  8px 1px 1px";
                 track_List.style.opacity = "1";
-                track_List.style.height = "270px";
+				  track_List.style.display = "block";
+                track_List.style.height = "200px";
 				expandTB.innerHTML = "COLLAPSE";
 
 
@@ -461,6 +475,8 @@ function initAudioPlayer() {
 
             } else {
                 track_List.style.opacity = "";
+				
+								  track_List.style.display = "none";
                 track_List.style.height = "0px";
 				expandTB.style.borderRadius = "8px";
                 expandTB.innerHTML = "EXPAND";
@@ -470,38 +486,22 @@ function initAudioPlayer() {
         //Clear Action Panel//////
 
   closeAP.onclick = function() {
-        ActP.style.width = "0px";
-        ActP.style.opacity = "0";
-
-        document.getElementById('emailPanel')
-            .style.opacity = '0';
-        document.getElementById('soundCloudPanel')
-            .style.opacity = '0';
-        document.getElementById('paypalPanel')
-            .style.opacity = '0';
-
-        APlinks.style.opacity = "0";
-        openAP.style.opacity = "1";
-        closeAP.style.opacity = "0";
-
+	   if (ActP.style.display === "") {
+		   actPOC.src="images/cmop-openactionbtn.png";
+		 
+            ActP.style.display = "none";
+			ActP.style.opacity="0";
+        } else {
+			actPOC.src="images/cmop-closeactionbtn.png";
+		   
+            ActP.style.display = "";
+			ActP.style.opacity = "1";
+        }
 
     }
 
-    openAP.onclick = function() {
-        ActP.style.width = "400px";
-        ActP.style.opacity = "1";
-
-
-        document.getElementById('emailPanel')
-            .style.opacity = '1';
-        document.getElementById('soundCloudPanel')
-            .style.opacity = '1';
-        document.getElementById('paypalPanel')
-            .style.opacity = '1';
-        APlinks.style.opacity = "1";
-        openAP.style.opacity = "0";
-        closeAP.style.opacity = "1";
-    }
+    
+        
 
   
 

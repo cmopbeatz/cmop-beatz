@@ -13,9 +13,13 @@
   <meta property="og:image"         content="http://cmopbeatz.com/images/cmop-letterhead-FB.png" />
   <meta property="og:image:width" content="200" />
   <meta property="og:image:height" content="200" />
- 
+
+
 </head>
-<style type="text/css">
+
+
+
+<style type="text/css" >
 <!--
 html{
 	scrollbar-arrow-color: #CCC;
@@ -65,11 +69,11 @@ body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	margin: 0;
 	background-repeat: repeat;
-	width: auto;
+	width: inherit;
 	background-image: url(images/cmop-3dlogo0001.png);
 	background-attachment: fixed;
 	background-position: center center;
-	height: 100%;
+	height: auto;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -79,17 +83,13 @@ body {
 	height: 40px;
 	overflow: hidden;
 	position: relative;
-
 	color: rgba(255,255,255,1);
-
-	background-color: #000000;
 }
 .scroll-left p {
-	position: absolute;
-	width: 300%;
+	width: 1000px;
 	height: 100%;
 	line-height: 50px;
-	text-align: center;
+	text-align: left;
 	/* Starting position */
 	-moz-transform: translateX(100%);
 	-webkit-transform: translateX(100%);
@@ -98,8 +98,8 @@ body {
 	-moz-animation: scroll-left 15s linear infinite;
 	-webkit-animation: scroll-left 15s linear infinite;
 	animation: scroll-left 15s linear infinite;
-	margin-left: 100px;
-	left: 8px;
+	overflow: hidden;
+	float: right;
 }
 /* Move it (define the animation) */
 @-moz-keyframes scroll-left {
@@ -127,23 +127,22 @@ body {
 
 div#audio_player{
 	width: 340px;
-	height: 48px;
+	height: auto;
 	border-radius: 2px 2px 2px 2px;
 	visibility: visible;
 	z-index: 5;
-	position: absolute;
+	position: relative;
 	display: inline-block;
-	left: 8px;
-	top: 83px;
+	float: left;
+	top: 50px;
 }
 div#main{
-	float: right;
+	float: left;
 	width: 340px;
 	height: 60px;
 	background-color: rgbd(255,255,255,.5);
 	border-radius: 4px;
 	background-image: none;
-	left: 25px;
 	position: relative;
 	border-top-width: thin;
 	border-top-style: solid;
@@ -157,10 +156,11 @@ div#main{
 }
 
 div#audio_controls{
-	height: 60px;
+	height: auto;
 	width: 311px;
 	position: relative;
 	left: 1px;
+	float: left;
 }
 /* ~~ Element/tag selectors ~~ */
 ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
@@ -193,12 +193,8 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	background-repeat: no-repeat;
 	position: static;
 	z-index: 1;
-	width: 100%;
-	height: 100%;
-	margin-left: 60px;
-	margin-right: auto;
-	margin-top: 40px;
-	margin-bottom: 80px;
+	width: 1280px;
+	height: 1000px;
 	-webkit-transition: all 2s ease-in-out 0s;
 	-moz-transition: all 2s ease-in-out 0s;
 	-ms-transition: all 2s ease-in-out 0s;
@@ -206,6 +202,8 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	transition: all 2s ease-in-out 0s;
 	opacity: 1;
 	display: block;
+	margin-top: 40px;
+	margin-left: 20px;
 }
 #Enter-page {
 	font-family: Arial, Helvetica, sans-serif;
@@ -247,39 +245,43 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 /* ~~the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo~~ */
 .header {
 	background:;
-	height: 40px;
-	width: 1260px;
+	height: 50px;
+	width: 97%;
 	z-index: 10;
 	position: relative;
-	background-color: #000;
-	border: 4px solid rgba(0,0,0,1);
+	background-color: rgba(0,0,0,1);
 	left: -3px;
+	box-shadow: 0px 0px 2px 2px rgba(0,0,0,.7);
+	border-top-width: 2px;
+	border-right-width: 4px;
+	border-bottom-width: 4px;
+	border-left-width: 2px;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: rgba(255,255,255,1);
+	border-right-color: rgba(102,102,102,.3);
+	border-bottom-color: rgba(0,204,255,.2);
+	border-left-color: rgba(255,255,255,1);
+	border-radius: 5px;
 }
 #contact-options {
 	color: rgba(255,255,255,1);
-	background-color: rgba(0,0,0,1);
 	height: 40px;
 	width: 500px;
-	position: absolute;
-	left: -200px;
-	top: 11px;
+	position: relative;
 	display: none;
 }
 #share-options {
 	height: 40px;
-	width: 500px;
-	left: 5px;
-	position: absolute;
-	top: 51px;
+	width: 280px;
+	position: relative;
 	font-size: 36px;
 	text-align: center;
 	vertical-align: middle;
 	white-space: nowrap;
-	display: none;
-	padding-top: 10px;
-	padding-right: 10px;
-	padding-bottom: 10px;
-	padding-left: 10px;
+	display: block;
 }
 .linkbox {
 	height: auto;
@@ -290,12 +292,16 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 #clock-toggle {
 	height: 40px;
 	width: 40px;
-	float: right;
-	position: absolute;
-	left: 1040px;
-	top: -26px;
 	border-radius: 20px;
-	background-color: rgba(0,0,0,1);
+	background-color: rgba(255,255,255,0);
+	position: relative;
+	margin: 0px;
+}
+#statusContainer {
+	height: 50px;
+	width: 100px;
+	float: right;
+	position: relative;
 }
 
 /* ~~ This is the layout information. ~~ 
@@ -304,7 +310,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 
 */
 .content {
-	width: 1260px;
+	width: 87%;
 	height: 780px;
 	padding-top: 10px;
 	padding-bottom: 1px;
@@ -323,8 +329,8 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	background-color: #000;
 	background-image: url(images/cmop-cont-disp00.gif);
 	background-position: left;
-	min-height: 350px;
-	min-width: 780px;
+	margin: 0px;
+	margin-left: 40px;
 }
 
 /* ~~ This grouped selector gives the lists in the .content area space ~~ */
@@ -335,12 +341,11 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 button#footer {
 	background-color: #000;
 	height: 20px;
-	width: 1260px;
+	width: 97%;
 	padding-right: 0;
 	padding-bottom: 0;
 	padding-left: 0;
-	position: relative;
-	margin-bottom: 50px;
+	position: static;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	box-shadow: 0px 0px 4px 3px #000;
@@ -356,16 +361,17 @@ button#footer {
 	text-decoration: underline overline;
 	font-weight: bold;
 	font-variant: small-caps;
+	margin: 0;
+	top: 10px;
 }
 #aboutField{
-	width: 1260px;
+	width: 1240px;
 	height: 70px;
 	display: none;
 	box-shadow: 0px 0px 2px 1px #000;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	position: absolute;
+	position: relative;
 	left: 0px;
-	top: 890px;
 	background-color: #999;
 	border-radius: 0px 0px 10px 10px;
 	-webkit-transition: all .5s ease-in-out;
@@ -378,7 +384,6 @@ button#footer {
 	font-weight: bold;
 	font-variant: small-caps;
 	margin-left: 59px;
-	margin-top: 50px;
 	margin-bottom: 60px;
 }
 
@@ -534,17 +539,14 @@ div#AdvOptions{
 	overflow: hidden;
 			}
 	select#trackbox{
-	float: left;
-	width: 320px;
+	width: 340px;
 	height: 0px;
 	color: #FFF;
 	background-color: rgba(102,102,102,0.2);
 	background-image: none;
 	background-position: center;
-	position: relative;
-	z-index: 1;
-	margin-left: 5px;
-	/* [disabled]transition: all .5s ease-in-out 0s; */
+	position: absolute;
+	transition: all .5s ease-in-out .15s;
 	opacity: 0;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 16px;
@@ -553,38 +555,34 @@ div#AdvOptions{
 	letter-spacing: normal;
 	word-spacing: normal;
 	white-space: normal;
-	display: inline-block;
-	top: 193px;
+	display: none;
 	box-shadow: 2px 0px 2px 1px #333;
 	border-radius: 0px 0px 8px 8px;
-	left: -330px;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	-webkit-transition: all .5s ease-in-out 0s;
-	-moz-transition: all .5s ease-in-out 0s;
-	-ms-transition: all .5s ease-in-out 0s;
-	-o-transition: all .5s ease-in-out 0s;
+	-webkit-transition: all .5s ease-in-out .15s;
+	-moz-transition: all .5s ease-in-out .15s;
+	-ms-transition: all .5s ease-in-out .15s;
+	-o-transition: all .5s ease-in-out .15s;
 	border: thick solid rgba(51,51,51,1);
 	overflow-y: scroll;
 	overflow-x: hidden;
+	top: 115px;
 			}
 			
 			select option{
 	color: #fff;
 	text-shadow: 1px 1px 2px rgba(0, 0, 0, .4);
-	background-color: rgba(255,255,255,0.2);
-	font-family: Arial, Helvetica, sans-serif;
+	border: none;
 				}
 button#exp_tracklist {
 	height: 35px;
-	width: 318px;
+	width: 340px;
 	position: relative;
 	background-color: #333333;
 	color: #FFF;
 	font-size: 18px;
-	top: 132px;
 	border-radius: 8px;
-	left: 4px;
 	font-style: normal;
 	font-weight: bolder;
 	font-family: Arial, Helvetica, sans-serif;
@@ -615,12 +613,10 @@ button#exp_tracklist {
 div#buyLinks{
 	width: 148px;
 	height: 47px;
-	float: right;
+	float: left;
 	position: relative;
 	z-index: 8;
-	left: 0px;
-	top: 175px;
-	border-radius: 8px 1px 1px 1px;
+	border-radius: 8px 1px 1px 8px;
 	background-color: #333;
 	opacity: 1;
 	transition: all 1s;
@@ -630,6 +626,12 @@ div#buyLinks{
 	font-variant: small-caps;
 	font-weight: bold;
 	font-style: normal;
+	border-top-width: thin;
+	border-left-width: thin;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-top-color: rgba(255,255,255,1);
+	border-left-color: rgba(255,255,255,1);
 }
 div#addToCart{
 	height: 40px;
@@ -670,7 +672,6 @@ width:;
 	text-align: center;
 	background-image: none;
 	left: 5px;
-	top: 56px;
 	float: left;
 	line-height: 30px;
 	transition: all .3s ease-out;
@@ -690,17 +691,15 @@ width:;
 	background-color: rgba(51,204,255,.4);
 	font-weight: bold;
 	font-variant: small-caps;
+	top: -15px;
 			}
 button#PricingHeader{
 	width: 32px;
 	height: 32px;
-	position	: absolute;
-	margin-top: 20px;
+	position	: relative;
 	background-image: none;
 	background-repeat: no-repeat;
 	z-index: 4;
-	top: 400px;
-	left: -38px;
 	border-radius: 32px;
 	box-shadow: inset 0px 0px 4px 2px #000;
 	font-family: Arial, Helvetica, sans-serif;
@@ -722,13 +721,13 @@ button#PricingHeader{
 	-ms-transition: all 1s ease-in-out;
 	-o-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
+	margin: 0px;
+	top: 250px;
 }
 #pricingPanel {
-	height: 305px;
-	width: 600px;
+	height: 385px;
+	width: 400px;
 	position: absolute;
-	left: 7px;
-	top: 472px;
 	display: none;
 	text-shadow: 1px 1px 1px rgba(0,0,0,1);
 	-webkit-transition: all 1s;
@@ -737,13 +736,17 @@ button#PricingHeader{
 	-o-transition: all 1s;
 	transition: all 1s;
 	box-shadow: 0px 0px 2px 2px rgba(102,102,102,1);
+	top: 395px;
+	left: 35px;
 }
 #contCont {
+	width: 330px;
+	float: right;
 }
 .moreInfo {
 	background-color: rgba(102,102,102,1);
-	height: 190px;
-	width: 377px;
+	height: 250px;
+	width: auto;
 	position: absolute;
 	left: 0px;
 	top: 2px;
@@ -756,9 +759,7 @@ button#PricingHeader{
 #ovBtn {
 	height: auto;
 	width: 80px;
-	position: absolute;
-	top: -19px;
-	left: 50px;
+	position: relative;
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
 	vertical-align: middle;
@@ -766,13 +767,13 @@ button#PricingHeader{
 	background-color: #999;
 	color: #333;
 	font-weight: bold;
+	float: left;
+	margin-top: 0px;
 }
 #summBtn {
 	height: auto;
 	width: 100px;
-	position: absolute;
-	top: -19px;
-	left: 250px;
+	position: relative;
 	font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
 	vertical-align: middle;
@@ -780,35 +781,37 @@ button#PricingHeader{
 	background-color: #333;
 	color: #999;
 	font-weight: bold;
+	float: right;
+	margin-top: 0px;
 }
 #pricingTabs {
-	height: 100px;
-	position: absolute;
+	height: 70px;
+	position: relative;
 	font-family: "Carbon Phyber";
 	color: #000;
-	width: 140px;
-	padding-right: -40px;
-	display: inline-block;
-	text-align: center;
+	width: 330px;
+	text-align: left;
 	vertical-align: middle;
 	font-weight: bold;
 	font-variant: small-caps;
 	font-style: normal;
-	left: 50px;
+	float: left;
+	margin-bottom: 10px;
 }
 button#limitedTab {
-	width: inherit;
+	width: auto;
 	position: relative;
 	font-family: Arial, Helvetica, sans-serif;
 	color: #000;
-	font-size: 12px;
-	height: 24px;
-	letter-spacing: 2px;
-	text-align: right;
+	font-size: 14px;
+	height: auto;
+	text-align: left;
 	vertical-align: middle;
 	background-color: rgba(255, 255,255, 0);
-	float: right;
-	left: 3px;
+	margin: none;
+	text-indent: -12px;
+	float: left;
+	margin-left: 30px;
 }
 button#limitedTab:active {
 	color: #FFF;
@@ -821,16 +824,17 @@ button#exclusiveTab:hover {
 }
 button#standardTab {
 	background-color: rgba(255, 255,255, 0);
-	width: inherit;
+	width: auto;
 	position: relative;
-	height: 24px;
+	height: auto;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	letter-spacing: 2px;
-	text-align: right;
+	font-size: 14px;
+	text-align: left;
 	vertical-align: middle;
 	color: #000;
-	float: right;
+	margin: none;
+	text-indent: -12px;
+	float: left;
 }
 button#standardTab:hover {
 	color: #FFF;
@@ -840,47 +844,47 @@ button#standardTab:active {
 }
 button#proTab {
 	background-color: rgba(255, 255,255, 0);
-	width: inherit;
+	width: auto;
 	position: relative;
-	height: 24px;
+	height: auto;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	letter-spacing: 2px;
-	text-align: right;
+	font-size: 14px;
+	text-align: left;
 	vertical-align: middle;
 	color: #000;
-	float: right;
+	margin: none;
+	text-indent: -12px;
+	float: left;
 }
 button#proTab:hover {
 	color: #FFF;
 }
 button#exclusiveTab {
 	background-color: rgba(255, 255,255, 0);
-	width: inherit;
+	width: auto;
 	position: relative;
-	height: 24px;
+	height: auto;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 12px;
-	float: right;
+	font-size: 14px;
 	display: block;
-	letter-spacing: 2px;
-	text-align: right;
+	text-align: left;
 	vertical-align: middle;
 	color: #000;
+	margin: none;
+	text-indent: -12px;
+	float: left;
 }
 #contentPanel {
 	height: auto;
-	width: 377px;
-	float: left;
+	width: 330px;
 	position: relative;
-	margin-right: 20px;
-	right: -170px;
 	border-left-width: thin;
 	border-left-style: dashed;
 	border-left-color: rgba(153,153,153,1);
+	float: right;
 }
 .pricingCell {
-	background-color: rgba(52,52,52,.2);
+	background-color: rgba(52,52,52,.4);
 	font-family: Arial, Helvetica, sans-serif;
 	font-weight: bolder;
 	font-variant: normal;
@@ -890,49 +894,48 @@ button#exclusiveTab {
 	margin-left: 10px;
 	margin-right: 10px;
 	text-shadow: 1px 1px 2px rgba(0,0,0,1);
+	width: 329px;
 }
 #limitedContent {
-	width: 377px;
+	width: auto;
 	height: auto;
 	color: #FFF;
-	position: absolute;
+	position: relative;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
 	font-weight: bold;
-	float: left;
-	left: 18px;
-	top: 25px;
 	font-variant: small-caps;
 	border-radius: 8px;
 }
 #exclusiveContent {
-	position: absolute;
+	position: relative;
 	height: auto;
-	width: 377px;
-	top: 25px;
+	width: auto;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	color: rgba(255,255,255,1);
 	display: none;
-	float: left;
-	left: 18px;
 	font-variant: small-caps;
 	border-radius: 8px;
 }
+#ctCMOP {
+	height: 150px;
+	width: auto;
+	position: relative;
+	font-family: Arial, Helvetica, sans-serif;
+	background-color: rgba(102,102,102,.5);
+}
 #standardContent {
 	height: auto;
-	width: 377px;
-	position: absolute;
-	top: 25px;
+	width: auto;
+	position: relative;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
 	font-weight: bold;
 	font-variant: small-caps;
 	color: rgba(255,255,255,1);
 	display: none;
-	float: left;
-	left: 18px;
 	border-radius: 8px;
 }
 		
@@ -950,9 +953,8 @@ button#exclusiveTab {
 	height: 220px;
 	width: 20px;
 	text-decoration: none;
-	position: absolute;
-	top: 20px;
-	left: -350px;
+	position: relative;
+	top: 300px;
 	background-image: url(images/CMO_P-ToS-button.png);
 	background-repeat: no-repeat;
 	border-top-left-radius: 8px;
@@ -970,25 +972,26 @@ button#exclusiveTab {
 	border-radius: 10px;
 	box-shadow: 0px 0px 3px 1px #000;
 	z-index: 1;
-	float: left;
+	margin: 0px;
+	margin-left: 10px;
 }
 #termWindow{
 	position: absolute;
-	height: 300px;
-	width: 660px;
+	height: 385px;
+	width: 390px;
 	z-index: 15;
 	display: none;
 	overflow: auto;
 	background-color: rgba(102,102,102,0.5);
-	left: -310px;
 	opacity: 1;
 	box-shadow: inset 0px 0px 3px 2px #000;
-	top: -35px;
 	padding-top: 5px;
 	padding-left: 5px;
 	border-radius: 5px;
 	border: medium solid rgba(102,102,102,1);
 	float: left;
+	top: -120px;
+	left: -310px;
 }
 .scrollText {
 	font-family: "Courier New", Courier, monospace;
@@ -1004,19 +1007,16 @@ button#exclusiveTab {
 
 div#actionPanel{
 	width: 400px;
-	height: 540px;
-	position: absolute;
+	height: 400px;
+	position: relative;
 	overflow: hidden;
 	background-repeat: no-repeat;
 	z-index: 4;
 	display: block;
-	border-radius: 5px 0px 5px 5px;
-	bottom: -37px;
-	right: 0px;
+	border-radius: 5px 0px 0px 5px;
 	float: right;
-	top: 230px;
 	background-image: none;
-	border: 3px solid rgba(51,51,51,1);
+	border: 1.5px solid rgba(51,51,51,1);
 	box-shadow: inset 0px 0px 2px 2px rgba(51,51,51,1);
 	opacity: 1;
 	-webkit-transition: all .5s ease-in-out 0s;
@@ -1024,6 +1024,7 @@ div#actionPanel{
 	-ms-transition: all .5s ease-in-out 0s;
 	-o-transition: all .5s ease-in-out 0s;
 	transition: all .5s ease-in-out 0s;
+	top: -2.5px;
 }
 
 
@@ -1039,15 +1040,12 @@ div#actionPanel{
 button#closeAction {
 	background-color: rgba(255,255,255,.3);
 	height: 45px;
-	width: 60px;
-	position: absolute;
-	top: 159px;
+	width: 50px;
+	position: relative;
 	display: block;
-	float: left;
+	float: right;
 	z-index: 7;
-	left: 1250px;
 	transition: all 1s;
-	margin-left: 12px;
 	opacity: 1;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10px;
@@ -1068,21 +1066,27 @@ button#closeAction {
 	border-right-style: solid;
 	border-bottom-style: solid;
 	border-left-style: none;
-	border-top-color: rgba(255,255,255,1);
-	border-right-color: rgba(255,255,255,1);
-	border-bottom-color: rgba(255,255,255,1);
+	border-top-color: rgba(81,81,81,1);
+	border-right-color: rgba(51,51,51,1);
+	border-bottom-color: rgba(51,51,51,1);
 	text-decoration: blink;
+	margin-top: 0px;
+	margin-right: 0px;
+	top: 2px;
+}
+#apCommands {
+	height: 50px;
+	width: 195px;
+	position: relative;
+	float: right;
 }
 button#openAction {
 	background:;
-	height: 45px;
-	width: 60px;
-	position: absolute;
-	top: 237px;
-	display: table-column;
-	float: right;
+	height: auto;
+	width: auto;
+	position: relative;
+	display: block;
 	z-index: 7;
-	left: 1265px;
 	transition: all 1s ease-in-out 0s;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10px;
@@ -1097,7 +1101,6 @@ button#openAction {
 	text-shadow: 0px 0px 3px #FFF;
 	letter-spacing: 0.5px;
 	background-color: rgba(153,153,153,0.3);
-	white-space: nowrap;
 	background-repeat: no-repeat;
 	background-image: none;
 	-webkit-transition: all 1s ease-in-out 0s;
@@ -1108,25 +1111,24 @@ button#openAction {
 	border-radius: 15px;
 	box-shadow: inset 0px 0px 3px 2px rgba(0,0,0,1);
 	opacity: 0;
+	float: right;
+	margin: 0px;
 }
 #proContent {
 	height: auto;
-	width: 377px;
-	position: absolute;
-	top: 25px;
+	width: auto;
+	position: relative;
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 18px;
 	color: rgba(255,255,255,1);
 	font-weight: bold;
 	font-variant: small-caps;
 	display: none;
-	float: left;
-	left: 18px;
 	border-radius: 8px;
 }
 #emailPanel{
 	width: 400px;
-	height: 540px;
+	height: 400px;
 	position: relative;
 	float: left;
 	z-index: 3;
@@ -1135,10 +1137,11 @@ button#openAction {
 	opacity: 1;
 	margin-right: 50px;
 	background-color: rgba(51,51,51,0.5);
+	overflow-y: scroll;
 }
 #paypalPanel{
 	width: auto;
-	height: 540px;
+	height: 400px;
 	overflow: auto;
 	position: relative;
 	background-color: #;
@@ -1207,7 +1210,7 @@ button#openAction {
 
 #soundCloudPanel{
 	width: 400px;
-	height: 540px;
+	height: 400px;
 	position: absolute;
 	float: right;
 	z-index: 4;
@@ -1356,17 +1359,15 @@ input[type='range']::-ms-thumb{
 	border-radius: 10px 10px 0px 0px;
 }
 #tb_Icon {
-	width: 39px;
+	width: auto;
 	height: 39px;
-	position: absolute;
+	position: relative;
 	background-image: none;
-	top: 30px;
 	border: 3px solid #FFF;
 	border-radius: 30px;
 	background-repeat: no-repeat;
 	background-position: center center;
 	z-index: 2;
-	left: -45px;
 	box-shadow: inset 0px 0px 4px 2px #000;
 	background-color: rgba(255,255,255,.5);
 	font-size: 26px;
@@ -1377,17 +1378,18 @@ input[type='range']::-ms-thumb{
 	color: rgba(255,255,255,1);
 	text-decoration: blink;
 	text-shadow: 0px 0px 8px rgba(0,0,0,1);
+	margin: 0px;
 }
 #clock {
 	font-family: "Courier New";
-	font-size: 18px;
+	font-size: 20px;
 	font-weight: bold;
-	color: #999;
+	color: #FFF;
 	text-shadow: 0px 0px 2px #FFF;
-	width: 120px;
+	width: 145px;
 	height: 20px;
-	float: right;
-	position: absolute;
+	float: left;
+	position: relative;
 	opacity: 0;
 	-webkit-transition: all 1s ease-in-out;
 	-moz-transition: all 1s ease-in-out;
@@ -1395,7 +1397,6 @@ input[type='range']::-ms-thumb{
 	-o-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
 	visibility: visible;
-	right: 30px;
 	text-align: left;
 	vertical-align: text-bottom;
 	display: inline-block;
@@ -1405,19 +1406,18 @@ input[type='range']::-ms-thumb{
 	border-bottom-style: dashed;
 	border-left-style: none;
 	border-bottom-color: #CCC;
-	top: 0px;
+	top: 10px;
 }
 #options-toggle {
-	float: right;
-	height: 40px;
+	height: 30px;
 	width: 40px;
-	position: absolute;
-	left: 1222px;
-	top: -23px;
-	background-image: url(images/options-toggle-img.png);
 	background-repeat: no-repeat;
 	background-color: rgba(0,0,0,1);
 	border-left: thin 1px solid;
+	float: left;
+	position: relative;
+	margin: 0px;
+	margin-left: 15px;
 }
 #shareSong-container {
 	position: absolute;
@@ -1503,9 +1503,8 @@ input[type='range']::-ms-thumb{
 }
 #options-container {
 	height: 140px;
-	width: 460px;
+	width: 150px;
 	position: absolute;
-	left: 795px;
 	top: 47px;
 	display: none;
 }
@@ -1519,14 +1518,11 @@ input[type='range']::-ms-thumb{
 	width: 100px;
 	position: relative;
 	color: rgba(102,102,102,1);
-	margin-top: 10px;
-	float: right;
 	border-radius: 10px;
 	box-shadow: inset 0px 0px 1px 1px rgba(51,51,51,1);
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 14px;
 	font-weight: bold;
-	margin-left: 20px;
 }
 #share:hover {
 	color: rgba(255,255,255,1);
@@ -1535,12 +1531,10 @@ input[type='range']::-ms-thumb{
 #calendar {
 	height: 20px;
 	width: 150px;
-	position: absolute;
-	top: 20px;
-	left: 1080px;
+	position: relative;
 	font-size: 18px;
 	font-weight: normal;
-	color: #999;
+	color: #FFF;
 	-webkit-transition: opacity 1.2s ease-in-out 0s, width 1.2s ease-in-out;
 	-moz-transition: opacity 1.2s ease-in-out 0s, width 1.2s ease-in-out;
 	-ms-transition: opacity 1.2s ease-in-out 0s, width 1.2s ease-in-out;
@@ -1551,11 +1545,12 @@ input[type='range']::-ms-thumb{
 	font-family: "Courier New";
 	text-align: left;
 	vertical-align: text-bottom;
-	display: inline-block;
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
 	border-left-style: none;
+	float: right;
+	top: 10px;
 }
 
 
@@ -1580,7 +1575,11 @@ button#exclusiveTab:active {
 }
 #RSS-container {
 	height: 40px;
-	width: 1260px;
+	width: 560px;
+	position: absolute;
+	padding-right: 40px;
+	float: left;
+	top: -40px;
 }
 #CMOP-title {
 	height: 42px;
@@ -1594,33 +1593,37 @@ button#exclusiveTab:active {
 	word-spacing: 1px;
 	font-family: "Planet Kosmos";
 	background-repeat: no-repeat;
-	position: absolute;
-	left: 90px;
+	position: relative;
 	line-height: 40px;
 	text-shadow: -3px 2px 4px rgba(102,102,102,1);
-	top: 10px;
 	background-color: rgba(55,55,55,.1);
 	z-index: 3;
+	top: 5px;
+	display: block;
 }
 #CMOP-logo {
-	height: 100%;
+	height: 40px;
 	width: 60px;
-	position: absolute;
+	position: relative;
 	background-attachment: fixed;
 	background-repeat: no-repeat;
 	background-position: center center;
-	top: -62.5px;
-	left: -100px;
-	z-index: 4;
+	z-index: 11;
+	float: left;
+	top: -2px;
+	left: -30px;
 }
 #CMOP-description {
 	height: 40px;
-	width: 600px;
-	float: right;
+	width: 50%;
 	font-family: "Carbon Phyber";
 	font-size: 24px;
 	color: rgba(255,255,255,1);
-	right: 250px;
+	float: left;
+	z-index: 20;
+	top: 40px;
+	margin-left: 10px;
+	overflow: hidden;
 }
 #pre-loader {
 	background-color: rgba(51,51,51,.1);
@@ -1659,58 +1662,79 @@ button#exclusiveTab:active {
 <body>
 
 <div id ="pre-loader"><img src="images/cmop-letterhead2.png" height ="400px" width ="780px">
-<div id ="loader-graphic"><img src="images/cmop-loader-circle.gif" height="30px" width="30px"></div>
+<div id ="loader-graphic"><img src="images/cmop-loader-circle.gif" height="30px" width="60%"></div>
 <button id ="Enter-page">enter cmop-beatz</button>
 </div>
 
 <div id ="cntr" class="container">
-  <div class="header"><div id="CMOP-logo"><img width ="300" height="150px" src="images/cmop-letterhead2.png"></div><div id="CMOP-title" title="The Logo for &quot;cmop-beatz&quot;"><img width ="300" height="40px" src="images/cmop-web-logo.png">
- 
+<div id="leftUI" style="position:relative;height:700px;width:40px;float:left;top:100px;"><button title="Display song info" id="tb_Icon">?</button><button id="PricingHeader" >$</button><button id="ToS">
+  <p style="color:white">&nbsp;</p>
+  </button>
 </div>
-  <div id="RSS-container" >
-<div  id="CMOP-description" class="scroll-left"><p class ="scroll-left p"> We've got a beat for any genre! Contact us for exclusive projects! </p></div>
 
-</div>
-<button title="Hide/Show the Time and Date" name="clock-toggle" id="clock-toggle"><img src="images/clock.png" width="41" height="40"></button>
+
+
+  <div id="cmopHead" class="header">
+  <div id="CMOP-siteTitle" style="height:50px;width:92%;float:left;margin:0px;top:2px;">
+    <div id="CMOP-logo"><img width="60" height="50" src="images/cmop-letterhead2.png"></div><div id="CMOP-title" title="The Logo for &quot;cmop-beatz&quot;"><img id="cmopbeatz" style="width:100%;height:40px;" src="images/cmop-web-logo.png">
+ </div>
+ 
+ <div id="tdDisplay" style="background:rgba(51,51,51,.6);height:40px;width:240px;margin-top:5px;float:left;box-shadow:inset -.25px -.25px 1px 2px rgba(0,0,0,1);border:thin  solid rgba(255,255,255,1);border-radius:5px; ">
+  <div id="ccCont" style="width:360px;position:relative;height:40px;display:none;float:right;">
 <div id="clock"></div>
 <div id="calendar"></div>
- <button title="Share on Social Media" id="options-toggle"></button>
+</div>
+
+<div id="contact-options">
+   <p id ="sales@" style="position:relative;font-size:12px;float:left;">Sales:sales.cashmeout@gmail.com</p>   
+   <p id="exclusives@" style="position:relative;font-size:12px;float:left;top:-10px;">
+   Exclusives:exclusives.cashmeout@gmail.com</p>
+ </div>
+
+ <div id="share-options">
+<a style="position:relative;float:left;" href="https://twitter.com/cmopbeatz?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false"><img src="images/Twitter_Android.png" height="35" width="35"/><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></a>
+    
+    
+<a style="position:relative;float:left;margin-left:20px;" href="http://www.linkedin.com/shareArticle?mini=true&url=http://cmopbeatz.com/index.html&title=CASHMEOUT Productions presents:&summary=Tired of the same 'ole sound?&source=cmopbeatz" target="_blank"> <img src="images/linkedin-icon-21.png" style="height:30px; width:30px;"/> </a>
+    
+    
+<iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcmopbeatz.com%2Findex.html&width=60&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId=1941720529386220" width="60" height="21" style="position:relative;float:left;margin-left:20px;border:none;overflow:hidden;top:5px;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+    
+    
+<a style="position:relative;float:left;margin-left:20px;" href="http://plus.google.com/share?url=http://cmopbeatz.com/index.html"><img src="images/google-plus-icon.png" style="height:30px; width:30px;"></a>
+  
+  
+ </div>
+
+</div>
+
+<div id="statusContainer">
+<button title="Hide/Show the Time and Date" name="clock-toggle" id="clock-toggle"><img src="images/clock.png" width="40" height="39"></button>
+
+ <button title="Share on Social Media" id="options-toggle"><img src="images/options-toggle-img.png"/></button>
+ </div>
+
+ </div>
+  
+
+
+
+
+ 
  <div id="options-container">
  <table width="460" border="0">
   <tr>
     <td><button title="how to contact CMOp..." class="options" id="contact">contact</button></td>
-    <td><div id="contact-options">
-   Purchase/Sales:sales.cashmeout@gmail.com<br>   
-   Exclusives & Collabs:exclusives.cashmeout@gmail.com
- </div>
+    
 </td>
   </tr>
   <tr>
-    <td><button class="options" id="share">share</button></td>
-    <td><div id="share-options">
-<table width="280" border="0">
-  <tr>
+    <td><button class="options" id="share">social</button></td>
+    </tr>
+    </table>
     
-    
-    <td class="linkbox"><a href="https://twitter.com/cmopbeatz?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false"><img src="images/Twitter_Android.png" height="60" width="60"/></a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></td>
-    
-    
-    <td class="linkbox"><a href="http://www.linkedin.com/shareArticle?mini=true&url=http://cmopbeatz.com/index.html&title=CASHMEOUT Productions presents:&summary=Tired of the same 'ole sound?&source=cmopbeatz" target="_blank"> <img src="images/linkedin-icon-21.png" style="height:30px; width:30px;"/> </a></td>
-    
-    
-    <td class="linkbox"><iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcmopbeatz.com%2Findex.html&width=60&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId=1941720529386220" width="60" height="21" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-</td>
-    
-    
-    <td class="linkbox"><a href="http://plus.google.com/share?url=http://cmopbeatz.com/index.html"><img src="images/google-plus-icon.png" style="height:30px; width:30px;"></a></td>
-  
-  </tr>
-</table>
-
-
- </div></td>
-  </tr>
-</table>
+   
 
  
  
@@ -1719,19 +1743,13 @@ button#exclusiveTab:active {
   </div>
 </div>
   <div id="cont" class="content">
-    <div id="buyLinks">
-      <div id="addToCart" title="View complete tracklist"><img src="images/CMO_P-buyLinks-S-Cart.png" width="40" height="40" alt="add to cart"></div>
-         
-          <div id="soundCloud" title="Listen to music featured on SoundCloud" ><img src="images/CMO_P-buyLinks-S-Cloud.png" width="40" height="40" alt="to soundcloud.com"></div>
-          
-      <div id="eMail" title="Questions/Comments"> <img src="images/CMO_P-buyLinks-E-mail1.png" width="50" height="50" alt="to email"></div>
-    </div>
-       <button title="Display song info" id="tb_Icon">?</button>
-       <div id="textbox"> 
-         <h4 id= "playlist_status" class="PS_scroll" style= "color: #FFF">Select a Track</h4>
-         
-         
-    </div> 
+    <div id="RSS-container" >
+<div  id="CMOP-description" class="scroll-left"><p class ="scroll-left p"> view son-list:#|view/close action-panel:#/#|about this page:#|pricing:#|Terms of Service:#</p></div>
+
+</div>
+    
+       
+      
    
 
     
@@ -1754,9 +1772,30 @@ button#exclusiveTab:active {
       
       </div>-->
    
-    <button title="Expand/Collapse tracklist" name="exp_tracklist" value="Click to expand." id="exp_tracklist">EXPAND</button>
     
-    <select name="trackbox" size="8" class="selection" id="trackbox">
+    
+    
+    <div id="audio_player">
+    
+     <div id="textbox"> 
+         <h4 id= "playlist_status" class="PS_scroll" style= "color: #FFF">Select a Track</h4>
+         
+         
+    </div> 
+      <input id="seekslider" type="range" min="0" max="500" value="0" step="1">
+        <div id="audio_controls">
+          
+          <div id="main">
+            <button id="playpausebtn">          
+            </button>
+            <button id="mutebtn"></button>
+            <div id="timebox" style="padding-bottom:5px;"> <span style="text-align:center;vertical-align:middle;" id="curtimetext">00.00</span>/<span style="text-align:center;vertical-align:middle;" id="durtimetext">00.00</span> </div>
+            <input style="margin-right:20px;" id="volumeslider" type="range" min="0" max="100" value="100" step="1">
+          </div>
+           
+          
+        </div>
+  <!--expand Track List & trackBox--><button title="Expand/Collapse tracklist" name="exp_tracklist" value="Click to expand." id="exp_tracklist">EXPAND</button><select name="trackbox" size="8" class="selection" id="trackbox">
         
       <option value="emptyfile.mp3" style ="background:rgba(0,204,255,.4);" disabled>.:Select a Track:.</option>
           <option  value="After Me(no-hook).mp3">After Me(no-hook) prod. by: d1nero</option>
@@ -1783,23 +1822,12 @@ button#exclusiveTab:active {
           <option  value="Position2(no-hook).mp3">Position2(no-hook) prod. by: d1nero</option>
 
     </select>
-    <div id="audio_player">
-        <input id="seekslider" type="range" min="0" max="500" value="0" step="1">
-        <div id="audio_controls">
-          
-          <div id="main">
-            <button id="playpausebtn">          
-            </button>
-            <button id="mutebtn"></button>
-            <div id="timebox" style="padding-bottom:5px;"> <span style="text-align:center;vertical-align:middle;" id="curtimetext">00.00</span>/<span style="text-align:center;vertical-align:middle;" id="durtimetext">00.00</span> </div>
-            <input style="margin-right:20px;" id="volumeslider" type="range" min="0" max="100" value="100" step="1">
-          </div>
-        </div>
-  
-    </div><div id="TermsService">
-  <button id="ToS">
-  <p style="color:white">&nbsp;</p>
-  </button>                                           
+    </div>
+    
+    
+    
+    <div id="TermsService">
+                                             
 
 <div id="termWindow"><p style="color:yellow">TERMS of SERVICE									<font size="1">Last updated:(01/06/2016).</font></p>
 
@@ -1861,40 +1889,40 @@ Service.</font>
 <font size="2">If you have any questions about these Terms, please contact us using the <strong>Questions/Comments</strong> form.</font></p>
 </div>
 </div>
-<button id="PricingHeader" >$</button>
   <div id ="pricingPanel">
-  <table style="margin-left:40px;" width="300" border="0">
-  <tr>
-    <td style ="box-shadow:inset rgba(51,51,51,1); float:left;text-align:center;color:white;background:rgba(51,204,255,.2);border-radius:5px;box-shadow: #000;text-shadow:rgba(0,0,0,1);"><strong>Lease by type</strong></td>
-    <td style ="box-shadow:inset rgba(51,51,51,1);float:right;text-align:left;margin-right:22px;color:white;background:rgba(51,204,255,.2);border-radius:5px;box-shadow: #000;text-shadow:rgba(0,0,0,1);"><strong>Description</strong></td>
-  </tr>
-</table>
-  	<div id ="pricingTabs">
-  		<button id ="limitedTab">
-  		<h2>limited</h2>
+
+   
+
+  	<div id ="pricingTabs">  
+    <div style ="font-size:15px;font-family:Arial, Helvetica, sans-serif;position:relative;box-shadow:inset rgba(51,51,51,1); float:left;text-align:center;color:white;background:rgba(51,204,255,.2);border-radius:5px;box-shadow: #000;text-shadow:rgba(0,0,0,1);width:329px;"><strong>Lease type</strong></div>
+  		<button id ="limitedTab"><strong>LIMITED</strong>
   		</button>
 	    <button id ="standardTab">
-	    <h2>standard </h2>
+	    <strong>STANDARD</strong>
 	    </button>
     	<button id ="proTab">
-    	<h2>pro</h2>
+<strong>PRO</strong>
     	</button>
     	<button id ="exclusiveTab">
-    	<h2>exclusive</h2>
+<strong>EXCLUSIVE</strong>
     	</button>
   	</div>
  
     
   <div id ="contentPanel">
+   <div style ="position:relative;box-shadow:inset rgba(51,51,51,1);float:left;color:white;background:rgba(51,204,255,.2);border-radius:5px;box-shadow: #000;text-shadow:rgba(0,0,0,1);"><strong>Description</strong></div>
+   
+   
+  <div id="pDescTabs" style="position:relative;width:300px;height:20px;margin-top:30px;">
 	<button id ="ovBtn">Overview</button>
     <button id ="summBtn">Summary</button>
-
+   </div>
 <div id ="contCont">
   	<div id ="limitedContent">
     <div class ="moreInfo" id ="limitedInfo">Limited LEASE
     <br>
-You will receive a link for an encoded MP3 file of the tagged song.  Leasing rights allow you to use the beat (or song) for ONE recording. This recording can then be distributed  online for promotional purposes only. You may sell the recording, either by itself or on a mixtape or album up to 1000 units. You may also use the beat for non-profit promotional use or demos. You have full rights to record, alter, mix the beat/song in any shape, way, or form (except reselling the beat). In the event that someone buys exclusive rights to the beat you have leased, your rights remain; the beat is still yours to use only as stated in this License for 365 days (1 calendar year) from the day of lease.  The seller receives a royalty from the sale of records or downloads. You must also give full credit to the seller (indicated with the phrase "prod. by:" in the track title) on all recordings. Upon purchasing leasing rights, the seller still owns the beat(s) and the seller is able to resell the beat(s) to any other party until exclusive rights have been purchased.</div>
-    <table id ="lOv" width="379"  align="center" cellspacing="1">
+You will receive a link for an encoded MP3 file of the tagged song.  Leasing rights allow you to use the beat (or song) for ONE recording. This recording can then be distributed  online for promotional purposes only. You may sell the recording, either by itself or on a mixtape or album up to 1000 units. You may also use the beat for non-profit promotional use or demos. You have full rights to record, alter, mix the beat/song in any shape, way, or form (except reselling the beat). In the event that someone buys exclusive rights to the beat you have leased, your rights remain; the beat is still yours to use only as stated in this License for 365 days (1 calendar year) from the day of lease.  The seller receives a royalty from the sale of records or downloads. You must also give full credit to the seller (indicated with the phrase "prod. by: [producer's name]" in album credits or mentions) on all recordings. Upon purchasing leasing rights, the seller still owns the beat(s) and the seller is able to resell the beat(s) to any other party until exclusive rights have been purchased.</div>
+    <table id ="lOv" width="330"  align="center" cellspacing="1">
   <tr>
     <td class = "pricingCell">LIMITED Lease</td>
   </tr>
@@ -1921,8 +1949,8 @@ You will receive a link for an encoded MP3 file of the tagged song.  Leasing rig
     <div id ="standardContent">
         <div class ="moreInfo" id ="standardInfo">Standard LEASE
         <br>
-You will receive a link for the Wav file of the untagged song.  Standard Leasing rights allow you to use the beat (or song) for ONE recording. You may sell the recording, either by itself or on a mixtape or album up to 3000 copies. After that you MUST  renegotiate new terms of agreement with seller. You may also use the beat for non-profit promotional use or demos. You have full rights to record, alter, mix the beat/song in any shape, way, or form (except reselling the beat). In the event that someone buys exclusive rights to the beat you have leased, your rights shall stand and the beat is still yours to use only as stated in this License. The seller will receive a royalty from the sale of records or downloads.  You must give full credit to the producer on all recordings(indicated with "prod. by:" while observing the song title). Upon purchasing leasing rights, the seller still owns the beat(s) and the seller is able to resell the beat(s) to any other party until exclusive rights have been purchased.</div>
-    <table id ="sOv" width="377"  align="center" cellspacing="1">
+You will receive a link for the Wav file of the untagged song.  Standard Leasing rights allow you to use the beat (or song) for ONE recording. You may sell the recording, either by itself or on a mixtape or album up to 3000 copies. After that you MUST  renegotiate new terms of agreement with seller. You may also use the beat for non-profit promotional use or demos. You have full rights to record, alter, mix the beat/song in any shape, way, or form (except reselling the beat). In the event that someone buys exclusive rights to the beat you have leased, your rights shall stand and the beat is still yours to use only as stated in this License. The seller will receive a royalty from the sale of records or downloads.  You must give full credit to the producer on all recordings(indicated with "prod. by:[producer's name]" in album credits or mentions). Upon purchasing leasing rights, the seller still owns the beat(s) and the seller is able to resell the beat(s) to any other party until exclusive rights have been purchased.</div>
+    <table id ="sOv" width="330"  align="center" cellspacing="1">
   <tr>
     <td class = "pricingCell">STANDARD License</td>
   </tr>
@@ -1948,8 +1976,8 @@ You will receive a link for the Wav file of the untagged song.  Standard Leasing
     <div id ="proContent">
         <div class ="moreInfo" id ="proInfo">Pro LEASE
         <br>
-You will receive a link for the Wav file of the untagged beat. Pro Leasing rights allow you to use the beat (or song) for ONE recording. You may sell the recording, either by itself or on a mixtape or album up to 5000 copies. After that you MUST  renegotiate new terms of agreement with seller. You may also use the beat for non-profit promotional use or demos. You have full rights to record, alter, mix the beat/song in any shape, way, or form (except reselling the beat). In the event that someone buys exclusive rights to the beat you have leased, your rights shall stand; the beat is still yours to use only as stated in this License. The seller will receive a royalty from the sale of records or downloads.  You must give full credit to the producer(indicated with the phrase "prod. by:" in the song's title) on all recordings. Upon purchasing leasing rights, the seller still owns the beat(s) and the seller is able to resell the beat(s) to any other party until exclusive rights have been purchased.</div>
-    <table id ="pOv" width="377"  align="center" cellspacing="1">
+You will receive a link for the Wav file of the untagged beat. Pro Leasing rights allow you to use the beat (or song) for ONE recording. You may sell the recording, either by itself or on a mixtape or album up to 5000 copies. After that you MUST  renegotiate new terms of agreement with seller. You may also use the beat for non-profit promotional use or demos. You have full rights to record, alter, mix the beat/song in any shape, way, or form (except reselling the beat). In the event that someone buys exclusive rights to the beat you have leased, your rights shall stand; the beat is still yours to use only as stated in this License. The seller will receive a royalty from the sale of records or downloads.  You must give full credit to the producer(indicated with the phrase "prod. by:[producer's name]" in album credits or mentions) on all recordings. Upon purchasing leasing rights, the seller still owns the beat(s) and the seller is able to resell the beat(s) to any other party until exclusive rights have been purchased.</div>
+    <table id ="pOv" width="330"  align="center" cellspacing="1">
   <tr>
     <td class = "pricingCell">PRO License</td>
   </tr>
@@ -1969,15 +1997,15 @@ You will receive a link for the Wav file of the untagged beat. Pro Leasing right
     <td class = "pricingCell">Non-Exclusive</td>
   </tr>
   <tr>
-    <td class = "pricingCell">Must give producucer WRITTEN credits</td>
+    <td class = "pricingCell">Must give producer WRITTEN credits</td>
   </tr>
 </table></div>
     <div id ="exclusiveContent">
         <div class ="moreInfo" id ="exclusiveInfo">Exclusive RIGHTS
         <br>
-You will receive a link for the untagged .Wav file of the beat (or song) as well as the Trackouts (Stems). The song file will also be delivered digitally to your email address. Exclusive rights grant you unlimited commercial recordings and broadcasts. You have full rights to record, alter, mix the beat/song in any shape, way, or form (except reselling the beat). The original seller may no longer lease or sell the beat/song, but may still display it on his/her own promotional page (no downloads).The seller will receive a royalty from the sale of records or downloads as well as mechanical royalties from use of the composition. You must give full credit to the producer(indicated with "prod. by:" while observing the song title) on all recordings.</div>
-    <table id ="eOv" width="377"  align="center" cellspacing="1">
-  <tr>
+You will receive a link for the untagged .Wav file of the beat (or song) as well as the Trackouts (Stems). The song file will also be delivered digitally to your email address. Exclusive rights grant you unlimited commercial recordings and broadcasts. You have full rights to record, alter, mix the beat/song in any shape, way, or form (except reselling the beat). The original seller may no longer lease or sell the beat/song, but may still display it on his/her own promotional page (no downloads).The seller will receive a royalty from the sale of records or downloads as well as mechanical royalties from use of the composition. You must give full credit to the producer(indicated with "prod. by:[producer's name]" in album credits or mentions) on all recordings.</div>
+        <table id ="eOv" width="330"  align="center" cellspacing="1">
+          <tr>
     <td class = "pricingCell">EXCLUSIVE Rights</td>
   </tr>
   <tr>
@@ -1990,13 +2018,11 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
     <td class = "pricingCell">Unlimited distribution</td>
   </tr>
   <tr>
-    <td class = "pricingCell">Exclusive Rights<br>(Must give producer WRITTEN credits)</td>
+    <td class = "pricingCell">Exclusive Rights<br>Must give producer WRITTEN credits</td>
   </tr>
    <tr>
-    <td><p style="font-size: small; background:#666; border-radius:2px;">**Contact CMO-p:
-    <br>Click the <img src="images/options-toggle-img.png" height="15" width="15"> button(upper-right), select contact; copy and paste the desired email address into the recipient field of your composed email.
-    <br>-OR-
-    <br>Click the <img src="images/cmop-openactionbtn.png" height="15" width="20"> tab then select the <img src="images/CMO_P-buyLinks-E-mail1.png" height="15" width="20"> icon. Fill out the quick form then click 'Submit.'</p></td>
+    <td class="pricingCell"><div id="how2Ct" style="position:relative;width:auto;"><p id="ct-1" style="position:relative;width:60px;float:left;font-size:14px;padding:none;text-align:left;margin:none;border:rgba(255,255,255,1);background:rgba(51,51,51,.3);border-radius:10px;">Contact CMOP:</p> <p id="click-1" style="position:relative;width:40px;padding:none;float:left;font-size:14px;">click</p><img style="position:relative;width:25px;height:25px;float:left;padding:none;margin:none;background:rgba(0,0,0,.5);box-shadow:inset 0px 0px 1px 2px rgba(0,0,0,1);" src="images/CMO_P-buyLinks-E-mail1.png" width="20" height="20"/><p id="ct-2" style="position:relative;width:90px;float:left;margin-right:10px;font-size:14px;"> to the right</p> <p id="click-1" style="position:relative;width:40px;padding:none;float:left;font-size:14px;">click</p><img style="position:relative;width:25px;height:25px;float:left;padding:none;margin:none;background:rgba(0,0,0,.5);box-shadow:inset 0px 0px 1px 2px rgba(0,0,0,1);" src="images/options-toggle-img.png" height="20" width="20"/><p id="ct-3" style="position:relative;width:40px;padding:none;margin:none;float:left;font-size:14px;">above</p></div>
+   </td>
   </tr>
 </table></div>
   </div>
@@ -2019,15 +2045,24 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
         </div>
       </nav>-->
 
-  <button id="openAction"><img src="images/cmop-openactionbtn.png" width="40.25" height="40.25"><br><strong>--open--</strong>
+ 
 
-</button>
-<button id="closeAction"><img src="images/cmop-closeactionbtn.png" width="40.25" height="40.25"><br><strong>--close--</strong></button>
+<div id="actionContainer" style="width:400px;height:400px;position:relative;float:right;top:325px;">
+<div id="apCommands">
+<div id="closeAPcont" style="float:right;position:relative;width:42px;">
+<button id="closeAction"><img id="actPOC" src="images/cmop-closeactionbtn.png" width="40.25" height="40.25"></button>
+ 
+</div>
+<div id="buyLinks">
+      <div id="addToCart" title="View complete tracklist"><img src="images/CMO_P-buyLinks-S-Cart.png" width="40" height="40" alt="add to cart"></div>
+         
+          <div id="soundCloud" title="Listen to music featured on SoundCloud" ><img src="images/CMO_P-buyLinks-S-Cloud.png" width="40" height="40" alt="to soundcloud.com"></div>
+          
+      <div id="eMail" title="Questions/Comments"> <img src="images/CMO_P-buyLinks-E-mail1.png" width="50" height="50" alt="to email"></div>
+    </div>
+</div>
+
 <div id="actionPanel" scrolling="no">
-
-  
-
-
 
   <div id="paypalPanel">
   <table width="400" border="0">
@@ -2042,7 +2077,7 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
 	<option value="Standard">Standard $65.99</option>
 	<option value="Pro">Pro $99.99</option>
 </select></td>
-    <td><input type="hidden" name="currency_code" value="USD">
+    <td ><input type="hidden" name="currency_code" value="USD">
 <input type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
 <img alt="" border="0" src="images/CMO_P-Cart-buybtn.png"
 width="1" height="1"></form></td>
@@ -2521,8 +2556,8 @@ height="1">
   
 
 
-  <div id="emailPanel" scrolling="no">
-  Questions/Comments
+  <div id="emailPanel">
+  
 	<form id="QCform" method="POST" target = "no-target" name ="QCform">
     
     <div id="fNameBox">First Name:
@@ -2561,11 +2596,11 @@ height="1">
     </div>
 </div>
 
-
+</div>
 
 
  <button id="footer">  <p style="color:white"><strong>About</strong></p>
- </button>
+</button>
 
 </div>
  
@@ -2576,13 +2611,22 @@ height="1">
 
 </div>
   
-
+<div id="windowSize" style="position:absolute;width:auto;background:white;height:auto;border-radius:20px;box-shadow:inset rgba(102,102,102,.5;left:500px;")>000</div>
 
 <iframe src= "#" id="no-target" name="no-target" style="visibility:hidden;"></iframe>
 
-<script type="text/javascript" src="mpcontrols-alt.js"></script>
-<script type="text/javascript" src="QC-main.js"></script>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="detectWin.js"></script>
+
+<script type="text/javascript" src="QC-main.js"></script>
+
+<script type="text/javascript" src="mpcontrols-alt.js"></script>
+
+
+
+
+
+
 </body>
 </html>
