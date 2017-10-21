@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pt" xmlns:fb="http://www.facebook.com/2008/fbml">
+<html lang="en" xmlns:fb="http://www.facebook.com/2008/fbml">
 
 <head>
 <meta charset="utf-8">
@@ -69,11 +69,11 @@ body {
 	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
 	margin: 0;
 	background-repeat: repeat;
-	width: inherit;
+	width: 100%;
 	background-image: url(images/cmop-3dlogo0001.png);
 	background-attachment: fixed;
 	background-position: center center;
-	height: auto;
+	height: 100%;
 	overflow-y: scroll;
 	overflow-x: hidden;
 }
@@ -200,46 +200,58 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	-ms-transition: all 2s ease-in-out 0s;
 	-o-transition: all 2s ease-in-out 0s;
 	transition: all 2s ease-in-out 0s;
-	opacity: 1;
-	display: block;
+	display: none;
 	margin-top: 40px;
 	margin-left: 20px;
 }
 #Enter-page {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 18px;
-	font-weight: bold;
+	font-family: "Courier New";
+	font-size: 20px;
+	font-weight: normal;
 	color: rgba(255,255,255,1);
-	background-color: rgba(0,0,0,1);
+	background-color: rgba(51,51,51,1);
 	height: 40px;
-	width: 100%;
-	font-variant: small-caps;
+	width: 300px;
+	font-variant: normal;
 	-webkit-transition: all .25s ease-in;
 	-moz-transition: all .25s ease-in;
 	-ms-transition: all .25s ease-in;
 	-o-transition: all .25s ease-in;
 	transition: all .25s ease-in;
 	opacity: 1;
-	border-radius: 0px 0px 0px 40px;
-	position: absolute;
-	top: 344px;
+	border-radius: 5px 0px 0px 5px;
+	position: relative;
+	background-attachment: fixed;
+	background-repeat: repeat-x;
+	background-position: left top;
+	margin: 0px;
+	float: right;
+	border-left-width: medium;
+	border-left-style: solid;
+	border-left-color: rgba(0,204,255,.2);
+	box-shadow: inset 0px 0px 2px 2px rgba(0,0,0,1);
+	margin-top: 10px;
+	margin-right: 10px;
 }
 #loader-graphic {
-	height: 40px;
-	width: 100%;
+	height: 35px;
+	width: 35px;
 	-webkit-transition: all 1s ease-out 1s;
 	-moz-transition: all 1s ease-out 1s;
 	-ms-transition: all 1s ease-out 1s;
 	-o-transition: all 1s ease-out 1s;
 	transition: all 1s ease-out 1s;
-	position: absolute;
+	position: relative;
 	opacity: 1;
-	top: 370px;
 	text-align: center;
 	vertical-align: middle;
 	border-radius: 0px 0px 0px 40px;
-	background-color: rgba(0,0,0,1);
 	z-index: 20;
+	background-attachment: fixed;
+	background-repeat: repeat-x;
+	background-position: left top;
+	float: left;
+	margin-top: 15px;
 }
 
 /* ~~the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo~~ */
@@ -310,7 +322,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 
 */
 .content {
-	width: 87%;
+	width: 90%;
 	height: 780px;
 	padding-top: 10px;
 	padding-bottom: 1px;
@@ -1628,22 +1640,22 @@ button#exclusiveTab:active {
 #pre-loader {
 	background-color: rgba(51,51,51,.1);
 	background-attachment: fixed;
-	background-image: url(../images/CMO_P-grafittilogobkgndd.jpg);
-	background-repeat: no-repeat;
-	background-position: center center;
-	border-radius: 0px 40px 0px 40px;
+	background-image: url(images/preloader-bkgrnd.png);
+	background-repeat: repeat-x;
+	background-position: left top;
+	border-radius: 100px 0px 0px 100px;
 	box-shadow: inset 0px 0px 2px 3px rgba(0,0,0,1);
-	position: absolute;
+	position: relative;
 	-webkit-transition: all 1s ease-in-out 0s;
 	-moz-transition: all 1s ease-in-out 0s;
 	-ms-transition: all 1s ease-in-out 0s;
 	-o-transition: all 1s ease-in-out 0s;
 	transition: all 1s ease-in-out 0s;
-	margin-left: 350px;
 	z-index: 20;
-	top: 120px;
 	opacity: 1;
-	display: none;
+	display: block;
+	width: 100%;
+	height: 200px;
 }
 #lOv {
 	display: block;
@@ -1660,10 +1672,62 @@ button#exclusiveTab:active {
 </style>
 
 <body>
+<div id="please-wait" style="position:absolute;width:100%;height:100%;background:rgba(51,51,51,.65);z-index:100;">
+<p id="sorry" style="position:relative;width:100%;height:auto;color:rgba(255,255,255,1);font-size:120px;text-align:center;text-indent:40px;text-shadow:0px 0px 2px rgba(255,255,255,.7);">sorry.</p>
 
-<div id ="pre-loader"><img src="images/cmop-letterhead2.png" height ="400px" width ="780px">
-<div id ="loader-graphic"><img src="images/cmop-loader-circle.gif" height="30px" width="60%"></div>
-<button id ="Enter-page">enter cmop-beatz</button>
+
+<p id="underConstruction" style="position:relative;background:rgba(51,51,51,1);text-shadow: 0px 0px 2px rgba(51,51,51,.6);width:100%;height:80px;box-shadow:0px 0px 2px 4px rgba(51,51,51,.5);z-index:101;top:260px;color:rgba(0,0,0,1);font-size:50px;vertical-align:middle;text-align:left;text-indent:20px;color:rgba(255,255,255,.5);border-top:thick solid rgba(255,255,255,1);float:left;">Please return on:</p><p id="returnTime" style="position:relative;float:right;color:rgba(255,255,0,1);text-shadow:0px 0px 2px rgba(0,0,0,.6);font-size:25px;top:160px;z-index:102">
+
+
+<script>
+var end = new Date('10/28/2017 10:1 AM');
+
+    var _second = 1000;
+    var _minute = _second * 60;
+    var _hour = _minute * 60;
+    var _day = _hour * 24;
+    var timer;
+
+    function showRemaining() {
+        var now = new Date();
+        var distance = end - now;
+        if (distance < 0) {
+
+            clearInterval(timer);
+            document.getElementById('returnTime').innerHTML = 'EXPIRED!';
+
+            return;
+        }
+        var days = Math.floor(distance / _day);
+        var hours = Math.floor((distance % _day) / _hour);
+        var minutes = Math.floor((distance % _hour) / _minute);
+        var seconds = Math.floor((distance % _minute) / _second);
+
+        document.getElementById('returnTime').innerHTML = days + 'days ';
+        document.getElementById('returnTime').innerHTML += hours + 'hrs ';
+        document.getElementById('returnTime').innerHTML += minutes + 'mins ';
+        document.getElementById('returnTime').innerHTML += seconds + 'secs';
+    }
+
+    timer = setInterval(showRemaining, 1000);
+</script>
+
+
+
+</p>
+
+<div id="return-in" style="position:absolute;width:100%;height:200px;background-image:url(images/cmop-UCbannerBKG.png);top:260px;box-shadow:0px .25px 1px 2px rgba(51,51,51,.6);"><p id="constNotice" style="position:relative;width:auto;height:100px;background:rgba(255,255,0,1);border-radius:20px;box-shadow: inset -.25px -.25px 1px 2px rgba(51,51,51,.15);font-size:60px;font-weight:bolder;margin-top:40px;box-shadow:inset 0px 0px 1px 3px rgba(255,255,255,.6);"> We are currently under construction...</p>
+
+</div>
+</div>
+<div id="PLwrapper" style="width:100%;height:100%;position:relative;background:rgba(51,51,51,.0);display:block;">
+<div id ="pre-loader"><img src="images/cmop-letterhead2.png" style="position:relative;width:200px;height:150px;margin-top:30px;margin-left:30px;">
+
+<div id="enter-wrapper" style="width:100%;height:60px;margin-top:100px;background:rgba(51,51,51,.7);">
+<div id ="loader-graphic"><img src="images/cmop-loader-circle.gif" style="background:rgba(255,255,255,.05);border-radius:40px;box-shadow: 0px 0px 1px 2px #000;" height="30px" width="30px"></div>
+<button id ="Enter-page">Loading...</button>
+</div>
+</div>
 </div>
 
 <div id ="cntr" class="container">
@@ -1679,7 +1743,7 @@ button#exclusiveTab:active {
     <div id="CMOP-logo"><img width="60" height="50" src="images/cmop-letterhead2.png"></div><div id="CMOP-title" title="The Logo for &quot;cmop-beatz&quot;"><img id="cmopbeatz" style="width:100%;height:40px;" src="images/cmop-web-logo.png">
  </div>
  
- <div id="tdDisplay" style="background:rgba(51,51,51,.6);height:40px;width:240px;margin-top:5px;float:left;box-shadow:inset -.25px -.25px 1px 2px rgba(0,0,0,1);border:thin  solid rgba(255,255,255,1);border-radius:5px; ">
+ <div id="tdDisplay" style="background:rgba(51,51,51,.6);height:40px;width:280px;margin-top:5px;float:left;box-shadow:inset -.25px -.25px 1px 2px rgba(0,0,0,1);border:thin  solid rgba(255,255,255,1);border-radius:5px; ">
   <div id="ccCont" style="width:360px;position:relative;height:40px;display:none;float:right;">
 <div id="clock"></div>
 <div id="calendar"></div>
@@ -2611,19 +2675,22 @@ height="1">
 
 </div>
   
-<div id="windowSize" style="position:absolute;width:auto;background:white;height:auto;border-radius:20px;box-shadow:inset rgba(102,102,102,.5;left:500px;")>000</div>
+
 
 <iframe src= "#" id="no-target" name="no-target" style="visibility:hidden;"></iframe>
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+
+
 <script type="text/javascript" src="detectWin.js"></script>
 
 <script type="text/javascript" src="QC-main.js"></script>
 
 <script type="text/javascript" src="mpcontrols-alt.js"></script>
 
-
+<script type="text/javascript" src="preLoader.js"></script>
 
 
 

@@ -1,60 +1,12 @@
 // JavaScript Document//
 
-window.onload = initAudioPlayer, initPreLoader;
-
-document.addEventListener('DOMContentLoaded', function() {
-   // your code here
-   
-introLoader();
-}, false);
+window.onload = initAudioPlayer;
 
 
 
 
-function initPreLoader(){
 
 
-		document.getElementById('cntr').style.display = "none";
-
-		document.getElementById('pre-loader').style.display ="block";
-		document.getElementById('pre-loader').style.top = "120px";
-
-		document.getElementById('Enter-page').style.opacity = "0";
-		document.getElementyId('loader-graphic').style.opacity="1";
-}
-
-function introLoader(){
-var hideEnter = setTimeout(function(){document.getElementById('Enter-page').style.display = "none"; }, 3000);
-
-
-var hideSplash = setTimeout(function(){document.getElementById('loader-graphic').style.display = "none"; }, 3000);
-
-	
-var showEnter =	setTimeout(function() {
-    document.getElementById('Enter-page').style.display = "block";
-}, 3500);
-	
-}
-	
-	function showEnterBtn(){
-		document.getElementyId('loader-graphic').style.opacity="0";
-		document.getElementyId('loader-graphic').style.display="none";
-		
-				document.getElementById('Enter-page').style.opacity = "1";
-						document.getElementById('Enter-page').style.display = "block";
-	}
-	
-	document.getElementById('Enter-page').onclick = function(){
-		
-				document.getElementById('pre-loader').style.opacity ="0";
-				document.getElementById('pre-loader').style.display ="none";
-
-		document.getElementById('Enter-page').style.opacity = "0";
-		
-		document.getElementById('cntr').style.display = "block";
-
-
-		}	
 
 
 
