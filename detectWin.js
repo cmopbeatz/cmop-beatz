@@ -31,7 +31,7 @@ $(window).width() < 710 ? $("#cmopbeatz").width(0):$("#cmopbeatz").width(280);
 
 $(window).width() < 710 ? $("#cmopbeatz").show():$("#cmopbeatz").show();	
 
-$(window).width() < 545 ? $('.container').hide():$('.container').show();	
+//$(window).width() < 545 ? $('.container').hide():$('.container').show();	
 
 
 	
@@ -53,7 +53,7 @@ $(window).width() < 710 ? $("#cmopbeatz").width(0):$("#cmopbeatz").width(280);
 
 $(window).width() < 710 ? $("#cmopbeatz").show():$("#cmopbeatz").show();	
 
-$(window).width() < 545 ? $('.container').hide():$('.container').show();	
+//$(window).width() < 545 ? $('.container').hide():$('.container').show();	
 
 });
 });
