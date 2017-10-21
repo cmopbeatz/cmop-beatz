@@ -23,7 +23,7 @@ $(document).ready(function () {
 	
 	$('#Enter-page').click(function(){
 		$('#PLwrapper').css('display','none');
-		$('.container').css('display','block');		
+		//$('.container').css('display','block');		
 		
 		});
 
