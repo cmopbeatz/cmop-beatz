@@ -80,7 +80,7 @@ qcExpand.onclick = function(){
 
 	if(qcPanel.style.width ==""){
 		
-	qcPanel.style.width = "428px";
+	qcPanel.style.width = "400px";
 	qcFBox.style.opacity = "1";
 	qcFBox.style.display = "block";
 	cmtPane.style.opacity = "1";
