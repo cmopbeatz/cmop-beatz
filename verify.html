@@ -99,7 +99,6 @@ html{
 	scrollbar-highlight-color: #0CF;
 	scrollbar-dark-shadow-color: #333;
 	scrollbar-shadow-color: #666;
-	
 }
 ::-webkit-scrollbar {
   width: 11px;
@@ -145,6 +144,10 @@ body {
 	overflow-x: hidden;
 	overflow-y: auto;
 	width: 100%;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+	position: static;
 }
 
 #mail-dialog {
@@ -164,7 +167,6 @@ body {
 	background-repeat: no-repeat;
 	background-position: 250px center;
 	position: relative;
-	float: left;
 }
 #tContact-styler {
 	font-family: Arial, Helvetica, sans-serif;
@@ -237,7 +239,7 @@ body {
 #e-mail {
 	font-family: Arial, Helvetica, sans-serif;
 	height: auto;
-	width: 200px;
+	width: 100px;
 	vertical-align: top;
 	padding-left: 10px;
 	position: absolute;
@@ -263,9 +265,7 @@ input#validateMail {
 	color: rgba(51,51,51,1);
 	font-weight: bold;
 	position: absolute;
-	margin-bottom: 10px;
 	float: right;
-	margin-left: 50px;
 }
 #submitButton {
 	height: 50px;
@@ -439,8 +439,7 @@ input#mailAddr {
 	border-top-color: rgba(102,102,102,1);
 	border-right-color: rgba(204,204,204,1);
 	height: 30px;
-	margin-bottom: 5px;
-	margin-left: 20px;
+	margin-top: 5px;
 }
 #linkArea {
 	font-family: Arial, Helvetica, sans-serif;
@@ -487,7 +486,7 @@ input#mailAddr {
 }
 #wrapper {
 	clear: both;
-	height: auto;
+	height: 100%;
 	width: auto;
 	position: relative;
 	-webkit-transition: all 1s cubic-bezier(x1,y1,x2,y2) .25s;
@@ -507,7 +506,41 @@ input#mailAddr {
 	float: right;
 	position: relative;
 	top: 3px;
+	width:auto;
+	
+	 /* linearly increase the font-size from 16->32px 
+     between a viewport width of 600px-> 1200px  */
+  @include fluid-type(font-size, 600px, 1200px, 16px, 32px);
 }
+
+@media screen and (max-width: 400px) {
+  #headerDesc {
+     font-size:16px;
+	 width:auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #headerDesc {
+     font-size:40px;
+	 width:300px;
+  }
+}
+
+@media screen and (min-width: 740px) {
+  #headerDesc {
+     font-size:60px;
+	 width:400px;
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  #headerDesc {
+     font-size:120px;
+	 width:720px;
+  }
+}
+
 #dlArea {
 	height: 20px;
 	width: 180px;
@@ -578,7 +611,7 @@ input#mailAddr {
 }
 #qcArea {
 	font-family: Arial, Helvetica, sans-serif;
-	position: relative;
+	position: absolute;
 	height: 300px;
 	display: block;
 	opacity: 1;
@@ -592,10 +625,12 @@ input#mailAddr {
 	vertical-align: middle;
 	text-align: center;
 	text-decoration: none;
+	left: 510px;
+	top: 1px;
 }
 #formArea {
-	height: 400px;
-	width: 100%;
+	height: 300px;
+	width: inherit;
 	position: relative;
 	-webkit-transition: all 1s ease-in-out .15s;
 	-moz-transition: all 1s ease-in-out .15s;
@@ -692,7 +727,7 @@ Regards,
 <img src="images/d1nero-profile-logo(web).png" width="180" height="60" style="position:relative;top:40px;"/>
 <br>
 <br>
-<br><img src="images/cmop-web-logo.png"width="180" height="50" style="position:relative;"/>
+<br><img src="images/cmop-web-logo.png"width="300" height="65" style="position:relative;"/>
 </div>
 
 
@@ -721,6 +756,9 @@ Regards,
 
 
 <div id ="intersititial">
+
+
+
 <div id ="email-info">
 <p style="background:rgba(0,204,255,.3);">Why is an email address necessary?</p>
 <p style ="font-size: 14px; position: static; top: 260px; left: 70px;padding-right:10px;padding-top:1.5px;width:485px;">An email address is necessary to ensure you recieve a copy of the down-<br>loaded/purchased music in a secure way and serves as a backup method<br>should the download become corrupted or other issues arise.</p> 
@@ -729,7 +767,7 @@ Regards,
 <p style="background:rgba(0,204,255,.3);text-align:center;">Terms of Service</p>
 
 
-<p style="font-size:12px; position:static;text-align:left;top:150px;padding-top:1.5px;">Please read these Terms of Service ("Terms", "Terms of Service") carefully before<br> using <strong>CMO_P Beatz</strong>("service") 
+<p style="font-size: 12px; position: static; text-align: left; top: 150px; padding-top: 1.5px; width: 100%;">Please read these Terms of Service ("Terms", "Terms of Service") carefully before<br> using <strong>CMO_P Beatz</strong>("service") 
 Your access to and use of our Services is conditioned on<br> your acceptance of and compliance with
 these Terms. These Terms apply to all visitors, <br>users and others who access or use the Service.
 By accessing or using the Service you<br> 
@@ -841,7 +879,7 @@ Email(required):
      <option id="q4" name="Other...">Other...</option>
    </select>
    <div id="commtArea">
-     <textarea name="Please enter Question/Comment" cols="50" rows="10" id="commtBox" placeholder="Type Here"style="border-radius:5px;" value="Nevermind..."></textarea>
+     <textarea name="Please enter Question/Comment" cols="46" rows="10" id="commtBox" placeholder="Type Here"style="border-radius:5px;" value="Nevermind..."></textarea>
      <div id ="cmmtError" style="display:none;position:absolute;width:300px;height:120px;background:rgba(102,102,102,1);box-shadow:inset 0px 0px 2px #000000;border-radius:15px;padding-left:5px;padding-right:5px;padding-top:5px;top:15px;left:35px;">Form will submit without a question if this field is left blank. Is this okay?<input id="yBtn"  style="display:none;position:relative;float:left;margin-left:50px;border-radius:5px;margin-top:10px;"type="button" value="Yes" onclick="confirmHideError();" /><input id="nBtn" style="display:none;position:relative;float:right;margin-right:50px;border-radius:5px;margin-top:10px;" type="button" value="No" onclick="hideError();"/></div>
    </div>
     </div>
@@ -895,6 +933,8 @@ Certificate of Authenticity[LIMITED]</strong></td>
 
 
 <script type="text/javascript" src="form-G-s.js"></script>
+
+<script type="text/javascript" src"detectvWin.js"></script>
 <script type="text/javascript" src="QC(Add-On).js"></script>
 <script type="text/javascript" src="Cert-2-PDF.js"></script>
 <script type="text/javascript" src="certAuth.js"></script>

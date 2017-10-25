@@ -85,7 +85,7 @@ qcExpand.onclick = function(){
 	qcFBox.style.display = "block";
 	cmtPane.style.opacity = "1";
 	cmtPane.style.display = "block";
-	qcExpand.style.right = "-210px";
+	qcExpand.style.right = "-220px";
 	eQCimg.src = "images/cmop-openactionbtn.png";
 	
 
