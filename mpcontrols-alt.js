@@ -202,7 +202,7 @@ actPOC = document.getElementById('actPOC');
 
     //contact/Share(HEADER)//
     contactbtn.onclick = function() {
-				   		           document.getElementById('tdDisplay').style.width="360px";
+				   		           document.getElementById('tdDisplay').style.width="330px";
 		           document.getElementById('ccCont').style.display="none";
         shareCtn.style.display = "none";
 
@@ -212,7 +212,7 @@ actPOC = document.getElementById('actPOC');
     sharebtn.onclick = function() {
 
 		           document.getElementById('ccCont').style.display="none";
-				   		           document.getElementById('tdDisplay').style.width="240px";
+				   		           document.getElementById('tdDisplay').style.width="220px";
         contactCtn.style.display = "none";
 
         shareCtn.style.display = "block";
@@ -226,7 +226,7 @@ actPOC = document.getElementById('actPOC');
         startDate();
         if (clockdisp.style.opacity === "") {
 
-         document.getElementById('tdDisplay').style.width="360px";
+         document.getElementById('tdDisplay').style.width="330px";
 			shareCtn.style.display="none";
 			contactCtn.style.display="none";
            document.getElementById('ccCont').style.display="block";
@@ -249,8 +249,11 @@ actPOC = document.getElementById('actPOC');
         var month = d.getMonth();
         var date = d.getDate();
         var year = d.getFullYear();
+		
+		var propday = ["Mo","Tu","Wd","Th","Fr","Sa","Su"];
+		var propmonth = ["01","02","03","04","05","06","07","08","09","10","11","12"];
 
-        caldisp.innerHTML = "[" + day + "]" + "¦" + month + "¦" + date + "¦" + year;
+        caldisp.innerHTML = "[" + propday[day] + "]" + "¦" + propmonth[month] + "¦" + date + "¦" + year;
     }
 
     function startTime() {
@@ -419,7 +422,7 @@ actPOC = document.getElementById('actPOC');
                 expandTB.style.borderRadius = "8px  8px 1px 1px";
                 track_List.style.opacity = "1";
 				  track_List.style.display = "block";
-                track_List.style.height = "200px";
+                track_List.style.height = "190px";
 				expandTB.innerHTML = "COLLAPSE";
 
 

@@ -9,10 +9,11 @@
 
 
 $('.container').css('display','none');
-
+$('#audio_player').css('display','none');
 
 $(document).ready(function () {
 	$('.container').css('display','none');
+	$('#audio_player').css('display','none');
   
     setTimeout(function () {
        
@@ -23,7 +24,8 @@ $(document).ready(function () {
 	
 	$('#Enter-page').click(function(){
 		$('#PLwrapper').css('display','none');
-		//$('.container').css('display','block');		
+		$('.container').css('display','block');
+		$('#audio_player').css('display','block');		
 		
 		});
 
