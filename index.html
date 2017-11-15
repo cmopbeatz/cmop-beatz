@@ -141,7 +141,7 @@ div#audio_player{
 	position: absolute;
 	display: block;
 	float: left;
-	top: 320px;
+	top: 360px;
 	left: 60px;
 }
 div#main{
@@ -208,9 +208,9 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	-ms-transition: all 2s ease-in-out 0s;
 	-o-transition: all 2s ease-in-out 0s;
 	transition: all 2s ease-in-out 0s;
-	display: block;
+	display: none;
 	margin-left: 20px;
-	margin-top: 80px;
+	margin-top: 40px;
 }
 #Enter-page {
 	font-family: "Courier New";
@@ -387,27 +387,26 @@ button#footer {
 	top: 10px;
 }
 #aboutField{
-	width: 1240px;
-	height: 400px;
+	width: 90%;
+	height: 800px;
 	display: none;
 	box-shadow: 0px 0px 2px 1px #000;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	position: relative;
 	left: 0px;
-	background-color: #333;
-	border-radius: 0px 0px 10px 10px;
+	background-color: #CCC;
 	-webkit-transition: all .5s ease-in-out;
 	-moz-transition: all .5s ease-in-out;
 	-ms-transition: all .5s ease-in-out;
 	-o-transition: all .5s ease-in-out;
 	transition: all .5s ease-in-out;
 	color: rgba(255,255,255,1);
-	text-shadow: 1px 2px 2px rgba(0,0,0,1);
+	text-shadow: 1px 1px 1px rgba(0,0,0,.3);
 	font-weight: normal;
 	font-variant: small-caps;
 	margin-left: 59px;
 	margin-bottom: 60px;
-	top: 40px;
+	top: -80px;
 	font-size: 18px;
 }
 
@@ -1241,7 +1240,6 @@ button#openAction {
 	transition: opacity 1s;
 	opacity: 1;
 	right: 4px;
-	top: 233px;
 	display: none;
 }
 #fNameBox {
@@ -1250,7 +1248,7 @@ button#openAction {
 	float: left;
 	position: absolute;
 	left: 20px;
-	top: 50px;
+	top: 0px;
 	font-family: Arial, Helvetica, sans-serif;
 	color: rgba(255,255,255,1);
 }
@@ -1264,7 +1262,7 @@ button#openAction {
 	height: 40px;
 	width: 160px;
 	position: absolute;
-	top: 120px;
+	top: 60px;
 	left: 20px;
 	font-family: Arial, Helvetica, sans-serif;
 	color: rgba(255,255,255,1);
@@ -1273,14 +1271,14 @@ button#openAction {
 	height: auto;
 	width: auto;
 	position: absolute;
-	top: 280px;
+	top: 240px;
 	left: 25px;
 }
 #reasonBox {
 	height: auto;
 	width: auto;
 	position: absolute;
-	top: 220px;
+	top: 120px;
 	left: 10px;
 	font-family: Arial, Helvetica, sans-serif;
 	color: rgba(255,255,255,1);
@@ -1289,14 +1287,14 @@ button#openAction {
 	height: auto;
 	width: auto;
 	position: absolute;
-	top: 40px;
+	top: 20px;
 	left: 2.5px;
 }
 #commtArea {
 	height: auto;
 	width: auto;
 	position: absolute;
-	top: 60px;
+	top: 40px;
 }
 #lNameBox {
 	height: 40px;
@@ -1304,7 +1302,7 @@ button#openAction {
 	float: right;
 	position: absolute;
 	left: 220px;
-	top: 50px;
+	top: 0px;
 	font-family: Arial, Helvetica, sans-serif;
 	color: rgba(255,255,255,1);
 }
@@ -1569,13 +1567,13 @@ input[type='range']::-ms-thumb{
 	opacity: 0;
 	text-shadow: 0px 0px 2px #FFF;
 	font-family: "Courier New";
-	text-align: left;
+	text-align: center;
 	vertical-align: text-bottom;
 	border-top-style: none;
 	border-right-style: none;
 	border-bottom-style: none;
 	border-left-style: none;
-	float: right;
+	float: left;
 	top: 10px;
 }
 
@@ -1670,6 +1668,7 @@ button#exclusiveTab:active {
 	display: block;
 	width: 100%;
 	height: 200px;
+	margin-bottom: 100px;
 }
 #lOv {
 	display: block;
@@ -1686,7 +1685,8 @@ button#exclusiveTab:active {
 </style>
 
 <body>
-<div id="please-wait" style="position:absolute;width:100%;height:100%;background:rgba(51,51,51,.5);z-index:100;">
+
+<div id="please-wait" style="position:absolute;width:100%;height:1200px;background:rgba(51,51,51,.5);z-index:100;">
 <p id="sorry" style="position:relative;width:100%;height:auto;color:rgba(255,255,255,1);font-size:120px;text-align:center;text-indent:40px;text-shadow:0px 0px 2px rgba(255,255,255,.7);">sorry.</p>
 
 
@@ -1694,7 +1694,7 @@ button#exclusiveTab:active {
 
 
 <script>
-var end = new Date('11/15/2017 11:15 AM');
+var end = new Date('11/15/2017 8:00 PM');
 
     var _second = 1000;
     var _minute = _second * 60;
@@ -1736,12 +1736,53 @@ var end = new Date('11/15/2017 11:15 AM');
 </div>
 <div id="PLwrapper" style="width: 100%; height: 100%; position: relative; background: rgba(51,51,51,.0); display: block;">
 <div id ="pre-loader"><img src="images/cmop-letterhead2.png" style="position:relative;width:200px;height:150px;margin-top:30px;margin-left:30px;">
+<div id="tips-wrapper" style="display:none;margin-top:20px;text-align:center;">
+<div id="Loading-tips" style="position:relative;width:93%;height:auto;background:rgba(255,255,255,0);margin-left:20px;box-shadow:0px 0px 2px 3px rgba(51,51,51,.75);">
 
-<div id="enter-wrapper" style="width:100%;height:60px;margin-top:100px;background:rgba(51,51,51,.7);">
+<div id="tips-header" style="width:100%;height:auto;background:rgba(0,0,0,1);color:rgba(255,255,255,1);font-weight:bolder;font-size:32px;text-align:left;text-indent:10px;vertical-align:top;">
+cmopbeatz.com says:
+</div>
+
+<div id="tips-body" style="width:100%;height:auto;background:rgba(0,0,0,1);">
+<img id="tips-body-bkg" style="width:100%;height:auto;" src=""/>
+
+</div> 
+
+
+<div id="tips-caption" style="position:relative;width:100%;height:auto;background:rgba(0,0,0,1);font-size:16px;">
+
+<p id="caption1" class="tips" style="position:relative;color:rgba(255,255,255,1);height:auto;width:100%;display:none;">
+To contact cmopbeatz, you can either click the <sup>1</sup>options icon, then select "contact" and copy the appropriate address into your email client's recipient field, or click the <sup>2</sup>Questions/Comments icon to use our form. Select the type of question and you're good to go!</p>
+
+<p id="caption2" class="tips" style="position:relative;color:rgba(255,255,255,1);height:auto;width:100%;display:none;">
+If you like what you hear, and are interested in reaching out regarding purchasing Exclusive Rights, you may contact cmopbeatz.com via exclusives.cahmeout@gmail.com, or use our Questions/Comments form and select the option "...regarding Exclusives"
+
+</p>
+
+<p id="caption3" class="tips" style="position:relative;color:rgba(255,255,255,1);height:auto;width:100%;display:none;">
+To view our pricing an dleasing info, click the <sup>1</sup>Pricing icon located on the left side of the screen.
+</p>
+
+<p id="caption4" class="tips" style="position:relative;color:rgba(255,255,255,1);height:auto;width:100%;display:none;">
+Want to request a custom track? Contact cmopbeatz via exclusives.cashmeout@gmail.com or use our Questions/Comments form and select "...Other"
+
+</p>
+
+<p id="caption5" class="tips" style="position:relative;color:rgba(255,255,255,1);height:auto;width:100%;display:none;">
+This site and its assets were designed and developed by d1nero.
+To inquire about design services, contact d1nero directly at designsbyd1nero@gmail.com
+</p>
+
+</div>
+</div>
+</div>
+
+
+<!--<div id="enter-wrapper" style="width:100%;height:60px;margin-top:20px;background:rgba(0,0,0,1);">
 <div id ="loader-graphic"><img src="images/cmop-loader-circle.gif" style="background:rgba(255,255,255,.05);border-radius:40px;box-shadow: 0px 0px 1px 2px #000;" height="30px" width="30px"></div>
 <button id ="Enter-page">Loading...</button>
 </div>
-</div>
+</div>-->
 </div>
 
     <div id="audio_player">
@@ -1791,8 +1832,8 @@ var end = new Date('11/15/2017 11:15 AM');
           <option  value="Position2(no-hook).mp3">Position2(no-hook) prod. by: d1nero</option>
 
     </select>
-    </div>
-<div id="cmopSearch" style="position:absolute;float:right;height:auto;width:460px;top:10px;"><script>
+</div>
+<!--<div id="cmopSearch" style="position:absolute;margin-left:600px;height:auto;width:460px;top:10px;"><script>
   (function() {
     var cx = '013579132076709726964:frpuasqpcwo';
     var gcse = document.createElement('script');
@@ -1804,7 +1845,35 @@ var end = new Date('11/15/2017 11:15 AM');
   })();
 </script>
 <gcse:searchbox-only></gcse:searchbox-only>
+</div>-->
+<div id="adPlacementHeader" style="width:100%;height:180px;margin-top:20px;">
+<div id="adPlacement-HL" style="position:relative;width:300px;height:auto;float:left;margin-left:20px;margin-right:20px;font-size:20px;color:white;">
+<a href="http://www.anrdoezrs.net/click-8475802-12298007" target="_top">
+<img src="http://www.ftjcfx.com/image-8475802-12298007" width="234" height="60" alt="Business Class Deals" border="0"/></a>
+
+<a style="background:rgba(0,0,0,1);color:white;" href="http://www.anrdoezrs.net/click-8475802-12958290" target="_top">Never Before Savings on First Class Airfares. Get up to $100 Off* with Code FC100</a><img src="http://www.awltovhc.com/image-8475802-12958290" width="1" height="1" border="0"/>
+
 </div>
+
+<div id="adPlacement-HC" style="position:relative;width:300px;height:auto;float:left;">
+<a href="http://www.tkqlhce.com/click-8475802-11055193" target="_top">
+<img src="http://www.tqlkg.com/image-8475802-11055193" width="300" height="100" alt="" border="0"/></a>
+
+<a style="color:white;font-size:14px;background:rgba(0,0,0,1);" href="http://www.dpbolvw.net/click-8475802-10780087" target="_top">Free Upgrade to 2nd Day Shipping at Sonos.com with code FRE2NDYSHP17 (Customer must first select 2nd day shipping at checkout. ) </a><img src="http://www.lduhtrp.net/image-8475802-10780087" width="1" height="1" border="0"/>
+
+</div>
+
+<div id="adPlacement-HR" style="position:relative;width:600px;height:auto;float:right;margin-right:10px;">
+<a href="http://www.jdoqocy.com/click-8475802-12558796" target="_top">
+<img src="http://www.tqlkg.com/image-8475802-12558796" width="600" height="65" alt="" border="0"/></a>
+
+<a style="font-size:18px;background:rgba(0,0,0,1);" href="http://www.tkqlhce.com/click-8475802-12558780" target="_top">Consumer Electronics - Keep up to the date with the latest tech for up to 50% off.</a><img src="http://www.tqlkg.com/image-8475802-12558780" width="1" height="1" border="0"/>
+
+</div>
+
+</div>
+
+
 <div id ="cntr" class="container">
 <div id="leftUI" style="position:relative;height:700px;width:40px;float:left;top:100px;"><button title="Display song info" id="tb_Icon">?</button><button id="PricingHeader" >$</button><button id="ToS">
   <p style="color:white">&nbsp;</p>
@@ -1885,7 +1954,7 @@ var end = new Date('11/15/2017 11:15 AM');
 
   <div id="cont" class="content">
     <div id="RSS-container" >
-<div  id="CMOP-description" class="scroll-left"><p class ="scroll-left p"> view son-list:#|view/close action-panel:#/#|about this page:#|pricing:#|Terms of Service:#</p></div>
+<div  id="CMOP-description" class="scroll-left"><p class ="scroll-left p">Welcome to cmopbeatz.com! To listen, click the 'Expand' button below, then select a track. Enjoy!</p></div>
 
 </div>
     
@@ -2142,6 +2211,7 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
 
 <div id="actionContainer" style="width:400px;height:400px;position:relative;float:right;margin-top:325px;">
 <div id="apCommands">
+
 <div id="closeAPcont" style="float:right;position:relative;width:42px;">
 <button id="closeAction"><img id="actPOC" src="images/cmop-closeactionbtn.png" width="40.25" height="40.25"></button>
  
@@ -2651,13 +2721,13 @@ height="1">
 
   <div id="emailPanel">
   
-	<form id="QCform" method="POST" target = "no-target" name ="QCform">
+	<form id="QCform" style="height:400px;width:100%;" method="POST" target = "no-target" name ="QCform">
     
     <div id="fNameBox">First Name:
     <input type="text" name="First Name:" placeholder="first" id = "fName" style="border-radius:5px;"/></div>
     
      <div id="lNameBox">Last Name:
-    <input type="text" name="Last Name:" placeholder="last" id = "lName"style="border-radius:5px;"/></div>
+    <input type="text" name="Last Name:" placeholder="last" id = "lName" style="border-radius:5px;"/></div>
    
     <div id="emailBox">Email Address:<input type="email" name="Email Address:" placeholder="abcd@1234.com" id = "email" style="border-radius:5px;"></div>
      
@@ -2670,7 +2740,7 @@ height="1">
      <option id="q4" name="Other...">Other...</option>
    </select>
    <div id="commtArea">
-     <textarea name="Please enter Question/Comment" cols="50" rows="10" id="commtBox" placeholder="Type Here"style="border-radius:5px;"></textarea>
+     <textarea name="Please enter Question/Comment" cols="50" rows="10" id="commtBox" placeholder="Type Here" style="border-radius:5px;width:300px;"></textarea>
    </div>
     </div>
   
@@ -2682,12 +2752,15 @@ height="1">
     
     </form>
     </div>
-    </div>
     
     <div id="soundCloudPanel" scrolling="no">
- 
+ <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/327214508&amp;color=%234c5454&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
  
     </div>
+    
+    </div>
+    
+    
 </div>
 
 </div>
@@ -2701,45 +2774,41 @@ height="1">
  
  
 <div id="aboutField">
-<table width="100%">
 
-<tr><td>
-<div id="adPanel" style="margin-left:80px;position:relative;width:93%;height:160px;background:rgba(51,51,51,1);border-radius:4px;box-shadow:inset 0px 0px 2px 3px rgba(0,0,0,1);">
-  <div id="CMOP-vh1-ST" style="margin-left:10px;width:460px;font-size:24px;text-align:left;font-weight:normal;color:white;float:left;">
-   cmopbeatz.com proudly supports the arts and their vital role in education. That's why every quarter, we will donate 15% of our sales revenue to: 
+
+<div id="adPanel" style="margin-left:80px;position:relative;width:90%;height:auto;background:rgba(51,51,51,1);border-radius:4px;box-shadow:inset 0px 0px 2px 3px rgba(0,0,0,1);">
+  <div id="CMOP-vh1-ST" style="margin-left:10px;width:100%;font-size:18px;text-align:left;font-weight:normal;color:black;float:left;">cmopbeatz.com proudly supports the arts and their vital role in education. That's why every quarter, we will donate 15% of our sales revenue to: 
   </div>
  
-  <div id="STM-logo" style="position:relative;width:140px;float:left;margin-left:10px;margin-top:10px;">
-  <img src="images/vh1-STM-logo.png" height="140" width="140"/>
+  <div id="STM-logo" style="position:relative;width:100%;float:left;">
+  <div id="stmicon" style="width:auto;height:auto;box-shadow:inset 0px 0px 1px 2px;float:left;">
+  <img src="images/vh1-STM-logo.png" height="315" width="315"/>
+  </div>
+  <iframe style="float:right;" width="560" height="315" src="https://www.youtube.com/embed/2lcGdUDVb5s" frameborder="0" allowfullscreen></iframe>
     </div>
-<div id="more-info" style="font-size:16px;float:right;height:160px;width:510px;color:white;margin-left:12px;">vh1's "Save The Music Foundation" is a 501c3 nonprofit organization dedicated to restoring music programs in America’s public schools, and raising awareness about the importance of music as part of each child’s complete education. For  information on how to get involved, or to donate directly, please visit: <a style="color:rgba(0,204,255,1);font-size:22px;" href="http://www.vh1savethemusic.org/">www.vh1savethemusic.org</a>
+<div id="more-info" style="font-size:16px;float:right;height:160px;width:100%;color:black;margin-left:12px;">vh1's "Save The Music Foundation" is a 501c3 nonprofit organization dedicated to restoring music programs in America’s public schools, and raising awareness about the importance of music as part of each child’s complete education. For  information on how to get involved, or to donate directly, please visit: <a style="color:rgba(0,204,255,1);font-size:22px;" href="http://www.vh1savethemusic.org/">www.vh1savethemusic.org</a>
 
 </div>
 
   
   
 </div>
-</td>
-</tr>
 
-<tr>
-<td>
-<div id="discPanel" style="margin-left:80px;position:relative;width:93%;height:160px;background:rgba(51,51,51,1);background-image:url(images/preloader-bkgrnd.png);border-radius:4px;box-shadow:inset 0px 0px 2px 3px rgba(0,0,0,1);"><p id="dcTitle">DISCOGRAPHY</p><div id="coming-soon" style="height:160px;width:160px;background:rgba(0,0,0,1);"></div></div>
-</td>
-</tr>
 
-<tr>
-<td>
-<div id="legals" style="text-align:center;">
-<p style="color:white;text-align:center;">&copy;Copyright 2017. CASHMEOUT Productions. All Rights reserved.</p>
-<p style="font-size:18px;text-align:center;">Layout & Design by d1nero. To inquire about services, contact: <a style="color:white;" href="mailto:designsbyd1nero@gmail.com">designsbyd1nero</a></p>
+
+<div id="discPanel" style="margin-top:20px;margin-left:40px;width:auto;height:auto;border-radius:4px;float:left;border-radius:25px;"><div id="dscPanelHead" style="position:relative;margin-bottom:20px;width:100%;height:60px;background:rgba(0,0,0,1);">DISCOGRAPHY</div>
+
+<div id="dscPanelSide" style="float:left;width:1000px;height:160px;font-size:30px;background:url(images/preloader-bkgrnd.png);color:rgba(255,255,255,1);">content available soon</div>
 </div>
-</td>
-</tr>
-</table>
+
+
+
 </div>
   
-
+<div id="legals" style="position:relative;width:100%;height:20px;text-align:center;vertical-align:middle;float:left;margin-top:40px;background:rgba(0,0,0,1);">
+<p style="width:auto;color:white;text-align:center;vertical-align:middle;">&copy;Copyright 2017. CASHMEOUT Productions. All Rights reserved.</p>
+<p style="background:rgba(255,255,255,1);width:auto;font-size:18px;text-align:center;color:black;">Layout & Design by d1nero. To inquire about services, contact: <a style="color:blue;" href="mailto:designsbyd1nero@gmail.com">designsbyd1nero</a></p>
+</div>
 
 <iframe src= "#" id="no-target" name="no-target" style="visibility:hidden;"></iframe>
 
@@ -2755,6 +2824,8 @@ height="1">
 <script type="text/javascript" src="mpcontrols-alt.js"></script>
 
 <script type="text/javascript" src="preLoader.js"></script>
+
+<script type="text/javascript" src="webTips.js"></script>
 
 
 
