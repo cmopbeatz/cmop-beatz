@@ -1,0 +1,336 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Tos &amp; Privacy</title>
+<style type="text/css">
+#Privacy-Policy {
+	-webkit-transition: all .5s cubic-bezier(x1,y1,x2,y2) .2s;
+	-moz-transition: all .5s cubic-bezier(x1,y1,x2,y2) .2s;
+	-ms-transition: all .5s cubic-bezier(x1,y1,x2,y2) .2s;
+	-o-transition: all .5s cubic-bezier(x1,y1,x2,y2) .2s;
+	transition: all .5s cubic-bezier(x1,y1,x2,y2) .2s;
+}
+#Terms-of-Use {
+	-webkit-transition: all .5s cubic-bezier(x1,y1,x2,y2) .2s;
+	-moz-transition: all .5s cubic-bezier(x1,y1,x2,y2) .2s;
+	-ms-transition: all .5s cubic-bezier(x1,y1,x2,y2) .2s;
+	-o-transition: all .5s cubic-bezier(x1,y1,x2,y2) .2s;
+	transition: all .5s cubic-bezier(x1,y1,x2,y2) .2s;
+}
+
+#emailPanel{
+	width: 400px;
+	height: 420px;
+	position: relative;
+	float: left;
+	z-index: 3;
+	border: thick solid #333;
+	transition: opacity 1s;
+	opacity: 1;
+	margin-right: 50px;
+	background-color: rgba(51,51,51,0.5);
+	overflow-y: scroll;
+	overflow: visible;
+}
+
+#fNameBox {
+	height: 40px;
+	width: 100px;
+	float: left;
+	position: absolute;
+	left: 20px;
+	top: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgba(255,255,255,1);
+}
+#reasonBox     {
+	height: 100px;
+	width: 100px;
+	left: 20px;
+	position: absolute;
+}
+#emailBox {
+	height: 40px;
+	width: 160px;
+	position: absolute;
+	top: 60px;
+	left: 20px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgba(255,255,255,1);
+}
+#submitArea {
+	height: auto;
+	width: auto;
+	position: absolute;
+	top: 240px;
+	left: 25px;
+}
+#reasonBox {
+	height: auto;
+	width: auto;
+	position: absolute;
+	top: 120px;
+	left: 10px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgba(255,255,255,1);
+}
+#reasonSelect {
+	height: auto;
+	width: auto;
+	position: absolute;
+	top: 20px;
+	left: 2.5px;
+}
+#commtArea {
+	height: auto;
+	width: auto;
+	position: absolute;
+	top: 40px;
+}
+#lNameBox {
+	height: 40px;
+	width: 100px;
+	float: right;
+	position: absolute;
+	left: 220px;
+	top: 0px;
+	font-family: Arial, Helvetica, sans-serif;
+	color: rgba(255,255,255,1);
+}
+
+#CMOP-title {
+	height: 42px;
+	width: 300px;
+	float: left;
+	font-size: 24px;
+	color: rgba(204,204,204,1);
+	letter-spacing: 2px;
+	text-align: left;
+	vertical-align: middle;
+	word-spacing: 1px;
+	font-family: "Planet Kosmos";
+	background-repeat: no-repeat;
+	position: relative;
+	line-height: 40px;
+	text-shadow: -3px 2px 4px rgba(102,102,102,1);
+	background-color: rgba(55,55,55,.1);
+	z-index: 3;
+	top: 5px;
+	display: block;
+}
+</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+
+<body style="background-image:url(images/bodybkg-wrks.png);height:600px;">
+
+
+
+<div id="disclaimers" style="position:relative;width:100%;height:auto;background:rgba(255,255,255,.1);overflow:auto;font-family:Arial, Helvetica, sans-serif">
+
+<div id ="pre-loader"><img src="images/cmop-letterhead2.png" style="position:relative;width:200px;height:150px;margin-left:30px;"></div>
+<div id="CMOP-title" title="The Logo for &quot;cmop-beatz&quot;"><img id="cmopbeatz" style="width:100%;height:40px;" src="images/cmop-web-logo.png">
+ </div>
+
+
+<div id="linkCont" style="width:300px;margin-top:200px;">
+<a id="ToU" href="javascript:void(0);" style="background:rgba(51,51,51,1);position:absolute;color:white;float:left;">
+<script>
+$('#ToU').click(function(){
+	$('#Privacy-Policy').css('display','none');
+	$('#Terms-of-Use').css('display','block');
+	
+	$('#Privacy-Policy').css('opacity','0');
+	$('#Terms-of-Use').css('opacity','1');
+	});
+</script>Terms of Use</a>
+<br>
+<br><a id="PPo" href="javascript:void(0);" style="background:rgba(51,51,51,1);position:relative;color:white;float:left;"><script>
+$('#PPo').click(function(){
+	$('#Privacy-Policy').css('display','block');
+	$('#Terms-of-Use').css('display','none');
+	
+	$('#Privacy-Policy').css('opacity','1');
+	$('#Terms-of-Use').css('opacity','0');
+	});
+</script>Privacy Policy</a>
+</div>
+
+<div id="Privacy-Policy" style="position:relative;width:1000px;text-align:center;background:black;color:white;margin-left:200px;">
+<script>
+$(document).ready(function(){
+	$('#Privacy-Policy').css('display','none');
+		$('#Privacy-Policy').css('opacity','0');
+	});
+
+</script>
+<p style="text-align:right;position:relative;float:left;width:auto;"><font size="9">Privacy Policy</font><br><font size="2">(Revised: 11/29/2017)</font></p> 
+ 
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><strong>A. What info is collected?</strong>
+<br>
+<font size="2">cmopbeatz.com voluntarily collects the following data from its users:</font>
+<br>
+<br>1. Email Address: 
+<br>
+<font size="2">Users may submit their email address via our Questions/Comments <br>form, along with their question or comment. cmopbeatz.com can <br>then contact customers in regards to their question or concern. <br>Providing an email address also guarantees that in the event that <br>a purchased/downloaded item fails to function or becomes <br>corrupted during file transfer, the user can recieve a <br>one-time replacement(proof of purchase is nessecary).</font>
+<br>
+<br>2. First Name/Last Name: 
+<br><font size="2">Names are stored in conjunction with the user's submitted email address. <br>This information is also optional and does not prevent the user from <br>interacting with the website(with the exception of the purchasing process).</font>
+
+<br>
+<br>3. Feedback in the form of Questions and Concerns: 
+<br><font size="2">Comments, specifications and questions are stored when the user <br>
+interacts with the Questions/Comments form and is used solely for the purpose <br>
+of correspondence with users. In the case of requests for services, <br>cmopbeatz.com resonds to submissions only upon request/specification.</font> 
+<br>
+<br>
+4. Cookies & Session Data:
+<br>
+<font size="2">cmopbeatz.com uses and refers to Cookie and Session Data to <br>improve user experience. This information is observed for <br>data concerning time spent on the site, links visited, <br>products purchased, time of visit, and user interactions.</font>
+
+<br>
+<br><font size="1">*All of the information is submitted by the end-user (you) on a voluntary basis and with the <br>exception of completing a transaction(purchase), is not necessary to interact with the site.</font>
+<br>
+<br><strong>B. How is this information is stored/shared/disclosed?</strong>
+<br>
+<br>1. Form Data: 
+<br><font size="2">Information submitted to cmopbeatz.com via our webform <br>is stored using Google Forms, and is intended for communicating <br>with users only upon request (e.g. When a question is submitted, <br>or a request for Exclusive material). <br>This information is neither sold nor shared with <br>third-party entities(e.g websites, services, or other companies).</font>
+<br>
+<br>2. Payment Information: 
+<br><font size="2">Information submitted via our 'checkout' process is submitted <br>directly to Paypal and is secured by Paypal's own provisions. <br>cmopbeatz.com does not store information regarding the actual payment <br>process with the exception of items purchased, types of <br>items purchased and time/date of purchase.</font> 
+<br>
+<br>3. Cookies & Session Data:
+
+<br><font size="2">User Cookies and Session Data are stored for analytical purposes only. <br>cmopbeatz.com does not sell, trade, nor divulge stored data to third-parties. <br>Tracked/logged session data is pertinent only to the active session and <br>is not retained as any form of leverage, sales lead, or commodity during or after user visit. <br>Upon visiting a hosted or embedded link, cmopbeatz.com assumes <br>no liability for customer experience, interaction, or exposure.</font> 
+<br>
+<br><strong>C. How can the information can be reviewed or modified</strong>
+<br>For concerns regarding form data(stored), contact information(Name, Email Address), <br>information specific to purchasing, Leasing, or direct user interaction with <br>cmopbeatz.com can be made available upon request.  <br>Users can contact cmopbeatz.com via business.cashmeout@gmail.com <br>or using the Questions and Comments form below:
+
+</div>
+
+
+
+  <div id="Terms-of-Use" style="position:relative;width:1000px;text-align:center;background:black;color:white;margin-left:200px;">
+       
+<p style="text-align:right;position:relative;float:left;width:auto;"><font size="9">Terms of Use</font><br><font size="2">(Revised: 11/29/2017)</font></p> 
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<strong>Terms of Licensing</strong>
+<br>
+<font size="2">CASHMEOUT(CMOp) offers licenses of various types at affordable, reasonable prices.<br> Please consider that services offered are not free, but some can be negotiable if nece-<br>ssary and beneficial. If payment is not received for selected track, or if the checkout<br> process is not completed, the transaction will be considered void. If later discovered<br> that the track or "beat" in question was utilized without adecquate consent from CMOp,<br> legal action may be taken. Please confirm that the transaction has been completed<br> prior to using purchased material.</font>
+<br>
+<br>
+<strong>Termination</strong>
+<br>
+<font size="2">We may terminate or suspend access to our Service immediately, without prior<br> notice or liability, for any reason whatsoever, including without limitation if you breach<br> the Terms.
+All provisions of the Terms which by their nature should survive termination<br> 
+shall survive
+termination, including, without limitation, ownership provisions, warranty<br> disclaimers, indemnity
+and limitations of liability.</font>
+<br>
+<br>
+<strong>Links To Other Web Sites</strong>
+<br>
+<font size="2">Our Service may contain links to thirdparty web sites or services that are not owned or<br> controlled by <strong>CASHMEOUT Productions</strong>("company").
+<strong>CASHMEOUT Productions</strong><br> has no control over, and assumes no responsibility for, the
+content, privacy policies, or<br> practices of any third party web sites or services. You further
+acknowledge and agree<br> that <strong>CASHMEOUT Productions</strong> shall not be responsible or liable,
+directly or indirectly<br> for any damage or loss caused or alleged to be caused by or in connection
+with use of<br> or reliance on any such content, goods or services available on or through any such
+web-<br>sites or services.
+We strongly advise you to read the terms and conditions and privacy<br> policies of any third-party
+web sites or services that you visit.</font>
+<br>
+<br>
+<strong>Governing Law</strong>
+<br>
+<font size="2">These Terms shall be governed and construed in accordance with the laws of<br> the United States, without regard to its conflict of law provisions.
+Our failure to enforce<br> any right or provision of these Terms will not be considered a waiver of
+those rights. If<br> any provision of these Terms is held to be invalid or unenforceable by a court, the
+rem-<br>aining provisions of these Terms will remain in effect. These Terms constitute the entire<br>
+agreement between us ("company", "end-user") regarding our service, and supersede<br> and replace any prior agreements we might have between us regarding the Service.</font>
+<br>
+<br>
+<strong>Changes</strong>
+<br>
+<font size="2">We reserve the right, at our sole discretion, to modify or replace these Terms at any time. <br>If a revision is material we will try to provide at least 30  business days notice <br>prior to any new terms taking effect. What constitutes a material change will be <br>determined at our sole discretion.
+
+By continuing to access or use the company's service <br>after those revisions become effective, you agree to
+be bound by the revised terms. <br>If you do not agree to the new terms, please stop using the
+Service.</font>
+<br>
+<br>
+
+<strong>Contact Us</strong>
+<br>
+<font size="3">If you have any questions about these Terms, please contact cmopbeatz.com via email at: business.cashmeout@gmail.com <br>or via the brief Questions/Comments form below:</font>
+</div>
+<div id="ctcCont" style="margin-top:20px;position:relative;width:1000px;float:right;margin-right:135px;background:rgba(0,0,0,1);">
+<div id="Contact-Us" style="margin-left:30px;position:relative;width:500px;height:420px;float:left;">
+<p style="top:-20px;position:relative;height:auto;font-size:48px;background:rgba(51,51,51,1);color:white;">Contact Us</p>
+<p style="position:relative;top:-20px;font-size:26px;color:rgba(255,255,255,1);"><strong>Other ways to Contact cmopbeatz.com:</strong></p>
+<p style="position:relative;top:-20px;text-align:left;"><font color="#FFFFFF" size="4">1. General & Sales Related: </font></p>
+<p style="position:relative;top:-20px;color:white;text-indent:10px;background:rgba(153,153,153,.3);"> <a style="color:white;" href="mailto:sales.cashmeout@gmail.com" >sales.cashmeout@gmail.com</a></p>
+<br><p style="position:relative;top:-50px;text-align:left;"><font color="#FFFFFF" size="4">2. Exclusives & Rights: </font></p>
+<p style="position:relative;top:-50px;color:white;text-indent:10px;background:rgba(153,153,153,.3);"><a style="color:white;" href="mailto:exclusives.cashmeout@gmail.com" >exclusives.cashmeout@gmail.com</a></p>
+<br><p style="position:relative;top:-80px;text-align:left;"><font color="#FFFFFF" size="4">3. Business & Legal: </font></p>
+<p style="position:relative;top:-80px;color:white;text-indent:10px;background:rgba(153,153,153,.3);"> <a style="color:white;" href="mailto:business.cashmeout@gmail.com" >business.cashmeout@gmail.com</a></p>
+</div>
+<div id="emailPanel" >
+    <form id="QCform" style="height:400px;width:100%;" method="POST" target = "no-target" name ="QCform">
+      <div id="fNameBox">First Name:
+        <input type="text" name="First Name:" placeholder="first" id = "fName" style="border-radius:5px;"/>
+      </div>
+      <div id="lNameBox">Last Name:
+        <input type="text" name="Last Name:" placeholder="last" id = "lName" style="border-radius:5px;"/>
+      </div>
+      <div id="emailBox">Email Address:
+        <input type="email" name="Email Address:" placeholder="abcd@1234.com" id = "email" style="border-radius:5px;">
+      </div>
+      <div id="reasonBox">My question/comment:
+        <div id="reasonSelect">
+          <select id="selQ" name="My question/comment:" size="1">
+            <option id="q1" name="regarding Exclusives...">regarding Exclusives...</option>
+            <option id="q2" name="regarding my recent purchase...">regarding my recent purchase...</option>
+            <option id="q3" name="regarding the site and/or services provided(in general)...">regarding the site and/or services provided...</option>
+            <option id="q4" name="Other...">Other...</option>
+          </select>
+          <div id="commtArea">
+            <textarea name="Please enter Question/Comment" cols="50" rows="10" id="commtBox" placeholder="Type Here" style="border-radius:5px;width:300px;"></textarea>
+          </div>
+        </div>
+        <div id="submitArea">
+          <input type="submit" id ="submitBtn" name ="fbzx" value ="submit"style="border-radius:5px;" onClick="checkEmail();"/>
+        </div>
+      </div>
+    </form><div id="QCLabel" style="position:relative;float:right;text-align:center;color:white;"><strong>Questions/Comments</strong></div>
+  </div>
+  
+</div>
+
+</div>
+
+ 
+
+  <div id="legals2" style="position:relative;width:100%;height:20px;text-align:center;vertical-align:middle;float:left;">
+    <p style="width:auto;color:white;text-align:center;vertical-align:middle;background:rgba(0,0,0,1);margin-top:10px;">&copy;Copyright 2017. CASHMEOUT Productions. All Rights reserved.</p>
+    <p style="background:rgba(255,255,255,1);width:auto;font-size:18px;text-align:center;color:black;">Layout & Design by d1nero. To inquire about services, contact: <a style="color:blue;" href="mailto:designsbyd1nero@gmail.com">designsbyd1nero</a></p>
+    
+    
+  </div>
+<script src="QC-main.js"></script>
+</body>
+</html>

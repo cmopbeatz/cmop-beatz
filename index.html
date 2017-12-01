@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" xmlns:fb="http://www.facebook.com/2008/fbml">
 
-<head>
+<head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <meta charset="utf-8">
 <title>CMO_P Beatz</title> 
    
@@ -15,6 +15,29 @@
   <meta property="og:image:height" content="200" />
 
 
+
+
+<script>
+jQuery(document).ready(function() {
+	function count($this){
+		var current = parseInt($this.html(), 10);
+		current = current + 1; /* Where 1 is increment */
+
+		$this.html(++current);
+		if(current > $this.data('count')){
+			$this.html($this.data('count'));
+		} else {
+			setTimeout(function(){count($this)}, 50);
+		}
+	}
+
+	jQuery(".stat-count").each(function() {
+	  jQuery(this).data('count', parseInt(jQuery(this).html(), 10));
+	  jQuery(this).html('0');
+	  count(jQuery(this));
+	});
+});
+</script>
 
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script>
@@ -83,7 +106,7 @@ body {
 	height: 100%;
 	overflow-y: scroll;
 	overflow-x: hidden;
-	background-image: url(images/bodybkg-wrks.png);
+	background-image: url(images/bodybkg-wrks-3k.png);
 }
 
 
@@ -209,7 +232,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	-ms-transition: all 2s ease-in-out 0s;
 	-o-transition: all 2s ease-in-out 0s;
 	transition: all 2s ease-in-out 0s;
-	display: none;
+	display: block;
 	margin-left: 20px;
 	margin-top: 40px;
 }
@@ -406,7 +429,7 @@ button#footer {
 	font-weight: normal;
 	font-variant: small-caps;
 	margin-left: 59px;
-	margin-bottom: 60px;
+	margin-bottom: 0px;
 	top: -80px;
 	font-size: 18px;
 }
@@ -747,6 +770,7 @@ button#PricingHeader{
 	transition: all 1s ease-in-out;
 	margin: 0px;
 	top: 250px;
+	overflow: visible;
 }
 #pricingPanel {
 	height: 385px;
@@ -1175,6 +1199,7 @@ button#openAction {
 	transition: opacity 1s;
 	background-color: rgba(153,153,153,.1);
 	opacity: 1;
+	overflow-x: hidden;
 }
 
 /*////Song/ProductLayout for PayPalPanel////*/
@@ -1308,7 +1333,7 @@ button#openAction {
 	color: rgba(255,255,255,1);
 }
 .product-list {
-	height: auto;
+	height: 20px;
 	color: rgba(255,255,255,1);
 	background-color: rgba(51,51,51,.2);
 	border-top-width: thin;
@@ -1323,6 +1348,42 @@ button#openAction {
 	font-weight: bold;
 	text-shadow: .2px -.px;
 	text-shadow: 0.4px -0.4px 1px rgba(0,0,0,1);
+	width: auto;
+	position: relative;
+}
+.song-prod-title {
+	height: 20px;
+	width: 120px;
+	background-color: rgba(153,153,153,.75);
+	border-top-width: medium;
+	border-right-width: medium;
+	border-bottom-width: medium;
+	border-left-width: medium;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-top-color: rgba(0,0,0,1);
+	border-right-color: rgba(0,204,255,.3);
+	border-bottom-color: rgba(255,255,255,1);
+	border-left-color: rgba(51,51,51,1);
+	border-radius: 10px 0px 0px 10px;
+	margin: 0px;
+	padding: 0px;
+	box-shadow: 0px 0px 2px 2px rgba(0,0,0,1);
+}
+.song-purch-cont {
+	height: 20px;
+	width: 200px;
+	background-color: rgba(204,204,204,.75);
+	box-shadow: inset 0px 0px 1px 2px rgba(0,0,0,1);
+	font-family: "Arial Black", Gadget, sans-serif;
+	font-size: 25px;
+	font-weight: bold;
+	font-variant: small-caps;
+	text-align: center;
+	vertical-align: middle;
+	white-space: nowrap;
 }
 
 input[type='range']{
@@ -1402,6 +1463,7 @@ input[type='range']::-ms-thumb{
 	text-decoration: blink;
 	text-shadow: 0px 0px 8px rgba(0,0,0,1);
 	margin: 0px;
+	overflow: visible;
 }
 #clock {
 	font-family: "Courier New";
@@ -1650,6 +1712,16 @@ button#exclusiveTab:active {
 	margin-left: 10px;
 	overflow: hidden;
 }
+.pay1 {
+	width: 220px;
+	position: relative;
+	float: left;
+	height: 40px;
+	margin-right: 0px;
+	margin-top: 10px;
+	display: none;
+	margin-left: 5px;
+}
 #pre-loader {
 	background-color: rgba(51,51,51,.1);
 	background-attachment: fixed;
@@ -1683,9 +1755,133 @@ button#exclusiveTab:active {
 #eOv {
 	display: block;
 }
+.pay2 {
+	width: 220px;
+	position: relative;
+	height: 40px;
+	float: left;
+	margin-right: 0px;
+	margin-top: 10px;
+	display: none;
+	margin-left: 5px;
+}
+.closer {
+	color: rgba(51,51,51,1);
+	text-decoration: none;
+}
+.pay3 {
+	width: 220px;
+	position: relative;
+	float: left;
+	height: 40px;
+	margin-top: 10px;
+	margin-right: 0px;
+	display: none;
+	margin-left: 5px;
+}
+.types1 {
+	height: 50px;
+	width: 70px;
+	position: relative;
+	float: left;
+	background-color: rgba(51,51,51,.3);
+	margin-right: 2px;
+	margin-top: 0px;
+	text-shadow: 0px 0px 2px rgba(255,255,255,1);
+	font-weight: bold;
+}
+.types2 {
+	height: 50px;
+	width: 70px;
+	position: relative;
+	float: left;
+	background-color: rgba(51,51,51,.3);
+	margin-right: 2px;
+	margin-top: 0px;
+	text-shadow: 0px 0px 2px rgba(255,255,255,1);
+	font-weight: bold;
+}
+.types3 {
+	height: 50px;
+	width: 70px;
+	position: relative;
+	float: left;
+	background-color: rgba(102,102,102,.3);
+	margin-right: 2px;
+	margin-top: 0px;
+	text-shadow: 0px 0px 2px rgba(255,255,255,1);
+	font-weight: bold;
+}
+.payCont {
+	display: none;
+	height: 50px;
+	width: 100%;
+	position: relative;
+}
+.lease-type {
+	height: 50px;
+	width: 100%;
+	position: relative;
+	margin: 0px;
+}
+.lease-cont {
+	height: 50px;
+	width: 100%;
+	position: relative;
+	display: none;
+}
+.closePay {
+	float: right;
+	margin-top: 5px;
+	height: 30px;
+	width: 25px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	color: rgba(51,51,51,1);
+	text-decoration: none;
+}
+.closeLease {
+	float: right;
+	margin-top: 5px;
+	height: 30px;
+	width: 25px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	color: rgba(51,51,51,1);
+	text-decoration: none;
+}
+
+.stat {
+	padding:20px 5px;
+	background:rgba(51,51,51,.4);
+	text-align:center;
+	float:left;
+	margin-left:100px;
+	width:150px;
+	height:80px;
+}
+.stat-count {
+	font-size: 51px;
+	font-weight: normal;
+	letter-spacing: -0.02em;
+	line-height: 1.2;
+	margin-bottom: 20px;
+	overflow:hidden;
+	font-family:"Georgia", Courier, monospace;
+	padding: 0;
+	position: relative;
+}
+.stat-detail {
+	color:#fff;
+	padding-top:10px;
+	font: italic 1.3rem/1.75 "Georgia", Courier, monospace;
+}
+
 </style>
 
-<body>
+<body> 
 
 <div id="please-wait" style="position:absolute;width:100%;height:1200px;background:rgba(51,51,51,.5);z-index:100;">
 <p id="sorry" style="position:relative;width:100%;height:auto;color:rgba(255,255,255,1);font-size:120px;text-align:center;text-indent:40px;text-shadow:0px 0px 2px rgba(255,255,255,.7);">sorry.</p>
@@ -1695,7 +1891,7 @@ button#exclusiveTab:active {
 
 
 <script>
-var end = new Date('11/30/2017 11:30 PM');
+var end = new Date('12/30/2017 11:30 PM');
 
     var _second = 1000;
     var _minute = _second * 60;
@@ -1735,10 +1931,10 @@ var end = new Date('11/30/2017 11:30 PM');
 
 </div>
 </div>
-<div id="PLwrapper" style="width: 100%; height: 100%; position: relative; background: rgba(51,51,51,.0); display: none;">
+<!--<div id="PLwrapper" style="width: 100%; height: 100%; position: relative; background: rgba(51,51,51,.0); display: block;">
 <div id ="pre-loader"><img src="images/cmop-letterhead2.png" style="position:relative;width:200px;height:150px;margin-top:30px;margin-left:30px;">
 <div id="tips-wrapper" style="display:block;margin-top:20px;text-align:center;">
-<div id="Loading-tips" style="position:relative;width:93%;height:auto;background:rgba(255,255,255,0);margin-left:20px;box-shadow:0px 0px 2px 3px rgba(51,51,51,.75);">
+<div id="Loading-tips" style="position:relative;width:93%;height:auto;background:rgba(255,255,255,0);margin-left:20px;">
 
 <div id="tips-header" style="width:100%;height:auto;background:rgba(0,0,0,1);color:rgba(255,255,255,1);font-weight:bolder;font-size:32px;text-align:left;text-indent:10px;vertical-align:top;">
 cmopbeatz.com says:
@@ -1785,7 +1981,7 @@ To inquire about design services, contact d1nero directly at designsbyd1nero@gma
 </div>
 </div>
 </div>
-
+-->
     <div id="audio_player">
     
      <div id="textbox"> 
@@ -1848,27 +2044,27 @@ To inquire about design services, contact d1nero directly at designsbyd1nero@gma
 <gcse:searchbox-only></gcse:searchbox-only>
 </div>-->
 <div id="adPlacementHeader" style="width:100%;height:180px;margin-top:20px;">
-<div id="adPlacement-HL" style="position:relative;width:300px;height:auto;float:left;margin-left:20px;margin-right:20px;font-size:20px;color:white;">
-<a href="http://www.anrdoezrs.net/click-8475802-12298007" target="_top">
+<div id="adPlacement-HL" style="position:relative;width:300px;height:auto;float:left;margin-right:20px;font-size:20px;color:white;">
+<a href="http://www.anrdoezrs.net/click-8475802-12298007" target="_blank">
 <img src="http://www.ftjcfx.com/image-8475802-12298007" width="234" height="60" alt="Business Class Deals" border="0"/></a>
 
-<a style="background:rgba(0,0,0,1);color:white;" href="http://www.anrdoezrs.net/click-8475802-12958290" target="_top">Never Before Savings on First Class Airfares. Get up to $100 Off* with Code FC100</a><img src="http://www.awltovhc.com/image-8475802-12958290" width="1" height="1" border="0"/>
+<a style="background:rgba(0,0,0,1);color:white;" href="http://www.anrdoezrs.net/click-8475802-12958290" target="_blank">Never Before Savings on First Class Airfares. Get up to $100 Off* with Code FC100</a><img src="http://www.awltovhc.com/image-8475802-12958290" width="1" height="1" border="0"/>
 
 </div>
 
 <div id="adPlacement-HC" style="position:relative;width:300px;height:auto;float:left;">
-<a href="http://www.tkqlhce.com/click-8475802-11055193" target="_top">
+<a href="http://www.tkqlhce.com/click-8475802-11055193" target="_blank">
 <img src="http://www.tqlkg.com/image-8475802-11055193" width="300" height="100" alt="" border="0"/></a>
 
-<a style="color:white;font-size:14px;background:rgba(0,0,0,1);" href="http://www.dpbolvw.net/click-8475802-10780087" target="_top">Free Upgrade to 2nd Day Shipping at Sonos.com with code FRE2NDYSHP17 (Customer must first select 2nd day shipping at checkout. ) </a><img src="http://www.lduhtrp.net/image-8475802-10780087" width="1" height="1" border="0"/>
+<a style="color:white;font-size:14px;background:rgba(0,0,0,1);" href="http://www.dpbolvw.net/click-8475802-10780087" target="_blank">Free Upgrade to 2nd Day Shipping at Sonos.com with code FRE2NDYSHP17 (Customer must first select 2nd day shipping at checkout. ) </a><img src="http://www.lduhtrp.net/image-8475802-10780087" width="1" height="1" border="0"/>
 
 </div>
 
 <div id="adPlacement-HR" style="position:relative;width:600px;height:auto;float:right;margin-right:10px;">
-<a href="http://www.jdoqocy.com/click-8475802-12558796" target="_top">
+<a href="http://www.jdoqocy.com/click-8475802-12558796" target="_blank">
 <img src="http://www.tqlkg.com/image-8475802-12558796" width="600" height="65" alt="" border="0"/></a>
 
-<a style="font-size:18px;background:rgba(0,0,0,1);" href="http://www.tkqlhce.com/click-8475802-12558780" target="_top">Consumer Electronics - Keep up to the date with the latest tech for up to 50% off.</a><img src="http://www.tqlkg.com/image-8475802-12558780" width="1" height="1" border="0"/>
+<a style="font-size:18px;background:rgba(0,0,0,1);" href="http://www.tkqlhce.com/click-8475802-12558780" target="_blank">Consumer Electronics - Keep up to the date with the latest tech for up to 50% off.</a><img src="http://www.tqlkg.com/image-8475802-12558780" width="1" height="1" border="0"/>
 
 </div>
 
@@ -1876,9 +2072,7 @@ To inquire about design services, contact d1nero directly at designsbyd1nero@gma
 
 
 <div id ="cntr" class="container">
-<div id="leftUI" style="position:relative;height:700px;width:40px;float:left;top:100px;"><button title="Display song info" id="tb_Icon">?</button><button id="PricingHeader" >$</button><button id="ToS">
-  <p style="color:white">&nbsp;</p>
-  </button>
+<div id="leftUI" style="z-index:2;position:relative;height:700px;width:40px;float:left;top:100px;overflow:visible;"><button title="Display song info" id="tb_Icon">?</button><button id="PricingHeader" >$</button>
 </div>
 
 
@@ -1982,81 +2176,11 @@ To inquire about design services, contact d1nero directly at designsbyd1nero@gma
       </div>
       
       </div>-->
-   
-    
-    
-    
-
-    
-    
-    <div id="TermsService">
-                                             
-
-<div id="termWindow"><p style="color:yellow">TERMS of SERVICE									<font size="1">Last updated:(01/06/2016).</font></p>
-
-<p style="color:white">
-<br>
-<font size="1.5">Please read these Terms of Service ("Terms", "Terms of Service") carefully before using <strong>CMO_P Beatz</strong>("service") 
-Your access to and use of our Services is conditioned on your acceptance of and compliance with
-these Terms. These Terms apply to all visitors, users and others who access or use the Service.
-By accessing or using the Service you agree to be bound by these Terms. If you disagree with
-any part of the terms then you may not access the Service.</font>
-<br>
-<br>
-<strong>Terms of Licensing</strong>
-<br>
-<font size="2">CASHMEOUT(CMOp) offers licenses of various types for different projects, at affordable, reasonable prices. Please consider that the services offered are not free, but can be nogotiable if necessary and beneficial. Also, if payment is not received for selected track, or if the checkout process is not completed, the transaction will be considered void. If later discovered that the track or "beat" in question was indeed utilized without adeqcquate consent from CMOp, legal action may be taken. Please confirm that the transaction has been completed prior to using purchased material.</font>
-<br>
-<br>
-<strong>Termination</strong>
-<br>
-<font size="2">We may terminate or suspend access to our Service immediately, without prior notice or liability, for any reason whatsoever, including without limitation if you breach the Terms.
-All provisions of the Terms which by their nature should survive termination shall survive
-termination, including, without limitation, ownership provisions, warranty disclaimers, indemnity
-and limitations of liability.</font>
-<br>
-<br>
-<strong>Links To Other Web Sites</strong>
-<br>
-<font size="2">Our Service may contain links to thirdparty web sites or services that are not owned or controlled by <strong>CASHMEOUT Productions</strong>("company").
-<strong>CASHMEOUT Productions</strong> has no control over, and assumes no responsibility for, the
-content, privacy policies, or practices of any third party web sites or services. You further
-acknowledge and agree that <strong>CASHMEOUT Productions</strong> shall not be responsible or liable,
-directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection
-with use of or reliance on any such content, goods or services available on or through any such
-web sites or services.
-We strongly advise you to read the terms and conditions and privacy policies of any third-party
-web sites or services that you visit.</font>
-<br>
-<br>
-<strong>Governing Law</strong>
-<br>
-<font size="2">These Terms shall be governed and construed in accordance with the laws of the United States, without regard to its conflict of law provisions.
-Our failure to enforce any right or provision of these Terms will not be considered a waiver of
-those rights. If any provision of these Terms is held to be invalid or unenforceable by a court, the
-remaining provisions of these Terms will remain in effect. These Terms constitute the entire
-agreement between us ("company", "end-user") regarding our service, and supersede and replace any prior agreements we might have between us regarding the Service.</font>
-<br>
-<br>
-<strong>Changes</strong>
-<br>
-<font size="2">We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material we will try to provide at least 30  business days notice prior to any new terms taking effect. What constitutes a material change will be determined at our sole discretion.
-
-By continuing to access or use the company's service after those revisions become effective, you agree to
-be bound by the revised terms. If you do not agree to the new terms, please stop using the
-Service.</font>
-<br>
-<br>
-<strong>Contact Us</strong>
-<br>
-<font size="2">If you have any questions about these Terms, please contact us using the <strong>Questions/Comments</strong> form.</font></p>
-</div>
-</div>
-  <div id ="pricingPanel">
-
-   
-
-  	<div id ="pricingTabs">  
+    <div id ="pricingPanel">
+      
+      
+      
+      <div id ="pricingTabs">  
     <div style ="font-size:15px;font-family:Arial, Helvetica, sans-serif;position:relative;box-shadow:inset rgba(51,51,51,1); float:left;text-align:center;color:white;background:rgba(51,204,255,.2);border-radius:5px;box-shadow: #000;text-shadow:rgba(0,0,0,1);width:329px;"><strong>Lease type</strong></div>
   		<button id ="limitedTab"><strong>LIMITED</strong>
   		</button>
@@ -2084,7 +2208,7 @@ Service.</font>
   	<div id ="limitedContent">
     <div class ="moreInfo" id ="limitedInfo">Limited LEASE
     <br>
-You will receive a link for an encoded MP3 file of the tagged song.  Leasing rights allow you to use the beat (or song) for ONE recording. This recording can then be distributed  online for promotional purposes only. You may sell the recording, either by itself or on a mixtape or album up to 1000 units. You may also use the beat for non-profit promotional use or demos. You have full rights to record, alter, mix the beat/song in any shape, way, or form (except reselling the beat). In the event that someone buys exclusive rights to the beat you have leased, your rights remain; the beat is still yours to use only as stated in this License for 365 days (1 calendar year) from the day of lease.  The seller receives a royalty from the sale of records or downloads. You must also give full credit to the seller (indicated with the phrase "prod. by: [producer's name]" in album credits or mentions) on all recordings. Upon purchasing leasing rights, the seller still owns the beat(s) and the seller is able to resell the beat(s) to any other party until exclusive rights have been purchased.</div>
+You will receive a link for an encoded MP3 file of the tagged beat.  Leasing rights allow you to use the beat (or song) for ONE recording. This recording can then be distributed  online for promotional purposes only. You may sell the recording, either by itself or on a mixtape or album up to 1000 units. You may also use the beat for non-profit promotional use or demos. You have full rights to record, alter, mix the beat/song in any shape, way, or form (except reselling the beat). In the event that someone buys exclusive rights to the beat you have leased, your rights remain; the beat is still yours to use only as stated in this License for 365 days (1 calendar year) from the day of lease.  The seller receives a royalty from the sale of records or downloads. You must also give full credit to the seller (indicated with the phrase "prod. by: [producer's name]" in album credits or mentions) on all recordings. Upon purchasing leasing rights, the seller still owns the beat(s) and the seller is able to resell the beat(s) to any other party until exclusive rights have been purchased.</div>
     <table id ="lOv" width="330"  align="center" cellspacing="1">
   <tr>
     <td class = "pricingCell">LIMITED Lease</td>
@@ -2112,7 +2236,7 @@ You will receive a link for an encoded MP3 file of the tagged song.  Leasing rig
     <div id ="standardContent">
         <div class ="moreInfo" id ="standardInfo">Standard LEASE
         <br>
-You will receive a link for the Wav file of the untagged song.  Standard Leasing rights allow you to use the beat (or song) for ONE recording. You may sell the recording, either by itself or on a mixtape or album up to 3000 copies. After that you MUST  renegotiate new terms of agreement with seller. You may also use the beat for non-profit promotional use or demos. You have full rights to record, alter, mix the beat/song in any shape, way, or form (except reselling the beat). In the event that someone buys exclusive rights to the beat you have leased, your rights shall stand and the beat is still yours to use only as stated in this License. The seller will receive a royalty from the sale of records or downloads.  You must give full credit to the producer on all recordings(indicated with "prod. by:[producer's name]" in album credits or mentions). Upon purchasing leasing rights, the seller still owns the beat(s) and the seller is able to resell the beat(s) to any other party until exclusive rights have been purchased.</div>
+You will receive a link for the Wav file of the tagged beat.  Standard Leasing rights allow you to use the beat (or song) for ONE recording. You may sell the recording, either by itself or on a mixtape or album up to 3000 copies. After that you MUST  renegotiate new terms of agreement with seller. You may also use the beat for non-profit promotional use or demos. You have full rights to record, alter, mix the beat/song in any shape, way, or form (except reselling the beat). In the event that someone buys exclusive rights to the beat you have leased, your rights shall stand and the beat is still yours to use only as stated in this License. The seller will receive a royalty from the sale of records or downloads.  You must give full credit to the producer on all recordings(indicated with "prod. by:[producer's name]" in album credits or mentions). Upon purchasing leasing rights, the seller still owns the beat(s) and the seller is able to resell the beat(s) to any other party until exclusive rights have been purchased.</div>
     <table id ="sOv" width="330"  align="center" cellspacing="1">
   <tr>
     <td class = "pricingCell">STANDARD License</td>
@@ -2227,560 +2351,376 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
 </div>
 
 <div id="actionPanel" scrolling="no">
-
   <div id="paypalPanel">
-  <table width="400" border="0">
-   <tr class = "product-list">
- 
-    <td>After Me</td>
-    <td>
-    <button id="lease-type0"></button>
-    <div id="payCont-0">
-
-<div class="pay1">(L)</div>
-<div class="pay2">(S)</div>
-<div class="pay3">(P)</div>
-<button id="payClose0"></button>
-</div>
-
-</td>
-  </tr>  
-    
-    <!--<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="2ELHMUAT2YZLW">
-    <td class="purchasing"><input type="hidden" name="on0" value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95</option>
-	<option value="Standard">Standard $65.99</option>
-	<option value="Pro">Pro $99.99</option>
-</select></td>
-    <td ><input type="hidden" name="currency_code" value="USD">
-<input type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png"
-width="1" height="1"></form>--></td>
-  </tr>
+    <table width="400" border="0">
+      <tr class = "product-list">
+        <td class="song-prod-title">After Me</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType0">Click here to select a Lease Type:</button>
+          
+          <div class="lease-cont" id="lease-cont0">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+          <div class="payCont" id="payCont-0">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim0"></div>
+            <div class="pay2" id="sta0"></div>
+            <div class="pay3" id="pro0"></div>
+           
+          </div></td>
+      </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">All In</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType1">Click here to select a Lease Type:</button>
+         
+          <div class="lease-cont" id="lease-cont1">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+          <div class="payCont" id="payCont-1">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim1"></div>
+            <div class="pay2" id="sta1"></div>
+            <div class="pay3" id="pro1"></div></td>
+      </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">Baddest Bitch</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType2">Click here to select a Lease Type:</button>
+         
+          <div class="lease-cont" id="lease-cont2">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+        <div class="payCont" id="payCont-2">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim2"></div>
+            <div class="pay2" id="sta2"></div>
+            <div class="pay3" id="pro2"></div></td>
+      </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">Beach Cruiser</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType3">Click here to select a Lease Type:</button>
+          
+          <div class="lease-cont" id="lease-cont3">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+         <div class="payCont" id="payCont-3">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim3"></div>
+            <div class="pay2" id="sta3"></div>
+            <div class="pay3" id="pro3"></div></td>
+      </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">Bi-Coastal</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType4">Click here to select a Lease Type:</button>
+         
+          <div class="lease-cont" id="lease-cont4">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+         <div class="payCont" id="payCont-4">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim4"></div>
+            <div class="pay2" id="sta4"></div>
+            <div class="pay3" id="pro4"></div></td>
+      </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">Bottles</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType5">Click here to select a Lease Type:</button>
+          
+          <div class="lease-cont" id="lease-cont5">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+          <div class="payCont" id="payCont-5">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim5"></div>
+            <div class="pay2" id="sta5"></div>
+            <div class="pay3" id="pro5"></div></td>
+      </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">Destined</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType6">Click here to select a Lease Type:</button>
+         
+          <div class="lease-cont" id="lease-cont6">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+         <div class="payCont" id="payCont-6">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim6"></div>
+            <div class="pay2" id="sta6"></div>
+            <div class="pay3" id="pro6"></div></td>
+      </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">F-n Do It</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType7">Click here to select a Lease Type:</button>
+          
+          <div class="lease-cont" id="lease-cont7">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+          <div class="payCont" id="payCont-7">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim7"></div>
+            <div class="pay2" id="sta7"></div>
+            <div class="pay3" id="pro7"></div></td>
+      </tr>
+      <tr class ="product-list">
+        <td class="song-prod-title">Frenchie</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType8">Click here to select a Lease Type:</button>
+          
+          <div class="lease-cont" id="lease-cont8">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+         <div class="payCont" id="payCont-8">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim8"></div>
+            <div class="pay2" id="sta8"></div>
+            <div class="pay3" id="pro8"></div></td>
+      </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">Functional Fyre</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType9">Click here to select a Lease Type:</button>
+        
+          <div class="lease-cont" id="lease-cont9">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+         <div class="payCont" id="payCont-9">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim9"></div>
+            <div class="pay2" id="sta9"></div>
+            <div class="pay3" id="pro9"></div></td>
+      </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">Gyros</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType10">Click here to select a Lease Type:</button>
+        
+          <div class="lease-cont" id="lease-cont10">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+         <div class="payCont" id="payCont-10">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim10"></div>
+            <div class="pay2" id="sta10"></div>
+            <div class="pay3" id="pro10"></div></td>
+      </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">Hands-Up</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType11">Click here to select a Lease Type:</button>
+          
+          <div class="lease-cont" id="lease-cont11">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+        <div class="payCont" id="payCont-11">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim11"></div>
+            <div class="pay2" id="sta11"></div>
+            <div class="pay3" id="pro11"></div></td>
+      </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">HH-e</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType12">Click here to select a Lease Type:</button>
+         
+          <div class="lease-cont" id="lease-cont12">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+         <div class="payCont" id="payCont-12">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim12"></div>
+            <div class="pay2" id="sta12"></div>
+            <div class="pay3" id="pro12"></div></td>
+      </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">Hi-Jinx</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType13">Click here to select a Lease Type:</button>
+        
+          <div class="lease-cont" id="lease-cont13">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+         <div class="payCont" id="payCont-13">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim13"></div>
+            <div class="pay2" id="sta13"></div>
+            <div class="pay3" id="pro13"></div></td>
+      </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">In My Mind</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType14">Click here to select a Lease Type:</button>
+         
+          <div class="lease-cont" id="lease-cont14">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+          <div class="payCont" id="payCont-14">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim14"></div>
+            <div class="pay2" id="sta14"></div>
+            <div class="pay3" id="pro14"></div></td>
+      </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">Justify</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType15">Click here to select a Lease Type:</button>
+         
+          <div class="lease-cont" id="lease-cont15">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+          <div class="payCont" id="payCont-15">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim15"></div>
+            <div class="pay2" id="sta15"></div>
+            <div class="pay3" id="pro15"></div></td>
+      </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">Like Neon</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType16">Click here to select a Lease Type:</button>
+        
+          <div class="lease-cont" id="lease-cont16">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+          <div class="payCont" id="payCont-16">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim16"></div>
+            <div class="pay2" id="sta16"></div>
+            <div class="pay3" id="pro16"></div></td>
+      </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">Make It Count</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType17">Click here to select a Lease Type:</button>
+        
+          <div class="lease-cont" id="lease-cont17">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+          <div class="payCont" id="payCont-17">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim17"></div>
+            <div class="pay2" id="sta17"></div>
+            <div class="pay3" id="pro17"></div>
+          </td>
+        </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">Numbers</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType18">Click here to select a Lease Type:</button>
+          
+          <div class="lease-cont" id="lease-cont18">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+          <div class="payCont" id="payCont-18">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim18"></div>
+            <div class="pay2" id="sta18"></div>
+            <div class="pay3" id="pro18"></div></td>
+      </tr>
+      <tr class= "product-list">
+        <td class="song-prod-title">Position2</td>
+        <td class="song-purch-cont"><button class="lease-type" id="leaseType19">Click here to select a Lease Type:</button>
+          
+          <div class="lease-cont" id="lease-cont19">
+            <div class="closeLease" ><a class="closer" href="javascript:void(0);">X</a></div>
+            <button  class="types1"></button>
+            <button  class="types2"></button>
+            <button  class="types3"></button>
+          </div>
+          <div class="payCont" id="payCont-19">
+            <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
+            <div class="pay1" id="lim19"></div>
+            <div class="pay2" id="sta19"></div>
+            <div class="pay3" id="pro19"></div></td>
+      </tr>
+    </table>
+  </div>
   
-  <tr class= "product-list">
-    <td>All In</td>
-    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="2SRKGJCMDFH4Q">
-    <td class="purchasing"><input type="hidden" name="on0" value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95</option>
-	<option value="Standard">Standard $65.99</option>
-	<option value="Pro">Pro $99.99</option></select></td>
-    
-    <td><input type="hidden" name="currency_code" value="USD">
-<input  type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form></td>
-  </tr>
-  
-  <tr class= "product-list">
- 
-    <td>Baddest Bitch</td>
-     <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="9DXGVKLUGWYXC">
-    <td class="purchasing"><input type="hidden" name="on0" value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95</option>
-	<option value="Standard">Standard $65.99</option>
-	<option value="Pro">Pro $99.99</option>
-</select> </td>
-    <td><input type="hidden" name="currency_code" value="USD">
-<input  type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-</td>
-  </tr>
-  
-  
-  <tr class= "product-list">
-  <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="NRK9Q7HUE5BYW">
-    <td>Beach Cruiser</td>
-    <td class="purchasing"><input type="hidden" name="on0" value="Purchasing">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95</option>
-	<option value="Standard">Standard $65.99</option>
-	<option value="Pro">Pro $99.99</option>
-</select></td>
-    <td><input type="hidden" name="currency_code" value="USD">
-<input  type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png"border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form></td>
-</tr> 
-  <tr class= "product-list">
-    <td>Bi-Coastal</td>
-    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="ASFWCLAB5XVGC">
-    <td class="purchasing"><input type="hidden" name="on0" value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95</option>
-	<option value="Standard">Standard $65.99</option>
-	<option value="Pro">Pro $99.99</option>
-</select></td>
-    <td><input type="hidden" name="currency_code" value="USD">
-<input  type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png"border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form></td>
-  </tr>
-
-    <tr class= "product-list">
-
-    <td>Bottles</td>
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="4G259CS5UYCHY">
-    <td class="purchasing"><input type="hidden" name="on0" value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95</option>
-	<option value="Standard">Standard $65.99</option>
-	<option value="Pro">Pro $99.99</option>
-</select> </td>
-    <td><input type="hidden" name="currency_code" value="USD">
-<input  type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png"border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form></td>
-  </tr>
-
-  <tr class= "product-list">
-
-    <td>Destined</td>
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="XEVVQEQBCV9GQ">
-    <td class="purchasing"><input type="hidden" name="on0" value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95</option>
-	<option value="Standard">Standard $65.99</option>
-	<option value="Pro">Pro $99.99</option>
-</select></td>
-    <td><input type="hidden" name="currency_code" value="USD">
-<input  type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png"border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-</td>
-  </tr>
-  
-  <tr class= "product-list">
-  
-  <td>F-n Do It</td>
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
-
-method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="MRGHVE4JTAJH8">
- 
- <td class="purchasing"><input type="hidden" name="on0" 
-
-value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95 USD</option>
-	<option value="Standard">Standard $65.99 USD</option>
-	<option value="Pro">Pro $99.99 USD</option>
-</select> </td>
-
-<td><input type="hidden" name="currency_code" value="USD">
-<input type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
-
-to pay online!">
-<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
-
-height="1">
-</form></td>
-</td>
-
-<tr class ="product-list">
-
- <td>Frenchie</td>
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
-
-method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="HED6DVVWK93JA">
- 
- <td class="purchasing"><input type="hidden" name="on0" 
-
-value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95 USD</option>
-	<option value="Standard">Standard $65.99 USD</option>
-	<option value="Pro">Pro $99.99 USD</option>
-</select> </td>
-
-<td><input type="hidden" name="currency_code" value="USD">
-<input type="image" height="30" width="50" src="images/CMO_P-Cart-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" height="1">
-</form></td>
-</tr>
-
-  <tr class= "product-list">
-	 <td>Functional Fyre</td>
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
-
-method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="UG7G9FHJCY7DC">
- 
- <td class="purchasing"><input type="hidden" name="on0" 
-
-value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95 USD</option>
-	<option value="Standard">Standard $65.99 USD</option>
-	<option value="Pro">Pro $99.99 USD</option>
-</select> </td>
-
-<td><input type="hidden" name="currency_code" value="USD">
-<input type="image" height="30" width="50" src="images/CMO_P-Cart-
-
-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
-
-to pay online!">
-<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
-
-height="1">
-</form></td>
-   
-  </tr>
-
-  <tr class= "product-list">
-
-  <td>Gyros</td>
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
-
-method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="HJ5SNDH2QFBA4">
- 
- <td class="purchasing"><input type="hidden" name="on0" 
-
-value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95 USD</option>
-	<option value="Standard">Standard $65.99 USD</option>
-	<option value="Pro">Pro $99.99 USD</option>
-</select> </td>
-
-<td><input type="hidden" name="currency_code" value="USD">
-<input type="image" height="30" width="50" src="images/CMO_P-Cart-
-
-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
-
-to pay online!">
-<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
-
-height="1">
-</form></td>
-</tr>
-
-  <tr class= "product-list">
-
-  <td>Hands-Up</td>
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
-
-method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="AYXAE8X45HV2Y">
- 
- <td class="purchasing"><input type="hidden" name="on0" 
-
-value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95 USD</option>
-	<option value="Standard">Standard $65.99 USD</option>
-	<option value="Pro">Pro $99.99 USD</option>
-</select> </td>
-
-<td><input type="hidden" name="currency_code" value="USD">
-<input type="image" height="30" width="50" src="images/CMO_P-Cart-
-
-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
-
-to pay online!">
-<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
-
-height="1">
-</form></td>
-  </tr>
-
-  <tr class= "product-list">
-
-    <td>HH-e</td>
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
-
-method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="LFU7J4W7HL69Q">
- 
- <td class="purchasing"><input type="hidden" name="on0" 
-
-value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95 USD</option>
-	<option value="Standard">Standard $65.99 USD</option>
-	<option value="Pro">Pro $99.99 USD</option>
-</select> </td>
-
-<td><input type="hidden" name="currency_code" value="USD">
-<input type="image" height="30" width="50" src="images/CMO_P-Cart-
-
-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
-
-to pay online!">
-<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
-
-height="1">
-</form></td>  </tr>
-
-  <tr class= "product-list">
-
-     <td>Hi-Jinx</td>
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
-
-method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="X49XLU2GNFYE6">
- 
- <td class="purchasing"><input type="hidden" name="on0" 
-
-value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95 USD</option>
-	<option value="Standard">Standard $65.99 USD</option>
-	<option value="Pro">Pro $99.99 USD</option>
-</select> </td>
-
-<td><input type="hidden" name="currency_code" value="USD">
-<input type="image" height="30" width="50" src="images/CMO_P-Cart-
-
-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
-
-to pay online!">
-<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
-
-height="1">
-</form></td>
-  </tr>
-
-  <tr class= "product-list">
-
-     <td>In My Mind</td>
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
-
-method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="5PQAMLHHP7LX2">
- 
- <td class="purchasing"><input type="hidden" name="on0" 
-
-value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95 USD</option>
-	<option value="Standard">Standard $65.99 USD</option>
-	<option value="Pro">Pro $99.99 USD</option>
-</select> </td>
-
-<td><input type="hidden" name="currency_code" value="USD">
-<input type="image" height="30" width="50" src="images/CMO_P-Cart-
-
-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
-
-to pay online!">
-<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
-
-height="1">
-</form></td>
-  </tr>
-
-  <tr class= "product-list">
-
-    <td>Justify</td>
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
-
-method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="ALL9HYT4GYMC6">
- 
- <td class="purchasing"><input type="hidden" name="on0" 
-
-value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95 USD</option>
-	<option value="Standard">Standard $65.99 USD</option>
-	<option value="Pro">Pro $99.99 USD</option>
-</select> </td>
-
-<td><input type="hidden" name="currency_code" value="USD">
-<input type="image" height="30" width="50" src="images/CMO_P-Cart-
-
-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
-
-to pay online!">
-<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
-
-height="1">
-</form></td>
-  </tr>
-
-  <tr class= "product-list">
-
-  <td>Like Neon</td>
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
-
-method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="95R4Y2LJ2Q4FL">
- 
- <td class="purchasing"><input type="hidden" name="on0" 
-
-value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95 USD</option>
-	<option value="Standard">Standard $65.99 USD</option>
-	<option value="Pro">Pro $99.99 USD</option>
-</select> </td>
-
-<td><input type="hidden" name="currency_code" value="USD">
-<input type="image" height="30" width="50" src="images/CMO_P-Cart-
-
-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
-
-to pay online!">
-<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
-
-height="1">
-</form></td>
-  </tr>
-
-  <tr class= "product-list">
-
-    <td>Make It Count</td>
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
-
-method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="QGWMQQJJPYDLG">
- 
- <td class="purchasing"><input type="hidden" name="on0" 
-
-value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95 USD</option>
-	<option value="Standard">Standard $65.99 USD</option>
-	<option value="Pro">Pro $99.99 USD</option>
-</select> </td>
-
-<td><input type="hidden" name="currency_code" value="USD">
-<input type="image" height="30" width="50" src="images/CMO_P-Cart-
-
-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
-
-to pay online!">
-<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
-
-height="1">
-</form></td>
-  </tr>
-
-  <tr class= "product-list">
-
-  <td>Numbers</td>
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
-
-method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="XH9DQPGTQBLQA">
- 
- <td class="purchasing"><input type="hidden" name="on0" 
-
-value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $29.95 USD</option>
-	<option value="Standard">Standard $65.99 USD</option>
-	<option value="Pro">Pro $99.99 USD</option>
-</select> </td>
-
-<td><input type="hidden" name="currency_code" value="USD">
-<input type="image" height="30" width="50" src="images/CMO_P-Cart-
-
-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
-
-to pay online!">
-<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
-
-height="1">
-</form></td>
-  </tr>
-
-  <tr class= "product-list">
-
-  <td>Position2</td>
-<form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" 
-
-method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="GH677ZXM52VHU">
- 
- <td class="purchasing"><input type="hidden" name="on0" 
-
-value="Purchase">License:<select class="order-dropdown" name="os0">
-	<option value="Limited">Limited $19.95 USD</option>
-	<option value="Standard">Standard $45.99 USD</option>
-	<option value="Pro">Pro $99.99 USD</option>
-</select> </td>
-
-<td><input type="hidden" name="currency_code" value="USD">
-<input type="image" height="30" width="50" src="images/CMO_P-Cart-
-
-buybtn.png" border="0" name="submit" alt="PayPal - The safer, easier way 
-
-to pay online!">
-<img alt="" border="0" src="images/CMO_P-Cart-buybtn.png" width="1" 
-
-height="1">
-</form></td>
-	</tr>
-</table>
-</div>
-  
-
-
   <div id="emailPanel">
-  
-	<form id="QCform" style="height:400px;width:100%;" method="POST" target = "no-target" name ="QCform">
-    
-    <div id="fNameBox">First Name:
-    <input type="text" name="First Name:" placeholder="first" id = "fName" style="border-radius:5px;"/></div>
-    
-     <div id="lNameBox">Last Name:
-    <input type="text" name="Last Name:" placeholder="last" id = "lName" style="border-radius:5px;"/></div>
-   
-    <div id="emailBox">Email Address:<input type="email" name="Email Address:" placeholder="abcd@1234.com" id = "email" style="border-radius:5px;"></div>
-     
-    <div id="reasonBox">My question/comment:
-    <div id="reasonSelect"> 
-   <select id="selQ" name="My question/comment:" size="1">
-     <option id="q1" name="regarding Exclusives...">regarding Exclusives...</option>
-     <option id="q2" name="regarding my recent purchase...">regarding my recent purchase...</option>
-     <option id="q3" name="regarding the site and/or services provided(in general)...">regarding the site and/or services provided...</option>
-     <option id="q4" name="Other...">Other...</option>
-   </select>
-   <div id="commtArea">
-     <textarea name="Please enter Question/Comment" cols="50" rows="10" id="commtBox" placeholder="Type Here" style="border-radius:5px;width:300px;"></textarea>
-   </div>
-    </div>
-  
-    <div id="submitArea">
-    <input type="submit" id ="submitBtn" name ="fbzx" value ="submit"style="border-radius:5px;" onClick="checkEmail();"/>
-    </div>
-    </div>
-    
-    
+    <form id="QCform" style="height:400px;width:100%;" method="POST" target = "no-target" name ="QCform">
+      <div id="fNameBox">First Name:
+        <input type="text" name="First Name:" placeholder="first" id = "fName" style="border-radius:5px;"/>
+      </div>
+      <div id="lNameBox">Last Name:
+        <input type="text" name="Last Name:" placeholder="last" id = "lName" style="border-radius:5px;"/>
+      </div>
+      <div id="emailBox">Email Address:
+        <input type="email" name="Email Address:" placeholder="abcd@1234.com" id = "email" style="border-radius:5px;">
+      </div>
+      <div id="reasonBox">My question/comment:
+        <div id="reasonSelect">
+          <select id="selQ" name="My question/comment:" size="1">
+            <option id="q1" name="regarding Exclusives...">regarding Exclusives...</option>
+            <option id="q2" name="regarding my recent purchase...">regarding my recent purchase...</option>
+            <option id="q3" name="regarding the site and/or services provided(in general)...">regarding the site and/or services provided...</option>
+            <option id="q4" name="Other...">Other...</option>
+          </select>
+          <div id="commtArea">
+            <textarea name="Please enter Question/Comment" cols="50" rows="10" id="commtBox" placeholder="Type Here" style="border-radius:5px;width:300px;"></textarea>
+          </div>
+        </div>
+        <div id="submitArea">
+          <input type="submit" id ="submitBtn" name ="fbzx" value ="submit"style="border-radius:5px;" onClick="checkEmail();"/>
+        </div>
+      </div>
     </form>
-    </div>
-    
-    <div id="soundCloudPanel" scrolling="no">
- <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/327214508&amp;color=%234c5454&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
- 
-    </div>
-    
-    </div>
-    
-    
+  </div>
+  
+  <div id="soundCloudPanel" scrolling="no">
+    <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/327214508&amp;color=%234c5454&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
+  </div>
+</div>
+
 </div>
 
 </div>
 
 
  <button id="footer">  <p style="color:white"><strong>About</strong></p>
+
 </button>
 
 </div>
@@ -2788,7 +2728,10 @@ height="1">
  
  
 <div id="aboutField">
-
+<div class="stat">
+    <span class="stat-count">01</span>
+    <p class="stat-detail">Visitors</p>
+</div>
 
 <div id="adPanel" style="margin-left:80px;position:relative;width:90%;height:auto;background:rgba(51,51,51,1);border-radius:4px;box-shadow:inset 0px 0px 2px 3px rgba(0,0,0,1);">
   <div id="CMOP-vh1-ST" style="margin-left:10px;width:100%;font-size:18px;text-align:left;font-weight:normal;color:black;float:left;">cmopbeatz.com proudly supports the arts and their vital role in education. That's why every quarter, we will donate 15% of our sales revenue to: 
@@ -2815,21 +2758,70 @@ height="1">
 <div id="dscPanelSide" style="float:left;width:1000px;height:160px;font-size:30px;background:url(images/preloader-bkgrnd.png);color:rgba(255,255,255,1);">content available soon</div>
 </div>
 
+<div id="projectsPanel" style="margin-top:20px;margin-left:40px;width:auto;height:auto;border-radius:4px;float:left;border-radius:25px;"><div id="dscPanelHead" style="position:relative;margin-bottom:20px;width:100%;height:60px;background:rgba(0,0,0,1);">Current Projects</div>
+
+<div id="projPanelSide" style="float:left;width:1000px;height:160px;font-size:30px;background:url(images/preloader-bkgrnd.png);color:rgba(255,255,255,1);">We're interested in working on your next big hit! <a style="color:rgba(51,204,255,1)" href="mailto:exclusives.cashmeout@gmail.com" >Contact CMOp</a></div>
+</div>
+
 
 
 </div>
-  
-<div id="legals" style="position:relative;width:100%;height:20px;text-align:center;vertical-align:middle;float:left;margin-top:40px;;">
-<p style="width:auto;color:white;text-align:center;vertical-align:middle;background:rgba(0,0,0,1)">&copy;Copyright 2017. CASHMEOUT Productions. All Rights reserved.</p>
-<p style="background:rgba(255,255,255,1);width:auto;font-size:18px;text-align:center;color:black;">Layout & Design by d1nero. To inquire about services, contact: <a style="color:blue;" href="mailto:designsbyd1nero@gmail.com">designsbyd1nero</a></p>
+
+
+
+
+
+<div id="adPlacementFooter" style="width:100%;height:180px;">
+<div id="adPlacement-FL" style="position:relative;width:300px;height:auto;float:left;margin-right:20px;font-size:20px;color:white;">
+<a href="http://www.anrdoezrs.net/click-8475802-10724417" target="_top">
+<img src="http://www.awltovhc.com/image-8475802-10724417" width="468" height="60" alt="20% Off Plus Hosting Plan & 33% Off Business Plan " border="0"/></a>
+
+
+<a href="http://www.anrdoezrs.net/click-8475802-10299014" target="_blank">Netfirms Web Hosting</a> Join 1,000,000 customers with plans as low as $4.95/mo, 24/7 LIVE customer service and fast, dependable servers.<img src="http://www.lduhtrp.net/image-8475802-10299014" width="1" height="1" border="0"/>
 </div>
+
+<div id="adPlacement-FR" style="position:relative;width:300px;height:auto;float:right;">
+<a href="http://www.jdoqocy.com/click-8475802-12397408" target="_blank">
+<img src="http://www.ftjcfx.com/image-8475802-12397408" width="250" height="250" alt="" border="0"/></a>
+
+<a href="http://www.dpbolvw.net/click-8475802-11612653" target="_blank">Cyber Monday is here! Save Big on Pinnacle Studio!</a><img src="http://www.lduhtrp.net/image-8475802-11612653" width="1" height="1" border="0"/>
+
+</div>
+
+
+</div>
+
+
+<div id="legals" style="position:relative;background:rgba(20%,20%,20%,.1);width:100%;height:20px;text-align:center;vertical-align:middle;float:left;margin-top:20px;">
+<div id="policies" style="margin-left:400px;margin-top:20px;position:relative;width:480px;height:40px;"><a id="TnP" style="position:relative;float:left;width:300px;color:white;" href="legal.html" target="_blank">
+
+terms of use | privacy policy</a>
+
+
+</div>
+
+  <div id="legals2" style="position:relative;width:100%;height:20px;text-align:center;vertical-align:middle;float:left;">
+    <p style="width:auto;color:white;text-align:center;vertical-align:middle;background:rgba(0,0,0,1);margin-top:10px;">&copy;Copyright 2017. CASHMEOUT Productions. All Rights reserved.</p>
+    <p style="background:rgba(255,255,255,1);width:auto;font-size:18px;text-align:center;color:black;">Layout & Design by d1nero. To inquire about services, contact: <a style="color:blue;" href="mailto:designsbyd1nero@gmail.com">designsbyd1nero</a></p>
+    
+    
+  </div>
+
+</div>
+
+
+
+
+
 
 <iframe src= "#" id="no-target" name="no-target" style="visibility:hidden;"></iframe>
 
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="jquery-ui.js"></script>
 
 <script src="https://www.paypalobjects.com/api/checkout.js"></script>
+<script type="text/javascript" src="paypal-checkout-flow.js"></script>
+
+<script type="text/javascript" src="acttionPanel-paypalpanel-functionality.js"></script>
 
 <script type="text/javascript" src="detectWin.js"></script>
 
@@ -2838,7 +2830,6 @@ height="1">
 <script type="text/javascript" src="mpcontrols-alt.js"></script>
 
 <script type="text/javascript" src="preLoader.js"></script>
-
 <script type="text/javascript" src="webTips.js"></script>
 
 

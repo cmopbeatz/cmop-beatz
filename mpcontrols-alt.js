@@ -15,7 +15,7 @@ function initAudioPlayer() {
 	
 
     var audio, playbtn, mutebtn, seekslider, volumeslider, seekto, seeking = false, songShare,
-        curtimetext, durtimetext, playlist_status, dir, playlist, playlist_index, tBox, track_List, ext, emlBtn, payBtn, pCart, tWindow, tLink, abtFooter, abtText, clicked = false,
+        curtimetext, durtimetext, playlist_status, dir, playlist, playlist_index, tBox, track_List, ext, emlBtn, payBtn, pCart, tWindow, abtFooter, abtText, clicked = false,
         pHead, tPanels, APlinks, closeAP, ActP, icon_TB, clockdisp, toggleClock, caldisp, contactbtn, sharebtn, contactCtn, shareCtn, optionbtn, lTAB, sTAB, pTAB, eTAB, ordSelect,ovBtn,sumBtn,lSum,sSum,pSum,eSum,lTable,sTable,pTable,eTable,pLoader,wContainer,apContainer, actPOC, 
         playlist = [];
 
@@ -90,7 +90,7 @@ actPOC = document.getElementById('actPOC');
 
     tWindow = document.getElementById('termWindow');
 
-    tLink = document.getElementById('ToS');
+
     pHead = document.getElementById('PricingHeader');
    
     tPanels = document.getElementById('pricingPanel');
@@ -298,19 +298,7 @@ actPOC = document.getElementById('actPOC');
 
 
 
-    ////Terms of Service/////
-    tLink.onclick = function() {
-        
-            if (tWindow.style.display === "") {
-                tWindow.style.display = "block";
-                   tPanels.style.display = "none";
-            } else {
-                tWindow.style.display = "";
-               
-            }
-
-        }
-		
+   
 		//////toggle Overview/Summary//////
 		ovBtn.onclick = function(){
 		ovBtn.style.backgroundColor="#999";

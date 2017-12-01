@@ -15,6 +15,7 @@ $(document).ready(function () {
 	$('.container').css('display','none');
 	$('#audio_player').css('display','none');
 	$('#adPlacementHeader').css('display','none');
+	$('#adPlacementFooter').css('display','none');
   	$('#Enter-page').attr("disabled",true);
 		
 		
@@ -30,6 +31,7 @@ $(document).ready(function () {
 		$('.container').css('display','block');
 		$('#audio_player').css('display','block');		
 		$('#adPlacementHeader').css('display','block');
+		$('#adPlacementFooter').css('display','block');
 		});
 
 });
