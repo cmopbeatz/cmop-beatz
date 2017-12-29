@@ -1,13 +1,14 @@
 // JavaScript Document
 //paypal-checkout-flow
 
+var indexURL = "index.html";
 //LIM
 //00100
 paypal.Button.render({
 
         // Set your environment
 
-        env: 'sandbox', // sandbox | production
+        env: 'production', // sandbox | production
 
         // Specify the style of the button
 
@@ -30,15 +31,14 @@ paypal.Button.render({
         },
 		
 		 // Wait for the PayPal button to be clicked
-
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+payment: function(data, actions) {
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -50,32 +50,55 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
-
         // Wait for the payment to be authorized by the customer
-
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
    
-				var page = "00100.html";
+				 $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}
+  	
+				 
+	  
+			});
+			 $('.goBtn').click(function(){
+	window.open("00100.html");
+		});
 
-var $dialog = $('<div></div>')
-               .html('<iframe style="border: 2px;z-index:20;" src="' + page + '" width="100%" height="100%"></iframe>')
-               .dialog({
-                   autoOpen: false,
-                   modal: true,
-                   height: 800,
-                   width: 1200,
-                   title: "Download"
-               });
-$dialog.dialog('open');
+
+
+	
+		});
+	
+					
+			
 				
             });
         }
@@ -110,14 +133,14 @@ paypal.Button.render({
 		
 		 // Wait for the PayPal button to be clicked
 
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+       payment: function(data, actions) {
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -129,20 +152,48 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
-
         // Wait for the payment to be authorized by the customer
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                 $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00101.html");
+		});
+		});
+	
+
+				
             });
         }
 
@@ -176,14 +227,14 @@ paypal.Button.render({
 		
 		 // Wait for the PayPal button to be clicked
 
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+       payment: function(data, actions) {
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -195,20 +246,46 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
-
         // Wait for the payment to be authorized by the customer
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                              $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00102.html");
+		});
+		});
+	
             });
         }
 
@@ -242,14 +319,14 @@ paypal.Button.render({
 		
 		 // Wait for the PayPal button to be clicked
 
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+       payment: function(data, actions) {
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -261,12 +338,23 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
 
@@ -274,7 +362,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                 $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00103.html");
+		});
+		});
+	
             });
         }
 
@@ -309,13 +413,13 @@ paypal.Button.render({
 		 // Wait for the PayPal button to be clicked
 
         payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -327,12 +431,23 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
 
@@ -340,7 +455,24 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00104.html");
+		});
+		});
+	
+				
             });
         }
 
@@ -374,14 +506,14 @@ paypal.Button.render({
 		
 		 // Wait for the PayPal button to be clicked
 
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+       payment: function(data, actions) {
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -393,12 +525,23 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
 
@@ -406,8 +549,26 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
-            });
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00105.html");
+		});
+		});
+	
+
+				 });
+           
         }
 
     }, '#lim5');
@@ -440,14 +601,14 @@ paypal.Button.render({
 		
 		 // Wait for the PayPal button to be clicked
 
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+       payment: function(data, actions) {
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -459,12 +620,23 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
 
@@ -472,7 +644,25 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00106.html");
+		});
+	
+	
+
+				 });
             });
         }
 
@@ -506,14 +696,14 @@ paypal.Button.render({
 		
 		 // Wait for the PayPal button to be clicked
 
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+       payment: function(data, actions) {
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -525,20 +715,46 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
-
         // Wait for the payment to be authorized by the customer
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                              $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00107.html");
+		});
+		});
+	
             });
         }
 
@@ -549,7 +765,7 @@ paypal.Button.render({
 
         // Set your environment
 
-        env: 'production', // sandbox | production
+        env: 'sandbox', // sandbox | production
 
         // Specify the style of the button
 
@@ -573,13 +789,13 @@ paypal.Button.render({
 		 // Wait for the PayPal button to be clicked
 
         payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -591,20 +807,46 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
-
         // Wait for the payment to be authorized by the customer
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                              $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00108.html");
+		});
+		});
+	
             });
         }
 
@@ -638,14 +880,14 @@ paypal.Button.render({
 		
 		 // Wait for the PayPal button to be clicked
 
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+       payment: function(data, actions) {
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -657,12 +899,23 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
 
@@ -670,7 +923,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                              $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00109.html");
+		});
+		});
+	
             });
         }
 
@@ -704,14 +973,14 @@ paypal.Button.render({
 		
 		 // Wait for the PayPal button to be clicked
 
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+       payment: function(data, actions) {
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -723,20 +992,46 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
-
         // Wait for the payment to be authorized by the customer
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00110.html");
+		});
+		});
+	
             });
         }
 
@@ -770,14 +1065,14 @@ paypal.Button.render({
 		
 		 // Wait for the PayPal button to be clicked
 
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+       payment: function(data, actions) {
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -789,12 +1084,23 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
 
@@ -802,7 +1108,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00111.html");
+		});
+		});
+	
             });
         }
 
@@ -837,13 +1159,13 @@ paypal.Button.render({
 		 // Wait for the PayPal button to be clicked
 
         payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -855,12 +1177,23 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
 
@@ -868,7 +1201,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00112.html");
+		});
+		});
+	
             });
         }
 
@@ -902,14 +1251,14 @@ paypal.Button.render({
 		
 		 // Wait for the PayPal button to be clicked
 
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+      payment: function(data, actions) {
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -921,20 +1270,46 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
-
         // Wait for the payment to be authorized by the customer
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00113.html");
+		});
+		});
+	
             });
         }
 
@@ -968,14 +1343,14 @@ paypal.Button.render({
 		
 		 // Wait for the PayPal button to be clicked
 
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+       payment: function(data, actions) {
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -987,12 +1362,23 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
 
@@ -1000,7 +1386,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00114.html");
+		});
+		});
+	
             });
         }
 
@@ -1035,13 +1437,13 @@ paypal.Button.render({
 		 // Wait for the PayPal button to be clicked
 
         payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -1053,12 +1455,23 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
 
@@ -1066,7 +1479,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                              $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00115.html");
+		});
+		});
+	
             });
         }
 
@@ -1100,14 +1529,14 @@ paypal.Button.render({
 		
 		 // Wait for the PayPal button to be clicked
 
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+       payment: function(data, actions) {
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -1119,20 +1548,46 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
-
         // Wait for the payment to be authorized by the customer
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00116.html");
+		});
+		});
+	
             });
         }
 
@@ -1166,14 +1621,14 @@ paypal.Button.render({
 		
 		 // Wait for the PayPal button to be clicked
 
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+       payment: function(data, actions) {
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -1185,20 +1640,46 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
-
         // Wait for the payment to be authorized by the customer
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                             $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00117.html");
+		});
+		});
+	
             });
         }
 
@@ -1233,13 +1714,13 @@ paypal.Button.render({
 		 // Wait for the PayPal button to be clicked
 
         payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -1251,12 +1732,23 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
 
@@ -1264,7 +1756,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00118.html");
+		});
+		});
+	
             });
         }
 
@@ -1298,14 +1806,14 @@ paypal.Button.render({
 		
 		 // Wait for the PayPal button to be clicked
 
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '14.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+       payment: function(data, actions) {
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '14.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -1317,12 +1825,23 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
- 			
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
 
@@ -1330,7 +1849,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00119.html");
+		});
+		});
+	
             });
         }
 
@@ -1372,14 +1907,14 @@ paypal.Button.render({
 		
 		 // Wait for the PayPal button to be clicked
 
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '29.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+       payment: function(data, actions) {
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '29.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
@@ -1391,11 +1926,23 @@ paypal.Button.render({
 		currency:'USD'
 	}
 	]
+	
 },
 
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
 
@@ -1403,7 +1950,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                            $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00200.html");
+		});
+		});
+	
             });
         }
 
@@ -1436,30 +1999,42 @@ paypal.Button.render({
 		
 		 // Wait for the PayPal button to be clicked
 
-        payment: function(data, actions) {
-            return actions.payment.create({
-                transactions: [
-                    {
-                        amount: { total: '29.95', currency: 'USD' },
-                        
- 
-                        item_list:{
+         payment: function(data, actions) {
+        return actions.payment.create({
+                payment: {
+                    transactions: [
+                        {
+                            amount: { total: '29.95', currency: 'USD' },
+                            
+                             item_list:{
 
 	items:[
 	{
-		sku:'cmo00200',
-		name:'Tagged WAV prod. by [d1nero]',
-		description:'Lease Type' +':'+'STANDARD',	
+		sku:'cmo00201',
+		name:'Tagged MP3 prod. by [d1nero]',
+		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '29.95',
+		price: '14.95',
 		currency:'USD'
 	}
 	]
+	
 },
 
 
- }
-                ]
+                        }
+                    ]
+                },
+                
+                experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
+               
+                
+                
             });
         },
 
@@ -1467,7 +2042,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00201.html");
+		});
+		});
+	
             });
         }
 
@@ -1502,7 +2093,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+               payment:{ 
+				transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -1511,7 +2103,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00202',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -1524,6 +2116,13 @@ paypal.Button.render({
 
  }
                 ]
+			   },
+			     experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
+
             });
         },
 
@@ -1531,7 +2130,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00202.html");
+		});
+		});
+	
             });
         }
 
@@ -1566,7 +2181,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+				transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -1575,7 +2191,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00203',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -1588,6 +2204,12 @@ paypal.Button.render({
 
  }
                 ]
+			},
+			experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -1595,7 +2217,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00203.html");
+		});
+		});
+	
             });
         }
 
@@ -1630,7 +2268,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+				transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -1639,7 +2278,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00204',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -1652,6 +2291,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -1659,7 +2304,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00204.html");
+		});
+		});
+	
             });
         }
 
@@ -1694,7 +2355,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+				transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -1703,7 +2365,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00205',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -1716,6 +2378,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -1723,7 +2391,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00205.html");
+		});
+		});
+	
             });
         }
 
@@ -1758,7 +2442,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+				transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -1767,7 +2452,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00206',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -1780,6 +2465,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -1787,7 +2478,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00206.html");
+		});
+		});
+	
             });
         }
 
@@ -1822,7 +2529,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -1831,7 +2539,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00207',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -1844,6 +2552,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -1851,7 +2565,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00207.html");
+		});
+		});
+	
             });
         }
 
@@ -1861,7 +2591,7 @@ paypal.Button.render({
 
         // Set your environment
 
-        env: 'production', // sandbox | production
+        env: 'sandbox', // sandbox | production
 
         // Specify the style of the button
 
@@ -1886,7 +2616,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+				transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -1895,7 +2626,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00208',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -1908,6 +2639,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -1915,7 +2652,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                              $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00208.html");
+		});
+		});
+	
             });
         }
 
@@ -1950,7 +2703,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+				transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -1959,7 +2713,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00209',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -1972,6 +2726,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -1979,7 +2739,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00209.html");
+		});
+		});
+	
             });
         }
 
@@ -2014,7 +2790,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+				transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -2023,7 +2800,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00210',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -2036,6 +2813,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -2043,7 +2826,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                         $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00210.html");
+		});
+		});
+	
             });
         }
 
@@ -2078,7 +2877,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+				transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -2087,7 +2887,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00211',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -2100,6 +2900,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -2107,7 +2913,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00211.html");
+		});
+		});
+	
             });
         }
 
@@ -2142,7 +2964,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+				transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -2151,7 +2974,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00212',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -2164,6 +2987,12 @@ paypal.Button.render({
 
  }
                 ]
+			},
+			experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -2171,7 +3000,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00212.html");
+		});
+		});
+	
             });
         }
 
@@ -2206,7 +3051,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+				transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -2215,7 +3061,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00213',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -2228,6 +3074,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -2235,7 +3087,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                             $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00213.html");
+		});
+		});
+	
             });
         }
 
@@ -2270,7 +3138,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+				transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -2279,7 +3148,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00214',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -2292,6 +3161,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -2299,7 +3174,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00214.html");
+		});
+		});
+	
             });
         }
 
@@ -2334,7 +3225,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+				transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -2343,7 +3235,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00215',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -2356,6 +3248,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -2363,7 +3261,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00215.html");
+		});
+		});
+	
             });
         }
 
@@ -2398,7 +3312,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -2407,7 +3322,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00216',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -2420,6 +3335,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -2427,7 +3348,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00216.html");
+		});
+		});
+	
             });
         }
 
@@ -2462,7 +3399,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -2471,7 +3409,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00217',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -2484,6 +3422,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -2491,7 +3435,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                              $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00217.html");
+		});
+		});
+	
             });
         }
 
@@ -2526,7 +3486,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -2535,7 +3496,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00218',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -2548,6 +3509,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -2555,7 +3522,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00218.html");
+		});
+		});
+	
             });
         }
 
@@ -2590,7 +3573,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '29.95', currency: 'USD' },
                         
@@ -2599,7 +3583,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00200',
+		sku:'cmo00219',
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
@@ -2612,6 +3596,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -2619,7 +3609,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00219.html");
+		});
+		});
+	
             });
         }
 
@@ -2659,7 +3665,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -2682,6 +3689,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -2689,7 +3702,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00300.html");
+		});
+		});
+	
             });
         }
 
@@ -2724,7 +3753,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -2733,7 +3763,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00301',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -2747,6 +3777,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -2754,7 +3790,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                 $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00301.html");
+		});
+		});
+	
             });
         }
 
@@ -2789,7 +3841,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -2798,7 +3851,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00302',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -2812,6 +3865,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -2819,7 +3878,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00302.html");
+		});
+		});
+	
             });
         }
 
@@ -2854,7 +3929,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -2863,7 +3939,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00303',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -2877,6 +3953,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -2884,7 +3966,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00303.html");
+		});
+		});
+	
             });
         }
 
@@ -2919,7 +4017,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -2928,7 +4027,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00304',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -2942,6 +4041,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -2949,7 +4054,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00304.html");
+		});
+		});
+	
             });
         }
 
@@ -2984,7 +4105,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -2993,7 +4115,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00305',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -3007,6 +4129,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -3014,7 +4142,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00305.html");
+		});
+		});
+	
             });
         }
 
@@ -3049,7 +4193,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -3058,7 +4203,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00306',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -3072,6 +4217,12 @@ paypal.Button.render({
 
  }
                 ]
+				}, 
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -3079,7 +4230,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                              $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00306.html");
+		});
+		});
+	
             });
         }
 
@@ -3114,7 +4281,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -3123,7 +4291,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00307',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -3137,6 +4305,12 @@ paypal.Button.render({
 
  }
                 ]
+				}, 
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -3144,7 +4318,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                              $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00307.html");
+		});
+		});
+	
             });
         }
 
@@ -3154,7 +4344,7 @@ paypal.Button.render({
 
         // Set your environment
 
-        env: 'production', // sandbox | production
+        env: 'sandbox', // sandbox | production
 
         // Specify the style of the button
 
@@ -3179,7 +4369,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -3188,7 +4379,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00308',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -3202,6 +4393,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -3209,7 +4406,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00308.html");
+		});
+		});
+	
             });
         }
 
@@ -3244,7 +4457,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -3253,7 +4467,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00309',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -3267,6 +4481,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -3274,7 +4494,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00309.html");
+		});
+		});
+	
             });
         }
 
@@ -3309,7 +4545,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -3318,7 +4555,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00310',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -3332,6 +4569,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -3339,7 +4582,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00310.html");
+		});
+		});
+	
             });
         }
 
@@ -3374,7 +4633,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -3383,7 +4643,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00311',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -3397,6 +4657,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -3404,7 +4670,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00311.html");
+		});
+		});
+	
             });
         }
 
@@ -3439,7 +4721,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -3448,7 +4731,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00312',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -3462,6 +4745,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -3469,7 +4758,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                           $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00312.html");
+		});
+		});
+	
             });
         }
 
@@ -3504,7 +4809,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -3513,7 +4819,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00313',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -3527,6 +4833,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -3534,7 +4846,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00313.html");
+		});
+		});
+	
             });
         }
 
@@ -3569,7 +4897,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -3578,7 +4907,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00314',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -3592,6 +4921,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -3599,7 +4934,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00314.html");
+		});
+		});
+	
             });
         }
 
@@ -3634,7 +4985,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+				transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -3643,7 +4995,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00315',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -3657,6 +5009,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -3664,7 +5022,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00315.html");
+		});
+		});
+	
             });
         }
 
@@ -3699,7 +5073,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+					transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -3708,7 +5083,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00316',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -3722,6 +5097,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -3729,7 +5110,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                               $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00316.html");
+		});
+		});
+	
             });
         }
 
@@ -3764,7 +5161,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+				transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -3773,7 +5171,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00317',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -3787,6 +5185,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -3794,7 +5198,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00317.html");
+		});
+		});
+	
             });
         }
 
@@ -3829,7 +5249,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+				transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -3838,7 +5259,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00318',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -3852,6 +5273,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -3859,7 +5286,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00318.html");
+		});
+		});
+	
             });
         }
 
@@ -3894,7 +5337,8 @@ paypal.Button.render({
 
         payment: function(data, actions) {
             return actions.payment.create({
-                transactions: [
+                payment:{
+				transactions: [
                     {
                         amount: { total: '69.95', currency: 'USD' },
                         
@@ -3903,7 +5347,7 @@ paypal.Button.render({
 
 	items:[
 	{
-		sku:'cmo00300',
+		sku:'cmo00319',
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
@@ -3917,6 +5361,12 @@ paypal.Button.render({
 
  }
                 ]
+				},
+				experience: {
+                    input_fields: {
+                        no_shipping: 1
+                    }
+                }
             });
         },
 
@@ -3924,7 +5374,23 @@ paypal.Button.render({
 
         onAuthorize: function(data, actions) {
             return actions.payment.execute().then(function() {
-                window.alert('Payment Complete!');
+                                $(document).ready(function() {
+swal({ 
+  title: "Your Download is ready!",
+   text: "Your download is waiting in another tab.",
+    icon: "success" ,
+	closeOnClickOutside: false,
+	button:{
+		className:"goBtn",
+		text: "Go!",
+		
+		}	
+});
+ $('.goBtn').click(function(){
+	window.open("00319.html");
+		});
+		});
+	
             });
         }
 

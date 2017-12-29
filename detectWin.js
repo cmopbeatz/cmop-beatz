@@ -2,7 +2,7 @@
 
 //var txt = "";
 //txt += "<p>innerWidth: " + window.innerWidth + "</p>";
-//txt += "<p>innerHeight: " + window.innerHeight + "</p>";
+//txt += "<p>innerHeight: " + window.innerHeight# + "</p>";
 //txt += "<p>outerWidth: " + window.outerWidth + "</p>";
 //txt += "<p>outerHeight: " + window.outerHeight + "</p>";
 
@@ -12,57 +12,74 @@
 
 
 $(document).ready(function () {
-  //your code here
+  //your code here$('#CMOP-siteTitle').css('width',340)
 
 
  
  
  	
-//});	
+//});
+
+
 
 var w = $(window).width();
- $('.container').css('width',w - 10);
-
-$(window).width() < 710 ? $("#CMOP-title").css('width','0px'):$("#CMOP-title").css('width','280px');	
-
-$(window).width() < 710 ? $("#CMOP-title").hide():$("#CMOP-title").show();	
-
-$(window).width() < 710 ? $("#cmopbeatz").width(0):$("#cmopbeatz").width(280);
-
-$(window).width() < 710 ? $("#cmopbeatz").show():$("#cmopbeatz").show();	
-
-$(window).width() < 710 ? $('#actionContainer').css('margin-top','325px'): $('#actionContainer').css('margin-top','325px')
-
-$(window).width() < 545 ? $('#actionContainer').css('position','absolute'):$('#actionContainer').css('position','relative');	
-
-$(window).width() < 710 ? $('#statusContainer').css('float','left'):$('#statusContainer').css('float','right');	
-
-$(window).width() < 512 ? $('#CMOP-logo').hide():$('#CMOP-logo').show();
 
 
+
+w < 1000 ? $('#HL-link').hide():$('#HL-link').show();
+w < 1000 ? $('#HC-link').hide():$('#HC-link').show();
+w < 1000 ? $('#HR-link').hide():$('#HR-link').show();
+w < 800 ? $('#CMOP-title').hide():$('#CMOP-title').show();
+
+w < 510 ?  $('#cmopbeatz').css('display','none') : $('#cmopbeatz').css('display','block');
+w < 501 ? $('#clock-toggle').css('display', 'none') : $('#clock-toggle').css('display', 'block');
 
 
 
 $(window).resize(function(){
 
-	var w = $(window).width();
- $('.container').css('width',w - 10);
 
-$(window).width() < 710 ? $("#CMOP-title").css('width','0px'):$("#CMOP-title").css('width','280px');	
 
-$(window).width() < 710 ? $("#CMOP-title").hide():$("#CMOP-title").show();	
+var w = $(window).width();
 
-$(window).width() < 710 ? $("#cmopbeatz").width(0):$("#cmopbeatz").width(280);
 
-$(window).width() < 710 ? $("#cmopbeatz").show():$("#cmopbeatz").show();	
 
-$(window).width() < 710 ? $('#actionContainer').css('margin-top','325px'): $('#actionContainer').css('margin-top','325px')
+w < 1000 ? $('#HL-link').hide():$('#HL-link').show();
+w < 1000 ? $('#HC-link').hide():$('#HC-link').show();
+w < 1000 ? $('#HR-link').hide():$('#HR-link').show();
+w < 800 ? $('#CMOP-title').hide():$('#CMOP-title').show();
 
-$(window).width() < 545 ? $('#actionContainer').css('position','absolute'):$('#actionContainer').css('position','relative');	
+w < 510 ?  $('#cmopbeatz').css('display','none') : $('#cmopbeatz').css('display','block');
 
-$(window).width() < 710 ? $('#statusContainer').css('float','right'):$('#statusContainer').css('float','right');	
+w < 501 ? $('#audio_player').css('display', 'none') : $('#audio_layer').css('display', 'block');
+ w <= 500 ? $('.okBtn').css('display', 'none'):$('.okBtn').css('display', 'none');
 
-$(window).width() < 512 ? $('#CMOP-logo').hide():$('#CMOP-logo').show();
+w <= 500 ? $('#siteBlocker').css('display','block'): $('#siteBlocker').css('display','none');
+
+
+
+if(w <= 500){
+
+
+swal({ 
+  title: "Page width too small!",
+   text: "cmopbeatz.com has detected that your page width is too small to view site content correctly. Please resize to a higher width.",
+    icon: "warning" ,
+	closeOnClickOutside: false,
+	button: false
+		
+	  
+			});
+					 
+	
+	
+	
+	
+}else{
+	
+	swal.close();
+	}
 
 });
 });
+

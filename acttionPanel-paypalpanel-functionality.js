@@ -1218,11 +1218,12 @@ closeL[19].click(function(){
 });
 
 //paybtn-text
-$(document).ready(function(e) {
-    $('.types1').text('(L)' +'$14.95');
-$('.types2').text('(S)' + '$29.95');
-$('.types3').text('(P)' + '$69.95');
-});
+//$(document).ready(function(e) {
+
+  //  $('.types1').text("$14.95");
+//$('.types2').text("$29.95");
+//$('.types3').text("$69.95");
+//});
 
 
 
