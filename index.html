@@ -394,11 +394,11 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 button#footer {
 	background-color: #000;
 	height: 20px;
-	width: 97%;
+	width: 100%;
 	padding-right: 0;
 	padding-bottom: 0;
 	padding-left: 0;
-	position: static;
+	position: relative;
 	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
 	font-size: 16px;
 	box-shadow: 0px 0px 4px 3px #000;
@@ -415,7 +415,7 @@ button#footer {
 	font-weight: bold;
 	font-variant: small-caps;
 	margin: 0;
-	top: 10px;
+	top: 60px;
 }
 #aboutField{
 	width: 90%;
@@ -437,7 +437,7 @@ button#footer {
 	font-variant: small-caps;
 	margin-left: 59px;
 	margin-bottom: 0px;
-	top: -80px;
+	top: 30px;
 	font-size: 18px;
 }
 
@@ -1790,7 +1790,7 @@ button#exclusiveTab:active {
 }
 .types1 {
 	height: 45px;
-	width: 70px;
+	width: 60px;
 	position: relative;
 	float: left;
 	background-color: rgba(51,51,51,.3);
@@ -1805,7 +1805,7 @@ button#exclusiveTab:active {
 }
 .types2 {
 	height: 45px;
-	width: 70px;
+	width: 60px;
 	position: relative;
 	float: left;
 	background-color: rgba(51,51,51,.3);
@@ -1819,7 +1819,7 @@ button#exclusiveTab:active {
 }
 .types3 {
 	height: 45px;
-	width: 70px;
+	width: 60px;
 	position: relative;
 	float: left;
 	background-color: rgba(102,102,102,.3);
@@ -1901,57 +1901,6 @@ button#exclusiveTab:active {
 </style>
 
 <body> 
-
-<!--<div id="please-wait" style="position:absolute;width:100%;height:1200px;background:rgba(51,51,51,.5);z-index:100;">
-<p id="sorry" style="position:relative;width:100%;height:auto;color:rgba(255,255,255,1);font-size:120px;text-align:center;text-indent:40px;text-shadow:0px 0px 2px rgba(255,255,255,.7);">sorry.</p>
-
-
-<p id="underConstruction" style="position:relative;background:rgba(51,51,51,1);text-shadow: 0px 0px 2px rgba(51,51,51,.6);width:100%;height:80px;box-shadow:0px 0px 2px 4px rgba(51,51,51,.5);z-index:101;top:260px;color:rgba(0,0,0,1);font-size:50px;vertical-align:middle;text-align:left;text-indent:20px;color:rgba(255,255,255,.5);border-top:thick solid rgba(255,255,255,1);">Please return in:</p><p id="returnTime" style="position:relative;float:right;color:rgba(255,255,0,1);text-shadow:0px 0px 2px rgba(0,0,0,.6);font-size:25px;top:160px;z-index:102">
-
-
-<script>
-var end = new Date('12/30/2017 11:30 PM');
-
-    var _second = 1000;
-    var _minute = _second * 60;
-    var _hour = _minute * 60;
-    var _day = _hour * 24;
-    var timer;
-
-    function showRemaining() {
-        var now = new Date();
-        var distance = end - now;
-        if (distance < 0) {
-
-            clearInterval(timer);
-            document.getElementById('returnTime').innerHTML = 'EXPIRED!';
-
-            return;
-        }
-        var days = Math.floor(distance / _day);
-        var hours = Math.floor((distance % _day) / _hour);
-        var minutes = Math.floor((distance % _hour) / _minute);
-        var seconds = Math.floor((distance % _minute) / _second);
-
-        document.getElementById('returnTime').innerHTML = days + 'days ';
-        document.getElementById('returnTime').innerHTML += hours + 'hrs ';
-        document.getElementById('returnTime').innerHTML += minutes + 'mins ';
-        document.getElementById('returnTime').innerHTML += seconds + 'secs';
-    }
-
-    timer = setInterval(showRemaining, 1000);
-</script>
-
-
-
-</p>
-
-<div id="return-in" style="position:absolute;width:100%;height:200px;background-image:url(images/cmop-UCbannerBKG.png);top:260px;box-shadow:0px .25px 1px 2px rgba(51,51,51,.6);"><p id="constNotice" style="position:relative;width:auto;height:100px;background:rgba(255,255,0,1);border-radius:20px;box-shadow: inset -.25px -.25px 1px 2px rgba(51,51,51,.15);font-size:45px;font-weight:bolder;margin-top:40px;box-shadow:inset 0px 0px 1px 3px rgba(255,255,255,.6);vertical-align:middle;"> We are currently under construction...</p>
-
-</div>
-</div>-->
-
-
 
 <div id="PLwrapper" style="width: 100%; height: 100%; position: relative; background: rgba(51,51,51,.0); display: block;">
 <div id ="pre-loader"><img src="images/cmop-letterhead2.png" style="position:relative;width:200px;height:150px;margin-top:30px;margin-left:30px;">
@@ -2053,19 +2002,7 @@ To inquire about design services, contact d1nero directly at designsbyd1nero@gma
 
     </select>
 </div>
-<!--<div id="cmopSearch" style="position:absolute;margin-left:600px;height:auto;width:460px;top:10px;"><script>
-  (function() {
-    var cx = '013579132076709726964:frpuasqpcwo';
-    var gcse = document.createElement('script');
-    gcse.type = 'text/javascript';
-    gcse.async = true;
-    gcse.src = 'https://cse.google.com/cse.js?cx=' + cx;
-    var s = document.getElementsByTagName('script')[0];
-    s.parentNode.insertBefore(gcse, s);
-  })();
-</script>
-<gcse:searchbox-only></gcse:searchbox-only>
-</div>-->
+
 <div id="adPlacementHeader" style="width:100%;height:180px;margin-top:10px;display:none;">
 <div id="adPlacement-HL" style="position:relative;width:30%;height:auto;float:left;margin-right:20px;font-size:20px;color:white;">
 <a href="http://www.anrdoezrs.net/click-8475802-12298007" target="_blank">
@@ -2091,20 +2028,13 @@ To inquire about design services, contact d1nero directly at designsbyd1nero@gma
 <img src="http://www.awltovhc.com/image-8475802-12982502" style="width:80%" height="90" alt="" border="0"/></a>
 
 
-<a id="HR-link" style="font-size:18px;background:rgba(0,0,0,1);color:white;" href="http://www.tkqlhce.com/click-8475802-12558780" target="_blank">Consumer Electronics - Keep up to the date with the latest tech for up to 50% off.</a><img src="http://www.tqlkg.com/image-8475802-12558780" width="1" height="1" border="0"/>
-
+<a id="HR-link" style="font-size:18px;background:rgba(0,0,0,1);color:white;" href="http://www.tkqlhce.com/click-8475802-12558780" target="_blank">Consumer Electronics - Keep up to the date with the latest tech for up to 50% off.</a><img src="http://www.tqlkg.com/image-8475802-12558780" width="1" height="1" border="0"/></div>
 </div>
-
-</div>
-
 
 <div id ="cntr" class="container">
 <div id="leftUI" style="z-index:2;position:relative;height:700px;width:40px;float:left;top:100px;overflow:visible;"><button title="Display song info" id="tb_Icon">?</button><button id="PricingHeader" >$</button>
 </div>
-
-
-
-
+  
   <div id="cmopHead" class="header">
   <div id="CMOP-siteTitle" style="height:50px;width:92%;float:left;margin:0px;top:2px;">
     <div id="CMOP-logo"><img width="60" height="50" src="images/cmop-letterhead2.png"></div>
@@ -2118,10 +2048,6 @@ To inquire about design services, contact d1nero directly at designsbyd1nero@gma
 <div id="calendar"></div>
 </div>
 
-
-
-
-
 <div id="contact-options">
    <p id ="sales@" style="position:relative;font-size:12px;float:left;">Sales:sales.cashmeout@gmail.com</p>   
    <p id="exclusives@" style="position:relative;font-size:12px;float:left;top:-10px;">
@@ -2130,18 +2056,12 @@ To inquire about design services, contact d1nero directly at designsbyd1nero@gma
 
  <div id="share-options">
 <a style="position:relative;float:left;top:-2px;" href="https://twitter.com/cmopbeatz?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-screen-name="false" data-show-count="false"><img src="images/Twitter_Android.png" height="35" width="35"/><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script></a>
-    
-    
+  
 <a style="position:relative;float:left;margin-left:20px;top:-3px;" href="http://www.linkedin.com/shareArticle?mini=true&url=http://cmopbeatz.com/index.html&title=CASHMEOUT Productions presents:&summary=Tired of the same 'ole sound?&source=cmopbeatz" target="_blank"> <img src="images/linkedin-icon-21.png" style="height:30px; width:30px;"/> </a>
     
-    
 <iframe src="https://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fcmopbeatz.com%2Findex.html&width=60&layout=button_count&action=like&size=small&show_faces=false&share=false&height=21&appId=1941720529386220" width="60" height="21" style="position:relative;float:left;margin-left:20px;border:none;overflow:hidden;top:9px;" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
-
-    
     
 <a style="position:relative;float:left;margin-left:20px;top:-4px;" href="http://plus.google.com/share?url=http://cmopbeatz.com/index.html"><img src="images/google-plus-icon.png" style="height:30px; width:30px;"></a>
-  
-  
  </div>
 
 </div>
@@ -2164,52 +2084,18 @@ To inquire about design services, contact d1nero directly at designsbyd1nero@gma
     
   </div>
  </div>
- 
  </div>
-  
-
-
-
-
- 
 
 </div>
 
-
-
-  <div id="cont" class="content">
+<div id="cont" class="content">
     <div id="RSS-container" >
 <div  id="CMOP-description" class="scroll-left"><p class ="scroll-left p">Welcome to cmopbeatz.com! To listen, click the 'Expand' button below, then select a track. Enjoy!</p></div>
 
 </div>
-    
-       
-      
-   
 
-    
-    <!--<div id= "shareSong-container">
-   
-      <div id="ssHeader">song options</div>
-      <div id="ssBody">
-      <div id= "fbSongshare"><div class="fb-like" 
-    data-href="https://cmopbeatz.github.io/cmop-beatz/CMOP_SC2.html"  
-    data-layout="standard" 
-    data-action="like" 
-    data-show-faces="false">
-  </div></div>
-      
-      
-      
-        <button id= "twSongshare"><img src="images/Twitter_Android.png" height="40px" width="40px"></button>
-        <button id= "inSongshare"><img src="images/linkedin-icon-21.png"height="40px" width="40px"></button>
-      </div>
-      
-      </div>-->
     <div id ="pricingPanel">
-      
-      
-      
+
       <div id ="pricingTabs">  
     <div style ="font-size:15px;font-family:Arial, Helvetica, sans-serif;position:relative;box-shadow:inset rgba(51,51,51,1); float:left;text-align:center;color:white;background:rgba(51,204,255,.2);border-radius:5px;box-shadow: #000;text-shadow:rgba(0,0,0,1);width:329px;"><strong>Lease type</strong></div>
   		<button id ="limitedTab"><strong>LIMITED</strong>
@@ -2345,23 +2231,7 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
   </div>
 </div>
 </div>
-  <!-- <div id="mediaPlayer"> 
-      <h2>Media Player</h2>
- <!-- Controls/Interface for mpControlScheme01 (uses mpcontrols.js)--><!--   <audio id="myTrack" >
-      	<source src="CMO_P-Music/Winner.mp3"type="audio/mp3"/>
-      </audio>
-      <nav>
-       <div id="defaultBar">
-       <div id ="progressBar"></div>
-       </div>
-       <div id="buttons">
-       <button type="button" id="playButton" ></button>
-       <button type="button" id="muteButton"></button>
-        <span id="currentTime">0:00</span>
-        /<span id="fullDuration">0:00</span>
-        </div>
-      </nav>-->
-
+  
  <div id="cookies" style="position:fixed;width:60%;height:70px;background:rgba(0,0,0,1);z-index:20;color:white;text-align:left;opacity:0;display:none;font-size:100%;margin-left:20%;border-radius:10px;top:90%;">
 <p style="width:70%;margin:0px;float:left;">To ensure the best user experience possible, this site uses Cookies.
 <br>To find out more about Cookies and their use, click <a href="https://en.wikipedia.org/wiki/HTTP_cookie" target="_blank" style="color:rgba(0,153,255,1);text-decoration:none;">here</a>.</p>
@@ -2385,8 +2255,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
 </div>
 
 <div id="actionPanel" scrolling="no">
-  <div id="paypalPanel">
+   <div id="paypalPanel">
     <table width="400" border="0">
+   
       <tr class = "product-list">
         <td class="song-prod-title">After Me</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType0">Click here to select a Lease Type:</button>
@@ -2402,9 +2273,10 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="pay1" id="lim0"></div>
             <div class="pay2" id="sta0"></div>
             <div class="pay3" id="pro0"></div>
-           
-          </div></td>
-      </tr>
+        
+          </div></td></tr>
+    
+      
       <tr class= "product-list">
         <td class="song-prod-title">All In</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType1">Click here to select a Lease Type:</button>
@@ -2418,8 +2290,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim1"></div>
             <div class="pay2" id="sta1"></div>
-            <div class="pay3" id="pro1"></div></td>
-      </tr>
+            <div class="pay3" id="pro1"></div>
+            </div></td></tr>
+            
       <tr class= "product-list">
         <td class="song-prod-title">Baddest Bitch</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType2">Click here to select a Lease Type:</button>
@@ -2433,8 +2306,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim2"></div>
             <div class="pay2" id="sta2"></div>
-            <div class="pay3" id="pro2"></div></td>
-      </tr>
+            <div class="pay3" id="pro2"></div>
+            </div></td></tr>
+            
       <tr class= "product-list">
         <td class="song-prod-title">Beach Cruiser</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType3">Click here to select a Lease Type:</button>
@@ -2448,8 +2322,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim3"></div>
             <div class="pay2" id="sta3"></div>
-            <div class="pay3" id="pro3"></div></td>
-      </tr>
+            <div class="pay3" id="pro3"></div>
+            </div></td></tr>
+            
       <tr class= "product-list">
         <td class="song-prod-title">Bi-Coastal</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType4">Click here to select a Lease Type:</button>
@@ -2463,8 +2338,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim4"></div>
             <div class="pay2" id="sta4"></div>
-            <div class="pay3" id="pro4"></div></td>
-      </tr>
+            <div class="pay3" id="pro4"></div>
+            </div></td></tr>
+            
       <tr class= "product-list">
         <td class="song-prod-title">Bottles</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType5">Click here to select a Lease Type:</button>
@@ -2478,8 +2354,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim5"></div>
             <div class="pay2" id="sta5"></div>
-            <div class="pay3" id="pro5"></div></td>
-      </tr>
+            <div class="pay3" id="pro5"></div>
+            </div></td></tr>
+            
       <tr class= "product-list">
         <td class="song-prod-title">Destined</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType6">Click here to select a Lease Type:</button>
@@ -2493,8 +2370,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim6"></div>
             <div class="pay2" id="sta6"></div>
-            <div class="pay3" id="pro6"></div></td>
-      </tr>
+            <div class="pay3" id="pro6"></div>
+            </div></td></tr>
+            
       <tr class= "product-list">
         <td class="song-prod-title">F-n Do It</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType7">Click here to select a Lease Type:</button>
@@ -2508,8 +2386,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim7"></div>
             <div class="pay2" id="sta7"></div>
-            <div class="pay3" id="pro7"></div></td>
-      </tr>
+            <div class="pay3" id="pro7"></div>
+            </div></td></tr>
+            
       <tr class ="product-list">
         <td class="song-prod-title">Frenchie</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType8">Click here to select a Lease Type:</button>
@@ -2523,8 +2402,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim8"></div>
             <div class="pay2" id="sta8"></div>
-            <div class="pay3" id="pro8"></div></td>
-      </tr>
+            <div class="pay3" id="pro8"></div>
+            </div></td></tr>
+            
       <tr class= "product-list">
         <td class="song-prod-title">Functional Fyre</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType9">Click here to select a Lease Type:</button>
@@ -2538,8 +2418,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim9"></div>
             <div class="pay2" id="sta9"></div>
-            <div class="pay3" id="pro9"></div></td>
-      </tr>
+            <div class="pay3" id="pro9"></div>
+            </div></td></tr>
+            
       <tr class= "product-list">
         <td class="song-prod-title">Gyros</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType10">Click here to select a Lease Type:</button>
@@ -2553,8 +2434,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim10"></div>
             <div class="pay2" id="sta10"></div>
-            <div class="pay3" id="pro10"></div></td>
-      </tr>
+            <div class="pay3" id="pro10"></div>
+            </div></td></tr>
+            
       <tr class= "product-list">
         <td class="song-prod-title">Hands-Up</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType11">Click here to select a Lease Type:</button>
@@ -2568,8 +2450,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim11"></div>
             <div class="pay2" id="sta11"></div>
-            <div class="pay3" id="pro11"></div></td>
-      </tr>
+            <div class="pay3" id="pro11"></div>
+            </div></td></tr>
+            
       <tr class= "product-list">
         <td class="song-prod-title">HH-e</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType12">Click here to select a Lease Type:</button>
@@ -2583,8 +2466,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim12"></div>
             <div class="pay2" id="sta12"></div>
-            <div class="pay3" id="pro12"></div></td>
-      </tr>
+            <div class="pay3" id="pro12"></div>
+            </div></td></tr>
+            
       <tr class= "product-list">
         <td class="song-prod-title">Hi-Jinx</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType13">Click here to select a Lease Type:</button>
@@ -2598,8 +2482,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim13"></div>
             <div class="pay2" id="sta13"></div>
-            <div class="pay3" id="pro13"></div></td>
-      </tr>
+            <div class="pay3" id="pro13"></div>
+            </div></td></tr>
+            
       <tr class= "product-list">
         <td class="song-prod-title">In My Mind</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType14">Click here to select a Lease Type:</button>
@@ -2613,8 +2498,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim14"></div>
             <div class="pay2" id="sta14"></div>
-            <div class="pay3" id="pro14"></div></td>
-      </tr>
+            <div class="pay3" id="pro14"></div>
+            </div></td></tr>
+            
       <tr class= "product-list">
         <td class="song-prod-title">Justify</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType15">Click here to select a Lease Type:</button>
@@ -2628,8 +2514,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim15"></div>
             <div class="pay2" id="sta15"></div>
-            <div class="pay3" id="pro15"></div></td>
-      </tr>
+            <div class="pay3" id="pro15"></div>
+            </div></td></tr>
+            
       <tr class= "product-list">
         <td class="song-prod-title">Like Neon</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType16">Click here to select a Lease Type:</button>
@@ -2643,8 +2530,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim16"></div>
             <div class="pay2" id="sta16"></div>
-            <div class="pay3" id="pro16"></div></td>
-      </tr>
+            <div class="pay3" id="pro16"></div>
+            </div></td></tr>
+            
       <tr class= "product-list">
         <td class="song-prod-title">Make It Count</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType17">Click here to select a Lease Type:</button>
@@ -2659,8 +2547,7 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="pay1" id="lim17"></div>
             <div class="pay2" id="sta17"></div>
             <div class="pay3" id="pro17"></div>
-          </td>
-        </tr>
+            </div></td></tr>
         
       <tr class= "product-list">
         <td class="song-prod-title">Numbers</td>
@@ -2676,8 +2563,9 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim18"></div>
             <div class="pay2" id="sta18"></div>
-            <div class="pay3" id="pro18"></div></td>
-      </tr>
+            <div class="pay3" id="pro18"></div>
+            </div></td></tr>
+            
       <tr class= "product-list">
         <td class="song-prod-title">Position2</td>
         <td class="song-purch-cont"><button class="lease-type" id="leaseType19">Click here to select a Lease Type:</button>
@@ -2692,11 +2580,12 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
             <div class="closePay" id="payClose0"><a class="closer" href="javascript:void(0);">X</a></div>
             <div class="pay1" id="lim19"></div>
             <div class="pay2" id="sta19"></div>
-            <div class="pay3" id="pro19"></div></td>
-      </tr>
+            <div class="pay3" id="pro19"></div>
+            </div></td></tr>
     </table>
   </div>
-  
+ 
+ 
   <div id="emailPanel">
     <form id="QCform" style="height:400px;width:100%;" method="POST" target = "no-target" name ="QCform">
       <div id="fNameBox">First Name:
@@ -2732,17 +2621,19 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
     <iframe width="100%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/327214508&amp;color=%234c5454&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true&amp;visual=true"></iframe>
   </div>
 </div>
-
-</div>
-
 </div>
 
 
- <button id="footer">  <p style="color:white"><strong>About</strong></p>
+
+<button id="footer">  <p style="color:white"><strong>About</strong></p>
 
 </button>
 
 </div>
+
+
+
+
  
  
  
@@ -2753,16 +2644,18 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
 </div>
 
 <div id="adPanel" style="margin-left:80px;position:relative;width:90%;height:auto;background:rgba(51,51,51,1);border-radius:4px;box-shadow:inset 0px 0px 2px 3px rgba(0,0,0,1);">
+  
   <div id="CMOP-vh1-ST" style="margin-left:10px;width:100%;font-size:18px;text-align:left;font-weight:normal;color:black;float:left;">cmopbeatz.com proudly supports the arts and their vital role in education. That's why every quarter, we will donate 15% of our sales revenue to: 
   </div>
  
   <div id="STM-logo" style="position:relative;width:100%;float:left;">
   <div id="stmicon" style="width:auto;height:auto;box-shadow:inset 0px 0px 1px 2px;float:left;">
-  <img src="images/vh1-STM-logo.png" height="315" width="315"/>
+  <img src="images/vh1-STM-logo.png" height="200" width="200"/>
   </div>
   <iframe style="float:right;" width="560" height="315" src="https://www.youtube.com/embed/2lcGdUDVb5s" frameborder="0" allowfullscreen></iframe>
   </div>
-<div id="more-info" style="font-size:16px;float:right;height:160px;width:100%;color:black;margin-left:12px;">vh1's "Save The Music Foundation" is a 501c3 nonprofit organization dedicated to restoring music programs in America’s public schools, and raising awareness about the importance of music as part of each child’s complete education. For  information on how to get involved, or to donate directly, please visit: <a style="color:rgba(0,204,255,1);font-size:22px;" href="http://www.vh1savethemusic.org/">www.vh1savethemusic.org</a>
+  
+<div id="more-info" style="font-size:16px;float:right;height:160px;width:100%;color:white;margin-left:12px;">vh1's "Save The Music Foundation" is a 501c3 nonprofit organization dedicated to restoring music programs in America’s public schools, and raising awareness about the importance of music as part of each child’s complete education. For  information on how to get involved, or to donate directly, please visit: <a style="color:rgba(0,204,255,1);font-size:22px;" href="http://www.vh1savethemusic.org/">www.vh1savethemusic.org</a>
 
 </div>
 
@@ -2784,6 +2677,7 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
 
 <div id="artist" style="width:30%;float:left;margin-left:10px;box-shadow:0px 0px 2px rgba(0,0,0,1);border-radius:10px;background:rgba(0,0,0,.4);">
 <img src="images/7b4d2cd7-9082-4ab1-9349-eded8db3ddd4[49].jpg" alt="DnC-PDL photo" style="width:300px;height:300px;border-radius:10px;" />
+
 <table style="text-transform:none;background:rgba(51,153,255,.3);border-radius:0px 0px 10px 10px;box-shadow:inset 0px 0px 2px rgba(51,51,51,1);">
 <tr><td width="73" style="font-size:70%;">
 Artist:
@@ -2816,7 +2710,12 @@ Artist:
 
 
 
-<div id="adPlacementFooter" style="width:100%;height:180px;display:none;">
+
+
+
+
+
+<div id="legals" style="position:relative;background:rgba(20%,20%,20%,.1);width:100%;height:20px;text-align:center;vertical-align:middle;float:left;margin-top:20px;"><div id="adPlacementFooter" style="position:relative;width:100%;height:180px;display:none;margin-top:40px;">
 <div id="adPlacement-FL" style="position:relative;width:300px;height:auto;float:left;margin-right:20px;font-size:20px;color:white;">
 <a href="http://www.anrdoezrs.net/click-8475802-10724417" target="_top">
 <img src="http://www.awltovhc.com/image-8475802-10724417" width="468" height="60" alt="20% Off Plus Hosting Plan & 33% Off Business Plan " border="0"/></a>
@@ -2835,12 +2734,7 @@ Artist:
 
 
 </div>
-
-
-
-
-<div id="legals" style="position:relative;background:rgba(20%,20%,20%,.1);width:100%;height:20px;text-align:center;vertical-align:middle;float:left;margin-top:20px;">
-<div id="policies" style="margin-left:400px;margin-top:20px;position:relative;width:480px;height:40px;"><a id="TnP" style="position:relative;float:left;width:100%;color:white;" href="legal.html" target="_blank">
+<div id="policies" style="margin-left:400px;position:relative;width:480px;height:40px;"><a id="TnP" style="position:relative;float:left;width:100%;color:white;" href="legal.html" target="_blank">
 
 terms of use | privacy policy</a>
 
