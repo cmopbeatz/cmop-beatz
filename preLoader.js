@@ -17,7 +17,7 @@ $(document).ready(function () {
 	$('#adPlacementHeader').css('display','none');
 	$('#adPlacementFooter').css('display','none');
   	$('#Enter-page').attr("disabled",true);
-	$('#TnP').css('display','none');
+	$('#policies').css('display','none');
 	$('#cookies').css('opacity','0');
 	$('#cookies').css('display','none');
 		
@@ -35,7 +35,7 @@ $(document).ready(function () {
 		$('#audio_player').css('display','block');		
 		$('#adPlacementHeader').css('display','block');
 		$('#adPlacementFooter').css('display','block');
-			$('#TnP').css('display','block');
+			$('#policies').css('display','block');
 			$('#cookies').css('opacity','1');
 		
 		$('#cookies').css('display','block');
