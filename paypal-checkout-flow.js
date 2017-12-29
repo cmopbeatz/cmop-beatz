@@ -36,7 +36,7 @@ payment: function(data, actions) {
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -46,7 +46,7 @@ payment: function(data, actions) {
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -138,7 +138,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -148,7 +148,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -232,7 +232,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -242,7 +242,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -324,7 +324,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -334,7 +334,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -417,7 +417,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -427,7 +427,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -511,7 +511,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -521,7 +521,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -606,7 +606,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -616,7 +616,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -701,7 +701,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -711,7 +711,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -793,7 +793,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -803,7 +803,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -885,7 +885,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -895,7 +895,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -978,7 +978,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -988,7 +988,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -1070,7 +1070,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -1080,7 +1080,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -1163,7 +1163,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -1173,7 +1173,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -1256,7 +1256,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -1266,7 +1266,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -1348,7 +1348,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -1358,7 +1358,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -1441,7 +1441,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -1451,7 +1451,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -1534,7 +1534,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -1544,7 +1544,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -1626,7 +1626,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -1636,7 +1636,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -1718,7 +1718,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -1728,7 +1728,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -1811,7 +1811,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '14.95', currency: 'USD' },
+                            amount: { total: '9.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -1821,7 +1821,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -1912,7 +1912,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '29.95', currency: 'USD' },
+                            amount: { total: '19.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -1922,7 +1922,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -2004,7 +2004,7 @@ paypal.Button.render({
                 payment: {
                     transactions: [
                         {
-                            amount: { total: '29.95', currency: 'USD' },
+                            amount: { total: '19.95', currency: 'USD' },
                             
                              item_list:{
 
@@ -2014,7 +2014,7 @@ paypal.Button.render({
 		name:'Tagged MP3 prod. by [d1nero]',
 		description:'Lease Type' +':'+'LIMITED',	
 		quantity:'1',
-		price: '14.95',
+		price: '9.95',
 		currency:'USD'
 	}
 	]
@@ -2096,7 +2096,7 @@ paypal.Button.render({
                payment:{ 
 				transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -2107,7 +2107,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -2184,7 +2184,7 @@ swal({
                 payment:{
 				transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -2195,7 +2195,7 @@ swal({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -2271,7 +2271,7 @@ paypal.Button.render({
                 payment:{
 				transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -2282,7 +2282,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -2358,7 +2358,7 @@ paypal.Button.render({
                 payment:{
 				transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -2369,7 +2369,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -2445,7 +2445,7 @@ paypal.Button.render({
                 payment:{
 				transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -2456,7 +2456,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -2532,7 +2532,7 @@ paypal.Button.render({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -2543,7 +2543,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -2619,7 +2619,7 @@ paypal.Button.render({
                 payment:{
 				transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -2630,7 +2630,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -2706,7 +2706,7 @@ paypal.Button.render({
                 payment:{
 				transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -2717,7 +2717,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -2793,7 +2793,7 @@ paypal.Button.render({
                 payment:{
 				transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -2804,7 +2804,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -2880,7 +2880,7 @@ paypal.Button.render({
                 payment:{
 				transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -2891,7 +2891,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -2967,7 +2967,7 @@ paypal.Button.render({
                 payment:{
 				transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -2978,7 +2978,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -3054,7 +3054,7 @@ paypal.Button.render({
                 payment:{
 				transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -3065,7 +3065,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -3141,7 +3141,7 @@ paypal.Button.render({
                 payment:{
 				transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -3152,7 +3152,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -3228,7 +3228,7 @@ paypal.Button.render({
                 payment:{
 				transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -3239,7 +3239,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -3315,7 +3315,7 @@ paypal.Button.render({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -3326,7 +3326,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -3402,7 +3402,7 @@ paypal.Button.render({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -3413,7 +3413,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -3489,7 +3489,7 @@ paypal.Button.render({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -3500,7 +3500,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -3576,7 +3576,7 @@ paypal.Button.render({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '29.95', currency: 'USD' },
+                        amount: { total: '19.95', currency: 'USD' },
                         
  
                         item_list:{
@@ -3587,7 +3587,7 @@ paypal.Button.render({
 		name:'Tagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'STANDARD',	
 		quantity:'1',
-		price: '29.95',
+		price: '19.95',
 		currency:'USD'
 	}
 	]
@@ -3668,7 +3668,7 @@ paypal.Button.render({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -3679,7 +3679,7 @@ paypal.Button.render({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -3756,7 +3756,7 @@ paypal.Button.render({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -3767,7 +3767,7 @@ paypal.Button.render({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -3844,7 +3844,7 @@ swal({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -3855,7 +3855,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -3932,7 +3932,7 @@ swal({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -3943,7 +3943,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -4020,7 +4020,7 @@ swal({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -4031,7 +4031,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -4108,7 +4108,7 @@ swal({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -4119,7 +4119,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -4196,7 +4196,7 @@ swal({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -4207,7 +4207,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -4284,7 +4284,7 @@ swal({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -4295,7 +4295,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -4372,7 +4372,7 @@ swal({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -4383,7 +4383,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -4460,7 +4460,7 @@ swal({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -4471,7 +4471,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -4548,7 +4548,7 @@ swal({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -4559,7 +4559,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -4636,7 +4636,7 @@ swal({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -4647,7 +4647,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -4724,7 +4724,7 @@ swal({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -4735,7 +4735,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -4812,7 +4812,7 @@ swal({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -4823,7 +4823,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -4900,7 +4900,7 @@ swal({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -4911,7 +4911,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -4988,7 +4988,7 @@ swal({
                 payment:{
 				transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -4999,7 +4999,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -5076,7 +5076,7 @@ swal({
                 payment:{
 					transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -5087,7 +5087,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -5164,7 +5164,7 @@ swal({
                 payment:{
 				transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -5175,7 +5175,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -5252,7 +5252,7 @@ swal({
                 payment:{
 				transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -5263,7 +5263,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
@@ -5340,7 +5340,7 @@ swal({
                 payment:{
 				transactions: [
                     {
-                        amount: { total: '69.95', currency: 'USD' },
+                        amount: { total: '30.00', currency: 'USD' },
                         
  
                         item_list:{
@@ -5351,7 +5351,7 @@ swal({
 		name:'Untagged WAV prod. by [d1nero]',
 		description:'Lease Type' +':'+'PRO',	
 		quantity:'1',
-		price: '69.95',
+		price: '30.00',
 		currency:'USD'
 	}
 	]
