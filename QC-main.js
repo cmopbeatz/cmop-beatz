@@ -55,7 +55,7 @@ function storeData(){
 		
 		
 		
-		var baseURL ="https://docs.google.com/forms/d/e/1FAIpQLSeWHnOc5p0lbQW6Cv-pst79MqfkuyROb_KYEYUuw9K_1I_QTg/formResponse?";
+		var baseURL ="https://docs.google.com/forms/d/e/1FAIpQLSeWHnOc5p0lbQW6Cv-pst79MqfkuyROb_KYEYUuw9K_1I_QTg/viewform?usp=sf_link#responses?";
 
 		var refSubmit = '&8557032640741396769';
 		var submitURL = (baseURL + fNameID + "=" + fName + "&" +  eMailID + "=" + eMail + "&" + sListID + "=" + sList + "&" + commtID + "=" + commt + refSubmit);

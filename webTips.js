@@ -16,7 +16,7 @@ $(document).ready(function(){
 				$('#caption2').hide()
 				$('#caption3').hide()
 				$('#caption4').hide()
-				$('#caption5').hide()
+		
 			$('#tips-body-bkg').attr('src','images/caption1.png');
 			
 			
@@ -28,7 +28,7 @@ $(document).ready(function(){
 				$('#caption2').show()
 				$('#caption3').hide()
 				$('#caption4').hide()
-				$('#caption5').hide()
+				
 					$('#tips-body-bkg').attr('src','images/caption2.png');
 				
 				
@@ -41,7 +41,7 @@ $(document).ready(function(){
 				$('#caption2').hide()
 				$('#caption3').show()
 				$('#caption4').hide()
-				$('#caption5').hide()
+			
 					$('#tips-body-bkg').attr('src','images/caption3.png');
 				
 				
@@ -55,22 +55,10 @@ $(document).ready(function(){
 				$('#caption2').hide()
 				$('#caption3').hide()
 				$('#caption4').show()
-				$('#caption5').hide()
-					$('#tips-body-bkg').attr('src','images/caption4.png');
-				
-				
-				
-				
-			}else
 			
-			if(counter === 5){
-				$('#caption1').hide()
-				$('#caption2').hide()
-				$('#caption3').hide()
-				$('#caption4').hide()
-				$('#caption5').show()
 					$('#tips-body-bkg').attr('src','images/caption5.png');
-						
+				
+				
 				
 				
 			}

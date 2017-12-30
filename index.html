@@ -2,6 +2,8 @@
 <html lang="en" xmlns:fb="http://www.facebook.com/2008/fbml">
 
 <head><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="jquery.serialize-object.js"></script>
+
 <meta charset="utf-8">
 <title>cmopbeatz.com</title> 
    
@@ -272,6 +274,7 @@ a:hover, a:active, a:focus { /* this group of selectors will give a keyboard nav
 	box-shadow: inset 0px 0px 2px 2px rgba(0,0,0,1);
 	margin-top: 10px;
 	margin-right: 10px;
+	display: none;
 }
 #loader-graphic {
 	height: 35px;
@@ -1921,10 +1924,10 @@ cmopbeatz.com says:
 <div id="tips-caption" style="position:relative;width:100%;height:auto;background:rgba(0,0,0,1);font-size:16px;">
 
 <p id="caption1" class="tips" style="position:relative;color:rgba(255,255,255,1);height:auto;width:95%;display:none;background:rgba(0,0,0,1);">
-To contact cmopbeatz, you can either click the <sup>1:</sup> options icon, then select "contact" and copy the appropriate address into your email client's recipient field, or click the <sup>2:</sup> Questions/Comments icon to use our form. Select the type of question and you're good to go!</p>
+To contact cmopbeatz, you can either click the <sup>1:</sup> options icon, then select "contact" and copy the appropriate address into your email client's recipient field, or click the <sup>2:</sup> Questions/Comments icon to use our form. Select the type of question, type your question and you're good to go!</p>
 
 <p id="caption2" class="tips" style="position:relative;color:rgba(255,255,255,1);height:auto;width:95%;display:none;background:rgba(0,0,0,1);">
-If you like what you hear, and are interested in reaching out regarding purchasing Exclusive Rights, you may contact cmopbeatz.com via exclusives.cahmeout@gmail.com, or use our Questions/Comments form and select the option "...regarding Exclusives"
+If you like what you hear, and are interested in reaching out regarding purchasing Exclusive Rights, you may contact cmopbeatz.com via exclusives.cahmeout@gmail.com, or use our Questions/Comments form and select the option under "Regarding Exclusives"
 
 </p>
 
@@ -1932,14 +1935,9 @@ If you like what you hear, and are interested in reaching out regarding purchasi
 To view our pricing and leasing info, click the <sup>1:</sup> Pricing icon located on the left side of the screen.
 </p>
 
+
 <p id="caption4" class="tips" style="position:relative;color:rgba(255,255,255,1);height:auto;width:95%;display:none;background:rgba(0,0,0,1);">
-Want to request a custom track? Contact cmopbeatz via exclusives.cashmeout@gmail.com or use our Questions/Comments form and select "...Other".
-
-</p>
-
-<p id="caption5" class="tips" style="position:relative;color:rgba(255,255,255,1);height:auto;width:95%;display:none;background:rgba(0,0,0,1);">
-This site and its[proprietary] assets were designed and developed by d1nero.
-To inquire about design services, contact d1nero directly at designsbyd1nero@gmail.com
+This site and its[proprietary] assets were designed and developed by d1nero. To inquire about design services, contact d1nero directly at designsbyd1nero@gmail.com
 </p>
 
 </div>
@@ -1948,7 +1946,7 @@ To inquire about design services, contact d1nero directly at designsbyd1nero@gma
 
 
 <div id="enter-wrapper" style="width:100%;height:60px;margin-top:20px;background:rgba(0,0,0,1);">
-<div id ="loader-graphic"><img alt="page is currently loading..." src="images/cmop-loader-circle.gif" style="background:rgba(255,255,255,.05);border-radius:40px;box-shadow: 0px 0px 1px 2px #000;" height="30px" width="30px"></div>
+<div id ="loader-graphic"><img alt="page is currently loading..." src="images/cmop-loader-circle.gif" style="background:rgba(255,255,255,.05);border-radius:40px;box-shadow: 0px 0px 1px 2px #000;" height="30px" width="30px"></div><p style="color:red;">We are undergoing critical maintenance. We apologize for the inconvenience. Please return: 17:30:00 PST</p>
 <button id ="Enter-page">Loading...</button>
 </div>
 </div>
@@ -2588,34 +2586,72 @@ You will receive a link for the untagged .Wav file of the beat (or song) as well
  
  
   <div id="emailPanel">
-    <form id="QCform" style="height:400px;width:100%;" method="POST" target = "no-target" name ="QCform">
-      <div id="fNameBox">First Name:
-        <input type="text" name="First Name:" placeholder="first" id = "fName" style="border-radius:5px;"/>
-      </div>
-      <div id="lNameBox">Last Name:
-        <input type="text" name="Last Name:" placeholder="last" id = "lName" style="border-radius:5px;"/>
-      </div>
-      <div id="emailBox">Email Address:
-        <input type="email" name="Email Address:" placeholder="abcd@1234.com" id = "email" style="border-radius:5px;">
-      </div>
-      <div id="reasonBox">My question/comment:
-        
-        <div id="reasonSelect">
-          <select id="selQ" name="My question/comment:" size="1">
-            <option id="q1" name="regarding Exclusives...">regarding Exclusives...</option>
-            <option id="q2" name="regarding my recent purchase...">regarding my recent purchase...</option>
-            <option id="q3" name="regarding the site and/or services provided(in general)...">regarding the site and/or services provided...</option>
-            <option id="q4" name="Other...">Other...</option>
-          </select>
-          <div id="commtArea">
-            <textarea name="Please enter Question/Comment" cols="50" rows="10" id="commtBox" placeholder="Type Here" style="border-radius:5px;width:300px;"></textarea>
-          </div>
-        </div>
-        <div id="submitArea">
-          <input type="submit" id ="submitBtn" name ="fbzx" value ="submit"style="border-radius:5px;" onClick="checkEmail();"/>
-        </div>
-      </div>
-    </form>
+    
+    
+    <iframe
+      id="JotFormIFrame-73635478486169"
+      onload="window.parent.scrollTo(0,0)"
+      allowtransparency="true"
+      src="https://form.jotform.com/73635478486169"
+      frameborder="0"
+      style="width: 1px;
+      min-width: 100%;
+      height:539px;
+      border:none;"
+      scrolling="no">
+    </iframe>
+    <script type="text/javascript">
+      var ifr = document.getElementById("JotFormIFrame-73635478486169");
+      if(window.location.href && window.location.href.indexOf("?") > -1) {
+        var get = window.location.href.substr(window.location.href.indexOf("?") + 1);
+        if(ifr && get.length > 0) {
+          var src = ifr.src;
+          src = src.indexOf("?") > -1 ? src + "&" + get : src  + "?" + get;
+          ifr.src = src;
+        }
+      }
+      window.handleIFrameMessage = function(e) {
+        var args = e.data.split(":");
+        if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
+        if (!iframe) { return; }
+        switch (args[0]) {
+          case "scrollIntoView":
+            iframe.scrollIntoView();
+            break;
+          case "setHeight":
+            iframe.style.height = args[1] + "px";
+            break;
+          case "collapseErrorPage":
+            if (iframe.clientHeight > window.innerHeight) {
+              iframe.style.height = window.innerHeight + "px";
+            }
+            break;
+          case "reloadPage":
+            window.location.reload();
+            break;
+          case "loadScript":
+            var src = args[1];
+            if (args.length > 3) {
+                src = args[1] + ':' + args[2];
+            }
+            var script = document.createElement('script');
+            script.src = src;
+            script.type = 'text/javascript';
+            document.body.appendChild(script);
+            break;
+        }
+        var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+        if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+          var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+          iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+        }
+      };
+      if (window.addEventListener) {
+        window.addEventListener("message", handleIFrameMessage, false);
+      } else if (window.attachEvent) {
+        window.attachEvent("onmessage", handleIFrameMessage);
+      }
+      </script>
   </div>
   
   <div id="soundCloudPanel" scrolling="no">
@@ -2708,14 +2744,6 @@ Artist:
 </div>
 
 
-
-
-
-
-
-
-
-
 <div id="legals" style="position:relative;background:rgba(20%,20%,20%,.1);width:100%;height:20px;text-align:center;vertical-align:middle;float:left;margin-top:20px;"><div id="adPlacementFooter" style="position:relative;width:100%;height:180px;display:none;margin-top:40px;">
 <div id="adPlacement-FL" style="position:relative;width:300px;height:auto;float:left;margin-right:20px;font-size:20px;color:white;">
 <a href="http://www.anrdoezrs.net/click-8475802-10724417" target="_top">
@@ -2768,11 +2796,13 @@ terms of use | privacy policy</a>
 
 <script type="text/javascript" src="detectWin.js"></script>
 
-<script type="text/javascript" src="QC-main.js"></script>
+
 
 <script type="text/javascript" src="mpcontrols-alt.js"></script>
 
-<script type="text/javascript" src="preLoader.js"></script><script type="text/javascript" src="webTips.js"></script>
+<script type="text/javascript" src="preLoader.js"></script>
+<script type="text/javascript" src="webTips.js"></script>
+<script type="text/javascript" src="cmopbeatz.js"></script>
 
 
 
