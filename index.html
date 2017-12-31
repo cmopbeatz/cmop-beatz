@@ -1946,7 +1946,7 @@ This site and its[proprietary] assets were designed and developed by d1nero. To 
 
 
 <div id="enter-wrapper" style="width:100%;height:60px;margin-top:20px;background:rgba(0,0,0,1);">
-<div id ="loader-graphic"><img alt="page is currently loading..." src="images/cmop-loader-circle.gif" style="background:rgba(255,255,255,.05);border-radius:40px;box-shadow: 0px 0px 1px 2px #000;" height="30px" width="30px"></div><p style="color:red;">We are undergoing critical maintenance. We apologize for the inconvenience. Please return: 17:30:00 PST</p>
+<div id ="loader-graphic"><img alt="page is currently loading..." src="images/cmop-loader-circle.gif" style="background:rgba(255,255,255,.05);border-radius:40px;box-shadow: 0px 0px 1px 2px #000;" height="30px" width="30px"></div><p style="color:red;">We are undergoing critical maintenance. We apologize for the inconvenience. Please return: 1/1/2018 @ 17:30:00 PST</p>
 <button id ="Enter-page">Loading...</button>
 </div>
 </div>
@@ -2088,9 +2088,94 @@ This site and its[proprietary] assets were designed and developed by d1nero. To 
 </div>
 
 <div id="cont" class="content">
+
+
+
     <div id="RSS-container" >
 <div  id="CMOP-description" class="scroll-left"><p class ="scroll-left p">Welcome to cmopbeatz.com! To listen, click the 'Expand' button below, then select a track. Enjoy!</p></div>
 
+</div>
+
+<div id="dlContainer" style="position: absolute; width: 50%; height: 50%; left: 274px; top: 233px;">
+<a id="reidir" style="text-align:center;" id="dllink" href="">Download</a>
+
+<script>
+
+
+
+</script>
+
+<div id="formContainer" >
+
+
+
+
+<iframe
+      id="JotFormIFrame-73635478486169"
+      onload="window.parent.scrollTo(0,0)"
+      allowtransparency="true"
+      src="https://form.jotform.com/73635478486169"
+      frameborder="0"
+      style="
+      width: 1px;
+      min-width: 100%;
+      height:300px;
+      border:none;"
+      scrolling="no">
+    </iframe>
+    <script type="text/javascript">
+      var ifr = document.getElementById("JotFormIFrame-73635478486169");
+      if(window.location.href && window.location.href.indexOf("?") > -1) {
+        var get = window.location.href.substr(window.location.href.indexOf("?") + 1);
+        if(ifr && get.length > 0) {
+          var src = ifr.src;
+          src = src.indexOf("?") > -1 ? src + "&" + get : src  + "?" + get;
+          ifr.src = src;
+        }
+      }
+      window.handleIFrameMessage = function(e) {
+        var args = e.data.split(":");
+        if (args.length > 2) { iframe = document.getElementById("JotFormIFrame-" + args[(args.length - 1)]); } else { iframe = document.getElementById("JotFormIFrame"); }
+        if (!iframe) { return; }
+        switch (args[0]) {
+          case "scrollIntoView":
+            iframe.scrollIntoView();
+            break;
+          case "setHeight":
+            iframe.style.height = args[1] + "px";
+            break;
+          case "collapseErrorPage":
+            if (iframe.clientHeight > window.innerHeight) {
+              iframe.style.height = window.innerHeight + "px";
+            }
+            break;
+          case "reloadPage":
+            window.location.reload();
+            break;
+          case "loadScript":
+            var src = args[1];
+            if (args.length > 3) {
+                src = args[1] + ':' + args[2];
+            }
+            var script = document.createElement('script');
+            script.src = src;
+            script.type = 'text/javascript';
+            document.body.appendChild(script);
+            break;
+        }
+        var isJotForm = (e.origin.indexOf("jotform") > -1) ? true : false;
+        if(isJotForm && "contentWindow" in iframe && "postMessage" in iframe.contentWindow) {
+          var urls = {"docurl":encodeURIComponent(document.URL),"referrer":encodeURIComponent(document.referrer)};
+          iframe.contentWindow.postMessage(JSON.stringify({"type":"urls","value":urls}), "*");
+        }
+      };
+      if (window.addEventListener) {
+        window.addEventListener("message", handleIFrameMessage, false);
+      } else if (window.attachEvent) {
+        window.attachEvent("onmessage", handleIFrameMessage);
+      }
+      </script>
+</div>
 </div>
 
     <div id ="pricingPanel">

@@ -76,7 +76,7 @@ payment: function(data, actions) {
 				 $(document).ready(function() {
 swal({ 
   title: "Your Download is ready!",
-   text: "Your download is waiting in another tab.",
+   text: "Your download is waiting.",
     icon: "success" ,
 	closeOnClickOutside: false,
 	button:{
