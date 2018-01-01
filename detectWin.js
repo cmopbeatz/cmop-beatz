@@ -76,8 +76,8 @@ swal({
 	
 	
 }else{
+	swal.closeModal();
 	
-	swal.close();
 	}
 
 });
