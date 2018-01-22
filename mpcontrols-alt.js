@@ -1,14 +1,6 @@
-// JavaScript Document//
+// Audio Player & Page Function(basic)
 
 window.onload = initAudioPlayer;
-
-
-
-
-
-
-
-
 
 function initAudioPlayer() {
 	

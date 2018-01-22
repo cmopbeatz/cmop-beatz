@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width:100%;
+}
+
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		5;
+	dw-num-cols-tablet:		8;
+	dw-num-cols-desktop:	10;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Mobile Layout: 480px and below. */
+
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 87.36%;
+	padding-left: 1.82%;
+	padding-right: 1.82%;
+	padding-bottom:10px;
+}
+#header{margin-bottom:20px;height:100px;background:rgba(0,0,0,1);box-shadow:0 0 1px 2px rgba(51,51,51,1)}.h-icon{width:140px;height:100px;float:left}.h-logo{width:370px;height:80px;float:right;margin-top:1%}
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+#legal,#policies,.legal-text{color:rgba(255,255,255,1)}
+
+#legal{background:linear-gradient(0deg,#000,rgba(153,153,153,.7) 40%,rgba(204,255,204,.3));height:auto;vertical-align:middle;margin-top:20px;text-shadow:.5px .25px 1px rgba(51,51,51,1);text-align:center;}
+#policies{clear:both;margin-left:0;height:20px;display:block;border-top:medium dashed rgba(255,255,255,1);border-bottom:medium dashed rgba(255,255,255,1)}
+.legal-text{text-decoration:none;font-weight:700}
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+}
+
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 88.2%;
+	max-width: 1232px;
+	padding-left: 0.9%;
+	padding-right: 0.9%;
+	margin: auto;
+}
+
+}

@@ -1,5 +1,7 @@
 // dl-Links.js
 
+
+function dL(){
 var dlLinks = [];
 
 var dlloc = document.getElementById('redir').href;
@@ -66,3 +68,6 @@ dlLinks[56] = "http://www.mediafire.com/file/utanwup6ajt5ha9/Like_Neon%28No_Tag%
 dlLinks[57] = "http://www.mediafire.com/file/974yda7h425al1a/Make_It_Count%28No_Tag%29_-_prod._by_%5Bd1nero%5D_-_cmo_p%40outlook.com.zip";
 dlLinks[58] = "http://www.mediafire.com/file/b6bpt11e3zapzb6/Numbers%28No_Tag%29_-_prod._by_%5Bd1nero%5D_-_cmo_p%40outlook.com.zip";
 dlLinks[59] = "http://www.mediafire.com/file/g49jro8o0n1k14w/Position2%28No_Tag%29_-_prod._by_%5Bd1nero%5D_-_cmo_p%40outlook.com.zip";
+
+
+}

@@ -1,10 +1,11 @@
-// JavaScript Document
-//paypal-checkout-flow
+// paypal-checkout-flow
 
 var indexURL = "index.html";
 
 
 var dlLinks = [];
+
+var dLink;
 
 
 dlLinks[0] = "http://www.mediafire.com/file/g3jk4kdf3y33h0b/After_ME_-_prod._by_%5Bd1nero%5D_-_cmo_p%40outlook.com.zip";
@@ -70,13 +71,14 @@ dlLinks[57] = "http://www.mediafire.com/file/974yda7h425al1a/Make_It_Count%28No_
 dlLinks[58] = "http://www.mediafire.com/file/b6bpt11e3zapzb6/Numbers%28No_Tag%29_-_prod._by_%5Bd1nero%5D_-_cmo_p%40outlook.com.zip";
 dlLinks[59] = "http://www.mediafire.com/file/g49jro8o0n1k14w/Position2%28No_Tag%29_-_prod._by_%5Bd1nero%5D_-_cmo_p%40outlook.com.zip";
 
+
 //LIM
 //00100
 paypal.Button.render({
 
         // Set your environment
 
-        env: 'sandbox', // sandbox | production
+        env: 'production', // sandbox | production
 
         // Specify the style of the button
 
@@ -157,7 +159,8 @@ swal({
 	  
 			});
 			 $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[0]);
+	
+	 window.open(dlLinks[0],"Download");
 		});
 
 
@@ -256,7 +259,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[1]);
+	 window.open(dlLinks[1],"Download");
 		});
 		});
 	
@@ -350,7 +353,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[2]);
+ window.open(dlLinks[2],"Download");
 		});
 		});
 	
@@ -443,7 +446,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[3]);
+	 window.open(dlLinks[3],"Download");
 		});
 		});
 	
@@ -536,7 +539,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[4]);
+	 window.open(dlLinks[4],"Download");
 		});
 		});
 	
@@ -630,7 +633,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[5]);
+	 window.open(dlLinks[5],"Download");
 		});
 		});
 	
@@ -725,7 +728,8 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[6]);
+	  window.open(dlLinks[6],"Download");
+
 		});
 	
 	
@@ -819,7 +823,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[7]);
+	 window.open(dlLinks[7],"Download");
 		});
 		});
 	
@@ -833,7 +837,7 @@ paypal.Button.render({
 
         // Set your environment
 
-        env: 'sandbox', // sandbox | production
+        env: 'production', // sandbox | production
 
         // Specify the style of the button
 
@@ -911,7 +915,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[8]);
+	 window.open(dlLinks[8],"Download");
 		});
 		});
 	
@@ -1004,7 +1008,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[9]);
+ window.open(dlLinks[9],"Download");
 		});
 		});
 	
@@ -1096,7 +1100,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[10]);
+	 window.open(dlLinks[10],"Download");
 		});
 		});
 	
@@ -1189,7 +1193,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[11]);
+	 window.open(dlLinks[11],"Download");
 		});
 		});
 	
@@ -1282,7 +1286,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[12]);
+	 window.open(dlLinks[12],"Download");
 		});
 		});
 	
@@ -1374,7 +1378,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[13]);
+	 window.open(dlLinks[13],"Download");
 		});
 		});
 	
@@ -1467,7 +1471,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[14]);
+	 window.open(dlLinks[14],"Download");
 		});
 		});
 	
@@ -1560,7 +1564,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[15]);
+	 window.open(dlLinks[15],"Download");
 		});
 		});
 	
@@ -1652,7 +1656,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[16]);
+	 window.open(dlLinks[16],"Download");
 		});
 		});
 	
@@ -1744,7 +1748,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[17]);
+	 window.open(dlLinks[17],"Download");
 		});
 		});
 	
@@ -1837,7 +1841,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[18]);
+	 window.open(dlLinks[18],"Download");
 		});
 		});
 	
@@ -1930,7 +1934,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[19]);
+	 window.open(dlLinks[19],"Download");
 		});
 		});
 	
@@ -2031,7 +2035,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[20]);
+	 $(window).open(dlLinks[20],"Download");
 		});
 		});
 	
@@ -2123,7 +2127,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[21]);
+	 window.open(dlLinks[21],"Download");
 		});
 		});
 	
@@ -2211,7 +2215,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[22]);
+	 window.open(dlLinks[22],"Download");
 		});
 		});
 	
@@ -2298,7 +2302,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[23]);
+	 window.open(dlLinks[23],"Download");
 		});
 		});
 	
@@ -2385,7 +2389,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-$('#redir').attr('href',dlLinks[24]);
+ window.open(dlLinks[24],"Download");
 		});
 		});
 	
@@ -2472,7 +2476,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[25]);
+	 window.open(dlLinks[25],"Download");
 		});
 		});
 	
@@ -2559,7 +2563,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[26]);
+	 window.open(dlLinks[26],"Download");
 		});
 		});
 	
@@ -2646,7 +2650,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[27]);
+	 window.open(dlLinks[27],"Download");
 		});
 		});
 	
@@ -2659,7 +2663,7 @@ paypal.Button.render({
 
         // Set your environment
 
-        env: 'sandbox', // sandbox | production
+        env: 'production', // sandbox | production
 
         // Specify the style of the button
 
@@ -2733,7 +2737,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[28]);
+	 window.open(dlLinks[28],"Download");
 		});
 		});
 	
@@ -2820,7 +2824,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[29]);
+	 window.open(dlLinks[29],"Download");
 		});
 		});
 	
@@ -2907,7 +2911,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[30]);
+	 window.open(dlLinks[30],"Download");
 		});
 		});
 	
@@ -2994,7 +2998,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[31]);
+	 window.open(dlLinks[31],"Download");
 		});
 		});
 	
@@ -3081,7 +3085,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[32]);
+	 window.open(dlLinks[32],"Download");
 		});
 		});
 	
@@ -3168,7 +3172,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[33]);
+	 window.open(dlLinks[33],"Download");
 		});
 		});
 	
@@ -3255,7 +3259,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[34]);
+	 window.open(dlLinks[34],"Download");
 		});
 		});
 	
@@ -3342,7 +3346,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[35]);
+	 window.open(dlLinks[35],"Download");
 		});
 		});
 	
@@ -3429,7 +3433,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[36]);
+	 window.open(dlLinks[36],"Download");
 		});
 		});
 	
@@ -3516,7 +3520,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[37]);
+	 window.open(dlLinks[37],"Download");
 		});
 		});
 	
@@ -3603,7 +3607,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[38]);
+	 window.open(dlLinks[38],"Download");
 		});
 		});
 	
@@ -3690,7 +3694,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[39]);
+	 window.open(dlLinks[39],"Download");
 		});
 		});
 	
@@ -3783,7 +3787,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[40]);
+	 window.open(dlLinks[40],"Download");
 		});
 		});
 	
@@ -3871,7 +3875,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[41]);
+	 window.open(dlLinks[41],"Download");
 		});
 		});
 	
@@ -3959,7 +3963,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[42]);
+	 window.open(dlLinks[42],"Download");
 		});
 		});
 	
@@ -4047,7 +4051,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[43]);
+	 window.open(dlLinks[43],"Download");
 		});
 		});
 	
@@ -4135,7 +4139,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[44]);
+	 window.open(dlLinks[44],"Download");
 		});
 		});
 	
@@ -4223,7 +4227,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[45]);
+	 window.open(dlLinks[45],"Download");
 		});
 		});
 	
@@ -4311,7 +4315,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[46]);
+	 window.open(dlLinks[46],"Download");
 		});
 		});
 	
@@ -4399,7 +4403,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[47]);
+ window.open(dlLinks[47],"Download");
 		});
 		});
 	
@@ -4412,7 +4416,7 @@ swal({
 
         // Set your environment
 
-        env: 'sandbox', // sandbox | production
+        env: 'production', // sandbox | production
 
         // Specify the style of the button
 
@@ -4487,7 +4491,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[48]);
+ window.open(dlLinks[48],"Download");
 		});
 		});
 	
@@ -4575,7 +4579,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[49]);
+ window.open(dlLinks[49],"Download");
 		});
 		});
 	
@@ -4663,7 +4667,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	d$('#redir').attr('href',dlLinks[50]);
+ window.open(dlLinks[50],"Download");
 		});
 		});
 	
@@ -4751,7 +4755,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[51]);
+ window.open(dlLinks[51],"Download");
 		});
 		});
 	
@@ -4839,7 +4843,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[52]);
+ window.open(dlLinks[52],"Download");
 		});
 		});
 	
@@ -4927,7 +4931,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[53]);
+ window.open(dlLinks[53],"Download");
 		});
 		});
 	
@@ -5015,7 +5019,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[54]);
+ window.open(dlLinks[54],"Download");
 		});
 		});
 	
@@ -5103,7 +5107,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[55]);
+	 window.open(dlLinks[55],"Download");
 		});
 		});
 	
@@ -5191,7 +5195,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[56]);
+	 window.open(dlLinks[56],"Download");
 		});
 		});
 	
@@ -5279,7 +5283,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[57]);
+ window.open(dlLinks[57],"Download");
 		});
 		});
 	
@@ -5367,7 +5371,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[58]);
+ window.open(dlLinks[58],"Download");
 		});
 		});
 	
@@ -5455,7 +5459,7 @@ swal({
 		}	
 });
  $('.goBtn').click(function(){
-	$('#redir').attr('href',dlLinks[59]);
+	 window.open(dlLinks[59],"Download");
 		});
 		});
 	

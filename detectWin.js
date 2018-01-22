@@ -1,12 +1,5 @@
-// JavaScript Document
+//detectWin
 
-//var txt = "";
-//txt += "<p>innerWidth: " + window.innerWidth + "</p>";
-//txt += "<p>innerHeight: " + window.innerHeight# + "</p>";
-//txt += "<p>outerWidth: " + window.outerWidth + "</p>";
-//txt += "<p>outerHeight: " + window.outerHeight + "</p>";
-
-//document.getElementById("windowSize").innerHTML = txt;
 
 
 

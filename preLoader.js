@@ -1,6 +1,6 @@
-// JavaScript Document
+// Pre-Loader
 
-//preLoader
+
 
 
 
@@ -53,6 +53,5 @@ $('#gotit').click(function(){
 	});
 
 });
-
 
 

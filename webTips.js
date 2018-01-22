@@ -1,4 +1,4 @@
-// JavaScript Document
+// Loading Tips
 
 
 $(document).ready(function(){
