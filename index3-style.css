@@ -18,6 +18,33 @@
 	margin-top:20px;
 	box-shadow:1px 1px 6px 2px rgba(51,51,51,1);
 	
+	}
 	
+	@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+}
+#audio-player {
+	width:400px;
 	
 	}
+#action-panel{
+	width:400px;
+	}	
+	
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 88.2%;
+	max-width: 1232px;
+	padding-left: 0.9%;
+	padding-right: 0.9%;
+	margin: auto;
+}
+
+}
