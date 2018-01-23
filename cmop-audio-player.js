@@ -31,6 +31,7 @@ var playlist_index = 0;
     playlist[19] = "Position2(no-hook)";
 var dir = "CMO_P-Music/Masters/";
 var ext = ".mp3"
+var prd = "prod. by d1nero";
 var curtimetext = document.getElementById('cur-time');
 var durtimetext = document.getElementById('duration');
 var track_List = document.getElementById('tracklist');
@@ -40,7 +41,7 @@ var prv = document.getElementById('prev');
 var nxt = document.getElementById('next');
 var playbtn = document.getElementById('play-pause');
 
-playlist_status.innerHTML = playlist[playlist_index];
+playlist_status.innerHTML = playlist[playlist_index]+ prd;
  //Audio Object//
     var audio = new Audio();
    audio.preload = false;
@@ -73,9 +74,9 @@ playlist_status.innerHTML = playlist[playlist_index];
 var selected_Track = track_List.options[track_List.selectedIndex].value;
 
         //if (selected_Track === "emptyfile.mp3") {
-           // playlist_status.innerHTML = "Select a Track";
+           //playlist_status.innerHTML = "Select a Track";
 
-           	//}else 
+           
 			if (selected_Track === "After Me(no-hook).mp3") {
             playlist_status.innerHTML = "After Me(no-hook) prod. by d1nero";
 
@@ -133,7 +134,7 @@ var selected_Track = track_List.options[track_List.selectedIndex].value;
 var x = playlist[playlist_index];
     console.log(x);
  audio.src = dir + playlist[playlist_index] + ext;
-       	   playlist_status.innerHTML = playlist[playlist_index];
+       	   playlist_status.innerHTML = playlist[playlist_index]+ prd;
 	    console.log(playlist_index)
 		audio.play();
   }
@@ -147,7 +148,7 @@ function nexttrack(){
 var x = playlist[playlist_index];
     console.log(x);
       audio.src = dir + playlist[playlist_index] + ext;
-      	   playlist_status.innerHTML = playlist[playlist_index];
+      	   playlist_status.innerHTML = playlist[playlist_index]+ prd;
 	   console.log(playlist_index)
 		audio.play();
 }
@@ -159,12 +160,12 @@ var x = playlist[playlist_index];
 			drop_list.push(playlist[i]);
 			}
 		}
-        if (playlist_index === (playlist.length)) {
+        if (playlist_index == (playlist.length)) {
             playlist_index = 0;
         } else {
             playlist_index++;
         }
-        playlist_status.innerHTML = playlist[playlist_index];
+        playlist_status.innerHTML = playlist[playlist_index]+ prd;
         audio.src = dir + playlist[playlist_index] + ext;
         audio.play();
     }
@@ -182,7 +183,7 @@ var x = playlist[playlist_index];
             playbtn.src = "images/playbutton.png";
         }
 
- playlist_status.innerHTML = playlist[playlist_index];
+ playlist_status.innerHTML = playlist[playlist_index]+prd;
     }
 
    

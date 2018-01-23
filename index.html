@@ -1,4 +1,4 @@
-<!doctype html><html class=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>cmopbeatz.com</title><link href="boilerplate.css" rel="stylesheet" type="text/css"><link href="index3-style.css" rel="stylesheet" type="text/css"><link href="SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css"><!-- To learn more about the conditional comments around the html tags at the top of the file:paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):* insert the link to your js here* remove the link below to the html5shiv* add the "no-js" class to the html tags at the top* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build --><!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--></head><body><div id="header"> <img class="h-icon" src="images/cmop-letterhead2.png"/> <img class="h-logo" src="images/cmop-web-logo.png"/> </div><div class="gridContainer clearfix"> 
+<!doctype html><html class=""><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>cmopbeatz.com</title><link href="boilerplate.css" rel="stylesheet" type="text/css"><link href="index3-style.css" rel="stylesheet" type="text/css"><link href="SpryAssets/SpryTabbedPanels.css" rel="stylesheet" type="text/css"><!-- To learn more about the conditional comments around the html tags at the top of the file:paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/Do the following if you're using your customized build of modernizr (http://www.modernizr.com/):* insert the link to your js here* remove the link below to the html5shiv* add the "no-js" class to the html tags at the top* you can also remove the link to respond.min.js if you included the MQ Polyfill in your modernizr build --><!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]--></head><body><div id="header"> <img class="h-icon" src="images/cmop-letterhead2.png"/><div id="header-logo">cmopbeatz.com</div></div><div class="gridContainer clearfix"> 
 <div id="welcome" style="margin-top:15%;text-align:center;background: rgba(255,255,255,0.9);box-shadow:1px 1px 8px 2px rgba(51,51,51,0.7);border-radius:10px;">
 <h1 style="background:rgba(153,153,153,.5);border-radius:10px 10px 0px 0px;">Welcome to cmopbeatz.com!</h1>
 <p style="font-size:20px;">Thank you for taking the time to stop in. We hope you enjoy our catalogue and above all else--build your next hit with us! Whether you're looking for good filler music or looking to finish your album, we've got just about anything you need! Of course, if you disagree, please contact us and we'll MAKE whatever you need!
@@ -174,14 +174,7 @@ If you have any questions about our use of cookies, please contact us on the mai
 </div>
 </div>
 
-  <div id="cookies" style="position:fixed;width:100%;height:auto;padding-bottom:4px;background:rgba(0,0,0,1);z-index:20;color:white;text-align:left;opacity:1;display:block;font-size:100%;top:75%;"><div id="ad-space-header">
-
-<a id="chp1" style="position:fixed;bottom:1.5%;" href="http://www.tkqlhce.com/click-8475802-12298007" target="_blank">
-<img src="http://www.lduhtrp.net/image-8475802-12298007" width="234" height="60" alt="Business Class Deals" border="0"/></a>
-
-<a id="chp2" style="left:50%;position:fixed;bottom:5%;text-shadow:.5px .5px 2px rgba(51,51,51,1);font-size:18px;" href="http://www.dpbolvw.net/click-8475802-12754699" target="_blank">Check Out Our Roundtrip Fares UNDER $199 at CheapOair</a><img src="http://www.tqlkg.com/image-8475802-12754699" width="1" height="1" border="0"/>
-
-</div>
+  <div id="cookies" style="position:fixed;width:100%;height:auto;padding-bottom:4px;background:rgba(0,0,0,1);z-index:20;color:white;text-align:left;opacity:1;display:block;font-size:100%;top:75%;">
 <p style="width:70%;margin-left:5%;float:left;font-size:100%;">To ensure the best user experience possible, this site uses Cookies.
 <br>To find out more about Cookies and their use, click <a id="cookies-inf" href="javascript:void(0);" style="color:rgba(0,153,255,1);text-decoration:none;">here</a>.
 
@@ -217,8 +210,34 @@ function responsiveFn() {
    $('#action-panel').css('margin-right','3%');
    $('#chp2').css('display','none');
    $('#chp1').css('bottom','.5%');
+   $('#welcome').css('margin-top','35%');
+ $('#track-title').css('float','left');	
+ $('#track-title').css('margin-left','4%');
+ $('#header-logo').css('float','left');
+ $('#header-logo').css('font-size','43%');
+ $('#header-logo').css('margin-top','5%');
+  $('#header-logo').css('text-shadow','.5px 1px 6px rgba(255, 255, 255, .8)');
+ $('.h-icon').css('display','none');
  
-    }
+    }else{
+	
+	
+			
+		 $('#action-panel').css('width','');
+   $('#action-panel').css('margin-right','');
+   $('#chp2').css('display','');
+   $('#chp1').css('bottom','');	
+      $('#welcome').css('margin-top','15%');
+	  $('#track-title').css('float','');	
+ $('#track-title').css('margin-left','');
+ $('#header-logo').css('float','right');
+ $('#header-logo').css('font-size','70%');
+ $('#header-logo').css('margin-top','');
+ $('#header-logo').css('text-shadow','1px 1px 6px rgba(255, 255, 255, .8)');
+ $('.h-icon').css('display','block');
+ 
+	}
+			
  }
 
   // load() event and resize() event are combined 
@@ -230,6 +249,8 @@ function responsiveFn() {
 
 
 </script>
+
+
 
 <script>
 $('#cookies-inf').click(function (){
