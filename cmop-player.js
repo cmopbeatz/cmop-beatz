@@ -44,7 +44,7 @@ var entry = document.getElementsByClassName('s-entry');
  
 	var audio = new Audio();
    audio.preload = false;
-    audio.src(dir + playlist[0] + ext);
+    
     audio.loop = false;
  
  
@@ -70,8 +70,9 @@ var src = $('#a-src');
 src.attr('src',dir|$(this).html()|ext);
 	
 	console.log('source:',src);
-	
+	audio.play();
 	});
+	
 	
 	
 	
