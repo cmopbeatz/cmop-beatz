@@ -49,3 +49,58 @@
 
 
 }
+
+
+/* New code for tracklist for Mobile devices */
+
+@media only screen and (max-width: 420) {
+	#track-box {		
+		height: 370px;		
+	}
+	.tracklist-desktop{
+		display: block !important;
+		width: 94% !important;
+		max-width: 94% !important;
+		padding: 10px 0 !important;
+		margin: 15px 0 0 10px !important;
+		float: left !important;
+		border-radius: 5px !important;
+		text-indent: 5px !important;
+		background: rgba(51,51,51,1) !important;
+		border-color: #ffffff !important;
+		color: #ffffff !important;
+		font-size: 20px !important;
+		text-align: left !important;				
+		height: auto !important;				
+		overflow: auto !important;
+		outline: 0 !important;
+	}
+}
+
+/* @media only screen and (max-width: 319px) {
+	
+	.tracklist-desktop{		
+		width: 90% !important;
+		max-width: 90% !important;		
+		margin: 25px 0 0 10px !important;		
+	}	
+
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
