@@ -53,11 +53,11 @@
 
 /* New code for tracklist for Mobile devices */
 
-@media only screen and (max-width: 420) {
+@media screen and (max-width: 419px) {
 	#track-box {		
 		height: 370px;		
 	}
-	.tracklist-desktop{
+	select.tracklist-desktop{
 		display: block !important;
 		width: 94% !important;
 		max-width: 94% !important;
@@ -74,10 +74,10 @@
 		height: auto !important;				
 		overflow: auto !important;
 		outline: 0 !important;
-	}
+	} 	
 }
 
-/* @media only screen and (max-width: 319px) {
+@media screen and (max-width: 319px) {
 	
 	.tracklist-desktop{		
 		width: 90% !important;
@@ -85,7 +85,7 @@
 		margin: 25px 0 0 10px !important;		
 	}	
 
-} */
+}
 
 
 
